@@ -263,11 +263,25 @@
             <param name="fileName">完整路径xml文件名 以.xml为后缀</param>
             <returns></returns>
         </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetXmlDocument(System.Boolean,System.String)">
+            <summary>
+            获得xml文档
+            </summary>
+            <param name="isMyquery"></param>
+            <param name="xmlContent"></param>
+            <returns></returns>
+        </member>
         <member name="M:MyQuery.Utils.XmlHelper.GetXmlDocument(System.Boolean)">
             <summary>
             获得空xml文档
             </summary>
             <param name="isMyquery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.getXmlns">
+            <summary>
+            获得xml的xmlns
+            </summary>
             <returns></returns>
         </member>
         <member name="M:MyQuery.Utils.XmlHelper.GetFormatXml(System.Xml.XmlDocument)">
@@ -680,13 +694,6 @@
             <param name="isParameter">是否参数方式</param>
             <returns></returns>
         </member>
-        <member name="M:MyQuery.Utils.MySqlParameters.GetPre(MyQuery.Utils.DBType)">
-            <summary>
-            获得参数前字符
-            </summary>
-            <param name="dBType"></param>
-            <returns></returns>
-        </member>
         <member name="P:MyQuery.Utils.MySqlParameters.Name">
             <summary>
             Sql参数列表对应的查询名称（或表名 增删改语句使用）
@@ -841,6 +848,14 @@
             <param name="rowRange">范围表示 如1:1</param>
             <param name="height">高度</param>
         </member>
+        <member name="M:MyQuery.Utils.ExcelBase.XLSConvertToPDF(System.String,System.String)">
+            <summary>
+            保存为pdf
+            </summary>
+            <param name="sourceFile"></param>
+            <param name="targetFile"></param>
+            <returns></returns>
+        </member>
         <member name="T:MyQuery.Utils.ExcelBE">
             <summary>
             Excel格数据
@@ -933,6 +948,13 @@
             <summary>
             格式
             </summary>
+        </member>
+        <member name="M:MyQuery.Utils.ExceptionHelper.GetDetialErrorDescription(System.Exception)">
+            <summary>
+            获取详细的错误描述
+            </summary>
+            <param name="error">异常对象</param>
+            <returns></returns>
         </member>
         <member name="T:MyQuery.Utils.TimerTask.TimerTaskDelegate">
             <summary>
@@ -1332,11 +1354,12 @@
             <param name="names">参数名数组</param>
             <returns></returns>
         </member>
-        <member name="M:MyQuery.Utils.SqlHelper.GetWhere(System.String)">
+        <member name="M:MyQuery.Utils.SqlHelper.GetWhere(System.String,System.Boolean)">
             <summary>
-            获取sql的where表达式（去掉开头的and 或or）
+            获取sql的where表达式
             </summary>
             <param name="sql">SQL语句</param>
+            <param name="addMove">true时去掉开头的and 或or false是没有开头的and 或or则加上and</param>
             <returns>sql的where表达式（去掉开头的and 或or）</returns>
         </member>
         <member name="M:MyQuery.Utils.SqlHelper.GetWhere(MyQuery.Utils.MySqlParameters,MyQuery.Utils.DBType,System.Data.IDataParameter[]@)">
@@ -1461,6 +1484,13 @@
             <param name="dbtype">类型字符串 空则获取web.cofig的配置</param>
             <returns>值</returns>
         </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetPrefix(MyQuery.Utils.DBType)">
+            <summary>
+            获得参数前字符
+            </summary>
+            <param name="dBType"></param>
+            <returns></returns>
+        </member>
         <member name="M:MyQuery.Utils.SqlHelper.GetLikeType(System.String)">
             <summary>
             获取LikeType类型
@@ -1488,9 +1518,14 @@
             oracle
             </summary>
         </member>
+        <member name="F:MyQuery.Utils.DBType.OleDbAccess">
+            <summary>
+            OleDb处理Access
+            </summary>
+        </member>
         <member name="F:MyQuery.Utils.DBType.OleDb">
             <summary>
-            OleDb 如access
+            OleDb
             </summary>
         </member>
         <member name="F:MyQuery.Utils.DBType.OdbcMySql">
@@ -2152,6 +2187,13 @@
             <param name="fileName"></param>
             <returns></returns>
         </member>
+        <member name="M:MyQuery.Utils.WebHelper.IsExcelFile(System.String)">
+            <summary>
+            判断是否为Excel文件
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
         <member name="M:MyQuery.Utils.WebHelper.IsExceedLength(System.Web.UI.HtmlControls.HtmlInputFile)">
             <summary>
             上传文件是否超过了限制
@@ -2213,13 +2255,13 @@
             <param name="btn">提交按钮对象</param>
             <param name="ctrls">校验控件对象列表Control[] ctrls={txtID,txtTitle}</param>
         </member>
-        <member name="M:MyQuery.Utils.WebHelper.SetControlAttributes(System.Web.UI.WebControls.Button,MyQuery.Utils.TextBoxVal[],System.String)">
+        <member name="M:MyQuery.Utils.WebHelper.SetControlAttributes(System.Web.UI.WebControls.Button,System.String,MyQuery.Utils.TextBoxVal[])">
             <summary>
             设定控件脚本控制（针对TextBoxEx）和提交按钮校验脚本
             </summary>
             <param name="btn">提交按钮对象</param>
-            <param name="ctrls">校验控件对象列表Control[] ctrls={txtID,txtTitle}</param>
             <param name="js">附加的脚本 必须返回true false</param>
+            <param name="ctrls">校验控件对象列表Control[] ctrls={txtID,txtTitle}</param>
         </member>
         <member name="M:MyQuery.Utils.WebHelper.GetValidateScript(MyQuery.Utils.TextBoxVal[])">
             <summary>
@@ -2809,9 +2851,17 @@
             <param name="split"></param>
             <returns></returns>
         </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetString(System.Data.DataTable,System.String)">
+            <summary>
+            将表的列转化为,分割的字符串
+            </summary>
+            <param name="dt">表</param>
+            <param name="colname">列名，不指定则取第一列</param>
+            <returns></returns>
+        </member>
         <member name="M:MyQuery.Utils.DataHelper.GetString(System.Collections.ICollection,System.String)">
             <summary>
-            将字符串数组转化为,分割的字符串 空则忽略
+            将对象集合转化为,分割的字符串 空则忽略
             </summary>
             <param name="objs">对象集合</param>
             <param name="dataformat">数据格式 当数据源为DataRow集合时format可表示列名</param>
@@ -4025,6 +4075,11 @@
             xml文件的后缀 .xml
             </summary>
         </member>
+        <member name="F:MyQuery.Utils.Constants.BUTTONS_CSS">
+            <summary>
+            列表按钮列合并 样式 
+            </summary>
+        </member>
         <member name="M:MyQuery.Utils.Constants.GetMinDate">
             <summary>
             获得数据库认可的最小日期 1900-01-01
@@ -4097,6 +4152,11 @@
         <member name="P:MyQuery.Utils.MyUser.Functions">
             <summary>
             功能code 多个用,分割
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.MyUser.Roles">
+            <summary>
+            角色 多个用,分割
             </summary>
         </member>
         <member name="T:MyQuery.Utils.DataScope">
@@ -4255,6 +4315,80 @@
             获得标记点形状
             </summary>
             <param name="type">None,无标记;Square,方形;Circle,圆形;Diamond,菱形;Triangle,三角;Cross,十字星;Star4,4角;Star5,五角;Star6,六角;Star10,十角</param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Utils.FtpHelper">
+            <summary>
+            封装FTP上传文件至服务器处理
+            by 贾世义 2013-11-15
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.FtpHelper.UploadFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="filename">需要上传的完整文件名</param>
+            <param name="targetDir">目标路径</param>
+            <param name="hostname">ftp地址</param>
+            <param name="username">ftp用户名</param>
+            <param name="password">ftp密码</param>
+        </member>
+        <member name="M:MyQuery.Utils.FtpHelper.DownloadFile(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="localDir">下载至本地路径</param>
+            <param name="FtpDir">ftp目标文件路径</param>
+            <param name="FtpFile">从ftp要下载的文件名</param>
+            <param name="hostname">ftp地址即IP</param>
+            <param name="username">ftp用户名</param>
+            <param name="password">ftp密码</param>
+        </member>
+        <member name="M:MyQuery.Utils.FtpHelper.ListDirectory(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            搜索远程文件
+            </summary>
+            <param name="targetDir"></param>
+            <param name="hostname"></param>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="SearchPattern"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.FtpHelper.GetStringResponse(System.Net.FtpWebRequest)">
+            <summary>
+            
+            </summary>
+            <param name="ftp"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:MyQuery.Utils.FtpHelper.MakeDir(System.String,System.String,System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:MyQuery.Utils.FtpHelper.DelDir(System.String,System.String,System.String,System.String)">
+            <summary>
+            删除目录
+            </summary>
+            <param name="dirName">创建的目录名称</param>
+            <param name="ftpHostIP">ftp地址</param>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+        </member>
+        <member name="M:MyQuery.Utils.FtpHelper.Rename(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            文件重命名
+            </summary>
+            <param name="currentFilename">当前目录名称及在ftp上的路径</param>
+            <param name="newFilename">重命名目录名称</param>
+            <param name="ftpServerIP">ftp地址</param>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+        </member>
+        <member name="M:MyQuery.Utils.FtpHelper.GetRequest(System.String,System.String,System.String)">
+            <summary>
+            根据服务器信息FtpWebRequest创建类的对象
+            </summary>
+            <param name="URI"></param>
+            <param name="username"></param>
+            <param name="password"></param>
             <returns></returns>
         </member>
     </members>
