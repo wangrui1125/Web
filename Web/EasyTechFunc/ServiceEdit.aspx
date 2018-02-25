@@ -10,32 +10,28 @@
         {
             width: 242px;
             text-align: center;
-        }
-        .style2
-        {
-            width: 242px;
-            text-align: center;
-            height: 21px;
+            height: 15px;
         }
         .style4
         {
             width: 242px;
             text-align: center;
-            height: 215px;
+            height: 158px;
         }
         .style6
         {
-            height: 215px;
+            height: 158px;
             width: 237px;
             text-align: center;
         }
         .style7
         {
             width: 237px;
+            height: 15px;
         }
         .style8
         {
-            height: 21px;
+            height: 114px;
             width: 237px;
         }
         .style9
@@ -50,6 +46,12 @@
             width: 237px;
             text-align: center;
         }
+        .style11
+        {
+            width: 242px;
+            text-align: center;
+            height: 114px;
+        }
     </style>
 </head>
 <body>
@@ -57,7 +59,7 @@
     <div>
     
     </div>
-    <table style="width: 47%; height: 322px;">
+    <table style="width: 71%; height: 443px;">
         <tr>
             <td class="style9">
                 服务单号：<asp:Label ID="Label3" runat="server"></asp:Label>
@@ -96,12 +98,12 @@
         </tr>
         <tr>
             <td class="style1">
-                &nbsp;</td>
+                </td>
             <td class="style7">
-                &nbsp;</td>
+                </td>
         </tr>
         <tr>
-            <td class="style2">
+            <td class="style11">
             </td>
             <td class="style8">
             </td>
