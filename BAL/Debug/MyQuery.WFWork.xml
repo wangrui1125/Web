@@ -1,0 +1,3637 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyQuery.WFWork</name>
+    </assembly>
+    <members>
+        <member name="T:MyQuery.WFWork.FlowButtonDesigner">
+            <summary>
+            FlowButton设计展现类
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.FlowButtonDesigner.GetDesignTimeHtml">
+            <summary>
+            GetDesignTimeHtml
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.WFWork.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.Instance">
+            <summary>
+            实例
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.InstanceId">
+            <summary>
+            实例ID
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.ProcessId">
+            <summary>
+            流程id
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.ModelId">
+            <summary>
+            模型id
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.TaskId">
+            <summary>
+            任务id
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.InstanceState">
+            <summary>
+            实例状态
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.LimitedTime">
+            <summary>
+            截止时间
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.UpdatedTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.AcceptTime">
+            <summary>
+            接受时间
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.LastInstanceId">
+            <summary>
+            上一个实例ID
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.Notes">
+            <summary>
+            回退理由
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.InstanceType">
+            <summary>
+            实例类型
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.RedirectMode">
+            <summary>
+            流程转办结果处理
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.IsAgree">
+            <summary>
+            审批是否同意
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Instance.ApproveNotes">
+            <summary>
+            审批意见
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.BaseExpand">
+            <summary>
+            封装工作流页面的基类
+            参数： model模型编号 task任务编号 process当前流程号 instance当前实例号
+            by 贾世义 2011-7-19 
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.BaseExpand.dealWF">
+            <summary>
+            工作流数据处理
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseExpand.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad进行验证和处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseExpand.InitFlow(MyQuery.WFWork.FlowInfo,MyQuery.WFWork.FlowButton,System.String)">
+            <summary>
+            工作流数据初始化
+            </summary>
+            <param name="FlowInfo1"></param>
+            <param name="FlowButton1"></param>
+            <param name="processName">标示本流程的名称 如姓名</param>
+        </member>
+        <member name="T:MyQuery.WFWork.BaseFlowInfo">
+            <summary>
+            封装工作流处理页面的基类
+            参数： model模型编号 task任务编号 process当前流程号 instance当前实例号
+            by 贾世义 2011-8-31 
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.BaseFlowInfo.dealWF">
+            <summary>
+            工作流数据处理
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseFlowInfo.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad进行验证和处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseFlowInfo.BackPageLoad(MyQuery.WFWork.FlowInfo,System.Web.UI.WebControls.Button,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.Button,MyQuery.Utils.TextBoxVal,MyQuery.Utils.TextBoxVal,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.CheckBox)">
+            <summary>
+            回退页面初始化
+            </summary>
+            <param name="FlowInfo1"></param>
+            <param name="btnBack"></param>
+            <param name="ddlInstance"></param>
+            <param name="btnSave"></param>
+            <param name="txtNotes"></param>
+            <param name="txtDaySpan"></param>
+            <param name="ddlRedirectMode"></param>
+            <param name="cbEmail"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseFlowInfo.BackSaveClick(MyQuery.Utils.TextBoxVal,System.Web.UI.WebControls.DropDownList,MyQuery.Utils.TextBoxVal,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.CheckBox)">
+            <summary>
+            回退提交按钮事件
+            </summary>
+            <param name="txtNotes"></param>
+            <param name="ddlInstance"></param>
+            <param name="txtDaySpan"></param>
+            <param name="ddlRedirectMode"></param>
+            <param name="cbEmail"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseFlowInfo.NextPageLoad(MyQuery.WFWork.FlowInfo,MyQuery.MyControl.MyGridView,MyQuery.Utils.TextBoxVal,MyQuery.Utils.TextBoxVal,System.Web.UI.WebControls.Label,System.Web.UI.HtmlControls.HtmlGenericControl,System.Web.UI.WebControls.Button,System.Web.UI.WebControls.Button,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.CheckBox)">
+            <summary>
+            下一步 页面初始化
+            </summary>
+            <param name="FlowInfo1"></param>
+            <param name="MyGridView1"></param>
+            <param name="txtDaySpan"></param>
+            <param name="txtNotes"></param>
+            <param name="lblNextTaskId"></param>
+            <param name="divQuery"></param>
+            <param name="btnSave"></param>
+            <param name="btnBack"></param>
+            <param name="ddlDep"></param>
+            <param name="cbEmail"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseFlowInfo.NextSaveClick(MyQuery.MyControl.MyGridView,System.Web.UI.WebControls.Label,MyQuery.Utils.TextBoxVal,MyQuery.Utils.TextBoxVal,System.Web.UI.WebControls.CheckBox)">
+            <summary>
+            下一步事件
+            </summary>
+            <param name="MyGridView1"></param>
+            <param name="lblNextTaskId"></param>
+            <param name="txtDaySpan"></param>
+            <param name="txtNotes"></param>
+            <param name="cbEmail"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseFlowInfo.NextQueryClick(MyQuery.MyControl.MyGridView,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.TextBox)">
+            <summary>
+            人员查询按钮
+            </summary>
+            <param name="MyGridView1"></param>
+            <param name="ddlDep"></param>
+            <param name="txtUser"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseFlowInfo.RedirectPageLoad(MyQuery.WFWork.FlowInfo,System.Web.UI.WebControls.Button,System.Web.UI.WebControls.Button,MyQuery.Utils.TextBoxVal,MyQuery.Utils.TextBoxVal,MyQuery.Utils.TextBoxVal,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.CheckBox)">
+            <summary>
+            转办 页面初始化
+            </summary>
+            <param name="FlowInfo1"></param>
+            <param name="btnBack"></param>
+            <param name="btnSave"></param>
+            <param name="txtUser"></param>
+            <param name="txtNotes"></param>
+            <param name="txtDaySpan"></param>
+            <param name="ddlRedirectMode"></param>
+            <param name="cbEmail"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseFlowInfo.RedirectSaveClick(MyQuery.Utils.TextBoxVal,MyQuery.Utils.TextBoxVal,MyQuery.Utils.TextBoxVal,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.CheckBox)">
+            <summary>
+            转办 提交事件
+            </summary>
+            <param name="txtUser"></param>
+            <param name="txtNotes"></param>
+            <param name="txtDaySpan"></param>
+            <param name="ddlRedirectMode"></param>
+            <param name="cbEmail"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseFlowInfo.NextDoPageLoad(MyQuery.WFWork.FlowInfo,System.Web.UI.HtmlControls.HtmlGenericControl,System.Web.UI.WebControls.HyperLink)">
+            <summary>
+            下一步做什么 页面初始化
+            </summary>
+            <param name="FlowInfo1"></param>
+            <param name="divInfo"></param>
+            <param name="hlBack"></param>
+        </member>
+        <member name="T:MyQuery.WFWork.FlowButton">
+            <summary>
+            工作流按钮控件 推荐继承MyQuery.Work.BasePage或MyQuery.WFWork.BaseExpand
+            使用注意：1、在Page_Load的!Page.IsPostBack中必须执行DataBind代码
+            2、需要执行客户端验证脚本的 必须在DataBind之前给ValidateScript赋值
+            3、在Page_Load的中必须执行if (IsPostBack 且 dealWF.ProcessId == 0) {  dealWF.ProcessName = "流程名称后缀";}
+            4、自定义事件必须在Page_Load的Page.IsPostBack中委托 事件的执行顺序为:BeforeSave(需要保存时)->Before自定义事件->封装的按钮事件->自定义按钮事件
+            by 贾世义 2011-8-31 
+            </summary>	
+        </member>
+        <member name="M:MyQuery.WFWork.FlowButton.DataBind">
+            <summary>
+            绑定生成按钮控件(非PostBack)
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.FlowButton.InitButtons">
+            <summary>
+            生成流程处理按钮
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.FlowButton.DataBind(System.Boolean)">
+            <summary>
+            绑定生成按钮控件（PostBack时使用，参数true时重新生成按钮)
+            </summary>
+            <param name="raiseOnDataBinding">是否引起子控件（按钮控件的绑定事件）</param>
+        </member>
+        <member name="M:MyQuery.WFWork.FlowButton.registerClientScriptApprove(System.Boolean)">
+            <summary>
+            注册审批的脚本
+            <param name="isSelect">是否有下拉列表</param>
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.FlowButton.RaisePostBackEvent(System.String)">
+            <summary>
+            回发处理
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.FlowButton.dealClick(System.Collections.ArrayList,MyQuery.WFWork.Instance[])">
+            <summary>
+            处理 自定义处理后保存实例
+            </summary>
+            <param name="MySqls"></param>
+            <param name="insts"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.FlowButton.SaveData">
+            <summary>
+            执行保存数据处理（包括BeforeSave和AfterSave）
+            注意 下一步、转办和回退已经执行了保存数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.FlowButton.saveData(System.Collections.ArrayList)">
+            <summary>
+            保存数据
+            </summary>
+            <param name="MySqls"></param>
+            <returns>错误信息</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.FlowButton.sendMessage(MyQuery.WFWork.ModelProcessStatus)">
+            <summary>
+            发送流程状态通知邮件
+            </summary>
+            <param name="processStatus"></param>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowButton.NextUsers">
+            <summary>
+            下一步处理人员，当非空时按此创建下一步任务
+            注意必须包括id（账号）和email（邮件）列
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowButton.TagKey">
+            <summary>
+            重写最外层标签，默认为div
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowButton.Message">
+            <summary>
+            设置处理方法需要输出的提示信息
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowButton.FlowDeal">
+            <summary>
+            工作流处理对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowButton.ValidateScript">
+            <summary>
+            获取设置 需注册的按钮验证脚本 脚本必须返回true或false
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowButton.CssClassEdit">
+            <summary>
+            编辑区域div的class
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowButton.CssClassNote">
+            <summary>
+            交办说明区域div的class
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowButton.CssClassButton">
+            <summary>
+            按钮的class
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowButton.IsHasSave">
+            <summary>
+            获取设置 是否已经执行保存
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowButton.IsNext">
+            <summary>
+            设置是否有下一步按钮
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowButton.HelpTip">
+            <summary>
+            设置帮助提示按钮内容
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.BeforeProcessCreate">
+            <summary>
+            创建流程前事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.BeforeSave">
+            <summary>
+            保存 前事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.BeforeNext">
+            <summary>
+            下一步 前事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.BeforeDelete">
+            <summary>
+            取消 前事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.BeforeBack">
+            <summary>
+            回退 前事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.BeforeSuspend">
+            <summary>
+            挂起 前事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.BeforeRedirect">
+            <summary>
+            转办 前事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.BeforeReplay">
+            <summary>
+            答复 前事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.BeforeFinish">
+            <summary>
+            结束 前事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.DealNext">
+            <summary>
+            下一步处理事件（定义后替代封装的下一步处理 并不再进入下一步页面）
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.DealBack">
+            <summary>
+            回退处理事件（定义后替代封装的回退处理 并不再进入回退页面）
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.DealDelete">
+            <summary>
+            作废处理事件（定义后替代封装的作废处理）
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.DealFinish">
+            <summary>
+            结束处理事件（定义后替代封装的结束处理）
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.DealRedirect">
+            <summary>
+            转办处理事件（定义后替代封装的转办处理 并不再进入转办页面）
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.DealReplay">
+            <summary>
+            回复处理事件（定义后替代封装的回复处理）
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.DealSave">
+            <summary>
+            保存处理事件（定义后替代封装的保存处理）
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.DealSuspend">
+            <summary>
+            挂起处理事件（定义后替代封装的挂起处理）
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.DealCreate">
+            <summary>
+            自定义扩展按钮事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.AfterProcessCreate">
+            <summary>
+            创建流程后事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.AfterSave">
+            <summary>
+            保存 后事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.AfterNext">
+            <summary>
+            下一步 后事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.AfterRedirect">
+            <summary>
+            转办 后事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.AfterBack">
+            <summary>
+            回退 后事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.AfterReplay">
+            <summary>
+            答复 后事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.AfterDelete">
+            <summary>
+            取消 后事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.AfterSuspend">
+            <summary>
+            挂起 后事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.FlowButton.AfterFinish">
+            <summary>
+            结束 后事件
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.FlowButton.BeforeEventDelegate">
+            <summary>
+            处理前事件
+            </summary>
+            <param name="MySqls">MySqlParameters集合的对象列表 在按钮事件是执行</param>
+            <returns>返回错误提示信息 非空则中断执行并Alert出提示</returns>
+        </member>
+        <member name="T:MyQuery.WFWork.FlowButton.DealEventDelegate">
+            <summary>
+            处理事件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.WFWork.FlowButton.AfterEventDelegate">
+            <summary>
+            处理后事件
+            </summary>
+            <param name="instance">当前实例</param>
+            <returns>返回错误提示信息 非空则中断继续执行并Alert出提示</returns>
+        </member>
+        <member name="T:MyQuery.WFWork.Node">
+            <summary>
+            表示形状的任务
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Node.#ctor(System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="x">任务矩形的中心X坐标</param>
+            <param name="y">任务矩形的中心Y坐标</param>
+        </member>
+        <member name="P:MyQuery.WFWork.Node.Rect">
+            <summary>
+            获取或设置任务的矩形,默认情况下矩形的大小为6个像素
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.Links">
+            <summary>
+            表示 Link 的集合
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Links.RemoveAt(System.Int32)">
+            <summary>
+            从集合中指定的索引位置移除对象
+            </summary>
+            <param name="index">对象在集合中的索引位置</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Links.Insert(System.Int32,MyQuery.WFWork.Link)">
+            <summary>
+            在集合中指定的索引位置插入对象
+            </summary>
+            <param name="index">对象在集合中的索引位置</param>
+            <param name="value">要插入到集合中的对象</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Links.Remove(MyQuery.WFWork.Link)">
+            <summary>
+            在集合中移除指定对象
+            </summary>
+            <param name="value">要从集合中移除的对象</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Links.Contains(MyQuery.WFWork.Link)">
+            <summary>
+            判断集合中是否包含某个对象
+            </summary>
+            <param name="value">判断是否存在于集合中的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Links.Clear">
+            <summary>
+            清除集合中的所有元素
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Links.IndexOf(MyQuery.WFWork.Link)">
+            <summary>
+            获取集合中某个对象的索引位置
+            </summary>
+            <param name="value">要对其进行索引的对象</param>
+            <returns>集合中某个对象的索引位置</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Links.Add(MyQuery.WFWork.Link)">
+            <summary>
+            向集合中添加元素
+            </summary>
+            <param name="value">要添加到集合的对象</param>
+            <returns>返回新添加的对象在集合中的位置</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Links.CopyTo(System.Array,System.Int32)">
+            <summary>
+            从特定 Array 索引处开始将集合的元素复制到 Array 中
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Links.GetEnumerator">
+            <summary>
+            返回可循环访问集合的枚举数
+            </summary>
+            <returns>可用于循环访问集合的 IEnumerator对象</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Links.GetNewId">
+            <summary>
+            获得新增Link的Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.WFWork.Links.IsReadOnly">
+            <summary>
+            获取集合是否已读
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Links.Item(System.Int32)">
+            <summary>
+            获取集合中位于索引位置的对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Links.IsFixedSize">
+            <summary>
+            判断集合是否具有固定大小
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Links.IsSynchronized">
+            <summary>
+            指示对集合的访问是否同步（线程安全）
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Links.Count">
+            <summary>
+            获取集合中包含的元素数
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Links.SyncRoot">
+            <summary>
+            获取可用于同步对集合的访问的对象
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.TimerTaskTimeOut">
+            <summary>
+            超时任务实例自动处理
+            by 贾世义 2011-07-01
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.TimerTaskTimeOut.Run">
+            <summary>
+            执行
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.FlowInfo">
+            <summary>
+            工作流显示信息控件
+            by 贾世义 2011-8-31
+            </summary>	
+        </member>
+        <member name="M:MyQuery.WFWork.FlowInfo.DataBind">
+            <summary>
+            绑定生成控件
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.FlowInfo.DataBind(System.Boolean)">
+            <summary>
+            绑定生成控件
+            </summary>
+            <param name="raiseOnDataBinding"></param>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowInfo.TagKey">
+            <summary>
+            重写最外层标签，默认为div
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowInfo.FlowDeal">
+            <summary>
+            工作流处理对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.FlowInfo.TaskName">
+            <summary>
+            任务名称 当非当前任务名称时需赋值
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.BaseTask">
+            <summary>
+            针对MyTask的封装
+            by 贾世义 2011-8-31 
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseTask.PageLoad(MyQuery.MyControl.MyInputs,System.Web.UI.HtmlControls.HtmlGenericControl,System.Web.UI.HtmlControls.HtmlGenericControl,MyQuery.WFWork.FlowInfo,MyQuery.WFWork.FlowButton)">
+            <summary>
+            页面初始化
+            </summary>
+            <param name="MyInputs1"></param>
+            <param name="divPrint1"></param>
+            <param name="divPrint2"></param>
+            <param name="FlowInfo1"></param>
+            <param name="FlowButton1"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseTask.FlowButton1_AfterProcessCreate(MyQuery.WFWork.Instance)">
+            <summary>
+            创建流程时写入业务表
+            </summary>
+            <param name="inst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseTask.FlowButton1_BeforeSave(System.Collections.ArrayList)">
+            <summary>
+            数据封装
+            </summary>
+            <param name="MySqls"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseTask.FlowButton1_AfterSave(MyQuery.WFWork.Instance)">
+            <summary>
+            执行扩展语句
+            </summary>
+            <param name="inst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseTask.FlowButton1_DealCreate">
+            <summary>
+            扩展按钮
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseTask.FlowButton1_DealDelete">
+            <summary>
+            删除处理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseTask.FlowButton1_DealNext">
+            <summary>
+            配置了sql则按照sql获取的人员处理下一步准备
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseTask.IsMainSub">
+            <summary>
+            是否为主子表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseTask.GetSubPageSize">
+            <summary>
+            获得内嵌iframe列表指定的记录数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseTask.GetSubHeight">
+            <summary>
+            获得内嵌iframe的高度，默认300px
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseTask.GetUrlParams">
+            <summary>
+            获得传递参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.WFWork.Tokens">
+            <summary>
+            表示 Token 的集合
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Tokens.RemoveAt(System.Int32)">
+            <summary>
+            从集合中指定的索引位置移除对象
+            </summary>
+            <param name="index">对象在集合中的索引位置</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Tokens.Insert(System.Int32,MyQuery.WFWork.Token)">
+            <summary>
+            在集合中指定的索引位置插入对象
+            </summary>
+            <param name="index">对象在集合中的索引位置</param>
+            <param name="value">要插入到集合中的对象</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Tokens.Remove(MyQuery.WFWork.Token)">
+            <summary>
+            在集合中移除指定对象
+            </summary>
+            <param name="value">要从集合中移除的对象</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Tokens.Contains(MyQuery.WFWork.Token)">
+            <summary>
+            判断集合中是否包含某个对象
+            </summary>
+            <param name="value">判断是否存在于集合中的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Tokens.Clear">
+            <summary>
+            清除集合中的所有元素
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Tokens.IndexOf(MyQuery.WFWork.Token)">
+            <summary>
+            获取集合中某个对象的索引位置
+            </summary>
+            <param name="value">要对其进行索引的对象</param>
+            <returns>集合中某个对象的索引位置</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Tokens.Add(MyQuery.WFWork.Token)">
+            <summary>
+            向集合中添加元素
+            </summary>
+            <param name="value">要添加到集合的对象</param>
+            <returns>返回新添加的对象在集合中的位置</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Tokens.CopyTo(System.Array,System.Int32)">
+            <summary>
+            从特定 Array 索引处开始将集合的元素复制到 Array 中
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Tokens.GetEnumerator">
+            <summary>
+            返回可循环访问集合的枚举数
+            </summary>
+            <returns>可用于循环访问集合的 IEnumerator对象</returns>
+        </member>
+        <member name="P:MyQuery.WFWork.Tokens.IsReadOnly">
+            <summary>
+            获取集合是否已读
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Tokens.Item(System.Int32)">
+            <summary>
+            获取集合中位于索引位置的对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Tokens.IsFixedSize">
+            <summary>
+            判断集合是否具有固定大小
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Tokens.IsSynchronized">
+            <summary>
+            指示对集合的访问是否同步（线程安全）
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Tokens.Count">
+            <summary>
+            获取集合中包含的元素数
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Tokens.SyncRoot">
+            <summary>
+            获取可用于同步对集合的访问的对象
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.Condition">
+            <summary>
+            任务条件
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Condition.ConditionId">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Condition.Expression">
+            <summary>
+            表达式
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Condition.Operator">
+            <summary>
+            判断符号
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Condition.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Condition.ResultTask">
+            <summary>
+            导向任务
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.IWFunction">
+            <summary>
+            自动执行任务接口
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.IWFunction.Run">
+            <summary>
+            执行
+            </summary>
+            <returns>是否成功</returns>
+        </member>
+        <member name="P:MyQuery.WFWork.IWFunction.WFDeal">
+            <summary>
+            工作流处理对象
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.Token">
+            <summary>
+            Token 的摘要说明。
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Token.TokenID">
+            <summary>
+            令牌ID
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Token.TokenType">
+            <summary>
+            令牌类型
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Token.TokenRange">
+            <summary>
+            范围级别
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Token.TokenIndex">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.Tasks">
+            <summary>
+            表示 Task 的集合
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Tasks.RemoveAt(System.Int32)">
+            <summary>
+            从集合中指定的索引位置移除对象
+            </summary>
+            <param name="index">对象在集合中的索引位置</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Tasks.Insert(System.Int32,MyQuery.WFWork.Task)">
+            <summary>
+            在集合中指定的索引位置插入对象
+            </summary>
+            <param name="index">对象在集合中的索引位置</param>
+            <param name="value">要插入到集合中的对象</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Tasks.Remove(MyQuery.WFWork.Task)">
+            <summary>
+            在集合中移除指定对象
+            </summary>
+            <param name="value">要从集合中移除的对象</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Tasks.Contains(MyQuery.WFWork.Task)">
+            <summary>
+            判断集合中是否包含某个对象
+            </summary>
+            <param name="value">判断是否存在于集合中的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Tasks.Clear">
+            <summary>
+            清除集合中的所有元素
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Tasks.IndexOf(MyQuery.WFWork.Task)">
+            <summary>
+            获取集合中某个对象的索引位置
+            </summary>
+            <param name="value">要对其进行索引的对象</param>
+            <returns>集合中某个对象的索引位置</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Tasks.Add(MyQuery.WFWork.Task)">
+            <summary>
+            向集合中添加元素
+            </summary>
+            <param name="value">要添加到集合的对象</param>
+            <returns>返回新添加的对象在集合中的位置</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Tasks.CopyTo(System.Array,System.Int32)">
+            <summary>
+            从特定 Array 索引处开始将集合的元素复制到 Array 中
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Tasks.GetEnumerator">
+            <summary>
+            返回可循环访问集合的枚举数
+            </summary>
+            <returns>可用于循环访问集合的 IEnumerator对象</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Tasks.GetTask(System.Int32)">
+            <summary>
+            找到Task
+            </summary>
+            <param name="taskid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Tasks.IsExistTaskName(System.Int32,System.String)">
+            <summary>
+            任务名称是否已经存在
+            </summary>
+            <param name="taskid"></param>
+            <param name="taskname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Tasks.GetNewId">
+            <summary>
+            获得新增Task的Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.WFWork.Tasks.IsReadOnly">
+            <summary>
+            获取集合是否已读
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Tasks.Item(System.Int32)">
+            <summary>
+            获取集合中位于索引位置的对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Tasks.IsFixedSize">
+            <summary>
+            判断集合是否具有固定大小
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Tasks.IsSynchronized">
+            <summary>
+            指示对集合的访问是否同步（线程安全）
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Tasks.Count">
+            <summary>
+            获取集合中包含的元素数
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Tasks.SyncRoot">
+            <summary>
+            获取可用于同步对集合的访问的对象
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.Nodes">
+            <summary>
+            表示 Node 的集合
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Nodes.RemoveAt(System.Int32)">
+            <summary>
+            从集合中指定的索引位置移除对象
+            </summary>
+            <param name="index">对象在集合中的索引位置</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Nodes.Insert(System.Int32,MyQuery.WFWork.Node)">
+            <summary>
+            在集合中指定的索引位置插入对象
+            </summary>
+            <param name="index">对象在集合中的索引位置</param>
+            <param name="value">要插入到集合中的对象</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Nodes.Remove(MyQuery.WFWork.Node)">
+            <summary>
+            在集合中移除指定对象
+            </summary>
+            <param name="value">要从集合中移除的对象</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Nodes.Contains(MyQuery.WFWork.Node)">
+            <summary>
+            判断集合中是否包含某个对象
+            </summary>
+            <param name="value">判断是否存在于集合中的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Nodes.Clear">
+            <summary>
+            清除集合中的所有元素
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Nodes.IndexOf(MyQuery.WFWork.Node)">
+            <summary>
+            获取集合中某个对象的索引位置
+            </summary>
+            <param name="value">要对其进行索引的对象</param>
+            <returns>集合中某个对象的索引位置</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Nodes.Add(MyQuery.WFWork.Node)">
+            <summary>
+            向集合中添加元素
+            </summary>
+            <param name="value">要添加到集合的对象</param>
+            <returns>返回新添加的对象在集合中的位置</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Nodes.CopyTo(System.Array,System.Int32)">
+            <summary>
+            从特定 Array 索引处开始将集合的元素复制到 Array 中
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Nodes.GetEnumerator">
+            <summary>
+            返回可循环访问集合的枚举数
+            </summary>
+            <returns>可用于循环访问集合的 IEnumerator对象</returns>
+        </member>
+        <member name="P:MyQuery.WFWork.Nodes.IsReadOnly">
+            <summary>
+            获取集合是否已读
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Nodes.Item(System.Int32)">
+            <summary>
+            获取集合中位于索引位置的对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Nodes.IsFixedSize">
+            <summary>
+            判断集合是否具有固定大小
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Nodes.IsSynchronized">
+            <summary>
+            指示对集合的访问是否同步（线程安全）
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Nodes.Count">
+            <summary>
+            获取集合中包含的元素数
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Nodes.SyncRoot">
+            <summary>
+            获取可用于同步对集合的访问的对象
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.Model">
+            <summary>
+            用图形化界面表示业务流程的控件
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.Model.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.#ctor(System.Boolean)">
+            <summary>
+            web调用构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.ProcessCommandKey(System.Windows.Forms.Message@,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            处理键盘命令
+            </summary>
+            <param name="msg">消息参数</param>
+            <param name="e">键盘命令参数</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.AddTask(System.Windows.Forms.DragEventArgs)">
+            <summary>
+            添加任务节点
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.AddTask(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            添加任务任务
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.DelTask(MyQuery.WFWork.Task)">
+            <summary>
+            删除任务任务
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.BeginMoveTask(MyQuery.WFWork.Task,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            开始移动任务任务
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.MovingTask(MyQuery.WFWork.Task,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            正在移动任务任务
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.EndMoveTask(MyQuery.WFWork.Task,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            结束移动任务项目
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.BeginDrawLink(MyQuery.WFWork.Task,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            开始绘制连接线
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.DrawingLink(MyQuery.WFWork.Model,System.Windows.Forms.DragEventArgs)">
+            <summary>
+            正在绘制连接线
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.DrawingLink(MyQuery.WFWork.Task,System.Windows.Forms.DragEventArgs)">
+            <summary>
+            正在绘制连接线
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.EndDrawLink(MyQuery.WFWork.Model,System.Windows.Forms.DragEventArgs)">
+            <summary>
+            结束绘制连接线
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.EndDrawLink(MyQuery.WFWork.Task,System.Windows.Forms.DragEventArgs)">
+            <summary>
+            结束绘制连接线
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.PickLink(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            拾取连接线
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.MoveLink(MyQuery.WFWork.Task,System.Int32,System.Int32)">
+            <summary>
+            重新绘制连接线
+            </summary>
+            <param name="task">移动的任务</param>
+            <param name="lastX">任务的历史Left坐标</param>
+            <param name="lastY">任务的历史Top坐标</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.DelLink">
+            <summary>
+            删除连接线
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.DrawReversibleLine(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            绘制异或连接线
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.DrawReversibleLine(System.Drawing.Point[])">
+            <summary>
+            绘制异或连接线
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.DrawReversibleRect(System.Drawing.Rectangle)">
+            <summary>
+            绘制异或矩形
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.GetAnchor(MyQuery.WFWork.Task,System.Int32,System.Int32)">
+            <summary>
+            获取连接线锚点
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.GetLink(MyQuery.WFWork.Task,System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            获取连接线
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.GetLink(MyQuery.WFWork.Task,MyQuery.WFWork.Task,System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            获取连接线
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnTaskCreated(System.Object,MyQuery.WFWork.TaskEventArgs)">
+            <summary>
+            添加任务事件
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnTaskDeleted(System.Object,MyQuery.WFWork.TaskEventArgs)">
+            <summary>
+            删除任务事件
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnTaskMoved(System.Object,MyQuery.WFWork.TaskEventArgs)">
+            <summary>
+            移动任务事件
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnLinkCreated(System.Object,MyQuery.WFWork.LinkEventArgs)">
+            <summary>
+            添加连接事件
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnLinkDeleted(System.Object,MyQuery.WFWork.LinkEventArgs)">
+            <summary>
+            删除连接事件
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            OnMouseDown
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            OnMouseMove
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            OnMouseUp
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnDragEnter(System.Windows.Forms.DragEventArgs)">
+            <summary>
+            OnDragEnter
+            </summary>
+            <param name="drgevent"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnDragLeave(System.EventArgs)">
+            <summary>
+            OnDragLeave
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnDragOver(System.Windows.Forms.DragEventArgs)">
+            <summary>
+            OnDragOver
+            </summary>
+            <param name="drgevent"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnDragDrop(System.Windows.Forms.DragEventArgs)">
+            <summary>
+            OnDragDrop
+            </summary>
+            <param name="drgevent"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnGiveFeedback(System.Windows.Forms.GiveFeedbackEventArgs)">
+            <summary>
+            OnGiveFeedback
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            OnPaint
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.task_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            task_MouseEnter
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.task_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            task_MouseLeave
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.Task_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Task_MouseDown
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.Task_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Task_MouseMove
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.Task_MouseUp(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Task_MouseUp
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.Task_DragEnter(System.Object,System.Windows.Forms.DragEventArgs)">
+            <summary>
+            Task_DragEnter
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.Task_DragLeave(System.Object,System.EventArgs)">
+            <summary>
+            Task_DragLeave
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.Task_DragOver(System.Object,System.Windows.Forms.DragEventArgs)">
+            <summary>
+            Task_DragOver
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.Task_DragDrop(System.Object,System.Windows.Forms.DragEventArgs)">
+            <summary>
+            Task_DragDrop
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.Task_GiveFeedback(System.Object,System.Windows.Forms.GiveFeedbackEventArgs)">
+            <summary>
+            Task_GiveFeedback
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.GetModelFromDataSet(System.Data.DataSet)">
+            <summary>
+            根据数据实例化
+            </summary>
+            <param name="ds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.dealLinks(MyQuery.DAL.Dao,System.Boolean)">
+            <summary>
+            保存连线
+            </summary>
+            <param name="dao"></param>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.dealTasks(MyQuery.DAL.Dao,System.Boolean)">
+            <summary>
+            保存任务集合
+            </summary>
+            <param name="dao"></param>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.dealFields(MyQuery.DAL.Dao,System.Boolean)">
+            <summary>
+            保存字段集合
+            </summary>
+            <param name="dao"></param>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.setModelParameters(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            设定保存模型参数
+            </summary>
+            <param name="mySql"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.Save(MyQuery.DAL.Dao,System.Boolean)">
+            <summary>
+            保存模型
+            </summary>
+            <param name="dao">数据源</param>
+            <param name="isAdd">是否新增</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.GetNextId(MyQuery.DAL.Dao)">
+            <summary>
+            获得最大编号+1
+            </summary>
+            <param name="dao"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Model.DealFirstTask(MyQuery.WFWork.Task)">
+            <summary>
+            处理判断 第一个普通任务
+            </summary>
+            <param name="task">非空时判断</param>
+            <returns>是否为开始任务</returns>
+        </member>
+        <member name="E:MyQuery.WFWork.Model.TaskCreated">
+            <summary>
+            任务创建事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.Model.TaskDeleted">
+            <summary>
+            任务删除事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.Model.TaskMoved">
+            <summary>
+            任务移动事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.Model.LinkCreated">
+            <summary>
+            连线创建事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.WFWork.Model.LinkDeleted">
+            <summary>
+            连线删除事件
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.ModelID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.ModelClass">
+            <summary>
+            类型id
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.ModelStatus">
+            <summary>
+            状态 0正常
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.ModelVersion">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.CreatedBy">
+            <summary>
+            创建者id
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.UpdatedBy">
+            <summary>
+            修改者id
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.CheckoutBy">
+            <summary>
+            签出（暂未用）
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.ModelName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.ModelData">
+            <summary>
+            暂未用
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.ModelMemo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.UpdatedTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.CheckoutTime">
+            <summary>
+            签出时间（暂未用）
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.CommandID">
+            <summary>
+            添加对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.CommandType">
+            <summary>
+            添加对象 类型
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.CurrentTask">
+            <summary>
+            当前任务
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.CurrentLink">
+            <summary>
+            当前连线
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.Tasks">
+            <summary>
+            任务集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.Links">
+            <summary>
+            连线集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.Fields">
+            <summary>
+            字段集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Model.IsSave">
+            <summary>
+            设置或获取 是否已经保存
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.Conditions">
+            <summary>
+            表示 Condition 的集合
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Conditions.RemoveAt(System.Int32)">
+            <summary>
+            从集合中指定的索引位置移除对象
+            </summary>
+            <param name="index">对象在集合中的索引位置</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Conditions.Remove(MyQuery.WFWork.Condition)">
+            <summary>
+            在集合中移除指定对象
+            </summary>
+            <param name="value">要从集合中移除的对象</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Conditions.Contains(MyQuery.WFWork.Condition)">
+            <summary>
+            判断集合中是否包含某个对象
+            </summary>
+            <param name="value">判断是否存在于集合中的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Conditions.Clear">
+            <summary>
+            清除集合中的所有元素
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Conditions.IndexOf(MyQuery.WFWork.Condition)">
+            <summary>
+            获取集合中某个对象的索引位置
+            </summary>
+            <param name="value">要对其进行索引的对象</param>
+            <returns>集合中某个对象的索引位置</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Conditions.Add(MyQuery.WFWork.Condition,System.Boolean)">
+            <summary>
+            向集合中添加元素
+            </summary>
+            <param name="value">要添加到集合的对象</param>
+            <param name="isNew">是否处理新增</param>
+            <returns>返回新添加的对象在集合中的位置</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Conditions.CopyTo(System.Array,System.Int32)">
+            <summary>
+            从特定 Array 索引处开始将集合的元素复制到 Array 中
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Conditions.GetEnumerator">
+            <summary>
+            返回可循环访问集合的枚举数
+            </summary>
+            <returns>可用于循环访问集合的 IEnumerator对象</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Conditions.GetNewId">
+            <summary>
+            获得新增Condition的Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.WFWork.Conditions.IsReadOnly">
+            <summary>
+            获取集合是否已读
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Conditions.Item(System.Int32)">
+            <summary>
+            获取集合中位于索引位置的对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Conditions.IsFixedSize">
+            <summary>
+            判断集合是否具有固定大小
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Conditions.IsSynchronized">
+            <summary>
+            指示对集合的访问是否同步（线程安全）
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Conditions.Count">
+            <summary>
+            获取集合中包含的元素数
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Conditions.SyncRoot">
+            <summary>
+            获取可用于同步对集合的访问的对象
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.LinkEventHandler">
+            <summary>
+            连接事件委托
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.LinkEventArgs">
+            <summary>
+            连接事件参数
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.LinkEventArgs.#ctor(MyQuery.WFWork.Link)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="link"></param>
+        </member>
+        <member name="P:MyQuery.WFWork.LinkEventArgs.CurrentLink">
+            <summary>
+            当前连接
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.FlowInfoDesigner">
+            <summary>
+            FlowInfo设计展现类
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.FlowInfoDesigner.GetDesignTimeHtml">
+            <summary>
+            GetDesignTimeHtml
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.WFWork.Field">
+            <summary>
+            字段
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Field.FieldID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Field.FieldName">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Field.DisplayName">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.TaskEventHandler">
+            <summary>
+            任务事件委托
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.TaskEventArgs">
+            <summary>
+            任务事件参数
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.TaskEventArgs.#ctor(MyQuery.WFWork.Task)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="P:MyQuery.WFWork.TaskEventArgs.CurrentTask">
+            <summary>
+            当前任务
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.WorkFlowDeal">
+            <summary>
+            工作流后台处理封装
+            by 贾世义 2011-6-16
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WorkFlowDeal.NEXTDOURL">
+            <summary>
+            下一步处理导航页面
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WorkFlowDeal.BackMode">
+            <summary>
+            回退处理模式
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WorkFlowDeal.IsMessage">
+            <summary>
+            是否默认发送消息
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userid">用户id</param>
+            <param name="modelid">模型id</param>
+            <param name="taskid">任务id</param>
+            <param name="processid">流程id</param>
+            <param name="instanceid">实例id</param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.#ctor(System.String,System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userid">用户id</param>
+            <param name="querystrings">Page.Request.QueryString</param>
+            <param name="processid">缓存的processid</param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetTask(System.Data.DataRow)">
+            <summary>
+            获得Task对象
+            </summary>
+            <param name="drTask"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetField(System.Data.DataRow)">
+            <summary>
+            获得Field对象
+            </summary>
+            <param name="dr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetScalar(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            根据MySqlParameters对象执行查询，并返回查询结果集中的第一行，第一列的值,忽略其他列和行
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.SqlExecute(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            根据MySqlParameters对象在数据库中执行SQl操作
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.SetModelInfo">
+            <summary>
+            获得模型名称等信息
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetTask(System.Int32)">
+            <summary>
+            根据id获得任务
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetInstance(System.Int32)">
+            <summary>
+            根据id获得实例
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetProcessStatus(System.Int32)">
+            <summary>
+            根据id获得流程状态
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.SendMessage(System.String)">
+            <summary>
+            给所有实例用户发邮件
+            </summary>
+            <param name="mailContent"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.SendMessage(System.String,System.String)">
+            <summary>
+            给用户发提醒邮件
+            </summary>
+            <param name="mailContent"></param>
+            <param name="userids"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.SendMessage(System.String,System.String[],System.String)">
+            <summary>
+            给用户发提醒邮件 错误忽略
+            </summary>
+            <param name="filename">在WorkFlow/Mail目录下的邮件配置文件（不含扩展名)</param>
+            <param name="strs">替换模板中的{n}的集合</param>
+            <param name="userids"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.SendMessageCreater(System.String)">
+            <summary>
+            给流程创建者发邮件 错误忽略
+            </summary>
+            <param name="msg">替换WorkFlow/Mail/Creater模板中的{0}</param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.SendMessage(System.Data.DataRowCollection,System.String)">
+            <summary>
+            下一步任务提醒邮件 错误忽略
+            </summary>
+            <param name="drUsers">用户表行集合 必须包含email列</param>
+            <param name="nextTaskName">下一步任务名称</param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetUrl(System.String)">
+            <summary>
+            获得任务URL
+            </summary>
+            <param name="taskPage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetUrl(System.String,System.String,System.String)">
+            <summary>
+            获得任务URL
+            </summary>
+            <param name="taskPage"></param>
+            <param name="taskid"></param>
+            <param name="instanceid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.IsUserExist(System.String)">
+            <summary>
+            判断用户是否存在
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.CreateProcessInstance(System.Collections.ArrayList,System.String)">
+            <summary>
+            创建流程和实例
+            </summary>
+            <param name="MySqls">执行语句的MySqlParameters集合</param>
+            <param name="processname">流程名称</param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.CreateProcessInstance(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            创建流程和实例
+            </summary>
+            <param name="modelid"></param>
+            <param name="taskid"></param>
+            <param name="processid"></param>
+            <param name="processname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.CreateInstance">
+            <summary>
+            获得新建的实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.CreateInstance(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            创建新实例
+            </summary>
+            <param name="modelid"></param>
+            <param name="taskid"></param>
+            <param name="processid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.CreateInstance(MyQuery.WFWork.Instance)">
+            <summary>
+            创建指定实例
+            </summary>
+            <param name="inst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.CreateNextInstance(MyQuery.WFWork.Instance)">
+            <summary>
+            创建新流程实例
+            </summary>
+            <param name="instLast"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.CreateNextInstance(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            创建下一步处理实例
+            </summary>
+            <param name="taskid">下一步任务号</param>
+            <param name="nextUsers">人员 多个用,分割</param>
+            <param name="daySpan">时限</param>
+            <param name="notes">说明</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.CreateNextInstance(System.Int32)">
+            <summary>
+            按照给定的任务号并仿制已有的实例 结束当前实例
+            </summary>
+            <param name="taskid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.CreateNextInstance(System.Int32,MyQuery.WFWork.RedirectModes,System.Int32,System.String,System.Boolean,System.String)">
+            <summary>
+            退回到上一步实例
+            </summary>
+            <param name="instanceid">实例号</param>
+            <param name="redirectModes">处理限制</param>
+            <param name="limitDaySpan">限制天数</param>
+            <param name="notes">回退说明</param>
+            <param name="ismessage">是否发信息</param>
+            <param name="userName">当前用户姓名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.IsTaskBack(MyQuery.WFWork.Task)">
+            <summary>
+            判断下一步任务是否为退回任务
+            </summary>
+            <param name="nextTask">下一步任务</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.IsInstanceAllEnd">
+            <summary>
+            判断是否除本实例外 本任务的并行实例是否已经处理完毕
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.isInstanceAllEnd(System.String,System.Boolean)">
+            <summary>
+            判断是否除本实例外 任务的并行实例是否已经处理完毕
+            </summary>
+            <param name="taskid"></param>
+            <param name="isCurrent">是否传入任务，否为上联任务</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.getNextTask(MyQuery.Work.DataFrom,MyQuery.WFWork.Task,System.Boolean@)">
+            <summary>
+            获得当前任务的下一任务(当没有时返回null;当分支时可能多个;当不满足条件时返回空集合）
+            </summary>
+            <param name="dataFrom"></param>
+            <param name="currTask"></param>
+            <param name="isSkipCondition">是否有条件任务跳转</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.getRunTask(System.Object,System.Object,System.String)">
+            <summary>
+            执行任务并返回下一步任务
+            </summary>
+            <param name="ifunction"></param>
+            <param name="sql"></param>
+            <param name="taskid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.getNextTaskTable(System.String)">
+            <summary>
+            获得下一步任务表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetNextTask(MyQuery.Work.DataFrom,MyQuery.WFWork.Task@,System.Boolean@,System.Data.DataTable)">
+            <summary>
+            获得当前任务的下一任务 并根据任务类型做出处理
+            </summary>
+            <param name="dataFrom"></param>
+            <param name="currTask">传入当前任务，返回下一步任务 null时无下一步</param>
+            <param name="isSkipCondition">是否有条件任务跳转</param>
+            <param name="nextUsers">注意必须包括id（账号）和email（邮件）列</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetNextTask(MyQuery.Work.DataFrom,MyQuery.WFWork.Task@,System.Boolean@)">
+            <summary>
+            获得当前任务的下一任务 并根据任务类型做出处理
+            </summary>
+            <param name="dataFrom"></param>
+            <param name="currTask">传入当前任务，返回下一步任务 null时无下一步</param>
+            <param name="isSkipCondition">是否有条件任务跳转</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.createNext(MyQuery.Work.DataFrom,System.String,MyQuery.WFWork.Task,System.Boolean,System.Data.DataTable)">
+            <summary>
+            直接创建下一步任务
+            </summary>
+            <param name="dataFrom"></param>
+            <param name="notes"></param>
+            <param name="nextTask"></param>
+            <param name="isSkipCondition"></param>
+            <param name="nextUsers">注意必须包括id（账号）和email（邮件）列</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.IsNextEnd">
+            <summary>
+            判断下一步任务是否为结束任务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetWaitingUsers">
+            <summary>
+            获得待办人员列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.UpdateInstanceAcceptTime">
+            <summary>
+            更新实例接受时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.UpdateInstanceStatus">
+            <summary>
+            更新实例状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.SaveData(System.Collections.ArrayList,System.Boolean)">
+            <summary>
+            保存数据
+            </summary>
+            <param name="MySqls">MySqlParameters集合的对象列表 无数据不处理</param>
+            <param name="isInst">是否需要保存的实例</param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.SqlExecute(System.Collections.ArrayList)">
+            <summary>
+            批量执行mySql
+            </summary>
+            <param name="MySqls"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.SaveData(System.Collections.ArrayList,MyQuery.WFWork.Instance[])">
+            <summary>
+            保存数据 处理下一步实例
+            </summary>
+            <param name="MySqls">MySqlParameters集合的对象列表 无数据不处理</param>
+            <param name="insts">下一步实例集合</param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.UpdateProcessStatus(MyQuery.WFWork.ModelProcessStatus,System.String)">
+            <summary>
+            更新流程状态
+            </summary>
+            <param name="processStatus">状态</param>
+            <param name="notes">说明</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.UpdateProcessStatus(System.Collections.ArrayList,MyQuery.WFWork.ModelProcessStatus)">
+            <summary>
+            更新流程状态
+            </summary>
+            <param name="MySqls">MySqlParameters集合的对象列表 无数据不处理</param>
+            <param name="processStatus">状态</param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.EndProcess">
+            <summary>
+            流程结束
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.isSqlRun(System.String)">
+            <summary>
+            是否为语句，当IButtonDeal接口的方法时则执行
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetTaskUserSql(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获得指定任务的权限用户SQL
+            </summary>
+            <param name="modelid">模型id</param>
+            <param name="taskid">任务id</param>
+            <param name="processid">流程id</param>
+            <param name="creater">创建者（仅当processid=0是有效）</param>
+            <param name="userid">当前用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.getTaskUserSql">
+            <summary>
+            获得任务处理人员的sql
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetTaskUsers(System.String)">
+            <summary>
+            根据帐户获得用户数据
+            </summary>
+            <param name="userids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetTaskUsers(MyQuery.Work.DataFrom,System.Int32,System.String)">
+            <summary>
+            获得任务有权限的用户
+            </summary>
+            <param name="dataFrom"></param>
+            <param name="taskid">任务编号</param>
+            <param name="userid">当前人员</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetTaskUsers(MyQuery.Work.DataFrom,MyQuery.WFWork.Task@,System.String@)">
+            <summary>
+            获得下一步任务的处理人员
+            </summary>
+            <param name="dataFrom">数据源</param>
+            <param name="nextTask"></param>
+            <param name="message">传入数据为用户id，可传出消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetTaskUsers(MyQuery.Work.DataFrom,System.Int32)">
+            <summary>
+            按照任务获取曾经处理完成的人员
+            </summary>
+            <param name="dataFrom">数据源 null则取默认</param>
+            <param name="taskid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetTaskUsers(MyQuery.WFWork.Task,System.String)">
+            <summary>
+            获得任务的可执行人员
+            </summary>
+            <param name="task"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetInstanceId(System.String)">
+            <summary>
+            获得待处理的自己的实例
+            </summary>
+            <param name="taskid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.RedirectInstance(System.String)">
+            <summary>
+            自动转办处理
+            </summary>
+            <param name="userids"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetTaskName(System.String)">
+            <summary>
+            获得任务名称
+            </summary>
+            <param name="taskid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetCanBackInstance(System.Web.UI.WebControls.DropDownList,System.String)">
+            <summary>
+            获得可回退的实例列表
+            </summary>
+            <param name="ddl"></param>
+            <param name="taskid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetApproveExample">
+            <summary>
+            获得标准审批意见
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.UpdateProcessStatus(System.String,MyQuery.WFWork.ModelProcessStatus)">
+            <summary>
+            调整流程状态
+            </summary>
+            <param name="notes"></param>
+            <param name="newStatus"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.UpdateProcessCreater(System.String,System.String)">
+            <summary>
+            调整流程创建人
+            </summary>
+            <param name="notes"></param>
+            <param name="userid"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetModelDataSet">
+            <summary>
+            获得模型数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.ModelImport(System.String)">
+            <summary>
+            导入模型
+            </summary>
+            <param name="fileName">XML完整文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.ModelIsExit(System.Int32)">
+            <summary>
+            模型是否已经存在
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.UpdateProcessName(System.String)">
+            <summary>
+            更新流程名称
+            </summary>
+            <param name="value">名称后缀</param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetUpdateProcessName(System.String)">
+            <summary>
+            获得更新流程名称语句对象
+            </summary>
+            <param name="value">名称后缀</param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.DealDelete(System.String)">
+            <summary>
+            删除流程实例
+            </summary>
+            <param name="tableName">业务表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.InsertProcessData(System.String)">
+            <summary>
+            创建业务表 本流程的空数据
+            </summary>
+            <param name="tableName">业务表名</param>
+            <returns>null</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.UpdateProcessData(System.String,System.Int32,System.String)">
+            <summary>
+            更新加入流程id
+            </summary>
+            <param name="tableName">业务表名</param>
+            <param name="processid">流程号</param>
+            <param name="id">id的值（字段名也为id类型数值）</param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.UpdateProcessData(System.String,System.String)">
+            <summary>
+            更新加入流程id
+            </summary>
+            <param name="tableName">业务表名</param>
+            <param name="id">id的值（字段名也为id类型数值）</param>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.CreateNext(MyQuery.Work.DataFrom,System.String,System.Data.DataTable)">
+            <summary>
+            创建下一步任务
+            </summary>
+            <param name="dataFrom">数据源</param>
+            <param name="notes">注释</param>
+            <param name="nextUsers">注意必须包括id（账号）和email（邮件）列</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WorkFlowDeal.GetMessage(System.String)">
+            <summary>
+            获得相关提示
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.Dbtype">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.IsSqlParameter">
+            <summary>
+            获取或设置 SQL是否支持参数
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.UserId">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.ModelId">
+            <summary>
+            获取当前模型id
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.ModelName">
+            <summary>
+            获取当前模型名称
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.ModelMemo">
+            <summary>
+             获取当前模型备注
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.TaskId">
+            <summary>
+            获取或设置 当前任务id
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.Task">
+            <summary>
+            获取当前任务
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.ProcessId">
+            <summary>
+            获取或设置 当前流程id
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.ProcessName">
+            <summary>
+            获取流程名称 或添加附件的流程名称
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.ProcessStatus">
+            <summary>
+            当前实例状态
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.ProcessNotes">
+            <summary>
+            当前实例状态
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.ProcessCreaterEmail">
+            <summary>
+            创建者邮箱
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.ProcessCreaterID">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.ProcessCreaterName">
+            <summary>
+            创建者名称
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.InstanceId">
+            <summary>
+            获取或设置 当前实例id
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.Instance">
+            <summary>
+            获取当前实例
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.WorkFlowDeal.ModelFields">
+            <summary>
+            模型字段
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.WIN32">
+            <summary>
+            WIN32 API封装调用
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_BLACK">
+            <summary>
+            BLACK 1
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_NOTMERGEPEN">
+            <summary>
+            NOTMERGEPEN 2
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_MASKNOTPEN">
+            <summary>
+            MASKNOTPEN 3
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_NOTCOPYPEN">
+            <summary>
+            NOTCOPYPEN 4
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_MASKPENNOT">
+            <summary>
+            MASKPENNOT 5
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_NOT">
+            <summary>
+            NOT 6
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_XORPEN">
+            <summary>
+            XORPEN 7
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_NOTMASKPEN">
+            <summary>
+            NOTMASKPEN 8
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_MASKPEN">
+            <summary>
+            MASKPEN 9
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_NOTXORPEN">
+            <summary>
+            NOTXORPEN 10
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_NOP">
+            <summary>
+            NOP 11
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_MERGENOTPEN">
+            <summary>
+            MERGENOTPEN 12
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_COPYPEN">
+            <summary>
+            COPYPEN 13
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_MERGEPENNOT">
+            <summary>
+            MERGEPENNOT 14
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_MERGEPEN">
+            <summary>
+            MERGEPEN 15
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.R2_WHITE">
+            <summary>
+            WHITE 16
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.PS_SOLID">
+            <summary>
+            SOLID 0
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.PS_DASH">
+            <summary>
+            DASH 1
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.PS_DOT">
+            <summary>
+            DOT 2
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.PS_DASHDOT">
+            <summary>
+            DASHDOT 3
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.PS_DASHDOTDOT">
+            <summary>
+            DASHDOTDOT 4
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.PS_NULL">
+            <summary>
+            NULL 5
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.PS_INSIDEFRAME">
+            <summary>
+            INSIDEFRAME 6
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.BLACK_BRUSH">
+            <summary>
+            4
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.DKGRAY_BRUSH">
+            <summary>
+            3
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.GRAY_BRUSH">
+            <summary>
+            2
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.HOLLOW_BRUSH">
+            <summary>
+            8
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.LTGRAY_BRUSH">
+            <summary>
+            1
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.NULL_BRUSH">
+            <summary>
+            5
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.WHITE_BRUSH">
+            <summary>
+            0
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.BLACK_PEN">
+            <summary>
+            7
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.WHITE_PEN">
+            <summary>
+            6
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.ANSI_FIXED_FONT">
+            <summary>
+            11
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.ANSI_VAR_FONT">
+            <summary>
+            12
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.DEFAULT_GUI_FONT">
+            <summary>
+            17
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.OEM_FIXED_FONT">
+            <summary>
+            10
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.SYSTEM_FONT">
+            <summary>
+            13
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.SYSTEM_FIXED_FONT">
+            <summary>
+            16
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.DEVICE_DEFAULT_FONT">
+            <summary>
+            14
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.DEFAULT_PALETTE">
+            <summary>
+            15
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.COLOR_RED">
+            <summary>
+            红色
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.COLOR_GREEN">
+            <summary>
+            绿色
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.COLOR_BLUE">
+            <summary>
+            蓝色
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.COLOR_BLACK">
+            <summary>
+            黑色
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WIN32.SetROP2(System.IntPtr,System.Int32)">
+            <summary>
+            对WIN32API的封装
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WIN32.GetDC(System.IntPtr)">
+            <summary>
+            对WIN32API的封装
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WIN32.ReleaseDC(System.IntPtr,System.IntPtr)">
+            <summary>
+            对WIN32API的封装
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WIN32.SelectObject(System.IntPtr,System.IntPtr)">
+            <summary>
+            对WIN32API的封装
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WIN32.GetStockObject(System.Int32)">
+            <summary>
+            对WIN32API的封装
+            </summary>
+            <param name="nIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WIN32.CreatePen(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            对WIN32API的封装
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WIN32.CreateSolidBrush(System.Int32)">
+            <summary>
+            对WIN32API的封装
+            </summary>
+            <param name="crColor">颜色</param>
+            <returns>If the function succeeds, the return value identifies a logical brushIf the function fails, the return value is NULL.</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WIN32.LineTo(System.IntPtr,System.Int32,System.Int32)">
+            <summary>
+            对WIN32API的封装
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WIN32.MoveToEx(System.IntPtr,System.Int32,System.Int32,MyQuery.WFWork.WIN32.POINTAPI@)">
+            <summary>
+            对WIN32API的封装
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WIN32.Rectangle(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            对WIN32API的封装
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.WIN32.POINTAPI">
+            <summary>
+            对WIN32API的封装
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.POINTAPI.x">
+            <summary>
+            X
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.WIN32.POINTAPI.y">
+            <summary>
+            Y
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.Link">
+            <summary>
+            模型中的连接线
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Link.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Link.LinkID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Link.LinkData">
+            <summary>
+            连接点数据
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Link.LinkType">
+            <summary>
+            连接类型
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Link.LinkStyle">
+            <summary>
+            连接样式
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Link.LastTask">
+            <summary>
+            上联任务
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Link.NextTask">
+            <summary>
+            下联任务
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Link.LinkPath">
+            <summary>
+            连线图
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Link.Nodes">
+            <summary>
+            连线点集合
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.WFunctionDeal">
+            <summary>
+            执行方法处理类
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WFunctionDeal.IsFunction(System.String)">
+            <summary>
+            反射判断类是否实现IWFunction
+            by 贾世义 2012-9-19
+            </summary>
+            <param name="iFunction"></param>
+            <returns>错误 null时正确</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WFunctionDeal.FunctionCalc(System.String,MyQuery.WFWork.WorkFlowDeal)">
+            <summary>
+            反射实现接口IWFunction的类 返回是否（作为是否展示的依据）
+            </summary>
+            <param name="iFunction">完整类名 必须包括完整命名空间（包含.认为为类） 否则返回true</param>
+            <param name="wfDeal">当前工作流处理类</param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.WFWork.Task">
+            <summary>
+            模型中的项
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Task.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Task.AdjustLabel">
+            <summary>
+            调整标签位置
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Task.Task_LocationChanged(System.Object,System.EventArgs)">
+            <summary>
+            任务位置变化
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.TaskID">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.TaskName">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.TaskType">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.TaskStyle">
+            <summary>
+            风格
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.TaskMode">
+            <summary>
+            并行方式 0只需1人执行 1需全部
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.IsApprove">
+            <summary>
+            是否有审批意见框
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.BackMode">
+            <summary>
+            回退方式 0不允许 1只允许下步 2所有
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.TaskPage">
+            <summary>
+            编辑页面
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.TaskView">
+            <summary>
+            显示页面
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.TaskMemo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.CreateText">
+            <summary>
+            扩展按钮文本
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.SaveText">
+            <summary>
+            保存按钮文本
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.FinishText">
+            <summary>
+            结束按钮文本
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.RedirectText">
+            <summary>
+            转办按钮文本
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.BackText">
+            <summary>
+            退回按钮文本
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.DeleteText">
+            <summary>
+            删除按钮文本
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.DisposeText">
+            <summary>
+            释放按钮文本
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.PrintText">
+            <summary>
+            打印按钮文本
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.CreateVisibility">
+            <summary>
+            意见编辑是否可见
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.SaveVisibility">
+            <summary>
+            保存按钮是否可见
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.FinishVisibility">
+            <summary>
+            结束按钮是否可见
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.RedirectVisibility">
+            <summary>
+            转办按钮是否可见
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.BackVisibility">
+            <summary>
+            退回按钮是否可见
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.DeleteVisibility">
+            <summary>
+            删除按钮是否可见
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.DisposeVisibility">
+            <summary>
+            释放按钮按钮是否可见
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.PrintVisibility">
+            <summary>
+            打印按钮按钮是否可见
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.SelectAvailableUser">
+            <summary>
+            是否允许选择下一步审批人员
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.JumpWhenNoUser">
+            <summary>
+            当无人处理时是否跳过
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.JumpWhenSameUser">
+            <summary>
+            当后续同一人是否跳过
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.LimitDaySpan">
+            <summary>
+            限制天数
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.ScriptBody">
+            <summary>
+            计算脚本
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.CanRedirect">
+            <summary>
+            是否跳过 下一步人员选择的处理
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.LastTask">
+            <summary>
+            上一步任务
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.NextTasks">
+            <summary>
+            下一步任务集合 条件任务时可多个
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.Links">
+            <summary>
+            任务的连线
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.TaskLabel">
+            <summary>
+            任务标签
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.Tokens">
+            <summary>
+            令牌集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.Conditions">
+            <summary>
+            条件集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Task.Nodes">
+            <summary>
+            各位置点集合
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.BaseDetail">
+            <summary>
+            封装详述页面的基类
+            参数： model模型编号 task任务编号 process当前流程号 instance当前实例号
+            by 贾世义 2011-7-19 
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.BaseDetail.dealWF">
+            <summary>
+            工作流数据处理
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.BaseDetail.validateScript">
+            <summary>
+            需注册到按钮的客户端验证脚本
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseDetail.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad进行验证和处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseDetail.PageLoad(MyQuery.WFWork.FlowInfo,MyQuery.WFWork.FlowButton,System.Web.UI.HtmlControls.HtmlGenericControl,System.Web.UI.WebControls.PlaceHolder,System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            页面初始化
+            </summary>
+            <param name="FlowInfo1"></param>
+            <param name="FlowButton1"></param>
+            <param name="divTab"></param>
+            <param name="phContent"></param>
+            <param name="hrFirefox"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BaseDetail.FlowButton1_DealCreate">
+            <summary>
+            扩展按钮实现
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.WFWork.Common">
+            <summary>
+            常用公共功能封装
+            by 贾世义 2011-6-7 
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Common.GetCommonDataSet(MyQuery.DAL.Dao)">
+            <summary>
+            获得模型配置数据
+            </summary>
+            <param name="dao"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Common.GetModelDataSet(MyQuery.DAL.Dao,System.Int32)">
+            <summary>
+            获得模型配置数据
+            </summary>
+            <param name="dao"></param>
+            <param name="modelid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Common.IsExistTaskInstance(System.Int32,System.Int32)">
+            <summary>
+            是否有当前未完成的任务的实例数据
+            </summary>
+            <param name="modelid"></param>
+            <param name="taskid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Common.SetLogInfo(MyQuery.DAL.Dao,System.String,System.String)">
+            <summary>
+            记录日志
+            </summary>
+            <param name="dao"></param>
+            <param name="userid">用户</param>
+            <param name="des">内容</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Common.Check(MyQuery.WFWork.WorkFlowDeal)">
+            <summary>
+            初始化检查流程
+            </summary>
+            <param name="dealWF"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Common.InitFlow(MyQuery.WFWork.WorkFlowDeal,MyQuery.WFWork.FlowInfo,MyQuery.WFWork.FlowButton,System.String,System.Boolean)">
+            <summary>
+            初始化工作流对象
+            </summary>
+            <param name="dealWF"></param>
+            <param name="FlowInfo1"></param>
+            <param name="FlowButton1"></param>
+            <param name="processName"></param>
+            <param name="isPostBack"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Common.IsMeetCondition(System.Object,System.Object,System.Object,System.Object,MyQuery.WFWork.Fields,System.Data.DataTable,MyQuery.WFWork.TaskTypes,System.String,System.String,System.String,System.Boolean,MyQuery.Work.DataFrom,MyQuery.DAL.Dao)">
+            <summary>
+            是否满足条件
+            </summary>
+            <param name="sexpression"></param>
+            <param name="soperator"></param>
+            <param name="svalue"></param>
+            <param name="resulttask"></param>
+            <param name="fields"></param>
+            <param name="dtContent"></param>
+            <param name="nextTaskType"></param>
+            <param name="scriptBody"></param>
+            <param name="processid"></param>
+            <param name="instanceid"></param>
+            <param name="isAgree"></param>
+            <param name="dataFrom"></param>
+            <param name="dao"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Common.GetSql(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            获得SQL语句
+            </summary>
+            <param name="sql"></param>
+            <param name="processid"></param>
+            <param name="instanceid"></param>
+            <param name="isAgree"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.WFWork.CommandTypes">
+            <summary>
+            命令类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.CommandTypes.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.CommandTypes.Task">
+            <summary>
+            任务
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.CommandTypes.Link">
+            <summary>
+            连线
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.TaskTypes">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskTypes.Start">
+            <summary>
+            开始
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskTypes.End">
+            <summary>
+            结束
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskTypes.Task">
+            <summary>
+            普通
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskTypes.Condition">
+            <summary>
+            条件
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskTypes.Logo">
+            <summary>
+            汇聚
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskTypes.Sub">
+            <summary>
+            子流程
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskTypes.AutoRun">
+            <summary>
+            自动运行任务
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.TaskStyles">
+            <summary>
+            任务风格枚举，指定任务的文本标签的显示方式
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskStyles.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskStyles.Up">
+            <summary>
+            上
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskStyles.Down">
+            <summary>
+            下
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskStyles.Left">
+            <summary>
+            左
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskStyles.Right">
+            <summary>
+            右
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.TaskModes">
+            <summary>
+            并行方式  
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskModes.OnlyOne">
+            <summary>
+            只需1人执行
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskModes.All">
+            <summary>
+            需全部
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.TaskBackModes">
+            <summary>
+            回退方式
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskBackModes.Not">
+            <summary>
+            不允许
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskBackModes.Next">
+            <summary>
+            只允许下一步回退到该任务
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TaskBackModes.All">
+            <summary>
+            所有
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.LinkTypes">
+            <summary>
+            连接类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.LinkTypes.line">
+            <summary>
+            直线
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.LinkTypes.Angle">
+            <summary>
+            折线
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.LinkStyles">
+            <summary>
+            连接风格枚举，指定连接的线段格式
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.LinkStyles.Red">
+            <summary>
+            红色
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.LinkStyles.Green">
+            <summary>
+            绿色
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.LinkStyles.Blue">
+            <summary>
+            蓝色
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.TokenTypes">
+            <summary>
+            令牌类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenTypes.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenTypes.Dep">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenTypes.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenTypes.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenTypes.Group">
+            <summary>
+            组
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenTypes.Same">
+            <summary>
+            同任务
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenTypes.SQL">
+            <summary>
+            SQL语句条件
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.InstanceStatus">
+            <summary>
+            流程实例状态
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.InstanceStatus.Wating">
+            <summary>
+            等待
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.InstanceStatus.Deal">
+            <summary>
+            办理
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.InstanceStatus.Cancel">
+            <summary>
+            取消
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.InstanceStatus.End">
+            <summary>
+            结束
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.InstanceTypes">
+            <summary>
+            流程实例类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.InstanceTypes.Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.InstanceTypes.Redirect">
+            <summary>
+            转办
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.InstanceTypes.Back">
+            <summary>
+            退回
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.RedirectModes">
+            <summary>
+            流程转办模式
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.RedirectModes.None">
+            <summary>
+            非转办或默认处理
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.RedirectModes.MustReplay">
+            <summary>
+            必须转回
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.RedirectModes.NoReplay">
+            <summary>
+            不能转回
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.RedirectModes.NoRedirect">
+            <summary>
+            不能转办
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.RedirectModes.NoReplayRedirect">
+            <summary>
+            不能转回和转办
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.ModelProcessStatus">
+            <summary>
+            流程状态
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.ModelProcessStatus.Actived">
+            <summary>
+            活动的
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.ModelProcessStatus.Suspend">
+            <summary>
+            挂起的
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.ModelProcessStatus.Cancel">
+            <summary>
+            取消的
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.ModelProcessStatus.End">
+            <summary>
+            结束的
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.TokenRoleRanges">
+            <summary>
+            权限角色范围
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenRoleRanges.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenRoleRanges.CreaterDep">
+            <summary>
+            同创建者部门
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenRoleRanges.CurrentUserDep">
+            <summary>
+            同当时操作用户部门
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenRoleRanges.CurrentUserParentDep">
+            <summary>
+            当时操作用户上级部门
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenRoleRanges.CurrentUserChildDep">
+            <summary>
+            当时操作用户下级部门
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenRoleRanges.CurrentUserSubDep">
+            <summary>
+            当时操作用户本部门及所有下级
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenRoleRanges.CreaterParentDep">
+            <summary>
+            创建者上级部门
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenRoleRanges.CurrentUserParentOrDep">
+            <summary>
+            当时操作用户当前或上级部门
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.TokenRoleRanges.CurrentUserChildOrDep">
+            <summary>
+            当时操作用户当前或下级部门
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.Fields">
+            <summary>
+            表示 Field 的集合
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Fields.RemoveAt(System.Int32)">
+            <summary>
+            从集合中指定的索引位置移除对象
+            </summary>
+            <param name="index">对象在集合中的索引位置</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Fields.Remove(MyQuery.WFWork.Field)">
+            <summary>
+            在集合中移除指定对象
+            </summary>
+            <param name="value">要从集合中移除的对象</param>
+        </member>
+        <member name="M:MyQuery.WFWork.Fields.Contains(MyQuery.WFWork.Field)">
+            <summary>
+            判断集合中是否包含某个对象
+            </summary>
+            <param name="value">判断是否存在于集合中的对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Fields.Clear">
+            <summary>
+            清除集合中的所有元素
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.Fields.IndexOf(MyQuery.WFWork.Field)">
+            <summary>
+            获取集合中某个对象的索引位置
+            </summary>
+            <param name="value">要对其进行索引的对象</param>
+            <returns>集合中某个对象的索引位置</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Fields.Add(MyQuery.WFWork.Field,System.Boolean)">
+            <summary>
+            向集合中添加元素
+            </summary>
+            <param name="value">要添加到集合的对象</param>
+            <param name="isNew">是否处理新增</param>
+            <returns>返回新添加的对象在集合中的位置</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Fields.CopyTo(System.Array,System.Int32)">
+            <summary>
+            从特定 Array 索引处开始将集合的元素复制到 Array 中
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.Fields.GetEnumerator">
+            <summary>
+            返回可循环访问集合的枚举数
+            </summary>
+            <returns>可用于循环访问集合的 IEnumerator对象</returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Fields.IsExistDisplayName(System.Int32,System.String)">
+            <summary>
+            是否已存在相同的字段
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.Fields.GetNewId">
+            <summary>
+            获得新增Field的Id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.WFWork.Fields.IsReadOnly">
+            <summary>
+            获取集合是否已读
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Fields.Item(System.Int32)">
+            <summary>
+            获取集合中位于索引位置的对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Fields.IsFixedSize">
+            <summary>
+            判断集合是否具有固定大小
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Fields.IsSynchronized">
+            <summary>
+            指示对集合的访问是否同步（线程安全）
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Fields.Count">
+            <summary>
+            获取集合中包含的元素数
+            </summary>
+        </member>
+        <member name="P:MyQuery.WFWork.Fields.SyncRoot">
+            <summary>
+            获取可用于同步对集合的访问的对象
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.WFChart">
+            <summary>
+            流程图
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.WFChart.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="modelid"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.WFChart.#ctor(System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="modelid"></param>
+            <param name="processid"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.WFChart.getMaxWidth">
+            <summary>
+            获得最大宽度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.WFWork.WFChart.getMaxHeight">
+            <summary>
+            获得最大高度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.WFWork.WFChart.bitmap">
+            <summary>
+            位图
+            </summary>
+        </member>
+        <member name="T:MyQuery.WFWork.BasePage">
+            <summary>
+            封装工作流表页面的基类
+            参数： model模型编号 task任务编号 process当前流程号 instance当前实例号
+            by 贾世义 2011-7-19 
+            </summary>
+        </member>
+        <member name="F:MyQuery.WFWork.BasePage.dealWF">
+            <summary>
+            工作流数据处理
+            </summary>
+        </member>
+        <member name="M:MyQuery.WFWork.BasePage.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad进行验证和处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.WFWork.BasePage.InitFlow(MyQuery.WFWork.FlowInfo,MyQuery.WFWork.FlowButton,System.String)">
+            <summary>
+            工作流数据初始化
+            </summary>
+            <param name="FlowInfo1"></param>
+            <param name="FlowButton1"></param>
+            <param name="processName">标示本流程的名称 如姓名</param>
+        </member>
+    </members>
+</doc>

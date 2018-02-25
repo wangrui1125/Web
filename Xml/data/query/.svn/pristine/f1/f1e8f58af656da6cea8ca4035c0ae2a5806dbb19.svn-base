@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+
+  <myquery title="等待自己办理的工作流" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="false" pagervisible="true">
+    <select>
+      <column name="modelid" visible="false">
+        wf_task.modelid
+      </column>
+      <column name="taskid" visible="false">
+        wf_task.taskid
+      </column>
+      <column name="taskpage" visible="false">
+        wf_task.taskpage
+      </column>
+      <column name="processid" visible="false">
+        wf_instance.processid
+      </column>
+      <column name="instanceid" visible="false">
+        wf_instance.instanceid
+      </column>
+      <column name="processname" title="流程名称" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailWFProcess&amp;processid={0}&amp;modelid={1}" usefields="processid,modelid" target="_blank">
+        <![CDATA[wf_process.processname]]>
+      </column>
+      <column name="userid" title="发起人" sort="wf_process.userid" width="70px">
+        s_user.name
+      </column>
+      <column name="createdtime" title="创建日期" dataformat="{0:d}" width="80px">
+        <![CDATA[wf_process.createdtime]]>
+      </column>
+      <column name="taskname" title="当前任务" width="150px" sort="wf_task.taskname">
+        <![CDATA['<a href="../'+case when wf_task.taskview='' then wf_task.taskpage+'&view=1' else wf_task.taskview end 
+        +'&model=' +cast(wf_instance.modelId as varchar) + '&task='+ cast(wf_instance.taskId as varchar) + '&process=' + cast(wf_instance.processId as varchar) + '&instance=' + cast(wf_instance.instanceId as varchar)+'" target="_blank">'+wf_task.taskname+'</a>']]>
+      </column>
+      <column name="instancetype" title="类型" width="50px" sort="wf_instance.instancetype">
+        case wf_instance.instancetype when 0 then '正常' when 1 then '转办' when 2 then '退回' else '' end
+      </column>
+      <column name="instancedate" title="任务创建时间" width="120px" dataformat="yyyy-M-d H:m:s">
+        <![CDATA[wf_instance.createdtime]]>
+      </column>
+      <column name="limitedtime" title="任务截止日期" dataformat="{0:d}" width="80px">
+        <![CDATA[wf_instance.limitedtime]]>
+      </column>
+      <column name="op" title="操作" issort="false" width="50px" type="link" urlformatstring="{0}&amp;model={1}&amp;task={2}&amp;process={3}&amp;instance={4}" usefields="taskpage,modelid,taskid,processid,instanceid" target="_self">
+        <![CDATA['办理']]>
+      </column>
+    </select>
+    <from type="table">
+      <table title="工作流实例">wf_instance</table>
+      <table title="任务">inner join wf_task on wf_task.taskid=wf_instance.taskid and wf_task.modelid=wf_instance.modelid</table>
+      <table title="流程表">inner join wf_process on wf_process.processid=wf_instance.processid</table>
+      <table title="人员表">inner join s_user on s_user.id=wf_process.userid</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="session" name="user.Id" title="待自己办理的">
+        <![CDATA[and wf_instance.userid={0} and wf_instance.instancestatus=0 and wf_process.processstatus=0]]>
+      </append>
+    </where>
+    <order>
+      wf_instance.createdtime
+    </order>
+  </myquery>
+
+  <myquery title="自己正在办理的工作流" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="false" pagervisible="true">
+    <select>
+      <column name="modelid" visible="false">
+        wf_task.modelid
+      </column>
+      <column name="taskid" visible="false">
+        wf_task.taskid
+      </column>
+      <column name="taskpage" visible="false">
+        wf_task.taskpage
+      </column>
+      <column name="processid" visible="false">
+        wf_instance.processid
+      </column>
+      <column name="instanceid" visible="false">
+        wf_instance.instanceid
+      </column>
+      <column name="processname" title="流程名称" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailWFProcess&amp;processid={0}&amp;modelid={1}" usefields="processid,modelid" target="_blank">
+        <![CDATA[wf_process.processname]]>
+      </column>
+      <column name="userid" title="发起人" sort="wf_process.userid" width="70px">
+        s_user.name
+      </column>
+      <column name="taskname" title="当前任务" width="150px" sort="wf_task.taskname">
+        <![CDATA['<a href="../'+case when wf_task.taskview='' then wf_task.taskpage+'&view=1' else wf_task.taskview end 
+        +'&model=' +cast(wf_instance.modelId as varchar) + '&task='+ cast(wf_instance.taskId as varchar) + '&process=' + cast(wf_instance.processId as varchar) + '&instance=' + cast(wf_instance.instanceId as varchar)+'" target="_blank">'+wf_task.taskname+'</a>']]>
+      </column>
+      <column name="instancetype" title="类型" width="50px" sort="wf_instance.instancetype">
+        case wf_instance.instancetype when 0 then '正常' when 1 then '转办' when 2 then '退回' else '' end
+      </column>
+      <column name="accepttime" title="任务接受时间" width="120px" dataformat="yyyy-M-d H:m:s">
+        <![CDATA[wf_instance.accepttime]]>
+      </column>
+      <column name="updatedtime" title="最近修改时间" width="120px" dataformat="yyyy-M-d H:m:s">
+        <![CDATA[wf_instance.updatedtime]]>
+      </column>
+      <column name="limitedtime" title="任务截止日期" dataformat="{0:d}" width="80px">
+        <![CDATA[wf_instance.limitedtime]]>
+      </column>
+      <column name="op" title="操作" issort="false" width="50px" type="link" urlformatstring="{0}&amp;model={1}&amp;task={2}&amp;process={3}&amp;instance={4}" usefields="taskpage,modelid,taskid,processid,instanceid" target="_self">
+        <![CDATA['办理']]>
+      </column>
+    </select>
+    <from type="table">
+      <table title="工作流实例">wf_instance</table>
+      <table title="任务">inner join wf_task on wf_task.taskid=wf_instance.taskid and wf_task.modelid=wf_instance.modelid</table>
+      <table title="流程表">inner join wf_process on wf_process.processid=wf_instance.processid</table>
+      <table title="人员表">inner join s_user on s_user.id=wf_process.userid</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="session" name="user.Id" title="自己正在办理的">
+        <![CDATA[and wf_instance.userid={0} and wf_instance.instancestatus=1 and wf_process.processstatus=0]]>
+      </append>
+    </where>
+    <order>
+      wf_instance.updatedtime desc
+    </order>
+  </myquery>
+  <javascript>parent.showTime();</javascript>
+</root>

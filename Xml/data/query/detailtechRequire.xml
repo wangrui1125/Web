@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="科技需求" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="120px"></col>
+        <col width="300px"></col>
+        <col width="120px"></col>
+        <col></col>
+      </colgroup>
+      <column name="Rq_Name" title="科技需求名称" colspan="3">
+        TechRequire.Rq_Name
+      </column>
+      <column name="Rq_ID" title="科技需求编号">
+        TechRequire.Rq_ID
+      </column>
+      <column name="Rq_flag" title="科技需求状态">
+        Rq_flag.name
+      </column>
+      <column name="Rq_DueDay" title="预期完成时间" dataformat="{0:yyyy-MM-dd}">
+        TechRequire.Rq_DueDay
+      </column>
+      <column name="Rq_Fund" title="拟提供技术资金">
+        TechRequire.Rq_Fund
+      </column>
+      <column name="Rq_Fields" title="所属领域">
+        TechRequire.Rq_Fields
+      </column>
+      <column name="marks" title="标签内容">
+        dbo.f_GetMark('tech',TechRequire.Rq_ID)
+      </column>
+      <column name="Rq_ResolveManner" title="拟解决方式">
+        TechRequire.Rq_ResolveManner
+      </column>
+      <column name="Rq_Type" title="科技需求类型">
+        Rq_Type.name
+      </column>
+      <column name="Rq_EnpDes" title="企业填写科技需求内容" colspan="3" dataformat="{0:M}">
+        TechRequire.Rq_EnpDes
+      </column>
+      <column name="Rq_Parameter" title="参数细节" colspan="3" dataformat="{0:M}">
+        TechRequire.Rq_Parameter
+      </column>
+      <column name="Rq_Expect" title="预期结果" colspan="3" dataformat="{0:M}">
+        TechRequire.Rq_Expect
+      </column>
+      <column name="Rq_CreaterID" title="科技需求创建者">
+        TechRequire.Rq_CreaterID
+      </column>
+      <column name="Rq_CreateTime" title="科技需求创建时间"  dataformat="{0:yyyy-MM-dd}">
+        TechRequire.Rq_CreateTime
+      </column>
+      <column name="Rq_updateID" title="科技需求最后更新人">
+        TechRequire.Rq_updateID
+      </column>
+      <column name="Rq_updatetime" title="科技需求最后更新时间" dataformat="{0:yyyy-MM-dd}">
+        TechRequire.Rq_updatetime
+      </column>
+      <column name="Rq_ComingFrom" title="科技需求来源于">
+        TechRequire.Rq_ComingFrom
+      </column>
+      <column name="Rq_ComingDay" title="科技需求来源时间" dataformat="{0:yyyy-MM-dd}">
+        TechRequire.Rq_ComingDay
+      </column>
+
+      <column name="Enp_Name" title="企业名称" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailEnterprise&amp;id={0}" usefields="eid" target="_blank">
+        Enterprise.Enp_Name
+      </column>
+      <column name="eid" title="企业id">
+        TechRequire.Enp_ID
+      </column>
+
+      <column name="Enp_Des" title="企业简介" colspan="3" dataformat="{0:M}">
+        Enterprise.Enp_Des
+      </column>
+
+      <column name="bak_state" title="项目所处阶段" colspan="3" dataformat="{0:M}">
+        TechRequire.bak_state
+      </column>
+      <column name="bak_equpments" title="已有对接设备条件" colspan="3" dataformat="{0:M}">
+        TechRequire.bak_equpments
+      </column>
+      <column name="bak_Resource" title="已有对接人员" colspan="3" dataformat="{0:M}">
+        TechRequire.bak_Resource
+      </column>
+      <column name="bak_experience" title="相关实施经验" colspan="3" dataformat="{0:M}">
+        TechRequire.bak_experience
+      </column>
+      <column name="Enp_Address" title="企业地址">
+        Enterprise.Enp_Address
+      </column>
+      <column name="Enp_Zipcode" title="企业邮编">
+        Enterprise.Enp_Zipcode
+      </column>
+
+      <column name="Rq_ConsultName" title="顾问姓名">
+        s_user.name
+      </column>
+      <column name="Rq_ConsultID" title="顾问id">
+        TechRequire.Rq_ConsultID
+      </column>
+      <column name="Rq_ConsultDes" title="科技需求内容(顾问完善)" colspan="3" dataformat="{0:M}">
+        TechRequire.Rq_ConsultDes
+      </column>
+    </select>
+    <from type="table">
+      <table title="科技需求">TechRequire</table>
+      <table title="企业">left join Enterprise on Enterprise.Enp_ID=TechRequire.Enp_ID</table>
+      <table title="用户">left join s_user on s_user.ID=TechRequire.Rq_ConsultID</table>
+      <table title="代码表">left join f_code Rq_flag on Rq_flag.id='Rq_flag' and Rq_flag.code=TechRequire.Rq_flag</table>
+      <table title="代码表">left join f_code Rq_Type on Rq_Type.id='Rq_Type' and Rq_Type.code=TechRequire.Rq_Type</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="querystring" name="id">
+        TechRequire.Rq_ID={0}
+      </append>
+    </where>
+  </myquery>
+</root>

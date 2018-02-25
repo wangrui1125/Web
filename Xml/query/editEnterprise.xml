@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="企业信息" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="100px"></col>
+        <col></col>
+      </colgroup>
+	  <column name="guwenID" title="指定企业顾问" type="select" urlformatstring="sql:select ID,name from S_User left join S_roleUser on S_User.ID=S_roleUser.UID  where S_roleUser.roleID=4 order by Name">
+      </column>
+	  
+      <column name="Enp_Name" type ="text" width="700px" title="企业名称" maxlength="100">
+        <validates>
+          <validate type="isnotnull"></validate>
+        </validates>
+      </column>
+      <column name="Enp_Des" type="texteditor" width="700px" title="企业简介">
+      </column>
+      <column name="Enp_Address" type="texteditor" width="700px" title="企业地址">
+      </column>
+      <column name="Enp_Zipcode" type="texteditor" width="700px" title="企业邮编">
+      </column>
+      <column name="CreateTime" visible="false" value="gettime">
+      </column>
+      <column name="createrID" visible="false" value="useraccount">
+      </column>
+    </select>
+    <from type="table">
+      <table title="企业信息">Enterprise</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="querystring" name="id">
+        Enterprise.Enp_ID={0}
+      </append>
+    </where>
+    <buttons>
+      <button name="save" title="提 交" type="save" cssclass="input_button">
+      </button>
+      <button name="btnReturn" title="取 消" type="doscript" cssclass="input_button">
+        window.opener=null;window.open('','_self');window.close();
+      </button>
+    </buttons>
+  </myquery>
+</root>

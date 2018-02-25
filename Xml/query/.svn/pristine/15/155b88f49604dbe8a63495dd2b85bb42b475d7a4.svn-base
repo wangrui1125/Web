@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="添加科研人员" pagesize="0">
+    <select>
+       <colgroup>
+        <col style="width: 100px;" />
+        <col />
+      </colgroup>
+
+     
+     <column name="UserID" width="99%" maxlength="150" title="UserID"  value="querystring,id" parameter="id"     parametervalue="!"  visible="false" ></column>
+     <column name="flag"  titile="flag"  visible="false" value="5"  >
+      </column>
+
+ 
+<column name="ConcernID" title="研究人员" width="200px" type="textajax" urlformatstring="WebService.asmx" usefields="GetResearcherList" dataformat="{0:ID}" maxlength="1" cssclass="text_ajax">
+        (select name+'['+id+']' from s_user where id=manager)
+        <validates>
+					<validate type="isnotnull" scope="edit">
+					</validate>
+          <validate type="regex" title="请输入账号或姓名，并在下拉列表中选择">
+            ^.+\\[\\w+\\]$
+          </validate>
+					<validate type="servervalidate" title="人员必须存在" scope="edit">
+						MyQuery.BAL.QueryValidate
+					</validate>
+				</validates>
+			</column>
+ 
+
+ 
+       
+       <column name="Researcher" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listplanResearcher&amp;planID={0}&amp;pagesize=5" maxlength="310" colspan="2" parameter="id" parametervalue="!">
+      </column>
+    </select>
+    <from type="table">
+      <table title="科研人员表">ConcernResearcher</table>
+    </from>
+    <where isparameter="true">
+     
+    </where>
+    <buttons position="top">
+   
+      <button name="save" title="添加" type="save" cssclass="input_button">
+      </button>
+      <button name="btnReturn" title="取 消" type="doscript" cssclass="input_button">
+        window.opener=null;window.open('','_self');window.close();
+      </button>
+    </buttons>
+    
+  </myquery>
+</root>

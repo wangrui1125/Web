@@ -1,0 +1,3683 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyQuery.MyControl</name>
+    </assembly>
+    <members>
+        <member name="T:MyQuery.MyControl.MyCommandEventArgs">
+            <summary>
+            扩展CommandEventArgs定义
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCommandEventArgs.#ctor(System.String,System.Object)">
+            <summary>
+            构造函数 与CommandEventArgs相同
+            </summary>
+            <param name="commandName"></param>
+            <param name="argument"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCommandEventArgs.OutExcel(System.Xml.XmlDocument)">
+            <summary>
+            根据ds导出Excel
+            </summary>
+            <param name="doc">要输出的excel模板实体</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCommandEventArgs.CreateTitleRow(System.Xml.XmlNode,MyQuery.MyControl.MyColumns,System.Int32)">
+            <summary>
+            生成标题行
+            </summary>
+            <param name="sheetTable"></param>
+            <param name="myColumns"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCommandEventArgs.CreateEmpty(System.Xml.XmlDocument)">
+            <summary>
+            创建可读的空表格
+            </summary>
+            <param name="doc"></param>
+        </member>
+        <member name="P:MyQuery.MyControl.MyCommandEventArgs.DataOut">
+            <summary>
+            输出Excel的IList数据（列表时 即使使用了分页也是导出全部页数据 详述时为当前处理对象）
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyCommandEventArgs.Columns">
+            <summary>
+            输出Excel的IList数据对应的列集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyCommandEventArgs.Name">
+            <summary>
+            对应查询的名称
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyCommandEventArgs.Title">
+            <summary>
+            对应查询的标题
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyCommandEventArgs.CalcScript">
+            <summary>
+            脚本计算列需要的公共脚本（仅列表导出有效）
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyCommandEventArgs.MergeColumns">
+            <summary>
+            数据相同时行合并的列名 多余1个用,分割（仅列表导出有效）
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyCommandEventArgs.FooterVisible">
+            <summary>
+            是否要计算行（仅列表导出有效）
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyCommandEventArgs.Cols">
+            <summary>
+            导出单条时MyCols对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyCommandEventArgs.User">
+            <summary>
+            当前用户账号
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyCommandEventArgs.Esheets">
+            <summary>
+            输出的其它sheet的对象 用于一次导出多个sheet
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyTabs">
+            <summary>
+            封装了Tab集合及其Tab列表
+            by 贾世义 2011-5-7
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabs.Add(MyQuery.MyControl.MyTab)">
+            <summary>
+            添加指定的tab属性类。
+            </summary>
+            <param name="tab">tab属性类。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabs.Add(System.String,System.String)">
+            <summary>
+            根据指定属性创建一个tab属性类并添加
+            </summary>
+            <param name="title">标题</param>
+            <param name="url">链接</param>
+            <returns>MyTab实例</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabs.Add(System.String)">
+            <summary>
+            根据指定属性创建一个tab属性类并添加
+            </summary>
+            <param name="title">标题</param>
+            <returns>MyTab实例</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabs.IndexOf(System.String)">
+            <summary>
+            查找指定标题的索引
+            </summary>
+            <param name="title">要查找的tab属性类的标题</param>
+            <returns>找到的tab的索引，如未找到则返回-1</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabs.IndexOf(MyQuery.MyControl.MyTab)">
+            <summary>
+            查找指定的tab属性类。
+            </summary>
+            <param name="tab">要查找的tab属性类。</param>
+            <returns>找到的tab属性类的索引，如未找到则返回-1。</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabs.OnInsert(System.Int32,System.Object)">
+            <summary>
+            插入对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabs.OnRemove(System.Int32,System.Object)">
+            <summary>
+            移除对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabs.OnSet(System.Int32,System.Object,System.Object)">
+            <summary>
+            设置对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="oldValue">原对象。</param>
+            <param name="newValue">新对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabs.OnValidate(System.Object)">
+            <summary>
+            验证时类型检查。
+            </summary>
+            <param name="value">对象。</param>
+        </member>
+        <member name="P:MyQuery.MyControl.MyTabs.Item(System.Int32)">
+            <summary>
+            索引器
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyTab">
+            <summary>
+            tab的封装
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyTab.Title">
+            <summary>
+            tab的标题
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyTab.Url">
+            <summary>
+            tab的链接
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyCols">
+            <summary>
+            封装了ColGroup及其col列表
+            by 贾世义 2009-1-14
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCols.Add(MyQuery.MyControl.MyCol)">
+            <summary>
+            添加指定的ColGroup的col属性类。
+            </summary>
+            <param name="col">ColGroup的col属性类。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCols.Add(System.String,System.String,System.String)">
+            <summary>
+            根据指定属性创建一个ColGroup的col属性类
+            </summary>
+            <param name="width">宽度</param>
+            <param name="cssclass">样式的class</param>
+            <param name="style">样式字符串</param>
+            <returns>MyCol实例</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCols.Add">
+            <summary>
+            根据指定属性创建一个ColGroup的col属性类
+            </summary>
+            <returns>MyCol实例</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCols.IndexOf(MyQuery.MyControl.MyCol)">
+            <summary>
+            查找指定的ColGroup的col属性类。
+            </summary>
+            <param name="col">要查找的ColGroup的col属性类。</param>
+            <returns>找到的ColGroup的col属性类的索引，如未找到则返回-1。</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCols.OnInsert(System.Int32,System.Object)">
+            <summary>
+            插入对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCols.OnRemove(System.Int32,System.Object)">
+            <summary>
+            移除对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCols.OnSet(System.Int32,System.Object,System.Object)">
+            <summary>
+            设置对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="oldValue">原对象。</param>
+            <param name="newValue">新对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCols.OnValidate(System.Object)">
+            <summary>
+            验证时类型检查。
+            </summary>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCols.GetColGroup">
+            <summary>
+            获得table的colgroup
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCols.GetColGroup(MyQuery.MyControl.MyColumns)">
+            <summary>
+            根据MyColumns获得colgroup
+            </summary>
+            <param name="myColumns">展示的列集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyCols.setCol(System.Web.UI.HtmlControls.HtmlGenericControl,MyQuery.MyControl.MyColumns)">
+            <summary>
+            添加 col
+            </summary>
+            <param name="colgroup"></param>
+            <param name="myColumns"></param>
+        </member>
+        <member name="P:MyQuery.MyControl.MyCols.Item(System.Int32)">
+            <summary>
+            索引器
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyCol">
+            <summary>
+            col的封装
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCol.Width">
+            <summary>
+            Col的宽度
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCol.CssClass">
+            <summary>
+            Col的样式的class
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCol.Style">
+            <summary>
+            Col的样式字符串
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyButtons">
+            <summary>
+            封装了自定义MyButton列表
+            by 贾世义 2009-1-18
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyButtons.Add(MyQuery.MyControl.MyButton)">
+            <summary>
+            添加指定的自定义MyButton类。
+            </summary>
+            <param name="myButton">自定义MyButton类。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyButtons.Add(System.String,System.String,MyQuery.MyControl.MyButtonType,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Int32,System.Int32,System.String,System.String,System.Boolean,System.Int32,System.Boolean)">
+            <summary>
+            根据指定属性创建一个自定义MyButton类
+            </summary>
+            <param name="name">名称</param>
+            <param name="title">展示</param>
+            <param name="type">类型</param>
+            <param name="width">宽度</param>
+            <param name="cssclass">样式</param>
+            <param name="expression">表达式</param>
+            <param name="functioncode">功能编号</param>
+            <param name="isselectedrow">是否判断选择了行</param>
+            <param name="confirminfo">确认信息</param>
+            <param name="windowwidth">新窗口宽度</param>
+            <param name="windowheight">高度</param>
+            <param name="parameters">需要的参数name,值从Page.Request.QueryString中获取 多于一个用,分割</param>
+            <param name="imgSrc">图片按钮的图片URL</param>
+            <param name="isNextTab">成功后是否前往下一个tab</param>
+            <param name="tabindex">成功后返回tab的索引，即在页面增加i参数 默认0 仅多个TAB时有效</param>
+            <param name="isReload">是否重新加载</param>
+            <returns>MyButton实例</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyButtons.Add(MyQuery.MyControl.MyButtons)">
+            <summary>
+            批量添加 name相同的替换
+            </summary>
+            <param name="myButtons"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyButtons.IndexOf(MyQuery.MyControl.MyButton)">
+            <summary>
+            查找指定的自定义MyButton类。
+            </summary>
+            <param name="myButton">要查找的自定义MyButton类。</param>
+            <returns>找到的自定义MyButton类的索引，如未找到则返回-1。</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyButtons.IndexOf(System.String)">
+            <summary>
+            查找指定name的索引
+            </summary>
+            <param name="name">要查找的自定义MyButton类的名称</param>
+            <returns>找到的自定义MyButton类的索引，如未找到则返回-1</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyButtons.Remove(System.String)">
+            <summary>
+            移除name的项 不存在则不处理
+            </summary>
+            <param name="name">name 忽略大小写</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyButtons.OnInsert(System.Int32,System.Object)">
+            <summary>
+            插入对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyButtons.OnRemove(System.Int32,System.Object)">
+            <summary>
+            移除对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyButtons.OnSet(System.Int32,System.Object,System.Object)">
+            <summary>
+            设置对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="oldValue">原对象。</param>
+            <param name="newValue">新对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyButtons.OnValidate(System.Object)">
+            <summary>
+            验证时类型检查。
+            </summary>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyButtons.GetButtonType(System.String)">
+            <summary>
+            获得按钮类型
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyButtons.Item(System.Int32)">
+            <summary>
+            索引器
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyButtons.Item(System.String)">
+            <summary>
+            索引器  忽略大小写
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyButton">
+            <summary>
+            button的封装
+            by 贾世义 2009-1-18
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.CssClass">
+            <summary>
+            样式的class
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.FunctionCode">
+            <summary>
+            此按钮对应的功能的functioncode
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.IsSelectedRow">
+            <summary>
+            是否需要选择行的判断
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.WindowWidth">
+            <summary>
+            open或dialog新窗口宽度
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.WindowHeight">
+            <summary>
+            open或dialog新窗口高度
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.ConfirmInfo">
+            <summary>
+            点击按钮给出的确认信息
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.Parameters">
+            <summary>
+            需要的参数name,值从Page.Request.QueryString中获取 多于一个用,分割 当有值时用name=value的方式拼入值配置的url
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.ImgSrc">
+            <summary>
+            支持按钮图片
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.IsNextTab">
+            <summary>
+            成功后是否前往下一个tab
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.TabIndex">
+            <summary>
+            成功后返回tab的索引，即在页面增加i参数 默认-1 仅多个TAB时有效
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButton.IsReload">
+            <summary>
+            成功后是否重新加载
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyButton.Expression">
+            <summary>
+            表达式 空则取Name
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyButtonType">
+            <summary>
+            用于MyButton的处理类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButtonType.Redirect">
+            <summary>
+            页面重定向
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButtonType.Open">
+            <summary>
+            新打开窗口
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButtonType.Dialog">
+            <summary>
+            打开模式窗体
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButtonType.Deal">
+            <summary>
+            单独处理使用
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButtonType.ToExcel">
+            <summary>
+            直接将datatsource数据导出到excel
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButtonType.DoScript">
+            <summary>
+            脚本
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButtonType.Reset">
+            <summary>
+            重置按钮
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButtonType.Save">
+            <summary>
+            编辑的提交
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyButtonType.RunSql">
+            <summary>
+            执行语句（主要用于删除）
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyValidates">
+            <summary>
+            封装了验证及其验证列表
+            by 贾世义 2009-2-20
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyValidates.Add(MyQuery.MyControl.MyValidate)">
+            <summary>
+            添加指定的MyValidate属性类。
+            </summary>
+            <param name="myValidate">MyValidate属性类。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyValidates.Add(MyQuery.MyControl.MyValidateType,System.String,System.String,MyQuery.MyControl.MyValidateScope)">
+            <summary>
+            根据指定属性创建一个MyValidate属性类
+            </summary>
+            <param name="type">类型</param>
+            <param name="title">提示信息</param>
+            <param name="exception">表达式</param>
+            <param name="scope">范围</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyValidates.Add(System.String,System.String,System.String,System.String)">
+            <summary>
+            根据指定属性创建一个MyValidate属性类
+            </summary>
+            <param name="type">类型</param>
+            <param name="title">提示信息</param>
+            <param name="exception">表达式</param>
+            <param name="scope">范围</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyValidates.IndexOf(MyQuery.MyControl.MyValidate)">
+            <summary>
+            查找指定的MyValidate属性类。
+            </summary>
+            <param name="myValidate">要查找的MyValidate属性类。</param>
+            <returns>找到的MyValidate属性类的索引，如未找到则返回-1。</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyValidates.OnInsert(System.Int32,System.Object)">
+            <summary>
+            插入对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyValidates.OnRemove(System.Int32,System.Object)">
+            <summary>
+            移除对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyValidates.OnSet(System.Int32,System.Object,System.Object)">
+            <summary>
+            设置对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="oldValue">原对象。</param>
+            <param name="newValue">新对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyValidates.OnValidate(System.Object)">
+            <summary>
+            验证时类型检查。
+            </summary>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyValidates.GetMyValidateType(System.String)">
+            <summary>
+            获得类型
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyValidates.GetMyValidateScope(System.String)">
+            <summary>
+            获得范围
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyValidates.Item(System.Int32)">
+            <summary>
+            索引器
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyValidate">
+            <summary>
+            验证的封装
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidate.Type">
+            <summary>
+            处理类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidate.Title">
+            <summary>
+            未通过验证的提示信息
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidate.Exception">
+            <summary>
+            验证表达式
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidate.Scope">
+            <summary>
+            验证范围
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyValidateType">
+            <summary>
+            用于MyValidate的处理类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidateType.IsNotNull">
+            <summary>
+            不能为空
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidateType.Regex">
+            <summary>
+            正则表达式
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidateType.Js">
+            <summary>
+            javascript
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidateType.IsExit">
+            <summary>
+            是否存在验证
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidateType.IsUserExit">
+            <summary>
+            是否存在s_User中验证
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidateType.ServerValidate">
+            <summary>
+            后台验证
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidateType.jQuery">
+            <summary>
+            jQuery的class验证
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyValidateScope">
+            <summary>
+            用于MyValidate的处理类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidateScope.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidateScope.Add">
+            <summary>
+            仅新增
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyValidateScope.Edit">
+            <summary>
+            仅编辑
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyTabPage">
+            <summary>
+            MyTab Tab页卡控件
+            </summary>	
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabPage.OnPreRender(System.EventArgs)">
+            <summary>
+            重写<see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)"/>方法。
+            </summary>
+            <param name="e">包含事件数据的 <see cref="T:System.EventArgs"/> 对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabPage.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写<see cref="M:System.Web.UI.WebControls.WebControl.AddAttributesToRender(System.Web.UI.HtmlTextWriter)"/> 方法，验证是否有form(runat=server)控件
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabPage.Render(System.Web.UI.HtmlTextWriter)">
+            <summary> 
+            将此控件呈现给指定的输出参数。
+            </summary>
+            <param name="writer"> 要写出到的 HTML 编写器 </param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabPage.DataBind">
+            <summary>
+            取消绑定生成控件
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabPage.DataBind(System.Boolean)">
+            <summary>
+            取消绑定生成控件
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabPage.DataBindChildren">
+            <summary>
+            取消绑定生成子控件
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabPage.CreateChildControls">
+            <summary>
+            取消生成子控件
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabPage.RaisePostBackEvent(System.String)">
+            <summary>
+            实现<see cref="T:System.Web.UI.IPostBackEventHandler"/> 接口，使 <see cref="T:MyQuery.MyControl.MyTabPage"/> 控件能够处理将窗体发送到服务器时引发的事件。
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="P:MyQuery.MyControl.MyTabPage.SelectedIndex">
+            <summary>
+            获取或设置当前显示页卡的索引。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyTabPage.Tabs">
+            <summary>
+            获取和设置MyTabs集合 获取时如空则默认一个页卡
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyTabPage.DataSource">
+            <summary>
+            获取和设置数据源 需为MyTabs对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyTabPage.Title">
+            <summary>
+            设置默认一个页卡的标题
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyTabPage.CssClassOn">
+            <summary>
+            获取和设置选中页卡的class
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyTabPage.Target">
+            <summary>
+            获取和设置页卡链接的Target
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyTabPage.AutoPostBack">
+            <summary>
+            获取是否自动回发
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyInputsDesigner">
+            <summary>
+            MyInputs设计展现类
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputsDesigner.GetDesignTimeHtml">
+            <summary>
+            GetDesignTimeHtml
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyInputsDesigner.AllowResize">
+            <summary>
+            自动大小
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyDate">
+            <summary>
+            MyDate 选择输入日期控件
+            by 贾世义 2005-8-16
+            </summary>	
+        </member>
+        <member name="M:MyQuery.MyControl.MyDate.OnLoad(System.EventArgs)">
+            <summary>
+            重写OnLoad 方法。
+            </summary>
+            <param name="e">包含事件数据的 <see cref="T:System.EventArgs"/> 对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyDate.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写<see cref="M:System.Web.UI.WebControls.WebControl.AddAttributesToRender(System.Web.UI.HtmlTextWriter)"/> 方法，验证是否有form(runat=server)控件
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyDate.OnPreRender(System.EventArgs)">
+            <summary>
+            重写<see cref="M:System.Web.UI.Control.OnPreRender(System.EventArgs)"/>方法。
+            </summary>
+            <param name="e">包含事件数据的 <see cref="T:System.EventArgs"/> 对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyDate.Render(System.Web.UI.HtmlTextWriter)">
+            <summary> 
+            将此控件呈现给指定的输出参数。
+            </summary>
+            <param name="writer"> 要写出到的 HTML 编写器 </param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyDate.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            当由类实现时，为 ASP.NET 服务器控件处理回发数据。
+            </summary>
+            <param name="postDataKey">控件的主要标识符</param>
+            <param name="postCollection">所有传入名称值的集合</param>
+            <returns>如果服务器控件的状态在回发发生后更改，则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyDate.RaisePostDataChangedEvent">
+            <summary>
+            当由类实现时，用信号要求服务器控件对象通知 ASP.NET 应用程序该控件的状态已更改。
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyDate.OnTextChanged(System.EventArgs)">
+            <summary>
+            数据变更函数
+            </summary>
+            <param name="e">事件参数</param>
+        </member>
+        <member name="P:MyQuery.MyControl.MyDate.Text">
+            <summary>
+            获取/设置日期值。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyDate.Date">
+            <summary>
+            获取日期值。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyDate.IsNull">
+            <summary>
+            获取/设置日期值是否允许空。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyDate.IsDate">
+            <summary>
+            获取/设置日期值是否为完整的年-月-日，否为年-月。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyDate.IsHour">
+            <summary>
+            获取/设置日期值是否包含时间。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyDate.IsTable">
+            <summary>
+            获取/设置日期值是否包含时间。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyDate.Enabled">
+            <summary>
+            获取/设置日期值能否编辑。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyDate.Length">
+            <summary>
+            获取/设置日期值中可供选择的年份长度。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyDate.End">
+            <summary>
+            获取/设置选择年份的结束值。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyDate.Start">
+            <summary>
+            获取选择年份的开始值。
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyDate.TextChanged">
+            <summary>
+            数据变更触发事件
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyBoundEventArgs">
+            <summary>
+            处理绑定时的参数
+            by 贾世义 2009-1-1
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.DealValue">
+            <summary>
+            用于保存本行其它列已经处理的值 为其它列使用
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.RowType">
+            <summary>
+            行类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.Row">
+            <summary>
+            行对象
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.KeyValue">
+            <summary>
+            行记录数据的主键值，多个主键时用,分割
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.Cell">
+            <summary>
+            格对象(当CellDataBound时有效)
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.Column">
+            <summary>
+            列对象(当CellDataBound时有效 分页时为null)
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.Rowspan">
+            <summary>
+            本行各列需要的rowspan（合并行时需要）
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.Colspan">
+            <summary>
+            绑定分页的格需要的colspan 非列表时已经处理的格的数量
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.IsMerged">
+            <summary>
+            是否为被合并的行
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.DataRow">
+            <summary>
+            本行对应的数据对象 仅当数据行时有效
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.DataRowIndex">
+            <summary>
+            本行对应处理数据的行索引（处理到多少行，注意当有子行集合时为子行集合的索引）
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.MergedCount">
+            <summary>
+            已经处理了的合并行的行数(包含rowspan的行) 默认为1
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.ChildRows">
+            <summary>
+            当数据行分组合并时 当前行的子数据集
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.Parent">
+            <summary>
+            上级
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.Button">
+            <summary>
+            当MyBtns的绑定Button处理时有效
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyBoundEventArgs.CompositeColumns">
+            <summary>
+            标题行合并列集合
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBoundEventArgs.#ctor(System.Web.UI.HtmlControls.HtmlGenericControl,MyQuery.MyControl.MyColumns)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="table"></param>
+            <param name="dataColumns"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBoundEventArgs.#ctor(System.Web.UI.HtmlControls.HtmlGenericControl,MyQuery.MyControl.MyButtons)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="table"></param>
+            <param name="myButtons"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBoundEventArgs.SetDefaultValue">
+            <summary>
+            重新设定数据前，设为默认值
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBoundEventArgs.Copy">
+            <summary>
+            获得复制的新对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBoundEventArgs.HasChildRows">
+            <summary>
+            是否有子行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBoundEventArgs.ChildDeep">
+            <summary>
+            获取节点深度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyBoundEventArgs.Table">
+            <summary>
+            获得已经添加了行的Table对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyBoundEventArgs.DataColumns">
+            <summary>
+            获得展示的绑定数据的列 MyGridView和MyInputs时有效
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyBoundEventArgs.Buttons">
+            <summary>
+            当MyBtns的绑定处理时有效
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyChart">
+            <summary>
+            封装的处理MsChart的对象类
+            by 贾世义 2009-2-18
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyChart.Template">
+            <summary>
+            外观配置模板
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyChart.Titles">
+            <summary>
+            标题集合
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyChart.MyAreas">
+            <summary>
+            对应图像ChartArea的MyArea集合
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyChart.DataSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyChart.DataColumns">
+            <summary>
+            处理的数据列
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyChart.Name">
+            <summary>
+            查询对应的名称
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyChart.User">
+            <summary>
+            当期用户对象
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyChart.CalcScript">
+            <summary>
+            计算使用的脚本
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyChart.GetChart(System.Web.UI.Page)">
+            <summary>
+            获得图形对象
+            </summary>
+            <param name="page">页面实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyChart.GetChart(System.Web.UI.Page,System.Web.UI.DataVisualization.Charting.RenderType)">
+            <summary>
+            获得图形对象
+            </summary>
+            <param name="page">页面实例</param>
+            <param name="type">输出类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyChart.GetDataPoint(System.Object,System.String,MyQuery.MyControl.MySerie,MyQuery.MyControl.MyArea)">
+            <summary>
+            获得描述的点的数据
+            </summary>
+            <param name="obj"></param>
+            <param name="name"></param>
+            <param name="mySerie"></param>
+            <param name="myArea"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyChart.IsExit(System.Web.UI.DataVisualization.Charting.LegendCollection,System.String)">
+            <summary>
+            判断是否已经存在
+            </summary>
+            <param name="legends"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyChart.GetChartType(System.String)">
+            <summary>
+            空时获取类型，有值时设置类型
+            </summary>
+            <param name="charttype">类型字符串</param>
+            <returns>类型字符串</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyChart.GetButton(System.String,System.String)">
+            <summary>
+            获得图形变换按钮(位置在左下角）
+            </summary>
+            <param name="charttype">类型字符串</param>
+            <param name="script">执行客户端脚本</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyChart.GetChartDiv(System.Web.UI.Page)">
+            <summary>
+            获得包含chart图形的div
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyChart.Button">
+            <summary>
+            变换图形 按钮标题
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyChart.Width">
+            <summary>
+            宽度 默认600
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyChart.Height">
+            <summary>
+            高度 默认500
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.ChartTitle">
+            <summary>
+            封装的处理MsChart的Title对象类
+            by 贾世义 2009-2-18
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.ChartTitle.Text">
+            <summary>
+            标题文本
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.ChartTitle.Docking">
+            <summary>
+            位置
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.ChartTitle.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="text"></param>
+            <param name="docking"></param>
+        </member>
+        <member name="T:MyQuery.MyControl.MyArea">
+            <summary>
+            封装的处理MsChart的ChartArea对象类
+            by 贾世义 2009-2-18
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.IsShow3D">
+            <summary>
+            是否显示为3D
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.XDataFormat">
+            <summary>
+            XValue的展示格式
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.YDataFormat">
+            <summary>
+            YValue的展示格式
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.IsDataTable">
+            <summary>
+            数据来源是否为DataTable
+                当true时 仅支持DataTable中的数据 如不指定serie节 则将xfield列作为横坐标 其余列各作为一个serie，否则按照指定的列生成serie
+                当false时 如指定了rows属性则只按照指定的行索引，否则取全部数据生成图 支持IList和计算列 其它同datatable
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.RowIndexs">
+            <summary>
+            指定的数据行 搭配isdatatable=false使用 指定行的索引号的数组
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.XField">
+            <summary>
+            横坐标对应字段名称
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.Lengend">
+            <summary>
+            图例
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.MySeries">
+            <summary>
+            对应数据系列Serie的集合
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.DataSource">
+            <summary>
+            区域自己独立的数据源
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.XInterval">
+            <summary>
+            X轴步长
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.YInterval">
+            <summary>
+            Y轴步长
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.XMinimum">
+            <summary>
+            X轴最小值
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.YMinimum">
+            <summary>
+            Y轴最小值
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.XValueType">
+            <summary>
+            X轴值展示数据类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.YValueType">
+            <summary>
+            Y轴值展示数据类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.IsClustered">
+            <summary>
+            是否聚簇3D显示 3D时有效
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.IsRighTangleAxes">
+            <summary>
+            是否直角坐标显示 3D时有效
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.Rotation">
+            <summary>
+            转动X轴角度 3D时有效
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.Inclination">
+            <summary>
+            转动Y轴角度 3D时有效
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.LightStyle">
+            <summary>
+            光照模式
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.PointDepth">
+            <summary>
+            数据点深度 3D时有效
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyArea.PointGapDepth">
+            <summary>
+            序列直接的距离 3D时有效
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyLengend">
+            <summary>
+            封装的处理MsChart的Lengend对象类
+            by 贾世义 2009-2-18
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyLengend.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyLengend.Title">
+            <summary>
+            标题文本
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyLengend.Docking">
+            <summary>
+            位置
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyLengend.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name"></param>
+            <param name="docking"></param>
+            <param name="title"></param>
+        </member>
+        <member name="T:MyQuery.MyControl.MySerie">
+            <summary>
+            封装的处理MsChart的ChartSerie对象类
+            by 贾世义 2009-2-18
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.Title">
+            <summary>
+            序列的标题作为Legend的文本
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.ChartType">
+            <summary>
+            图像类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.IsValueShownAsLabel">
+            <summary>
+            是否显示值
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.DataFormat">
+            <summary>
+            label的显示格式
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.UrlFormatString">
+            <summary>
+            链接URL格式
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.UserFields">
+            <summary>
+            链接URL对应的参数字段
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.IsToolTip">
+            <summary>
+            是否显示ToolTip
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.ColumnNames">
+            <summary>
+            值表达式必须设置为对应select节的column的name，当多个YValue时name可以用,分割
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.Color">
+            <summary>
+            指定颜色
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.CustomProperty">
+            <summary>
+            定制属性 格式：属性=值多个用,分割
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.MarkerSize">
+            <summary>
+            标记点大小
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.MarkerStyle">
+            <summary>
+            标记形状
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MySerie.MarkerColor">
+            <summary>
+            标记点颜色
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyGridViewDesigner">
+            <summary>
+            MyGridView设计展现类
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridViewDesigner.GetDesignTimeHtml">
+            <summary>
+            GetDesignTimeHtml
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridViewDesigner.AllowResize">
+            <summary>
+            自动大小
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.ReflectionDeal">
+            <summary>
+            封装的关于反射的处理
+            by 贾世义 2009-1-30
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.IsFunctionCalc(System.String)">
+            <summary>
+            反射判断类是否实现IFunctionCalc
+            </summary>
+            <param name="iFunctionCalc"></param>
+            <returns>错误 null时正确</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.FunctionCalc(System.String,System.String,System.String,MyQuery.Utils.MyUser)">
+            <summary>
+            反射实现接口IFunctionCalc的类 返回是否（作为是否展示的依据）
+            </summary>
+            <param name="iFunctionCalc">完整类名 必须包括完整命名空间（包含.认为为类） 否则返回true</param>
+            <param name="name">查询的名称 可空</param>
+            <param name="functionCode">功能编号 可空</param>
+            <param name="user">当前用户 可空</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.IsFooterCalc(System.String)">
+            <summary>
+            反射判断类是否实现IFooterCalc
+            </summary>
+            <param name="iFooterCalc"></param>
+            <returns>错误 null时正确</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.FooterCalc(System.String,MyQuery.MyControl.MyColumn,System.String,MyQuery.MyControl.MyColumns,System.Object,MyQuery.Utils.MyUser)">
+            <summary>
+            反射实现接口IFooterCalc的类 返回计算的值
+            </summary>
+            <param name="iFooterCalc">完整类名 必须包括完整命名空间（包含.认为为类） 否则返回null</param>
+            <param name="myColumn">当前处理列 可空</param>
+            <param name="name">当前查询名称 可空</param>
+            <param name="dataColumns">当前列集合 可空</param>
+            <param name="ds">当前DataSource</param>
+            <param name="user">当前用户 可空</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.IsColumnCalc(System.String)">
+            <summary>
+            反射判断类是否实现IColumnCalc
+            </summary>
+            <param name="iColumnCalc"></param>
+            <returns>错误 null时正确</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.ColumnCalc(System.String,MyQuery.MyControl.MyColumn,System.String,MyQuery.MyControl.MyColumns,System.Object,System.Object,MyQuery.Utils.MyUser)">
+            <summary>
+            反射实现接口IColumnCalc的类 返回值
+            </summary>
+            <param name="iColumnCalc">完整类名 必须包括完整命名空间（包含.认为为类） 否则返回null</param>
+            <param name="myColumn">当前处理列 可空</param>
+            <param name="name">当前查询名称 可空</param>
+            <param name="dataColumns">当前列集合 可空</param>
+            <param name="ds">当前DataSource</param>
+            <param name="obj">当前处理的行对象</param>
+            <param name="user">当前用户 可空</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.IsDefaultCalc(System.String)">
+            <summary>
+            反射判断类是否实现IDefaultCalc
+            </summary>
+            <param name="iDefaultCalc"></param>
+            <returns>错误 null时正确</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.DefaultCalc(System.String,MyQuery.Utils.MyUser)">
+            <summary>
+            反射实现接口IDefaultCalc的类 返回值
+            </summary>
+            <param name="iDefaultCalc">完整类名 必须包括完整命名空间 否则返回iDefaultCalc 如果是数值直接返回</param>
+            <param name="user">当前用户 可空</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.IsButtonDeal(System.String)">
+            <summary>
+            反射判断类是否实现IButtonDeal
+            </summary>
+            <param name="iButtonDeal"></param>
+            <returns>错误 null时正确</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.ButtonDeal(MyQuery.MyControl.MyButton,System.String,System.String,MyQuery.MyControl.MyColumns,System.Collections.Specialized.NameValueCollection,MyQuery.Utils.MyUser)">
+            <summary>
+            反射实现接口IButtonDeal的类 返回运行的脚本
+            </summary>
+            <param name="button">按钮对象</param>
+            <param name="name">查询对应名称 可空</param>
+            <param name="id">处理行ID 可空</param>
+            <param name="myColumns">处理的列集合</param>
+            <param name="QueryString">Page.Request.QueryString</param>
+            <param name="user">当前用户 可空</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.IsWhereCalc(System.String)">
+            <summary>
+            反射判断类是否实现IWhereCalc
+            </summary>
+            <param name="iWhereCalc"></param>
+            <returns>错误 null时正确</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.WhereCalc(System.String,System.String,MyQuery.Utils.MyUser)">
+            <summary>
+            反射实现接口IWhereCalc的类 返回值
+            </summary>
+            <param name="iWhereCalc">完整类名 必须包括完整命名空间（包含.认为为类） 否则返回iWhereCalc</param>
+            <param name="name">当前查询名称 可空</param>
+            <param name="user">当前用户 可空</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.IsRowCalc(System.String)">
+            <summary>
+            反射判断类是否实现IRowCalc
+            </summary>
+            <param name="iRowCalc"></param>
+            <returns>错误 null时正确</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.RowCalc(System.String,System.String,MyQuery.MyControl.MyColumns,System.Object,MyQuery.Utils.MyUser,System.String)">
+            <summary>
+            获得加入指定的行数据后的数据源
+            </summary>
+            <param name="iRowCalc">完整类名 必须包括完整命名空间</param>
+            <param name="name">当前查询名称</param>
+            <param name="myColumns">数据列集合</param>
+            <param name="ds">数据源</param>
+            <param name="user">用户对象 可空</param>
+            <param name="rowName">当前增加的行名称标示</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.IsValidateCalc(System.String)">
+            <summary>
+            反射判断类是否实现IValidateCalc
+            </summary>
+            <param name="iValidateCalc"></param>
+            <returns>错误 null时正确</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.ValidateCalc(System.String,MyQuery.MyControl.MyColumn,System.String,MyQuery.MyControl.MyColumns,MyQuery.Utils.MyUser)">
+            <summary>
+            反射实现接口IValidateCalc的类 返回是否通过验证
+            </summary>
+            <param name="iValidateCalc">完整类名 必须包括完整命名空间（包含.认为为类） 否则返回null</param>
+            <param name="myColumn">当前处理列 可空</param>
+            <param name="name">当前查询名称 可空</param>
+            <param name="dataColumns">当前列集合 可空</param>
+            <param name="user">当前用户对象 可空</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.GetValue(System.Object,System.String)">
+            <summary>
+            获取对象中指定name的值
+            </summary>
+            <param name="obj">DataRowView和实体类对象 空时从Request取值</param>
+            <param name="name">字段或类成员</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.GetFootValue(MyQuery.MyControl.MyColumn,System.String,MyQuery.MyControl.MyColumns,System.Object,MyQuery.Utils.MyUser)">
+            <summary>
+            根据数据源返回Foot的计算值 不满足计算条件则返回null
+            </summary>
+            <param name="myColumn">当前处理列</param>
+            <param name="name">当前查询名称 可空</param>
+            <param name="dataColumns">当前列集合 可空</param>
+            <param name="ds">当前DataSource</param>
+            <param name="user">当前用户 可空</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.GetSortList(System.Object,System.String,System.Boolean)">
+            <summary>
+            按照获得iList的排序
+            </summary>
+            <param name="ds">当前DataSource</param>
+            <param name="name">成员名称</param>
+            <param name="isAsc">是否升序</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.GetDisplayList(System.Object)">
+            <summary>
+            从数据源获的展示的IList
+            DataSet时返回第一个DataTable.DefaultView的IList；DataTable时返回.DefaultView的IList；其它返回IList
+            </summary>
+            <param name="dataSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.GetDisplayTable(System.Object)">
+            <summary>
+            从数据源获的展示的DataTable DataSet时返回第一个DataTable；DataTable时返回；DataView时返回.ToTable
+            </summary>
+            <param name="dataSource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.GetAddRows(System.Object,System.Collections.Specialized.NameValueCollection,System.String,MyQuery.MyControl.MyColumns,MyQuery.Utils.MyUser)">
+            <summary>
+            获得加入指定的行数据后的数据源
+            </summary>
+            <param name="ds">数据源</param>
+            <param name="addRows">增加的行的设置</param>
+            <param name="name">当前查询名</param>
+            <param name="myColumns">数据列集合</param>
+            <param name="user">用户对象 可空</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.ReflectionDeal.GetUseFieldsValue(MyQuery.MyControl.MyColumns,System.Object,System.String)">
+            <summary>
+            获得引用字段的值
+            </summary>
+            <param name="dataColumns">列集合 可空</param>
+            <param name="obj">数据对象 可空</param>
+            <param name="useFields">引用字段名多个用,分割</param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.MyControl.MyInputs">
+            <summary>
+            编辑、查询的展示与处理控件 
+            by 贾世义 2009-1-14
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.#ctor(System.Web.UI.Page)">
+            <summary>
+            构造函数 动态创建使用 需传入Page
+            </summary>
+            <param name="page"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.CreateChildControls">
+            <summary>
+            重写的生成子控件
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.getTable(MyQuery.MyControl.MyColumns)">
+            <summary>
+            获得table表格
+            </summary>
+            <param name="myColumns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.DataBind">
+            <summary>
+            绑定生成控件
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.dealColumns(MyQuery.MyControl.MyColumns)">
+            <summary>
+            处理列
+            </summary>
+            <param name="myColumns"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.DataBind(System.Boolean)">
+            <summary>
+            绑定生成控件
+            </summary>
+            <param name="raiseOnDataBinding"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.DataBind(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            重载DataBind 当使用控件的值时需要
+            </summary>
+            <param name="mySqlParameters">参数集合（不能为空）</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.OnRowDataBound(MyQuery.MyControl.MyBoundEventArgs)">
+            <summary>
+            行绑定事件处理(只处理tr)
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.OnCellDataBound(MyQuery.MyControl.MyBoundEventArgs)">
+            <summary>
+            格绑定事件处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.setCssClass(System.Web.UI.HtmlControls.HtmlGenericControl,MyQuery.MyControl.MyColumn)">
+            <summary>
+            设定样式 主要处理jQuery的验证
+            </summary>
+            <param name="input"></param>
+            <param name="myColumn"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.getJQueryClass(MyQuery.MyControl.MyColumn)">
+            <summary>
+            获得jQuery的验证class
+            </summary>
+            <param name="myColumn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.setDisabled(System.Web.UI.HtmlControls.HtmlGenericControl,MyQuery.MyControl.MyColumn)">
+            <summary>
+            编辑时设定sort配置相关的onchange脚本或不可用
+            </summary>
+            <param name="input"></param>
+            <param name="myColumn"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.setWhereSql(MyQuery.MyControl.MyColumn,System.String)">
+            <summary>
+            设定条件
+            </summary>
+            <param name="myColumn"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.setWhereSql(MyQuery.MyControl.MyColumn,System.Object,System.Object)">
+            <summary>
+            设定条件
+            </summary>
+            <param name="myColumn"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.getValue(System.String,System.Object,System.Boolean)">
+            <summary>
+            获取列的值
+            </summary>
+            <param name="name"></param>
+            <param name="defaultValue"></param>
+            <param name="isFirst"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.getDetailControl(MyQuery.MyControl.MyBoundEventArgs)">
+            <summary>
+            获得列的详述值 合并列递归
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.getSelectControl(MyQuery.MyControl.MyColumn)">
+            <summary>
+            获得列的选项 合并列递归
+            </summary>
+            <param name="myColumn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.SetColumnValue(System.String,System.Object)">
+            <summary>
+            给指定的列赋值
+            </summary>
+            <param name="colName">列名（忽略大小写）</param>
+            <param name="colValue">列值</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.GetColumnValue(System.String,System.Object)">
+            <summary>
+            获得列的值
+            </summary>
+            <param name="colName">列名（忽略大小写）</param>
+            <param name="defaultValue">默认值</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.SetColumnDisabled(System.String,System.Boolean)">
+            <summary>
+            给指定的列设置是否不可编辑（设置完成需要执行DataBind方法）
+            </summary>
+            <param name="colName">列名（忽略大小写）</param>
+            <param name="isDisabled">true表示不可编辑</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.SetColumnVisible(System.String,System.Boolean)">
+            <summary>
+            给指定的列设置是否可见（设置完成需要执行DataBind方法）
+            不可见则标题和控件都不可见，注意界面
+            </summary>
+            <param name="colName">列名（忽略大小写）</param>
+            <param name="isVisible">true表示可见</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyInputs.ClearColumns">
+            <summary>
+            清空所有列值
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyInputs.TagKey">
+            <summary>
+            重写最外层标签，默认为div
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyInputs.HTMLBuilder">
+            <summary>
+            html模板文件内容 注意设置了html则根据html生成页面，否则根据xml配置生成页面
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyInputs.InputsType">
+            <summary>
+            获取和设置处理类型
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyInputs.Cols">
+            <summary>
+            获取和设置colgroup集合 获取时如空则默认两列
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyInputs.Columns">
+            <summary>
+            获取和设置处理的列集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyInputs.IsParameter">
+            <summary>
+            获取和设置是否使用参数方式 默认true
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyInputs.IsSession">
+            <summary>
+            获取和设置是否使用Session缓存的条件 默认false
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyInputs.User">
+            <summary>
+            获取和设置用户对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyInputs.IsRefresh">
+            <summary>
+            获取和设置是否回发刷新(重新初始化控件值时需要)
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyInputs.RowDataBound">
+            <summary>
+            行绑定事件(只处理tr)，默认的处理在处理自定义事件前已经处理
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyInputs.CellDataBound">
+            <summary>
+            格绑定事件，默认的处理在处理自定义事件前已经处理 RowType = DataControlRowType.Header时处理标题格 RowType = DataControlRowType.DataRow时处理数据格
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyInputsType">
+            <summary>
+            用于MyInputs的处理类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyInputsType.Condition">
+            <summary>
+            查询条件
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyInputsType.Detail">
+            <summary>
+            详细信息
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyInputsType.Select">
+            <summary>
+            列选择
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyInputsType.Edit">
+            <summary>
+            编辑
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyBtnsDesigner">
+            <summary>
+            MyBtns设计展现类
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtnsDesigner.GetDesignTimeHtml">
+            <summary>
+            GetDesignTimeHtml
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyBtnsDesigner.AllowResize">
+            <summary>
+            自动大小
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyTabPageDesigner">
+            <summary>
+            <see cref="T:MyQuery.MyControl.MyTabPage"/> 服务器控件设计器。
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabPageDesigner.GetDesignTimeHtml">
+            <summary>
+            获取用于在设计时表示关联控件的 HTML。
+            </summary>
+            <returns>用于在设计时表示控件的 HTML。</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyTabPageDesigner.GetErrorDesignTimeHtml(System.Exception)">
+            <summary>
+            获取在呈现控件时遇到错误后在设计时为指定的异常显示的 HTML。
+            </summary>
+            <param name="e">要为其显示错误信息的异常。</param>
+            <returns>设计时为指定的异常显示的 HTML。</returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyTabPageDesigner.AllowResize">
+            <summary>
+            自动大小
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyPager">
+            <summary>
+            MyPager分页服务器控件
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyPager.AddAttributesToRender(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写<see cref="M:System.Web.UI.WebControls.WebControl.AddAttributesToRender(System.Web.UI.HtmlTextWriter)"/> 方法，验证是否有form(runat=server)控件
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyPager.OnLoad(System.EventArgs)">
+            <summary>
+            重写OnLoad 方法。
+            </summary>
+            <param name="e">包含事件数据的 <see cref="T:System.EventArgs"/> 对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyPager.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            重写<see cref="M:System.Web.UI.Control.Render(System.Web.UI.HtmlTextWriter)"/>方法。
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyPager.RaisePostBackEvent(System.String)">
+            <summary>
+            实现<see cref="T:System.Web.UI.IPostBackEventHandler"/> 接口，使 <see cref="T:MyQuery.MyControl.MyPager"/> 控件能够处理将窗体发送到服务器时引发的事件。
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyPager.OnPageChanged(MyQuery.MyControl.PageChangedEventArgs)">
+            <summary>
+            引发 <see cref="E:MyQuery.MyControl.MyPager.PageChanged"/> 事件。这使您可以为事件提供自定义处理程序。
+            </summary>
+            <param name="e">一个 <see cref="T:MyQuery.MyControl.PageChangedEventArgs"/>，它包含事件数据。</param>
+        </member>
+        <member name="P:MyQuery.MyControl.MyPager.TagKey">
+            <summary>
+            重写最外层标签，默认为div
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyPager.NumericButtonCount">
+            <summary>
+            获取或设置在控件的页导航元素中同时显示的数值按钮的数目。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyPager.PageSize">
+            <summary>
+            获取或设置每页显示的项数。如果是1则不显示记录数
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyPager.CurrentPageIndex">
+            <summary>
+            获取或设置当前显示页的索引。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyPager.RecordCount">
+            <summary>
+            获取或设置需要分页的所有记录的总数。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyPager.PageCount">
+            <summary>
+            获取所有要分页的记录需要的总页数。
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyPager.EnableViewState">
+            <summary>
+            获取或设置一个值，该值指示 MyPager 服务器控件是否向发出请求的客户端保持自己的视图状态，该属性经重写后不允许设为false。
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyPager.PageChanged">
+            <summary>
+            当页导航元素之一被单击或用户手工输入页索引提交时发生。
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.PageChangedEventHandler">
+            <summary>
+            表示处理 <see cref="E:MyQuery.MyControl.MyPager.PageChanged"/> 事件的方法。
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.PageChangedEventArgs">
+            <summary>
+            为 <see cref="T:MyQuery.MyControl.MyPager"/> 控件的 <see cref="E:MyQuery.MyControl.MyPager.PageChanged"/> 事件提供数据。无法继承此类。
+            </summary>
+            <remarks>
+            当 <see cref="T:MyQuery.MyControl.MyPager"/> 控件的页导航元素之一被单击或用户输入页索引提交时引发 <see cref="E:MyQuery.MyControl.MyPager.PageChanged"/> 事件。
+            <p>有关 PageChangedEventArgs 实例的初始属性值列表，请参阅 PageChangedEventArgs 构造函数。</p>
+            </remarks>
+        </member>
+        <member name="M:MyQuery.MyControl.PageChangedEventArgs.#ctor(System.Int32)">
+            <summary>
+            使用新页面索引初始化 PageChangedEventArgs 类的新实例。
+            </summary>
+            <param name="newPageIndex">用户从 <see cref="T:MyQuery.MyControl.MyPager"/> 控件的页选择元素选定的或在页索引文本框中手工输入的页的索引。</param>
+        </member>
+        <member name="P:MyQuery.MyControl.PageChangedEventArgs.NewPageIndex">
+            <summary>
+            获取用户在 <see cref="T:MyQuery.MyControl.MyPager"/> 控件的页选择元素中选定的或在页索引文本框中手工输入的页的索引。
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyDateDesigner">
+            <summary>
+            日期服务器控件设计器。
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyDateDesigner.GetDesignTimeHtml">
+            <summary>
+            获取用于在设计时表示关联控件的 HTML。
+            </summary>
+            <returns>用于在设计时表示控件的 HTML。</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyDateDesigner.GetErrorDesignTimeHtml(System.Exception)">
+            <summary>
+            获取在呈现控件时遇到错误后在设计时为指定的异常显示的 HTML。
+            </summary>
+            <param name="e">要为其显示错误信息的异常。</param>
+            <returns>设计时为指定的异常显示的 HTML。</returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyDateDesigner.AllowResize">
+            <summary>
+            自动大小
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.RowCommandEventHandler">
+            <summary>
+            表示处理行按钮回发的用户事件的方法
+            </summary>
+            <param name="sender">MyGridView</param>
+            <param name="e">CommandName为按钮的列名 CommandArgument为当前行按钮列的值</param>
+        </member>
+        <member name="T:MyQuery.MyControl.CellDataBoundEventHandler">
+            <summary>
+            表示处理格Cell完成后用户的处理事件的方法
+            </summary>
+            <param name="sender">包含事件的控件</param>
+            <param name="e">处理绑定的参数</param>
+        </member>
+        <member name="T:MyQuery.MyControl.RowDataBoundEventHandler">
+            <summary>
+            表示处理行Row完成后用户的处理事件的方法
+            </summary>
+            <param name="sender">包含事件的控件</param>
+            <param name="e">处理绑定的参数</param>
+        </member>
+        <member name="T:MyQuery.MyControl.PageIndexChangedEventHandler">
+            <summary>
+            表示处理页号改变后用户事件的方法（逻辑处理可忽略）新页号为PageIndex
+            </summary>
+            <param name="sender">MyGridView</param>
+            <param name="e"></param>
+        </member>
+        <member name="T:MyQuery.MyControl.SortingEventHandler">
+            <summary>
+            表示处理标题排序事件的方法（逻辑处理可忽略）已经回到首行 SortDirection已经缓存
+            </summary>
+            <param name="sender">MyGridView</param>
+            <param name="e"></param>
+        </member>
+        <member name="T:MyQuery.MyControl.ButtonBoundEventHandler">
+            <summary>
+            表示处理Button完成后用户的处理事件的方法
+            </summary>
+            <param name="sender">包含事件的控件</param>
+            <param name="e">处理绑定的参数</param>
+        </member>
+        <member name="T:MyQuery.MyControl.ButtonCommandEventHandler">
+            <summary>
+            表示处理按钮回发的用户事件的方法
+            </summary>
+            <param name="sender">包含事件的控件</param>
+            <param name="e">CommandName为按钮的名称 CommandArgument为按钮数据 导出Excel时必须给e.GridView赋值为当前模板的MyGridView对象</param>
+        </member>
+        <member name="T:MyQuery.MyControl.IButtonDeal">
+            <summary>
+            定义了处理button的自定义处理的C#处理接口
+            by 贾世义 2009-1-18
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.IButtonDeal.Deal">
+            <summary>
+            返回运行的脚本则执行之 空或空字符串则忽略
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.IButtonDeal.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IButtonDeal.Button">
+            <summary>
+            对应的按钮对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IButtonDeal.Id">
+            <summary>
+            列表处理的选中行的ID 行的ID有keycolumnnames获得（多个用,分割）多选时多个ID用;分割
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IButtonDeal.Columns">
+            <summary>
+            处理的列集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IButtonDeal.QueryString">
+            <summary>
+            按钮所在页面的Page.Request.QueryString
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IButtonDeal.User">
+            <summary>
+            当前用户 可空
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.IColumnCalc">
+            <summary>
+            定义了MyColumnType.CalcCS的C#计算规则的列的计算接口
+            by 贾世义 2009-1-5
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.IColumnCalc.GetValue">
+            <summary>
+            计算方法 返回的值作为cell的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.IColumnCalc.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IColumnCalc.Column">
+            <summary>
+            当前处理的列
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IColumnCalc.DataColumns">
+            <summary>
+            当前处理的数据列的集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IColumnCalc.DealObject">
+            <summary>
+            当前处理的数据行对象 
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IColumnCalc.DataSource">
+            <summary>
+            当前处理的DataSource
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IColumnCalc.User">
+            <summary>
+            当前用户 可空
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.IDefaultCalc">
+            <summary>
+            定义了列配置默认值的C#计算规则接口
+            by 贾世义 2009-1-15
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.IDefaultCalc.GetValue">
+            <summary>
+            计算方法 返回的值作为默认值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.IDefaultCalc.Parameter">
+            <summary>
+            配置的参数值字符串
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IDefaultCalc.User">
+            <summary>
+            当前用户 可空
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.IFooterCalc">
+            <summary>
+            定义了MyCalcType.Other的C#计算规则的列Footer的计算接口
+            by 贾世义 2009-1-5
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.IFooterCalc.GetValue">
+            <summary>
+            计算方法 返回的值作为cell的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.IFooterCalc.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IFooterCalc.Column">
+            <summary>
+            当前处理的列
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IFooterCalc.DataColumns">
+            <summary>
+            当前处理的数据列的集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IFooterCalc.DataSource">
+            <summary>
+            当前处理的数据的集合对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IFooterCalc.User">
+            <summary>
+            当前用户 可空
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.IFunctionCalc">
+            <summary>
+            定义了获取用户是否有功能权限的C#处理接口
+            by 贾世义 2009-1-18
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.IFunctionCalc.HasFunction">
+            <summary>
+            返回是否有此功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.IFunctionCalc.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IFunctionCalc.FunctionCode">
+            <summary>
+            按钮对应的FunctionCode
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IFunctionCalc.User">
+            <summary>
+            当前用户 可空
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.IRowCalc">
+            <summary>
+            定义了增加自定义行的C#计算规则的计算接口
+            by 贾世义 2009-2-17
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.IRowCalc.Add">
+            <summary>
+            计算方法 返回的值作为新的DataSource
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.IRowCalc.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IRowCalc.DataColumns">
+            <summary>
+            当前处理的数据列的集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IRowCalc.DataSource">
+            <summary>
+            当前处理的数据的集合对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IRowCalc.Parameter">
+            <summary>
+            配置的参数值字符串
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IRowCalc.User">
+            <summary>
+            当前用户 可空
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IRowCalc.RowName">
+            <summary>
+            当前插入行的名称标示
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.IValidateCalc">
+            <summary>
+            定义了获取验证是否通过的C#处理接口
+            by 贾世义 2009-2-19
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.IValidateCalc.Validate">
+            <summary>
+            返回未通过验证的提示信息 通过则返回null
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.IValidateCalc.Name">
+            <summary>
+            对应编辑的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IValidateCalc.Column">
+            <summary>
+            当前处理的列
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IValidateCalc.DataColumns">
+            <summary>
+            当前处理的数据列的集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IValidateCalc.User">
+            <summary>
+            当前处理的数据行对象 
+            </summary>
+            <summary>
+            当前用户 可空
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.IWhereCalc">
+            <summary>
+            定义了获取append中sys条件表达式的C#处理接口
+            by 贾世义 2009-1-17
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.IWhereCalc.GetValue">
+            <summary>
+            返回替换条件表达式和值的数组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.IWhereCalc.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IWhereCalc.Parameter">
+            <summary>
+            配置的参数值字符串
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.IWhereCalc.User">
+            <summary>
+            当前用户 可空
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyGridView">
+            <summary>
+            仿GridView控件 主要支持合并标题 计算行 行分组合并及排序等
+            by 贾世义 2008-12-31
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.#ctor(System.Web.UI.Page)">
+            <summary>
+            构造函数 动态创建使用 需传入Page
+            </summary>
+            <param name="page"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.CreateChildControls">
+            <summary>
+            重写的生成子控件
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.DataBind(System.Object)">
+            <summary>
+            重载DataBind 实现给定DataSource直接绑定
+            </summary>
+            <param name="ds"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.DataBind">
+            <summary>
+            重写的数据绑定
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.DataBind(System.Boolean)">
+            <summary>
+            绑定生成控件
+            </summary>
+            <param name="raiseOnDataBinding"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.GetMyColumns">
+            <summary>
+            获得GridView处理的列对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.OnRowDataBound(MyQuery.MyControl.MyBoundEventArgs)">
+            <summary>
+            行绑定事件处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.dealCells(MyQuery.MyControl.MyColumns,MyQuery.MyControl.MyBoundEventArgs)">
+            <summary>
+            处理列
+            </summary>
+            <param name="myColumns"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.OnCellDataBound(MyQuery.MyControl.MyBoundEventArgs)">
+            <summary>
+            格绑定事件处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.RaisePostBackEvent(System.String)">
+            <summary>
+            回发事件
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.OnSorting(System.Web.UI.WebControls.GridViewSortEventArgs)">
+            <summary>
+            排序事件处理 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.OnPageIndexChanged(System.EventArgs)">
+            <summary>
+            页改变事件处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyGridView.OnRowCommand(System.Web.UI.WebControls.CommandEventArgs)">
+            <summary>
+            行按钮命令事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.Name">
+            <summary>
+            xml配置名称
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.TagKey">
+            <summary>
+            重写最外层标签，默认为div
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.Caption">
+            <summary>
+            获取或设置表格的标题
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.Height">
+            <summary>
+            覆盖 高度属性
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.Width">
+            <summary>
+            覆盖 宽度属性
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.IsTableFixed">
+            <summary>
+            获取表格是否固定大小
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.TableFixedCols">
+            <summary>
+            获取或设置表格固定左侧列数（宽度固定时有效）
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.IsReloadSql">
+            <summary>
+            获取或设置是否重新加载sql
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.MyChart">
+            <summary>
+            获取或设置分析图片对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.AddRows">
+            <summary>
+            获取或设置增加行的配置信息
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.IsSaveData">
+            <summary>
+            获取或设置是否使用ViewState缓存数据
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.User">
+            <summary>
+            获取或设置用户对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.DataSource">
+            <summary>
+            获取设置数据源 
+            注意：支持DataSet第一个DataTable作为展示使用;DataTable 或实现了接口IList的集合类
+                只有声明了[Serializable]的IsLogicDeal=true才有效 才能使用ViewState缓存
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.Columns">
+            <summary>
+            获取设置绑定的列集合 空则默认DisplayTable的列
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.KeyColumnNames">
+            <summary>
+            获取设置主键列名 无主键则行不能选中 多个用,分割
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.SelectKeyValues">
+            <summary>
+            返回选择行的值
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.CalcScript">
+            <summary>
+            获取设置数据列（CalcScript）计算使用的JavaScript脚本函数
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.IsLogicDeal">
+            <summary>
+            获取设置是否逻辑处理 逻辑处理需要获取所有数据 但是根据分页展示数据
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.AllowPaging">
+            <summary>
+            获取或设置是否分页
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.RecordCount">
+            <summary>
+            获取设置记录数 逻辑处理必须设置
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.PageSize">
+            <summary>
+            获取设置分页大小
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.PageCount">
+            <summary>
+            获得页数
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.PageIndex">
+            <summary>
+            获取设置当前页索引
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.NormalRowClass">
+            <summary>
+            获取设置正常数据行class
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.AlterRowClass">
+            <summary>
+            获取设置奇数数据行class
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.SelectRowClass">
+            <summary>
+            获取设置选中数据行class
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.OverRowClass">
+            <summary>
+            获取设置鼠标停留时数据行class
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.FooterRowClass">
+            <summary>
+            获取设置Footer行class
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.PagerRowClass">
+            <summary>
+            获取设置分页行class
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.IsShowRowNum">
+            <summary>
+            获取或设置是否第一列显示序号
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.AllowSorting">
+            <summary>
+            获取或设置是否允许点击标题排序
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.IsMultiselect">
+            <summary>
+            获取或设置是否允许多选
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.IsSingleselect">
+            <summary>
+            获取或设置是否单选（多选设置优先）
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.PagerVisible">
+            <summary>
+            获取或设置是否显示分页(记录数提示)行 仅当非分页或只有一页时有效
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.FooterVisible">
+            <summary>
+            获取或设置是否Footer行显示
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.IsAsc">
+            <summary>
+            获取或设置首次点击排序方式
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.SortExpression">
+            <summary>
+            获取或设置首次点击排序字段表达式（不包括 排序方式）
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.MergeColumns">
+            <summary>
+            获取或设置当数据行内容相同时合并的列 多个可用,分割 按第一个列判断数据是否相同 
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.ParentColumnName">
+            <summary>
+            获取或设置需要按照父子关系合并行时指定主键字段名 请确保此列值不重复
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.ChildColumnName">
+            <summary>
+            获取或设置需要按照父子关系合并行时指定子对应父的字段名
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.ParentChildDisplay">
+            <summary>
+            获取或设置父子关系展示的列名 若空或列名不在Columns集合中则无法展示 这无法展开下级
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.ChildsOpenImg">
+            <summary>
+            获取或设置子行展开状态时的图片Url
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.ChildsCloseImg">
+            <summary>
+            获取或设置子行合并状态时的图片Url
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.IsAllOpenChilds">
+            <summary>
+            获取或设置是否展开全部子节点
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.AscImg">
+            <summary>
+            升序显示图片
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.DescImg">
+            <summary>
+            降序显示图片
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.IsCrossTable">
+            <summary>
+            是否为交叉列表 仅当数据源为Table并且指定了三列（第一列为项，第二列数据转化为列，第三列为值）时有效
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.IsBorder">
+            <summary>
+            获取或设置是否有表格线 默认有
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.RowHeight">
+            <summary>
+            获取或设置行高 默认不设置
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyGridView.AllowHeader">
+            <summary>
+            获取或设置是否有标题行
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyGridView.RowDataBound">
+            <summary>
+            行绑定事件，默认的处理在处理自定义事件前已经处理
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyGridView.CellDataBound">
+            <summary>
+            格绑定事件，默认的处理在处理自定义事件前已经处理
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyGridView.Sorting">
+            <summary>
+            排序事件，已经回到首行 物理分页需要按照新的排序重新获得数据并赋给DataSource，DataBind默认执行
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyGridView.PageIndexChanged">
+            <summary>
+            页改变事件，页号已经是新的.物理分页需要按照新的页号重新获得数据并赋给DataSource，DataBind默认执行
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyGridView.RowCommand">
+            <summary>
+            行按钮命令事件 先处理默认处理（列的Target配置了实现了IButtonDeal接口的类名，则会反射处理）,再进行自定义事件 this.DataBind默认执行
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyColumns">
+            <summary>
+            封装了自定义列列表 
+            by 贾世义 2008-12-31
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumns.Parent">
+            <summary>
+            上级列
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.Add(System.String,MyQuery.MyControl.MyColumnType,System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,MyQuery.MyControl.MyCalcType,System.String,MyQuery.MyControl.MyColumns,System.Object,System.Int32,MyQuery.Utils.LikeType,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            根据指定属性创建一个表格列属性类
+            </summary>
+            <param name="name">名称 给表的列其的name或类成员的名字(支持顺序：属性、字段、方法可带字符参数)</param>
+            <param name="type">列类型</param>
+            <param name="expression">取原始数的表达式 空则取Name 根据type处理</param>
+            <param name="title">标题</param>
+            <param name="width">宽度 支持指定宽度和百分值</param>
+            <param name="visible">是否显示</param>
+            <param name="dataFormat">数值显示格式</param>
+            <param name="urlFormatString">根据type处理 主要含义：TextAjax时为ServicePath 本项目路径从根目录开始 其它用http开头</param>
+            <param name="useFields">需要使用的字段（多个用,分割 必须是在MyColumn列集合中存在的name） TextAjax时为ServiceMethod</param>
+            <param name="target">根据type处理 主要：导航目的地 如_self、_blank等 默认_blank</param>
+            <param name="isSort">是否排序</param>
+            <param name="sort">排序字段</param>
+            <param name="className">样式</param>
+            <param name="calcType">Foot计算类型</param>
+            <param name="footCalc">其它Foot计算类型对应的类名</param>
+            <param name="childColumns">当合并列时必须指定子列集合</param>
+            <param name="value">根据模板类型处理</param>
+            <param name="maxLength">根据type处理 主要含义：最大长度</param>
+            <param name="likeType">当like条件时有效</param>
+            <param name="colspan">合并列数</param>
+            <param name="rowspan">合并行数</param>
+            <param name="notes">说明信息</param>
+            <param name="isinvisible">当数据或usefields的数据为空时则此列忽略不显示</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.Add(System.String,System.String)">
+            <summary>
+            根据指定属性创建一个表格列属性类 注意不覆盖已经存在的列
+            </summary>
+            <param name="name">名称 给表的列其的name或类成员的名字(支持顺序：属性、字段、方法可带字符参数)</param>
+            <param name="title">标题</param>
+            <returns>返回新增加的列对象</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.Add(System.String,System.String,System.Type)">
+            <summary>
+            根据指定属性创建一个表格列属性类 注意不覆盖已经存在的列
+            </summary>
+            <param name="name">名称 给表的列其的name或类成员的名字(支持顺序：属性、字段、方法可带字符参数)</param>
+            <param name="title">标题</param>
+            <param name="dataType">数据类型</param>
+            <returns>返回新增加的列对象</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.Add(System.String,System.String,System.String)">
+            <summary>
+            根据指定属性创建一个表格列属性类
+            </summary>
+            <param name="name">名称 给表的列其的name或类成员的名字(支持顺序：属性、字段、方法可带字符参数)</param>
+            <param name="title">标题</param>
+            <param name="width">显示宽度</param>
+            <returns>返回新增加的列对象</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.Add(System.String,System.String,System.String,System.String)">
+            <summary>
+            根据指定属性创建一个表格列属性类
+            </summary>
+            <param name="name">名称 给表的列其的name或类成员的名字(支持顺序：属性、字段、方法可带字符参数)</param>
+            <param name="title">标题</param>
+            <param name="width">显示宽度</param>
+            <param name="dataFormat">数据展示格式</param>
+            <returns>返回新增加的列对象</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.Add(System.String,System.String,MyQuery.MyControl.MyColumns)">
+            <summary>
+            根据指定属性创建一个表格列属性类
+            </summary>
+            <param name="name">名称 给表的列其的name或类成员的名字(支持顺序：属性、字段、方法可带字符参数)</param>
+            <param name="title">标题</param>
+            <param name="childColumns">子列</param>
+            <returns>返回新增加的列对象</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.Add(MyQuery.MyControl.MyColumns,System.String)">
+            <summary>
+            将MyColumns集合加入
+            </summary>
+            <param name="myColumns"></param>
+            <param name="fix">在列集合的名称后加匹配字符 不能为null</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.Add(MyQuery.MyControl.MyColumn)">
+            <summary>
+            添加指定的表格列属性类。
+            </summary>
+            <param name="myColumn">表格列属性类。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.IndexOf(MyQuery.MyControl.MyColumn)">
+            <summary>
+            查找指定的表格列属性类。
+            </summary>
+            <param name="myColumn">要查找的表格列属性类。</param>
+            <returns>找到的表格列属性类的索引，如未找到则返回-1。</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.IndexOf(System.String)">
+            <summary>
+            查找指定列名的索引
+            </summary>
+            <param name="name">要查找的表格列属性类的名称</param>
+            <returns>找到的表格列名的索引，如未找到则返回-1</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.Remove(System.String)">
+            <summary>
+            移除name的项 不存在则不处理
+            </summary>
+            <param name="name">name 忽略大小写</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.OnInsert(System.Int32,System.Object)">
+            <summary>
+            插入对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.OnRemove(System.Int32,System.Object)">
+            <summary>
+            移除对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.OnSet(System.Int32,System.Object,System.Object)">
+            <summary>
+            设置对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="oldValue">原对象。</param>
+            <param name="newValue">新对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.OnValidate(System.Object)">
+            <summary>
+            验证时类型检查。
+            </summary>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.GetRowspan">
+            <summary>
+            获得行的深度 当无合并列时深度为1
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.GetDataColumns">
+            <summary>
+            获得最后一层的列 即需要绑定数据的列（含不可见列）
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.GetSelectSql(System.Boolean)">
+            <summary>
+            获得SQL的select语句部分 包含select
+            </summary>
+            <param name="isSum">是否判断求和</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.GetColumnType(System.String)">
+            <summary>
+            获得列类型
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.GetCalcType(System.String)">
+            <summary>
+            获得列计算类型
+            </summary>
+            <param name="calcType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.GetMergeColumns(System.String)">
+            <summary>
+            获取MergeColumns合并列 多于一个用分割
+            </summary>
+            <param name="MergeColumns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.SetColumnsValue(System.String,System.Object,System.String,System.Object,MyQuery.Utils.MyUser,System.Int32,System.Boolean)">
+            <summary>
+            计算集合中列的值
+            </summary>
+            <param name="name">查询名称</param>
+            <param name="obj">数据对象</param>
+            <param name="calcScript">计算脚本</param>
+            <param name="ds">数据源</param>
+            <param name="user">用户对象</param>
+            <param name="rowCount">当前行序号</param>
+            <param name="isSelect">是否下拉列表值</param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.SetColumns(System.Object,System.Boolean)">
+            <summary>
+            从数据源获取列
+            </summary>
+            <param name="ds"></param>
+            <param name="isList">是否列表 列表时注意DataTable时为列 IList时为其集合对像的公共属性与字段</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumns.GetColumn(MyQuery.MyControl.MyColumnType)">
+            <summary>
+            按类型获取第一个满足条件的
+            </summary>
+            <param name="mycolumnType"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyColumns.Item(System.Int32)">
+            <summary>
+            索引器
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyColumns.Item(System.String)">
+            <summary>
+            索引器 忽略大小写
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyColumn">
+            <summary>
+            列实体
+            by 贾世义 2008-12-31
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Type">
+            <summary>
+            列类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Name">
+            <summary>
+            名称 给表的列其的name或类成员的名字(支持顺序：属性、字段、方法可带字符参数)
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Width">
+            <summary>
+            宽度 支持指定宽度和百分值
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Visible">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.DataFormat">
+            <summary>
+            数值显示格式
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.UrlFormatString">
+            <summary>
+            根据type处理 主要含义：TextAjax时为ServicePath 本项目路径从根目录开始 其它用http开头
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.UseFields">
+            <summary>
+            需要使用的字段（多个用,分割 必须是在MyColumn列集合中存在的name） TextAjax时为ServiceMethod
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Target">
+            <summary>
+            根据type处理 主要：导航目的地 如_self、_blank等 默认_blank
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.IsSort">
+            <summary>
+            是否排序或Excel导出配置时是否默认选择 当编辑时用做是否非只读
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Sort">
+            <summary>
+            排序字段 当编辑时用做onchange执行的脚本
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.ChildColumns">
+            <summary>
+            当合并列时必须指定子列集合
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.CssClass">
+            <summary>
+            样式
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.CalcType">
+            <summary>
+            Foot计算类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.FootCalc">
+            <summary>
+            其它Foot计算类型对应的类名
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Value">
+            <summary>
+            列表处理当前的值（仅在绑定处理中有效） 条件处理为默认值表达式
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Colspan">
+            <summary>
+            合并列数 仅当非列表时有效
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Rowspan">
+            <summary>
+            合并行数 仅当非列表时有效
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Selects">
+            <summary>
+            下拉列表时名称、值的集合
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.MaxLength">
+            <summary>
+            输入最多字符数
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Like">
+            <summary>
+            like时%的位置
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.MyValidates">
+            <summary>
+            编辑时针对本列的验证
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Notes">
+            <summary>
+            说明信息
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.IsInvisible">
+            <summary>
+            当数据或usefields的数据为空时则此列忽略不显示（仅编辑时有效）
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumn.Disabled">
+            <summary>
+            编辑时不可编辑（目前只用于程序）
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.GetSort(System.Boolean)">
+            <summary>
+            获得排序表达式
+            </summary>
+            <param name="isLogicDeal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.GetColSpan">
+            <summary>
+            合并列数
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.SetValue(System.String,MyQuery.MyControl.MyColumns,System.Object,System.String,System.Object,MyQuery.Utils.MyUser,System.Boolean)">
+            <summary>
+            获得列的显示值
+            </summary>
+            <param name="name">查询的name</param>
+            <param name="dataColumns">查询的DataColumns</param>
+            <param name="obj">处理的行数据</param>
+            <param name="calcScript">查询的CalcScript</param>
+            <param name="ds">当前的数据集</param>
+            <param name="user">当前用户</param>
+            <param name="isSelect">是否下拉列表值</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.IsOutExcel">
+            <summary>
+            根据列类型判断是否输出到Excel
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.IsCalcType">
+            <summary>
+            根据列类型判断是否为计算列
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.IsList">
+            <summary>
+            是否在列表展示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.IsSelect">
+            <summary>
+            是否是下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.IsDetail">
+            <summary>
+            是否在详细展示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.IsNoSql">
+            <summary>
+            是否需要将此列写入SQL
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.GetInputValue(System.String)">
+            <summary>
+            根据编辑类型返回相对应类型的值
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.GetParentColumn(MyQuery.MyControl.MyColumns)">
+            <summary>
+            如果本列在子集合中则返回上级组合列 否则返回null
+            </summary>
+            <param name="myColumns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.IsLastChild(MyQuery.MyControl.MyColumns)">
+            <summary>
+            判断本列在集合中并且是最后一个则返回true 否则返回false
+            </summary>
+            <param name="myColumns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.GetData(System.Web.UI.Page)">
+            <summary>
+            获得数据格加入对象
+            </summary>
+            <param name="page"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.GetLink(System.Web.UI.Page,System.Object[])">
+            <summary>
+            获得Link格加入对象
+            </summary>
+            <param name="page"></param>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.GetImage(System.Web.UI.Page,MyQuery.MyControl.MyColumns,System.Object)">
+            <summary>
+            获得Image格加入对象
+            </summary>
+            <param name="page"></param>
+            <param name="dataColumns"></param>
+            <param name="dataRow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.GetButton(System.Web.UI.Control)">
+            <summary>
+            获得Button格加入对象
+            </summary>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.GetLinkButton(System.Web.UI.Control)">
+            <summary>
+            获得LinkButton格加入对象
+            </summary>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.GetImageButton(System.Web.UI.Control)">
+            <summary>
+            获得ImageButton格加入对象
+            </summary>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.getClick(System.Web.UI.Control)">
+            <summary>
+            获得click脚本
+            </summary>
+            <param name="ctrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyColumn.IsMergeColumn">
+            <summary>
+            是否合并数据列（排除合并按钮）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyColumn.Expression">
+            <summary>
+            取原始数的表达式 空则取Name 根据type处理
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyColumn.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyColumnType">
+            <summary>
+            用于MyGridView的列类型枚举
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.First">
+            <summary>
+            列表首列 按照对应的IsMultiselect或IsShowRowNum处理 其它表示只要标题作为本行的第一列
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Link">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Image">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Button">
+            <summary>
+            按钮
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.LinkButton">
+            <summary>
+            链接按钮
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.ImageButton">
+            <summary>
+            图片按钮
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Composite">
+            <summary>
+            合并列 输出Text
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.CalcScript">
+            <summary>
+            JS脚本计算列 输出Text
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.CalcCS">
+            <summary>
+            C#计算列 输出Text 需要写实现IColumnCalc的类
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.CalcSQL">
+            <summary>
+            SQL脚本计算列 输出Text
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.TextInt">
+            <summary>
+            整数
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.TextDouble2">
+            <summary>
+            两位小数
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.TextDouble">
+            <summary>
+            无限制数值
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.TextDate">
+            <summary>
+            日期文本框
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.TextTime">
+            <summary>
+            日期时间文本框
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.TextAjax">
+            <summary>
+            Ajax文本框
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.TextArea">
+            <summary>
+            多行文本编辑
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.TextEditor">
+            <summary>
+            丰富文本编辑
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.CheckBox">
+            <summary>
+            复选框
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Select">
+            <summary>
+            下拉列表 对应varchar类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.SelectList">
+            <summary>
+            可多选下拉列表 对应varchar类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.SelectInt">
+            <summary>
+            下拉列表 对应int类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.SelectDouble">
+            <summary>
+            下拉列表 对应double类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.SelectDate">
+            <summary>
+            下拉列表 对应datetime类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.FromTo">
+            <summary>
+            从至Text
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.FromToInt">
+            <summary>
+            从至TextInt
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.FromToDate">
+            <summary>
+            从至TextDate
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.FromToDouble">
+            <summary>
+            从至TextDouble
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.FromToSelectInt">
+            <summary>
+            从至下拉列表 按int处理
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.FromToSelectDouble">
+            <summary>
+            从至下拉列表 按double处理
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Formula">
+            <summary>
+            Excel计算公式
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.ExcelOut">
+            <summary>
+            仅Excel导出
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.ExcelNo">
+            <summary>
+            不作为Excel导出
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Chart">
+            <summary>
+            分析图形
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Auto">
+            <summary>
+            自动生成 编辑使用
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Detail">
+            <summary>
+            编辑时为展示文本
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.FileInput">
+            <summary>
+            file input
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.TextNoWrap">
+            <summary>
+            不换行文本
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Title">
+            <summary>
+            仅将标题文字作为输出显示
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.GetValue">
+            <summary>
+            取值提交字段
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.GetValueDetail">
+            <summary>
+            仅取值展示字段
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.GetValueText">
+            <summary>
+            空时取值并作为编辑字段
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Hidden">
+            <summary>
+            编辑时获取值并作为隐藏域
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.RadioBox">
+            <summary>
+            单选框
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.FieldWhere">
+            <summary>
+            自定义查询条件（字段列表+表达式+文本框）
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.SingleSelect">
+            <summary>
+            弹出单选选窗口
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.MultiSelect">
+            <summary>
+            弹出多选窗口
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyColumnType.Iframe">
+            <summary>
+            嵌入链接
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyCalcType">
+            <summary>
+            用于MyGridView的列聚合计算类型枚举
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCalcType.None">
+            <summary>
+            无计算
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCalcType.Sum">
+            <summary>
+            求和 仅支持从DataTable中直接取值的列 其它请使用Others自己写实现IFooterCalc的类
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCalcType.Avg">
+            <summary>
+            求平均  仅支持从DataTable中直接取值的列 其它请使用Others自己写实现IFooterCalc的类
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCalcType.Count">
+            <summary>
+            计数
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCalcType.TotalSum">
+            <summary>
+            求总和 根据满足条件的数据计算
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCalcType.TotalAvg">
+            <summary>
+            求总平均 根据满足条件的数据计算
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCalcType.TotalCount">
+            <summary>
+            总计数 根据满足条件的数据计算
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCalcType.TotalSql">
+            <summary>
+            根据原有表达式计算满足条件的数据
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCalcType.Calc">
+            <summary>
+            脚本计算公式
+            </summary>
+        </member>
+        <member name="F:MyQuery.MyControl.MyCalcType.Other">
+            <summary>
+            其它
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyBtns">
+            <summary>
+            按钮的展示与处理控件 
+            by 贾世义 2009-1-18
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.#ctor(System.Web.UI.Page)">
+            <summary>
+            构造函数 动态创建使用 需传入Page
+            </summary>
+            <param name="page"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.CreateChildControls">
+            <summary>
+            重写CreateChildControls
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.DataBind(MyQuery.MyControl.MyButtons)">
+            <summary>
+            重载DataBind 实现直接将MyButtons绑定
+            </summary>
+            <param name="myButtons"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.DataBind">
+            <summary>
+            绑定生成控件
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.DataBind(System.Boolean)">
+            <summary>
+            绑定生成控件
+            </summary>
+            <param name="raiseOnDataBinding"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.OnRowDataBound(MyQuery.MyControl.MyBoundEventArgs)">
+            <summary>
+            行绑定事件处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.OnCellDataBound(MyQuery.MyControl.MyBoundEventArgs)">
+            <summary>
+            格绑定事件处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.OnButtonBound(MyQuery.MyControl.MyBoundEventArgs)">
+            <summary>
+            按钮绑定处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.RaisePostBackEvent(System.String)">
+            <summary>
+            回发处理
+            </summary>
+            <param name="eventArgument"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.OnButtonCommand(MyQuery.MyControl.MyCommandEventArgs)">
+            <summary>
+            按钮事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.getSelectId">
+            <summary>
+            获得获取ID的脚本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyBtns.GetHref(MyQuery.MyControl.MyButton)">
+            <summary>
+            得到导航Url
+            </summary>
+            <param name="button"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyBtns.TagKey">
+            <summary>
+            重写最外层标签，默认为div
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyBtns.IsjQuery">
+            <summary>
+            获取和设置是否启用jQuery的Validate
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyBtns.Buttons">
+            <summary>
+            获取和设置处理的按钮集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyBtns.IFunctioncalc">
+            <summary>
+            获取和设置实现了IFunctionCalc接口的类名
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyBtns.Title">
+            <summary>
+            获取和设置对应查询的标题 展示在按钮行的左边
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyBtns.User">
+            <summary>
+            获取和设置用户对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.MyControl.MyBtns.HelpTip">
+            <summary>
+            设置帮助提示按钮内容
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyBtns.RowDataBound">
+            <summary>
+            行绑定事件，默认的处理在处理自定义事件前已经处理
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyBtns.CellDataBound">
+            <summary>
+            格绑定事件，默认的处理在处理自定义事件前已经处理
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyBtns.ButtonBound">
+            <summary>
+            按钮绑定事件，默认的处理在处理自定义事件前已经处理
+            </summary>
+        </member>
+        <member name="E:MyQuery.MyControl.MyBtns.ButtonCommand">
+            <summary>
+            引起回发的按钮事件 先处理自定义事件再进行默认处理  
+            必须给e.GridView赋值为当前模板的MyGridView对象 默认先执行MyGridView.DataBind后ToExcel自动处理，Deal按照定义接口处理 否则忽略默认处理
+            MyGridView.DataBind默认执行
+            </summary>
+        </member>
+        <member name="T:MyQuery.MyControl.MyPagerDesigner">
+            <summary>
+            <see cref="T:MyQuery.MyControl.MyPager"/> 服务器控件设计器。
+            </summary>
+        </member>
+        <member name="M:MyQuery.MyControl.MyPagerDesigner.GetDesignTimeHtml">
+            <summary>
+            获取用于在设计时表示关联控件的 HTML。
+            </summary>
+            <returns>用于在设计时表示控件的 HTML。</returns>
+        </member>
+        <member name="M:MyQuery.MyControl.MyPagerDesigner.GetErrorDesignTimeHtml(System.Exception)">
+            <summary>
+            获取在呈现控件时遇到错误后在设计时为指定的异常显示的 HTML。
+            </summary>
+            <param name="e">要为其显示错误信息的异常。</param>
+            <returns>设计时为指定的异常显示的 HTML。</returns>
+        </member>
+        <member name="P:MyQuery.MyControl.MyPagerDesigner.AllowResize">
+            <summary>
+            自动大小
+            </summary>
+        </member>
+    </members>
+</doc>

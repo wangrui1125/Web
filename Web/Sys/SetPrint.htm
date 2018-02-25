@@ -1,0 +1,81 @@
+﻿<html>
+<head>
+    <title>打印设置</title>
+    <link href="../Css/common.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+
+var hkey_root,hkey_path,hkey_key
+
+hkey_root="HKEY_CURRENT_USER"
+
+hkey_path="\\Software\\Microsoft\\Internet Explorer\\PageSetup\\"
+
+//设置网页打印的页眉页脚为空
+
+function pagesetup_null()
+
+{
+
+  try{
+
+    var RegWsh = new ActiveXObject("WScript.Shell")
+
+    hkey_key="header"    
+
+    RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"")
+
+    hkey_key="footer"
+
+    RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"")
+
+  }catch(e){
+    alert("清空网页打印的页眉页脚失败，请手动设置");
+  }
+
+}
+
+//设置网页打印的页眉页脚为默认值
+
+function pagesetup_default()
+
+{
+
+  try{
+
+    var RegWsh = new ActiveXObject("WScript.Shell")
+
+    hkey_key="header"    
+
+    RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"&w&b页码，&p/&P")
+
+    hkey_key="footer"
+
+    RegWsh.RegWrite(hkey_root+hkey_path+hkey_key,"&u&b&d")
+
+  }catch(e){
+    alert("设置网页打印的页眉页脚失败，请手动设置");
+  }
+
+}
+
+    </script>
+
+</head>
+<body>
+    <br />
+    <br />
+    &nbsp;&nbsp;注意：打印前，为了美观需要清空浏览器打印设置中的页眉和页脚，请点击【清空页眉页脚】执行清空。（仅支持IE内核浏览器）
+    <p align="center">
+        <input type="button" value="清空页眉页脚" onclick="pagesetup_null()" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+        <input type="button" value="恢复默认页眉页脚" onclick="pagesetup_default()" />
+    </p>
+    <br />
+    <br />
+    如果执行下面的按钮【清空页眉页脚】未能去除或者进行更多的打印设置，请选择【文件】-【页面设置】进行手动删除页眉和页脚的设置。如图（IE9的打印设置）：
+    <p align="center">
+        <img src="../Img/PrintSet.jpg" />
+    </p>
+</body>
+</html>

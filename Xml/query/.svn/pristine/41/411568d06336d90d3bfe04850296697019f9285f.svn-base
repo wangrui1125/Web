@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="用户基本信息" pagesize="0">
+    <select>
+      <colgroup>
+         <col width="100px"/>
+        <col/>
+      </colgroup>
+      <column name="id" title="帐户">
+        Consult.Consult_ID
+      </column>
+      <column name="name" title="姓名">
+        S_User.Name
+      </column>
+      <column name="Unit" title="单位">
+       Consult.Consult_Unit
+      </column>
+      <column name="Fields" title="擅长领域">
+       Consult.Consult_Fields
+      </column>
+     <column name="Tel" title="手机">
+     Consult.Consult_Tel
+      </column>
+      <column name="email" title="邮箱">
+      Consult.Consult_email
+      </column>
+      <column name="Address" title="地址">
+      Consult.Consult_Add
+      </column>
+     <column name="Officephone" title="办公室电话">
+      Consult.Consult_Officephone
+      </column>
+     <column name="qq" title="腾讯qq">
+     Consult.Consult_qq
+      </column>
+    </select>
+    <from type="table">
+      <table title="用户表">Consult</table>
+      <table title="用户表">left join S_User on Consult.Consult_ID=S_User.ID</table>
+    
+     </from>
+    <where isparameter="true">
+      <append type="querystring" name="id">
+        Consult.Consult_ID={0}
+      </append>
+    </where>
+  </myquery>
+ 
+   <buttons position="top">
+      <button name="btnAdd" title="编 辑" type="redirect" cssclass="input_button" parameters="id">
+        tmp/MyEdit.aspx?n=edituserInfo
+      </button>
+  </buttons>
+</root>

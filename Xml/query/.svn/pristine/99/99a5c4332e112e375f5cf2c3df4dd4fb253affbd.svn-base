@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="方案信息" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="80px"/>
+        <col/>
+      </colgroup>
+      <column name="Plan_Title" title="方案名称">
+       [Plan].Plan_Title
+      </column>
+      <column name="Plan_Des" title="方案详细">
+        [Plan].Plan_Des
+      </column>
+      <column name="Plan_Status" title="方案状态">
+        f_code.Name
+      </column>
+      <column name="Rq_Name" title="方案对应的科技需求">
+        TechRequire.Rq_Name
+      </column>
+       <column name="Plan_CreaterID" title="方案创建者">
+        [Plan].Plan_CreaterID
+      </column>
+       <column name="Plan_CreaterTime" title="方案创建时间">
+        [Plan].Plan_CreateTime
+      </column>
+    </select>
+    <from type="table">
+      <table title="方案">[Plan]</table>
+      <table title="科技需求">left join TechRequire on [Plan].Rq_ID=TechRequire.Rq_ID</table>
+      <table title="代码表">left join f_code on f_code.id='Rq_flag' and f_code.code=[Plan].Plan_Status</table>
+    
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="querystring" name="id">
+        [Plan].Plan_ID={0}
+      </append>
+    </where>   
+  </myquery>
+  
+  <myquery title="研究人员列表" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true">
+    <select ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+       
+      <column name="cid" visible="false" >
+        ConcernResearcher.ID
+      </column>
+
+         
+<column name="name" title="姓名" width="80px"  >
+        Researcher.name
+      </column>
+      <column name="Department" title="单位部门" width="220px">
+        Researcher.Department
+      </column>
+      <column name="Extract" title="研究方向" width="300px" maxlength="20">
+        Researcher.Extract
+      </column>
+      <!--column name="PrimaryURL" title="个人主页" width="200px" issort="false">
+        <![CDATA['<a href="'+Researcher.PrimaryURL+'" target="_blank">'+Researcher.PrimaryURL+'</a>']]>
+      </column-->
+      <column name="PrimaryDetail" title="详细信息" maxlength="40">
+        Researcher.PrimaryDetail
+      </column>
+      <column name="marks" title="标签内容" width="100px">
+        dbo.f_GetMark('researcher',Researcher.id)
+      </column>
+    </select>
+    <from type="table">
+      <table title="信息列表">ConcernResearcher</table>
+        <table title="研究人员表">left join Researcher on Researcher.id = ConcernResearcher.ConcernID</table>
+      
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+   
+<append type="querystring" name="id" title="计划编号">
+        ConcernResearcher.UserID={0} and ConcernResearcher.flag=5
+      </append>
+    </where>
+    <order>
+     ConcernResearcher.ID desc
+    </order>
+  </myquery>
+  
+  
+</root>

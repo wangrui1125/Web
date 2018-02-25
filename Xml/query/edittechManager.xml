@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title=" " pagesize="0">
+    <select>
+      <colgroup>
+        <col style="width: 100px;" />
+        <col />
+      </colgroup>  
+	  
+		<column name="Rq_ConsultID" title="指定审阅人" type="select" urlformatstring="sql:select ID,name from S_User left join S_roleUser on S_User.ID=S_roleUser.UID  where S_roleUser.roleID=4 or S_roleUser.roleID=6 order by Name">
+      </column>
+	  
+      <column name="zplan" usefields="id" type="iframe" urlformatstring="tmp/MyDetail1.aspx?n=detailTechRequire&amp;id={0}" maxlength="800"   colspan="2" parameter="id" parametervalue="!">
+      </column>
+		<column name="Rq_Manager" visible="false" value="useraccount">
+      </column>
+		<column name="Rq_ManagerTime" visible="false" value="gettime">
+      </column>
+		<column name="Rq_Time" visible="false" value="gettime"></column>
+    </select>
+    <from type="table">
+      <table title="科技需求">TechRequire</table>	   	 
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+    <append type="querystring" name="id">
+        TechRequire.Rq_ID={0}
+    </append>
+    </where>
+   <buttons>
+      <button name="save" title="提 交" cssclass="input_button">	  
+      </button>
+	  <button name="sentwbchat" title="发送通知" type="redirect" cssclass="input_button" parameters="id">
+	  EasyTechFunc/WeChatTest.aspx
+      </button>
+      <button name="btnReturn" title="返 回" type="redirect" cssclass="input_button">
+        EasyTechFunc/TechRequire.aspx
+      </button>
+    </buttons>
+   <updatesqls isautoid="false">
+      <sql ismodify="false" paranames="id" columnnames="Rq_ConsultID">
+        <![CDATA[update TechRequire set Rq_Owner=Rq_ConsultID where Rq_ID=#id#]]>
+      </sql>
+      <sql ismodify="true" paranames="id" columnnames="Rq_ConsultID">
+        <![CDATA[update TechRequire set Rq_Owner=Rq_ConsultID where Rq_ID=#id#]]>
+      </sql>
+	<sql ismodify="false" paranames="id" >
+        <![CDATA[update TechRequire set Rq_flag=2 where Rq_ID=#id#]]>
+      </sql>
+      <sql ismodify="true" paranames="id"  >
+        <![CDATA[update TechRequire set Rq_flag=2 where Rq_ID=#id#]]>
+      </sql>
+    </updatesqls>
+  </myquery>
+</root>

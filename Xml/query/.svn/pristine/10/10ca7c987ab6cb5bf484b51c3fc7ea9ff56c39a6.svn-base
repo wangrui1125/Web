@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="我的科技需求(执行的)" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true" functioncode="909" >
+    <title parameters="parentid">
+      select name from s_User where id='{0}'
+    </title>
+    <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+   
+      <column name="name" title="需求名称" width="100px">
+        
+        TechRequire.Rq_Name
+      </column>
+       <column name="email" title="需求概述" width="60px"  >
+         TechRequire.Rq_EnpDes
+       </column>
+      <column name="tel" title="涉及领域" width="40px"  >
+         TechRequire.Rq_Fields
+      </column>
+      <column name="dep" title="后备力量" width="60px"  >
+        TechRequire.bak_Resource
+      </column>
+      
+    </select>
+    <from type="table">
+      <table title="用户表">TechRequire</table>
+      <table title="联系人表"> left join s_User on TechRequire.Rq_CreaterID=s_User.id</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+     
+
+      <append type="querystring" name="ID" title="用户ID">
+       and  s_User.ID={0}
+      </append>
+    
+   
+    </where>
+     <order>
+      s_user.id
+    </order>
+
+   
+  </myquery>
+</root>

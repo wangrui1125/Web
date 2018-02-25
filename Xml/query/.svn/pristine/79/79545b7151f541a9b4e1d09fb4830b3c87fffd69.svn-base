@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="科技需求" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="120px"></col>
+        <col width="300px"></col>
+        <col width="100px"></col>
+        <col></col>
+      </colgroup>
+   <column name="Enp_ID" title="需求企业" type="getvalue" urlformatstring="sql:select Enp_ID,Enp_Name from Enterprise where Enp_ID={0}" colspan="3" usefields="eid" parameter="eid" parametervalue="!">
+      </column>   
+      <column name="Enp_ID" title="需求企业" visible="false" colspan="3" width="99%" type="textajax" urlformatstring="WebService.asmx" usefields="GetEnpList" dataformat="{0:ID}" maxlength="1" cssclass="text_ajax" parameter="eid" parametervalue="">
+        <validates>
+          <validate type="isnotnull">
+          </validate>
+          <validate type="regex" title="请输入企业名称，并在下拉列表中选择">
+            ^.+\\[\\w+\\]$
+          </validate>
+          <validate type="servervalidate" title="企业必须存在">
+            MyQuery.BAL.QueryValidate
+          </validate>
+        </validates>
+      </column>
+      <column name="Rq_Name" type ="text" width="99%" title="科技需求名称" maxlength="150">
+        <validates>
+          <validate type="isnotnull"></validate>
+        </validates>
+      </column>
+      <column name="Rq_Fields" title="所属领域" type="text"  width="99%" maxlength="100">
+      </column>
+      <column name="Rq_EnpDes" type="textarea" width="99%" title="企业科技需求内容" colspan="3" urlformatstring="3">
+        <validates>
+          <validate type="isnotnull"></validate>
+        </validates>
+      </column>
+      <column name="Rq_Type" title="科技需求类型" type="select" urlformatstring="sql:select code,name from f_code where iflag=1 and id='Rq_Type' order by sn"  width="300px">
+      </column>
+      <column name="Rq_Expect" title="预期结果" type="textarea" width="99%" colspan="3" urlformatstring="3">
+      </column>
+      <column name="Rq_Parameter" title="参数细节" type="textarea"  width="99%" colspan="3" urlformatstring="3">
+      </column>
+      <column name="Rq_DueDay" title="预期完成时间" type="textdate"  width="300px">
+      </column>
+      <column name="Rq_Fund" title="拟提供技术资金" type="text"  width="99%" maxlength="100">
+      </column>
+      <column name="Rq_flag" title="科技需求状态" type="selectint" urlformatstring="sql:select code,name from f_code where iflag=1 and id='Rq_flag' and (sn=0 or sn=1) order by sn"  width="300px">
+      </column>
+      <column name="Rq_ResolveManner" title="拟解决方式" type="text" width="99%" maxlength="250">
+      </column>
+      <column name="bak_state" title="项目所处阶段" type="textarea" width="99%" colspan="3" urlformatstring="3">
+      </column>
+      <column name="bak_equpments" title="已有对接设备条件" type="textarea" width="99%" colspan="3" urlformatstring="3">
+      </column>
+      <column name="bak_Resource" title="已有对接人员" type="textarea" width="99%" colspan="3" urlformatstring="3"> 
+      </column>
+      <column name="bak_experience" title="相关实施经验" type="textarea" width="99%" colspan="3" urlformatstring="3">
+      </column>
+      <column name="Rq_CreateTime" visible="false" value="gettime">
+      </column>
+      <column name="Rq_CreaterID" visible="false" value="useraccount">
+      </column>
+      <column name="Rq_Owner" visible="false" value="useraccount">
+      </column>
+<column name="Rq_Time" visible="false" value="gettime">
+      </column>
+    </select>
+    <from type="table">
+      <table title="科技需求">TechRequire</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="querystring" name="id">
+        TechRequire.Rq_ID={0}
+      </append>
+    </where>
+    <buttons position="bottom">
+      <button name="save" title="提 交" type="save" cssclass="input_button">
+      </button>
+      <button name="btnMark" title="打标签" type="dialog" parameters="id" cssclass="input_button" windowwidth="330" windowheight="330">
+        tmp/MyEdit.aspx?n=editMark&amp;entity=tech
+      </button>
+      <!--button name="btnReturn" title="取 消" type="doscript" cssclass="input_button">
+        window.opener=null;window.open('','_self');window.close();
+      </button-->
+    </buttons>
+  </myquery>
+</root>

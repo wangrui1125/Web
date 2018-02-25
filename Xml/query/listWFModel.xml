@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="模型管理列表" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true">
+    <select keycolumnnames="modelid" ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+      <column name="modelid" title="模型ID" width="60px">
+        wf_model.modelid
+      </column>
+      <column name="des" title="分类" width="100px">
+        wf_class.des
+      </column>
+      <column name="modelname" title="名称" width="200px" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailWFProcess&amp;modelid={0}&amp;processid=0" usefields="modelid" target="_blank">
+        <![CDATA[wf_model.modelname]]>
+      </column>
+      <column name="modelversion" title="版本" width="50px">
+        wf_model.modelversion
+      </column>
+      <column name="createdtime" title="创建日期时间" width="120px" dataformat="yyyy-M-d H:m:s">
+        <![CDATA[wf_model.createdtime]]>
+      </column>
+      <column name="updatedtime" title="最后修改时间" width="120px" dataformat="yyyy-M-d H:m:s">
+        <![CDATA[wf_model.updatedtime]]>
+      </column>
+      <column name="modelstatus" title="状态" width="50px" sort="wf_model.modelstatus">
+        case when wf_model.modelstatus=1 then '停用' else '' end
+      </column>
+    </select>
+    <from type="table">
+      <table title="模型表">wf_model</table>
+      <table title="分类">left join wf_class on wf_class.id=wf_model.modelclass</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <colgroup>
+        <col width="80px"/>
+        <col width="100px"/>
+        <col width="80px"/>
+        <col width="100px"/>
+        <col width="80px"/>
+        <col/>
+      </colgroup>
+      <column name="modelclass" title="模型分类" width="105px" type="select" dataformat=",全部;0,未分类" urlformatstring="sql:select id,des from wf_class order by parentid,id">
+        and wf_model.modelclass={0}
+      </column>
+      <column name="clasname" title="模型名称" width="100px" target="all" cssclass="input_text">
+        and wf_model.modelname like {0}
+      </column>
+      <column name="modelstatus" title="状态" type="selectint" dataformat=",全部" urlformatstring="0,启用;1,停用">
+        and wf_model.modelstatus={0}
+      </column>
+    </where>
+    <group>
+    </group>
+    <order>
+      <![CDATA[wf_model.modelid desc]]>
+    </order>
+    <buttons>
+      <button name="btnIn0" title="新增导入" type="dialog" cssclass="input_button" windowwidth="390" windowheight="200">
+        WorkFlow/ModelInOut.aspx?op=in
+      </button>
+      <button name="btnEdit" title="编辑" type="dialog" cssclass="input_button" isselectedrow="true" windowwidth="390" windowheight="390">
+        Tmp/MyEdit.aspx?n=editWFModel&amp;id={0}
+      </button>
+      <button name="btnIn1" title="导入覆盖" type="dialog" cssclass="input_button" isselectedrow="true" windowwidth="390" windowheight="200">
+        WorkFlow/ModelInOut.aspx?op=in&amp;id={0}
+      </button>
+      <button name="toexcel" title="导出Excel" type="toexcel" cssclass="input_button">
+      </button>
+      <button name="btnOut" title="导出模型" type="dialog" cssclass="input_button" isselectedrow="true" windowwidth="390" windowheight="200">
+        WorkFlow/ModelInOut.aspx?op=out&amp;id={0}
+      </button>
+      <button name="runsql" title="删 除" type="runsql" isselectedrow="true" cssclass="input_button" confirminfo="确认删除选中的记录吗（删除后不能恢复）？">
+        <sql>select case when count(*)>0 then 1 else 0 end from wf_process where modelid={0}</sql>
+        <sql value="1" title="模型已经使用不能删除，已经停用成功">update wf_model set modelstatus=1 where modelid={0}</sql>
+        <sql value="0">delete from wf_field where modelid={0}</sql>
+        <sql value="0">delete from wf_link where modelid={0}</sql>
+        <sql value="0">delete from wf_condition where modelid={0}</sql>
+        <sql value="0">delete from wf_token where modelid={0}</sql>
+        <sql value="0">delete from wf_task where modelid={0}</sql>
+        <sql value="0" title="选择记录删除成功">delete from wf_model where modelid={0}</sql>
+      </button>
+    </buttons>
+  </myquery>
+
+</root>

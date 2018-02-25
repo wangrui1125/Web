@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="企业联系人" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="100px"></col>
+        <col></col>
+      </colgroup>
+      <column name="Enp_ID" title="企业ID" visible="false" value="querystring,eid" parameter="eid" parametervalue="!">
+      </column>
+      <column name="Name" title="联系人名称" width="500px" maxlength="25">
+        <validates>
+          <validate type="isnotnull"></validate>
+        </validates>
+      </column>
+      <column name="Department" title="部门名称" width="500px" maxlength="100">
+      </column>
+      <column name="Email" title="邮箱" width="500px" maxlength="100">
+      </column>
+      <column name="Tel" title="手机" width="500px" maxlength="20">
+      </column>
+      <column name="Officephone" title="座机" width="500px" maxlength="20">
+      </column>
+      <column name="qq" title="QQ号码" width="500px" maxlength="20">
+      </column>
+      <column name="weichat" title="微信" width="500px" maxlength="20">
+      </column>
+      <column name="title" title="头衔" width="500px" maxlength="50">
+      </column>
+      <column name="Fax" title="传真" width="500px" maxlength="20">
+      </column>
+      <column name="UserID" title="用户ID" width="500px" maxlength="10">
+      </column>
+      <column name="status" title="状态" type="select" urlformatstring="0,unactive;1,active">
+      </column>
+
+    </select>
+    <from type="table">
+      <table title="企业联系人">Contact</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="querystring" name="id">
+        Contact.ID={0}
+      </append>
+    </where>
+    <buttons position="bottom">
+      <button name="save" title="提 交" type="save" cssclass="input_button">
+      </button>
+      <button name="btnReturn" title="取 消" type="doscript" cssclass="input_button">
+        window.opener=null;window.open('','_self');window.close();
+      </button>
+    </buttons>
+    <updatesqls isautoid="false">
+      <sql ismodify="all" columnnames="userid">
+        <![CDATA[insert into S_User(id,name,Pwd,depid,iflag) select userid,name,userid,'1002','1' from Contact where userid='#userid#' and len(userid)>0 and userid not in (select id from S_User)]]>
+      </sql>
+      <sql ismodify="all" columnnames="userid">
+        <![CDATA[insert into S_RoleUser(Roleid,uid) select 3,id from Contact where userid='#userid#' and len(userid)>0 and userid not in (select uid from S_RoleUser)]]>
+      </sql>
+    </updatesqls>
+  </myquery>
+</root>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="编辑子方案信息" pagesize="0">
+    <select>
+      <colgroup>
+        <col style="width: 100px;" />
+        <col />
+      </colgroup>
+      <column name="Plan_Title" title="方案名"  width="99%" maxlength="150">
+        <validates>
+          <validate type="isnotnull">
+          </validate>
+        </validates>
+      </column>
+      <column name="Plan_Des" title="方案描述" type="textarea" width="99%">
+        <validates>
+          <validate type="isnotnull">
+          </validate>
+        </validates>
+      </column>
+  <column name="MeetAdd" title="会面地点" type="textarea" width="99%">
+       
+      </column>
+     <column name="MeetTime" title="会面时间"  width="99%" >
+      </column>
+<column name="Remark" title="备注" type="textarea"  width="99%">
+      </column>
+     
+      
+      <column name="Plan_Helper" visible="false" value="useraccount"></column>
+      <column name="Rq_ID" visible="false" value="querystring,rqid" parameter="rqid" parametervalue="!"></column>
+      <column name="Plan_Owner" visible="false" value="querystring,pid" parameter="pid" parametervalue="!"></column>
+      <column name="Plan_CreaterID" visible="false" value="useraccount"></column>
+      <column name="Plan_CreateTime" visible="false" value="gettime()" parameter="id" parametervalue=""></column>
+      <column name="Plan_UpdateTime" visible="false" value="gettime()" parameter="id" parametervalue="!"></column>
+
+    </select>
+    <from type="table">
+      <table title="方案表">[Plan]</table>
+    </from>
+    <where isparameter="true">
+      <append type="querystring" name="id">
+        Plan_id={0}
+      </append>
+    </where>
+    <buttons>
+      <button name="save" title="提 交" type="save" cssclass="input_button">
+      </button>
+      <button name="btnReturn" title="取 消" type="doscript" cssclass="input_button">
+        window.opener=null;window.open('','_self');window.close();
+      </button>
+    </buttons>
+  </myquery>
+</root>

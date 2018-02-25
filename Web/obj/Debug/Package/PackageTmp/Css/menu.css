@@ -1,0 +1,290 @@
+﻿body
+{
+	font: normal 12px Arial, Verdana, Lucida, Helvetica, simsun, sans-serif;
+	line-height: 22px;
+	color: #666;
+	width: 100%;
+	background: #5678a3;
+	padding: 0px;
+	margin: 0px;
+}
+td
+{
+	font: normal 12px Arial, Verdana, Lucida, Helvetica, simsun, sans-serif;
+}
+ul, li
+{
+	list-style: none;
+}
+a
+{
+	text-decoration: none;
+}
+a:link
+{
+	color: #215dc6;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #215dc6;
+	text-decoration: none;
+}
+a:hover
+{
+	text-decoration: underline;
+}
+a:active
+{
+	color: #215dc6;
+	text-decoration: underline;
+}
+/* Copyright Dynarch.com, 2003-2007.  All Rights Reserved. */
+/* DynarchMenu layout file */
+/* basic layout style for DynarchMenu; no colors are defined in this */
+
+/* horizontal parts */
+div.dynarch-horiz-menu
+{
+	border: 1px solid;
+	cursor: default;
+	color: black;
+	border-width: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+}
+div.dynarch-horiz-menu table, div.dynarch-popup-menu table
+{
+	/*font: 11px tahoma,verdana,sans-serif;*/
+}
+div.dynarch-horiz-menu table tr td.item table td.icon
+{
+	padding-right: 3px;
+}
+div.dynarch-horiz-menu table tr td.item
+{
+	/*font-size: 9pt;*/
+	padding: 0px 7px;
+}
+div.dynarch-horiz-menu table tr td.item img
+{
+	vertical-align: middle;
+}
+div.dynarch-horiz-menu table tr td.separator
+{
+	width: 0px;
+}
+div.dynarch-horiz-menu table tr td.separator div
+{
+	background-image: url(../Img/menu_line.gif);
+	margin: 3px 0px 2px 0px;
+	height: 1.2em;
+	overflow: hidden;
+	border: 0px dotted white;
+	width: 1px;
+}
+
+div.dynarch-horiz-menu td.disabled, div.dynarch-horiz-menu td.disabled table td
+{
+	color: #aca899;
+	background: none;
+}
+div.dynarch-horiz-menu td.disabled img
+{
+	-moz-opacity: 0.4;
+	filter: alpha(opacity=40);
+	opacity: 0.4;
+}
+
+div.dynarch-horiz-menu table tr td.hover, div.dynarch-horiz-menu table tr td.active
+{
+	color: #000;
+	font-weight: bold;
+	border: 1px solid #85a7d6;
+	border-bottom: none;
+	border-top: none;
+}
+
+/* vertical parts */
+
+div.dynarch-popup-menu
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border: 1px solid;
+	padding: 0px;
+	cursor: default;
+	z-index: 1000;
+	border-color: #99bbe8 #5585c6 #99bbe8 #5585c6;
+	color: #000;
+	background-color: #fff;
+}
+div.dynarch-popup-menu div.dynarch-menu-scroll
+{
+	overflow: hidden;
+}
+div.dynarch-popup-base-menu
+{
+	position: static;
+}
+div.dynarch-popup-menu tr.item td.icon img, div.dynarch-popup-menu tr.item td.icon div
+{
+	width: 18px;
+	height: 18px;
+}
+div.dynarch-popup-menu tr.item td.icon
+{
+	padding: 0px 1px;
+	height: 18px;
+	width: 18px;
+}
+div.dynarch-popup-menu tr.item td.label
+{
+	/*font-size: 9pt;*/
+	padding: 1px 15px 1px 3px; /* white-space: nowrap; */
+}
+div.dynarch-popup-menu tr.item td.arrow
+{
+	width: 11px;
+}
+div.dynarch-popup-menu tr.item td.arrow div
+{
+	width: 11px;
+	background: transparent url(  "../Img/rarrow.gif" ) no-repeat 0% 50%;
+}
+div.dynarch-popup-menu tr.hover td.arrow div, div.dynarch-popup-menu tr.active td.arrow div
+{
+	background: transparent url(  "../Img/rarrow-hover.gif" ) no-repeat 0% 50%;
+}
+
+div.dynarch-popup-menu tr.separator td div
+{
+	margin: 2px;
+	height: 1px;
+	line-height: 1px;
+	font-size: 1px;
+	border: none;
+}
+div.dynarch-popup-menu tr.disabled td.label
+{
+	color: #aca899;
+}
+div.dynarch-popup-menu tr.disabled td.icon img
+{
+	-moz-opacity: 0.4;
+	filter: alpha(opacity=40);
+	opacity: 0.4;
+}
+
+/* shadows */
+
+div.dynarch-menu-shadow, img.dynarch-menu-shadow, div.div.dynarch-IE6-shadow
+{
+	z-index: 990;
+	position: absolute;
+}
+div.dynarch-menu-shadow
+{
+	background-color: #555;
+	-moz-opacity: 0.6;
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+}
+
+/* hider */
+iframe#dynarch-menu-hider
+{
+	z-index: 980;
+}
+
+/* scroll */
+
+div.dynarch-menu-scroll-up
+{
+	height: 12px;
+	line-height: 12px;
+	overflow: hidden;
+	background: url(  "../Img/scroll-up.gif" ) no-repeat 50% 50%;
+}
+div.dynarch-menu-scroll-down
+{
+	height: 12px;
+	line-height: 12px;
+	overflow: hidden;
+	background: url(  "../Img/scroll-down.gif" ) no-repeat 50% 50%;
+}
+div.dynarch-menu-scroll-up-hover
+{
+	background-image: url(  "../Img/scroll-up-hover.gif" );
+}
+div.dynarch-menu-scroll-down-hover
+{
+	background-image: url(  "../Img/scroll-down-hover.gif" );
+}
+div.dynarch-menu-scroll-up-disabled
+{
+	background-image: url(  "../Img/scroll-up-disabled.gif" );
+}
+div.dynarch-menu-scroll-down-disabled
+{
+	background-image: url(  "../Img/scroll-down-disabled.gif" );
+}
+
+/* toolbars */
+
+div.dynarch-menu-toolbar table tr td.item
+{
+	padding: 2px 3px;
+}
+.impossible-class-name-to-preload-shadow-image-in-internet-exploder
+{
+	background-image: url(  "../Img/shadow.png" );
+}
+
+div.dynarch-horiz-menu table tr td.pressed
+{
+	background-color: #79cdf7;
+	padding: 3px 2px 1px 4px;
+}
+div.dynarch-horiz-menu table tr td.hover table, div.dynarch-horiz-menu table tr td.active table
+{
+	color: #000;
+}
+/* vertical parts */
+
+div.dynarch-popup-menu div.d
+{
+	border-left: 1px solid #d8e6f6;
+}
+div.dynarch-popup-menu div.c
+{
+	border-left: 1px solid #2979e7;
+}
+div.dynarch-popup-menu div.b
+{
+	border-left: 2px solid #7593bb;
+}
+div.dynarch-popup-menu div.a
+{
+	border-left: 1px solid #99d2f9;
+}
+div.dynarch-popup-menu tr.item td.icon
+{
+	padding: 1px 1px 1px 3px;
+}
+div.dynarch-popup-menu tr.separator td div
+{
+	background: url(  "../Img/separator.gif" ) no-repeat 50% 50%;
+}
+div.dynarch-popup-menu tr.item.hover, div.dynarch-popup-menu tr.item.active
+{
+	background-color: #7695c3;
+	color: #fff;
+}
+div.dynarch-popup-menu tr.item.hover td.icon, div.dynarch-popup-menu tr.item.active td.icon
+{
+	background-color: #7695c3;
+}

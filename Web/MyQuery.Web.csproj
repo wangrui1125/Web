@@ -1,0 +1,929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F0CB942-698E-46CE-9F5E-0B2E08F57861}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyQuery.Web</RootNamespace>
+    <AssemblyName>MyQuery.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.50731.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MyQuery.MyControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\MyQuery.MyControl.dll</HintPath>
+    </Reference>
+    <Reference Include="MyQuery.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\MyQuery.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="MyQuery.WFWork, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\MyQuery.WFWork.dll</HintPath>
+    </Reference>
+    <Reference Include="MyQuery.Work, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Lib\MyQuery.Work.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Net.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EasyTechFunc\AddHelper.aspx" />
+    <Content Include="EasyTechFunc\AddReq.aspx" />
+    <Content Include="EasyTechFunc\AddResearcher.aspx" />
+    <Content Include="EasyTechFunc\AddTechConsult.aspx" />
+    <Content Include="EasyTechFunc\AddTechManager.aspx" />
+    <Content Include="EasyTechFunc\ConcernAll.aspx" />
+    <Content Include="EasyTechFunc\ConsultConcern.aspx" />
+    <Content Include="EasyTechFunc\ConsultExecute.aspx" />
+    <Content Include="EasyTechFunc\Concern.aspx" />
+    <Content Include="EasyTechFunc\DeleteConcern.aspx" />
+    <Content Include="EasyTechFunc\Do.aspx" />
+    <Content Include="EasyTechFunc\EditEnp.aspx" />
+    <Content Include="EasyTechFunc\EditMark.aspx" />
+    <Content Include="EasyTechFunc\EditSubPlan.aspx" />
+    <Content Include="EasyTechFunc\EditTechRq.aspx" />
+    <Content Include="EasyTechFunc\EnterInfoConcern.aspx" />
+    <Content Include="EasyTechFunc\EnterInfoExecute.aspx" />
+    <Content Include="EasyTechFunc\Exe.aspx" />
+    <Content Include="EasyTechFunc\FinishPlan.aspx" />
+    <Content Include="EasyTechFunc\FinishRq.aspx" />
+    <Content Include="EasyTechFunc\Giveup.aspx" />
+    <Content Include="EasyTechFunc\Plan.aspx" />
+    <Content Include="EasyTechFunc\PlanConcern.aspx" />
+    <Content Include="EasyTechFunc\Queryenp.aspx" />
+    <Content Include="EasyTechFunc\QueryResearcher.aspx" />
+    <Content Include="EasyTechFunc\QuerytechRq.aspx" />
+    <Content Include="EasyTechFunc\recommand.aspx" />
+    <Content Include="EasyTechFunc\RefResearcher.aspx" />
+    <Content Include="EasyTechFunc\ResearcherConcern.aspx" />
+    <Content Include="EasyTechFunc\ResearcherExecute.aspx" />
+    <Content Include="EasyTechFunc\Review.aspx" />
+    <Content Include="EasyTechFunc\ReviewChange.aspx" />
+    <Content Include="EasyTechFunc\SearchPlan.aspx" />
+    <Content Include="EasyTechFunc\SearchSuccess.aspx" />
+    <Content Include="EasyTechFunc\SendEmail.aspx" />
+    <Content Include="EasyTechFunc\ServiceEdit.aspx" />
+    <Content Include="EasyTechFunc\StopPlan.aspx" />
+    <Content Include="EasyTechFunc\Submit.aspx" />
+    <Content Include="EasyTechFunc\SubmitFailure.aspx" />
+    <Content Include="EasyTechFunc\SubmitSuccess.aspx" />
+    <Content Include="EasyTechFunc\TechRequire.aspx" />
+    <Content Include="EasyTechFunc\TechRqConcern.aspx" />
+    <Content Include="EasyTechFunc\TechRqExecute.aspx" />
+    <Content Include="EasyTechFunc\UserInfo.aspx" />
+    <Content Include="EasyTechFunc\WeChatProgressReminder.aspx" />
+    <Content Include="EasyTechFunc\WeChatTest.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="Img\buttonsbackall.png" />
+    <Content Include="Img\menubg.jpg" />
+    <Content Include="Img\menufg.jpg" />
+    <Content Include="Img\menuon.jpg" />
+    <Content Include="Img\register.jpg" />
+    <Content Include="Img\wrapBack.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="SendEmail.aspx" />
+    <Content Include="Sys\down.aspx" />
+    <Content Include="Sys\InsteadOf.aspx" />
+    <Content Include="Tmp\ChartType\2D100StackedArea.png" />
+    <Content Include="Tmp\ChartType\2DArea.png" />
+    <Content Include="Tmp\ChartType\2DBar.png" />
+    <Content Include="Tmp\ChartType\2DBeltPieChart.png" />
+    <Content Include="Tmp\ChartType\2DBubble.png" />
+    <Content Include="Tmp\ChartType\2DColumn.png" />
+    <Content Include="Tmp\ChartType\2DDoughnut.png" />
+    <Content Include="Tmp\ChartType\2DDoughnut2.png" />
+    <Content Include="Tmp\ChartType\2DFastLine.png" />
+    <Content Include="Tmp\ChartType\2DKagi.png" />
+    <Content Include="Tmp\ChartType\2DLine.png" />
+    <Content Include="Tmp\ChartType\2DLineMarkers.png" />
+    <Content Include="Tmp\ChartType\2DPie.png" />
+    <Content Include="Tmp\ChartType\2DPoint.png" />
+    <Content Include="Tmp\ChartType\2DPointCustom.png" />
+    <Content Include="Tmp\ChartType\2DPointFigure.png" />
+    <Content Include="Tmp\ChartType\2DPointLabels.png" />
+    <Content Include="Tmp\ChartType\2DPointShapes.png" />
+    <Content Include="Tmp\ChartType\2DPolar.png" />
+    <Content Include="Tmp\ChartType\2DPolarMarker.png" />
+    <Content Include="Tmp\ChartType\2DPyramid.png" />
+    <Content Include="Tmp\ChartType\2DRadarArea.png" />
+    <Content Include="Tmp\ChartType\2DRadarMarker.png" />
+    <Content Include="Tmp\ChartType\2DRange.png" />
+    <Content Include="Tmp\ChartType\2DRangeBar.png" />
+    <Content Include="Tmp\ChartType\2DRangeColumn.png" />
+    <Content Include="Tmp\ChartType\2DRenko.png" />
+    <Content Include="Tmp\ChartType\2DSpline.png" />
+    <Content Include="Tmp\ChartType\2DSplineArea.png" />
+    <Content Include="Tmp\ChartType\2DSplineRange.png" />
+    <Content Include="Tmp\ChartType\2DStackedArea.png" />
+    <Content Include="Tmp\ChartType\2DStepLine.png" />
+    <Content Include="Tmp\ChartType\2DSupplementalPie.png" />
+    <Content Include="Tmp\ChartType\2DThreeLine.png" />
+    <Content Include="Tmp\Color.htm" />
+    <Content Include="Tmp\MyDetail1.aspx" />
+    <Content Include="Tmp\MyMain.aspx" />
+    <Content Include="Tmp\NewMyQuery.aspx" />
+    <Content Include="Css\common.css" />
+    <Content Include="Js\calendar.js" />
+    <Content Include="Js\mygridview.js" />
+    <Content Include="Test\Test.aspx" />
+    <Content Include="Tmp\MyQuery.aspx" />
+    <Content Include="Tmp\EditHtml.aspx" />
+    <Content Include="Tmp\SelChartType.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EasyTechFunc\AddHelper.aspx.cs">
+      <DependentUpon>AddHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\AddHelper.aspx.designer.cs">
+      <DependentUpon>AddHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\AddReq.aspx.cs">
+      <DependentUpon>AddReq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\AddReq.aspx.designer.cs">
+      <DependentUpon>AddReq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\AddResearcher.aspx.cs">
+      <DependentUpon>AddResearcher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\AddResearcher.aspx.designer.cs">
+      <DependentUpon>AddResearcher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\AddTechConsult.aspx.cs">
+      <DependentUpon>AddTechConsult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\AddTechConsult.aspx.designer.cs">
+      <DependentUpon>AddTechConsult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\AddTechManager.aspx.cs">
+      <DependentUpon>AddTechManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\AddTechManager.aspx.designer.cs">
+      <DependentUpon>AddTechManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\ConcernAll.aspx.cs">
+      <DependentUpon>ConcernAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\ConcernAll.aspx.designer.cs">
+      <DependentUpon>ConcernAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\ConsultConcern.aspx.cs">
+      <DependentUpon>ConsultConcern.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\ConsultConcern.aspx.designer.cs">
+      <DependentUpon>ConsultConcern.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\ConsultExecute.aspx.cs">
+      <DependentUpon>ConsultExecute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\ConsultExecute.aspx.designer.cs">
+      <DependentUpon>ConsultExecute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\Concern.aspx.cs">
+      <DependentUpon>Concern.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\Concern.aspx.designer.cs">
+      <DependentUpon>Concern.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\DeleteConcern.aspx.cs">
+      <DependentUpon>DeleteConcern.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\DeleteConcern.aspx.designer.cs">
+      <DependentUpon>DeleteConcern.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\Do.aspx.cs">
+      <DependentUpon>Do.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\Do.aspx.designer.cs">
+      <DependentUpon>Do.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\EditEnp.aspx.cs">
+      <DependentUpon>EditEnp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\EditEnp.aspx.designer.cs">
+      <DependentUpon>EditEnp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\EditMark.aspx.cs">
+      <DependentUpon>EditMark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\EditMark.aspx.designer.cs">
+      <DependentUpon>EditMark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\EditSubPlan.aspx.cs">
+      <DependentUpon>EditSubPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\EditSubPlan.aspx.designer.cs">
+      <DependentUpon>EditSubPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\EditTechRq.aspx.cs">
+      <DependentUpon>EditTechRq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\EditTechRq.aspx.designer.cs">
+      <DependentUpon>EditTechRq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\EnterInfoConcern.aspx.cs">
+      <DependentUpon>EnterInfoConcern.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\EnterInfoConcern.aspx.designer.cs">
+      <DependentUpon>EnterInfoConcern.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\EnterInfoExecute.aspx.cs">
+      <DependentUpon>EnterInfoExecute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\EnterInfoExecute.aspx.designer.cs">
+      <DependentUpon>EnterInfoExecute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\Exe.aspx.cs">
+      <DependentUpon>Exe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\Exe.aspx.designer.cs">
+      <DependentUpon>Exe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\FinishPlan.aspx.cs">
+      <DependentUpon>FinishPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\FinishPlan.aspx.designer.cs">
+      <DependentUpon>FinishPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\FinishRq.aspx.cs">
+      <DependentUpon>FinishRq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\FinishRq.aspx.designer.cs">
+      <DependentUpon>FinishRq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\Giveup.aspx.cs">
+      <DependentUpon>Giveup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\Giveup.aspx.designer.cs">
+      <DependentUpon>Giveup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\Plan.aspx.cs">
+      <DependentUpon>Plan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\Plan.aspx.designer.cs">
+      <DependentUpon>Plan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\PlanConcern.aspx.cs">
+      <DependentUpon>PlanConcern.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\PlanConcern.aspx.designer.cs">
+      <DependentUpon>PlanConcern.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\Queryenp.aspx.cs">
+      <DependentUpon>Queryenp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\Queryenp.aspx.designer.cs">
+      <DependentUpon>Queryenp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\QueryResearcher.aspx.cs">
+      <DependentUpon>QueryResearcher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\QueryResearcher.aspx.designer.cs">
+      <DependentUpon>QueryResearcher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\QuerytechRq.aspx.cs">
+      <DependentUpon>QuerytechRq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\QuerytechRq.aspx.designer.cs">
+      <DependentUpon>QuerytechRq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\recommand.aspx.cs">
+      <DependentUpon>recommand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\recommand.aspx.designer.cs">
+      <DependentUpon>recommand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\RefResearcher.aspx.cs">
+      <DependentUpon>RefResearcher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\RefResearcher.aspx.designer.cs">
+      <DependentUpon>RefResearcher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\ResearcherConcern.aspx.cs">
+      <DependentUpon>ResearcherConcern.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\ResearcherConcern.aspx.designer.cs">
+      <DependentUpon>ResearcherConcern.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\ResearcherExecute.aspx.cs">
+      <DependentUpon>ResearcherExecute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\ResearcherExecute.aspx.designer.cs">
+      <DependentUpon>ResearcherExecute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\Review.aspx.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\Review.aspx.designer.cs">
+      <DependentUpon>Review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\ReviewChange.aspx.cs">
+      <DependentUpon>ReviewChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\ReviewChange.aspx.designer.cs">
+      <DependentUpon>ReviewChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\SearchPlan.aspx.cs">
+      <DependentUpon>SearchPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\SearchPlan.aspx.designer.cs">
+      <DependentUpon>SearchPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\SearchSuccess.aspx.cs">
+      <DependentUpon>SearchSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\SearchSuccess.aspx.designer.cs">
+      <DependentUpon>SearchSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\SendEmail.aspx.cs">
+      <DependentUpon>SendEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\SendEmail.aspx.designer.cs">
+      <DependentUpon>SendEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\ServiceEdit.aspx.cs">
+      <DependentUpon>ServiceEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\ServiceEdit.aspx.designer.cs">
+      <DependentUpon>ServiceEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\StopPlan.aspx.cs">
+      <DependentUpon>StopPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\StopPlan.aspx.designer.cs">
+      <DependentUpon>StopPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\Submit.aspx.cs">
+      <DependentUpon>Submit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\Submit.aspx.designer.cs">
+      <DependentUpon>Submit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\SubmitFailure.aspx.cs">
+      <DependentUpon>SubmitFailure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\SubmitFailure.aspx.designer.cs">
+      <DependentUpon>SubmitFailure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\SubmitSuccess.aspx.cs">
+      <DependentUpon>SubmitSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\SubmitSuccess.aspx.designer.cs">
+      <DependentUpon>SubmitSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\TechRequire.aspx.cs">
+      <DependentUpon>TechRequire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\TechRequire.aspx.designer.cs">
+      <DependentUpon>TechRequire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\TechRqConcern.aspx.cs">
+      <DependentUpon>TechRqConcern.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\TechRqConcern.aspx.designer.cs">
+      <DependentUpon>TechRqConcern.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\TechRqExecute.aspx.cs">
+      <DependentUpon>TechRqExecute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\TechRqExecute.aspx.designer.cs">
+      <DependentUpon>TechRqExecute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\WeChatProgressReminder.aspx.cs">
+      <DependentUpon>WeChatProgressReminder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\WeChatProgressReminder.aspx.designer.cs">
+      <DependentUpon>WeChatProgressReminder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\WeChatTest.aspx.cs">
+      <DependentUpon>WeChatTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\WeChatTest.aspx.designer.cs">
+      <DependentUpon>WeChatTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendEmail.aspx.cs">
+      <DependentUpon>SendEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendEmail.aspx.designer.cs">
+      <DependentUpon>SendEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\down.aspx.cs">
+      <DependentUpon>down.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\down.aspx.designer.cs">
+      <DependentUpon>down.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\InsteadOf.aspx.cs">
+      <DependentUpon>InsteadOf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\InsteadOf.aspx.designer.cs">
+      <DependentUpon>InsteadOf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\MyDetail1.aspx.cs">
+      <DependentUpon>MyDetail1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\MyDetail1.aspx.designer.cs">
+      <DependentUpon>MyDetail1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\MyMain.aspx.cs">
+      <DependentUpon>MyMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\MyMain.aspx.designer.cs">
+      <DependentUpon>MyMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\NewMyQuery.aspx.cs">
+      <DependentUpon>NewMyQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\NewMyQuery.aspx.designer.cs">
+      <DependentUpon>NewMyQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\EditHtml.aspx.cs">
+      <DependentUpon>EditHtml.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\EditHtml.aspx.designer.cs">
+      <DependentUpon>EditHtml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetId.aspx.cs">
+      <DependentUpon>GetId.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetId.aspx.designer.cs">
+      <DependentUpon>GetId.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Image.aspx.cs">
+      <DependentUpon>Image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Image.aspx.designer.cs">
+      <DependentUpon>Image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sys\Editpasswd.aspx.cs">
+      <DependentUpon>Editpasswd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\Editpasswd.aspx.designer.cs">
+      <DependentUpon>Editpasswd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\RoleFunEdit.aspx.cs">
+      <DependentUpon>RoleFunEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\RoleFunEdit.aspx.designer.cs">
+      <DependentUpon>RoleFunEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\UserRoleEdit.aspx.cs">
+      <DependentUpon>UserRoleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\UserRoleEdit.aspx.designer.cs">
+      <DependentUpon>UserRoleEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\WorkDaySet.aspx.cs">
+      <DependentUpon>WorkDaySet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sys\WorkDaySet.aspx.designer.cs">
+      <DependentUpon>WorkDaySet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Image.aspx.cs">
+      <DependentUpon>Image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\Image.aspx.designer.cs">
+      <DependentUpon>Image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TestEdit.aspx.cs">
+      <DependentUpon>TestEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\TestEdit.aspx.designer.cs">
+      <DependentUpon>TestEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\down.aspx.cs">
+      <DependentUpon>down.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\down.aspx.designer.cs">
+      <DependentUpon>down.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\EditMyQuery.aspx.cs">
+      <DependentUpon>EditMyQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\EditMyQuery.aspx.designer.cs">
+      <DependentUpon>EditMyQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\MyEdit.aspx.cs">
+      <DependentUpon>MyEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\MyEdit.aspx.designer.cs">
+      <DependentUpon>MyEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\MyImport.aspx.cs">
+      <DependentUpon>MyImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\MyImport.aspx.designer.cs">
+      <DependentUpon>MyImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\MySel.aspx.cs">
+      <DependentUpon>MySel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\MySel.aspx.designer.cs">
+      <DependentUpon>MySel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\MyService.asmx.cs">
+      <DependentUpon>MyService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tmp\MyToExcel.aspx.cs">
+      <DependentUpon>MyToExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\MyToExcel.aspx.designer.cs">
+      <DependentUpon>MyToExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\MySubject.aspx.cs">
+      <DependentUpon>MySubject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\MySubject.aspx.designer.cs">
+      <DependentUpon>MySubject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\MyDetail.aspx.cs">
+      <DependentUpon>MyDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\MyDetail.aspx.designer.cs">
+      <DependentUpon>MyDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\MyQuery.aspx.cs">
+      <DependentUpon>MyQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\MyQuery.aspx.designer.cs">
+      <DependentUpon>MyQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\SelChartType.aspx.cs">
+      <DependentUpon>SelChartType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\SelChartType.aspx.designer.cs">
+      <DependentUpon>SelChartType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tmp\TplDetail.aspx.cs">
+      <DependentUpon>TplDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tmp\TplDetail.aspx.designer.cs">
+      <DependentUpon>TplDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService.asmx.cs">
+      <DependentUpon>WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Css\print.css" />
+    <Content Include="Img\bg.gif" />
+    <Content Include="Img\Cristal_Intense.gif" />
+    <Content Include="Img\PrintSet.jpg" />
+    <Content Include="Js\popupWindow.js" />
+    <Content Include="Sys\SetPrint.htm" />
+    <Content Include="Css\item.css" />
+    <Content Include="Css\WorkFlow.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="GetId.aspx" />
+    <Content Include="Image.aspx" />
+    <Content Include="Img\arrowd.gif" />
+    <Content Include="Img\arrowu.gif" />
+    <Content Include="Img\bg.png" />
+    <Content Include="Img\bg0.jpg" />
+    <Content Include="Img\bg1.jpg" />
+    <Content Include="Img\bg2.jpg" />
+    <Content Include="Img\bg3.jpg" />
+    <Content Include="Img\bg4.jpg" />
+    <Content Include="Img\btn_xp_bg.gif" />
+    <Content Include="Img\date.gif" />
+    <Content Include="Img\del.gif" />
+    <Content Include="Img\enter.jpg" />
+    <Content Include="Img\iedit.gif" />
+    <Content Include="Img\i_save.gif" />
+    <Content Include="Img\jt.gif" />
+    <Content Include="Img\lb1.jpg" />
+    <Content Include="Img\left.gif" />
+    <Content Include="Img\leftBack.gif" />
+    <Content Include="Img\left_r.gif" />
+    <Content Include="Img\loading_animation_liferay.gif" />
+    <Content Include="Img\menu.gif" />
+    <Content Include="Img\minus.gif" />
+    <Content Include="Img\msg.gif" />
+    <Content Include="Img\nav_bg0.gif" />
+    <Content Include="Img\plusx.gif" />
+    <Content Include="Img\r.gif" />
+    <Content Include="Img\return.gif" />
+    <Content Include="Img\r_d.gif" />
+    <Content Include="Img\SelectedBack.jpg" />
+    <Content Include="Img\shm.gif" />
+    <Content Include="Img\thbg.jpg" />
+    <Content Include="Img\top.gif" />
+    <Content Include="Css\menu.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Img\buttonsback.png" />
+    <Content Include="Img\calendar.gif" />
+    <Content Include="Img\close.gif" />
+    <Content Include="Img\error.gif" />
+    <Content Include="Img\green.gif" />
+    <Content Include="Img\menu_bg.gif" />
+    <Content Include="Img\menu_line.gif" />
+    <Content Include="Img\menu_on.jpg" />
+    <Content Include="Img\nav_bg.gif" />
+    <Content Include="Img\open.gif" />
+    <Content Include="Img\rarrow-hover.gif" />
+    <Content Include="Img\rarrow.gif" />
+    <Content Include="Img\red.gif" />
+    <Content Include="Img\right_r.gif" />
+    <Content Include="Img\scroll-down-disabled.gif" />
+    <Content Include="Img\scroll-down-hover.gif" />
+    <Content Include="Img\scroll-down.gif" />
+    <Content Include="Img\scroll-up-disabled.gif" />
+    <Content Include="Img\scroll-up-hover.gif" />
+    <Content Include="Img\scroll-up.gif" />
+    <Content Include="Img\search.gif" />
+    <Content Include="Img\separator.gif" />
+    <Content Include="Img\shadow.png" />
+    <Content Include="Img\tableft.gif" />
+    <Content Include="Img\tabright.gif" />
+    <Content Include="Img\wait.gif" />
+    <Content Include="Img\yellow.gif" />
+    <Content Include="Js\ClientValidate.js" />
+    <Content Include="Js\common.js" />
+    <Content Include="Js\helptip.js" />
+    <Content Include="Js\jquery.js" />
+    <Content Include="Js\menu.js" />
+    <Content Include="log4net.config" />
+    <Content Include="Login.aspx" />
+    <Content Include="Sys\LogOut.aspx" />
+    <Content Include="Sys\Editpasswd.aspx" />
+    <Content Include="Sys\RoleFunEdit.aspx" />
+    <Content Include="Sys\UserRoleEdit.aspx" />
+    <Content Include="Sys\WorkDaySet.aspx" />
+    <Content Include="Test\Image.aspx" />
+    <Content Include="Test\TestEdit.aspx" />
+    <Content Include="Tmp\down.aspx" />
+    <Content Include="Tmp\EditMyQuery.aspx" />
+    <Content Include="Tmp\MyEdit.aspx" />
+    <Content Include="Tmp\MyImport.aspx" />
+    <Content Include="Tmp\MySel.aspx" />
+    <Content Include="Tmp\MyService.asmx" />
+    <Content Include="Tmp\MyToExcel.aspx" />
+    <Content Include="Tmp\MySubject.aspx" />
+    <Content Include="Tmp\MyDetail.aspx" />
+    <Content Include="Tmp\TplDetail.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebService.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Bus\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BAL\MyQuery.BAL.csproj">
+      <Project>{55AEB7C8-2B7D-4A8F-B244-2E9FFCABFA1E}</Project>
+      <Name>MyQuery.BAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\MyQuery.Entity.csproj">
+      <Project>{A3F17072-3968-402A-9F11-A5C03A2E8EAF}</Project>
+      <Name>MyQuery.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12583</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

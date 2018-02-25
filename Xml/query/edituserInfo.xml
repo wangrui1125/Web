@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="用户信息" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="100px"/>
+        <col/>
+      </colgroup>
+   <column name="Consult_Unit" title="单位" type="text"  width="99%" maxlength="100" readonly="true" >
+      </column>
+ <column name="Consult_Fields" title="擅长领域" type="text"  width="99%" maxlength="100" readonly="true" >
+      </column>
+       <column name="Consult_tel" title="手机" type="text"  width="99%" maxlength="100" readonly="true" >
+      </column>
+      <column name="Consult_email" title="电子邮箱" type="text"  width="99%" maxlength="100" readonly="true" >
+      </column>
+       <column name="Consult_Add" title="地址" type="text"  width="99%" maxlength="100" readonly="true" >
+      </column>
+ <column name="Consult_Officephone" title="办公室电话" type="text"  width="99%" maxlength="100" readonly="true" >
+      </column>
+ <column name="Consult_qq" title="qq" type="text"  width="99%" maxlength="100" readonly="true" >
+      </column>
+        <column name="Consult_ID" visible="false" value="useraccount">
+      </column>
+    </select>
+    <from type="table">
+      <table title="顾问表">Consult</table>
+      
+    </from>
+    <where isparameter="true">
+      <append type="querystring" name="id">
+        Consult.Consult_ID={0}
+      </append>
+    </where>
+ <buttons position="bottom">
+    <button name="save" title="提 交" type="save" cssclass="input_button">
+    </button>
+    <button name="btnReturn" title="取 消" type="redirect" cssclass="input_button" parameters="id">
+      EasyTechFunc/UserInfo.aspx
+    </button>
+  </buttons>
+  
+  </myquery>
+ 
+
+</root>

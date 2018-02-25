@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="科技需求列表" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true">
+    <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+
+      <column name="id" visible="false">
+        TechRequire.Rq_ID
+      </column>
+      <column name="eid" visible="false">
+        TechRequire.Enp_ID
+      </column>	  
+	  <column name="Enp_Name" title="企业名称" width="100px" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailEnterprise&amp;id={0}" usefields="eid" target="_blank">
+        Enterprise.Enp_Name
+      </column>
+      <column name="Rq_Name" title="科技需求名称" width="100px" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailTechRequire&amp;id={0}" usefields="id" target="_blank">
+        TechRequire.Rq_Name
+      </column>	
+      <column name="marks" title="标签内容" width="100px">
+        dbo.f_GetMark('tech',TechRequire.Rq_ID)
+      </column>
+	  <column name="sate" title="需求等级" width="100px">
+       Rq_Status.name
+      </column> 	 
+      <column name="Rq_DueDay" title="有效时间" width="80px" dataformat="{0:yyyy-MM-dd}">
+        TechRequire.Rq_DueDay
+      </column>
+      <column name="Rq_Fund" title="拟提供技术资金" width="100px" maxlength="10">
+        TechRequire.Rq_Fund
+      </column>
+      <column name="Rq_ResolveManner" title="拟解决方式" width="150px" maxlength="10">
+        TechRequire.Rq_ResolveManner
+      </column>
+      <column name="Rq_flag" title="需求状态" width="80px">
+        Rq_flag.name
+      </column>
+		<column name="Name" title="当前处理者" width="50px">
+       S_User.Name
+      </column>
+	  <column name="sate" title="需求等级" width="80px">Rq_Status.name</column>	  
+	  <column name="Rq_Time" title="最后处理时间" width="80px">
+       Rq_Time
+      </column>  	  
+      <column name="edit" title="操作" width="150px" type="excelno">
+        <![CDATA['&nbsp;<a  href="../EasyTechFunc/EditTechRq.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">编辑</a>   
+		<a onclick=openDialogRefresh("../EasyTechFunc/EditMark.aspx?entity=tech&id='+cast(TechRequire.Rq_ID as varchar)+'",800,600) style="color: #0055BA;cursor: pointer;">打标签</a>
+&nbsp;<a a href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="_self" style="color: #0055BA;cursor: pointer;">关注</a>
+&nbsp;<a href="../EasyTechFunc/WeChatProgressReminder.aspx?n=listtechRequire6&ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">进度提醒</a><p>
+&nbsp;<a href="../EasyTechFunc/Review.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">需求审阅</a>
+&nbsp;<a href="../EasyTechFunc/Do.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">方案编写</a>
+&nbsp;<a href="../EasyTechFunc/Exe.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">方案执行</a></p>
+ ']]>
+      </column>
+    </select>
+    <from type="table">
+      <table title="科技需求">TechRequire</table>
+      <table title="企业">left join Enterprise on Enterprise.Enp_ID=TechRequire.Enp_ID</table>
+      <table title="关键词">left join Rq_words_alg on TechRequire.Rq_ID=Rq_words_alg.Rq_ID</table>
+           <table title="代码表">left join f_code Rq_flag on Rq_flag.id='Rq_flag' and Rq_flag.code=TechRequire.Rq_flag  and Rq_flag.Code!=0 and Rq_flag.Code!=3 </table>
+      <table title="代码表">left join f_code Rq_Type on Rq_Type.id='Rq_Type' and Rq_Type.code=TechRequire.Rq_Type</table>
+	  <table title="代码表">left join f_code Rq_Status on Rq_Status.id='Rq_Status' and Rq_Status.code=TechRequire.Rq_Status</table>
+       <table title="用户表">left join S_User on S_User.id= TechRequire.Rq_Owner</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="true">
+      <append type="querystring" name="eid" title="所属企业">
+        TechRequire.Enp_ID={0}
+      </append>
+      <append type="querystring" name="Rq_Type" title="所属科技需求类型">
+        TechRequire.Rq_Type={0}
+      </append>
+       <colgroup>
+        <col width="80px"/>
+        <col width="100px"/>
+        <col width="100px"/>
+        <col width="100px"/>
+        <col width="100px"/>
+        <col width="100px"/>
+        <col width="100px"/>
+        <col/>
+      </colgroup>
+      <column name="Enp_Name" title="企业名称" width="100px" target="all" cssclass="input_text">
+        Enterprise.Enp_Name like {0}  and Rq_flag.Code!=0 and Rq_flag.Code!=3 
+      </column>
+      <column name="Rq_Fields" title="所属领域" width="100px" target="all" cssclass="input_text">
+        TechRequire.Rq_Fields like {0}  and Rq_flag.Code!=0 and Rq_flag.Code!=3 
+      </column>
+      <column name="Rq_Name" title="科技需求名称" width="100px" target="all" cssclass="input_text">
+        TechRequire.Rq_Name like {0}  and Rq_flag.Code!=0 and Rq_flag.Code!=3 
+      </column>
+        <column name="Rq_flag" title="科技需求状态" type="selectint" dataformat=",全部" urlformatstring="sql:select code,name from f_code where iflag=1 and id='Rq_flag'and sn!=0 and sn!=3 order by sn"  width="105px">
+        TechRequire.Rq_flag={0}  and Rq_flag.Code!=0 and Rq_flag.Code!=3
+      </column>
+
+      <column name="Keywords" title="关键词" width="100px" target="all" cssclass="input_text">
+        Rq_words_alg.Rq_Keywords like {0}  and Rq_flag.Code!=0 and Rq_flag.Code!=3 
+      </column>
+      <column name="Rq_EnpDes" title="科技需求内容" width="100px" target="all" cssclass="input_text">
+        TechRequire.Rq_EnpDes like {0}  and Rq_flag.Code!=0 and Rq_flag.Code!=3 
+      </column>
+    </where>
+    <order>
+    TechRequire.Rq_Time desc
+    </order>
+    <buttons position="top">
+      
+      <button name="toexcel" title="导出Excel" type="toexcel" cssclass="input_button">
+      </button>
+    </buttons>
+  </myquery>
+</root>

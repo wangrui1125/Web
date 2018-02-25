@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="角色列表" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true" functioncode="903" >
+    <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+      <column name="id" title="编号" width="40px">
+        s_role.id
+      </column>
+      <column name="name" title="名称" width="100px">
+        s_role.name
+      </column>
+      <column name="des" title="描述">
+        s_role.des
+      </column>
+      <column name="datascope" title="数据范围" width="100px" sort="s_role.datascope" urlformatstring="0,自己的;1,部门的;2,全部的" type="select">
+        s_role.datascope
+      </column>
+      <column name="iflag" title="状态" width="40px" sort="s_role.iflag">
+        case when s_role.iflag=1 then '' else '停用' end
+      </column>
+    </select>
+    <from type="table">
+      <table title="角色表">s_role</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="session" name="user.DepID" title="所在单位">
+        and s_role.depid={0}
+      </append>
+      <colgroup>
+        <col width="80px"/>
+        <col width="100px"/>
+        <col width="80px"/>
+        <col/>
+      </colgroup>
+      <column name="iflag" title="状态" type="selectint" dataformat=",全部" urlformatstring="1,启用;0,停用">
+        and s_role.iflag={0}
+      </column>
+      <column name="user" title="自定义" type="fieldwhere" urlformatstring=",--请选择--;name,名称;des,描述;datascope,数据范围">
+        and
+      </column>
+    </where>
+    <order>
+      s_role.id
+    </order>
+    <buttons position="top">
+      <button name="btnAdd" title="新 增" type="dialog" cssclass="input_button" windowwidth="350" windowheight="350" parameters="parentid">
+        tmp/MyEdit.aspx?n=editrole
+      </button>
+      <button name="btnEdit" title="编 辑" type="dialog" cssclass="input_button" isselectedrow="true" windowwidth="350" windowheight="350">
+        tmp/MyEdit.aspx?n=editrole&amp;id={0}
+      </button>
+      <button name="toexcel" title="导出Excel" type="toexcel" cssclass="input_button">
+      </button>
+      <button name="delnot" title="删除|停用" type="runsql" isselectedrow="true" cssclass="input_button" confirminfo="确认删除选中的记录吗？">
+        <sql>select case when count(*)>0 then 1 else 0 end from s_rolefun where roleid={0}</sql>
+        <sql value="1" title="选择记录停用成功">update s_role set iflag=0 where id={0}</sql>
+        <sql value="0">delete from S_RoleUser where RoleID={0}</sql>
+        <sql value="0" title="选择记录删除成功">delete from s_role where id={0}</sql>
+      </button>
+      <button name="btnSun" title="角色权限管理" type="dialog" cssclass="input_button" windowwidth="390" windowheight="600" isselectedrow="true">
+        Sys/RoleFunEdit.aspx?id={0}
+      </button>
+    </buttons>
+  </myquery>
+</root>

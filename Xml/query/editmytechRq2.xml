@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="我的科技需求（执行的）" pagesize="0">
+    <select>
+    <colgroup>
+        <col style="width: 100px;" />
+        <col />
+      </colgroup>
+       
+ <!--
+<column name="listmytechRq26" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listmytechRq26&amp;id={0}&amp;pagesize=3" maxlength="200" colspan="2" parameter="id" parametervalue="!">
+      </column>
+<column name="listmytechRq266" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listmytechRq266&amp;id={0}&amp;pagesize=3" maxlength="200" colspan="2" parameter="id" parametervalue="!">
+      </column>
+<column name="listmytechRq25" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listmytechRq25&amp;id={0}&amp;pagesize=3" maxlength="200" colspan="2" parameter="id" parametervalue="!">
+      </column>
+<column name="listmytechRq27" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listmytechRq27&amp;id={0}&amp;pagesize=5" maxlength="510" colspan="2" parameter="id" parametervalue="!">
+      </column>
+    </select>
+	-->
+	 
+	  <!--我的科技需求（审阅中）-->
+<column name="listmytechRq62" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listmytechRq62&amp;id={0}&amp;pagesize=5" maxlength="300" colspan="2" parameter="id" parametervalue="!">
+      </column>
+	  
+	  <!--我的科技需求（处理）-->
+ <column name="listmytechRq25" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listmytechRq25&amp;id={0}&amp;pagesize=10" maxlength="510" colspan="2" parameter="id" parametervalue="!">
+      </column>
+	  
+	  <!--我的科技需求（其他）-->
+<column name="listmytechRq77" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listmytechRq77&amp;id={0}&amp;pagesize=10" maxlength="510" colspan="2" parameter="id" parametervalue="!">
+      </column>
+	  
+	    <!--邀请-->
+  <column name="listmytechRq66" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listmytechRq66&amp;id={0}&amp;pagesize=3" maxlength="300" colspan="2" parameter="id" parametervalue="!">
+      </column>    
+	<!--我的科技需求（未提交）-->	  
+ <column name="listmytechRq30" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listmytechRq30&amp;id={0}&amp;pagesize=3" maxlength="300" colspan="2" parameter="id" parametervalue="!">
+      </column>
+	  <!--我的科技需求（不通过）-->	
+<column name="listmytechRq33" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listmytechRq33&amp;id={0}&amp;pagesize=3" maxlength="300" colspan="2" parameter="id" parametervalue="!">
+      </column> 
+	  
+	  <!--我的科技需求（协助）-->
+<column name="listmytechRq666" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listmytechRq666&amp;id={0}&amp;pagesize=3" maxlength="300" colspan="2" parameter="id" parametervalue="!">
+      </column>
+	
+	
+     </select>
+    <from type="table">
+      <table title="科技需求">TechRequire</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="querystring" name="id">
+         TechRequire.Rq_CreaterID={0} 
+      </append>
+    </where>
+      <buttons position="top">
+      <button name="btnAdd" title="新 增" type="redirect" cssclass="input_button" parameters="eid">
+        tmp/MyEdit.aspx?n=editTechRequire3
+      </button>
+  </buttons>
+      
+  </myquery>
+</root>

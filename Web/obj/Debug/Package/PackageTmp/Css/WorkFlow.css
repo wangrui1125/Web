@@ -1,0 +1,76 @@
+﻿body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: #FFFFFF;
+    font: normal 12px Arial, Verdana, Lucida, Helvetica, simsun, sans-serif;
+}
+td
+{
+    font: normal 12px Arial, Verdana, Lucida, Helvetica, simsun, sans-serif;
+}
+form
+{
+    margin: 0px;
+    padding: 0px;
+}
+a
+{
+    color: #2f7d53;
+    text-decoration: underline;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+.flowinfoblock
+{
+    width: 99%;
+}
+.flowinfoblock TABLE
+{
+    border: 1px;
+    border-collapse: collapse;
+    width: 100%;
+}
+.flowinfoblock th
+{
+    background: url(../Img/green.gif) no-repeat;
+    background-position: left;
+    background-color: White;
+    padding-left: 25px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 13px;
+    color: #000000;
+    height: 25px;
+}
+.flowinfoblock td
+{
+    text-align: left;
+    vertical-align: middle;
+    font-size: 11px;
+    color: #333;
+}
+.flowinfonote
+{
+    text-align: left;
+    font-size: 11px;
+    font-style:italic;
+    color: #333;
+}
+.flowinfotitle
+{
+    border: 0px;
+    padding-top: 15px;
+    text-align: left;
+    padding-left: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fe7604;
+    background-image: url(../Img/buttonsback.png);
+    background-repeat: no-repeat;
+    height: 25px;
+}
+

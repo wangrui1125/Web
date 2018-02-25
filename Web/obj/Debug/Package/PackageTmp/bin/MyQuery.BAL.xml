@@ -1,0 +1,728 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyQuery.BAL</name>
+    </assembly>
+    <members>
+        <member name="T:MyQuery.BAL.QueryColumn">
+            <summary>
+            针对查询模板列计算接口的实现 
+            by 贾世义 2009-1-28
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.QueryColumn.GetValue">
+            <summary>
+            返回计算列的值
+            注意当case多于10个时建议再仿照此类另建一个实现类，配置中配成新实现的类名即可
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.BAL.QueryColumn.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryColumn.Column">
+            <summary>
+            当前处理的列
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryColumn.DataColumns">
+            <summary>
+            当前处理的数据列的集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryColumn.DealObject">
+            <summary>
+            当前处理的数据行
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryColumn.DataSource">
+            <summary>
+            当前处理的DataSet 当前的DataTable索引为0
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryColumn.User">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="T:MyQuery.BAL.QueryFunction">
+            <summary>
+            针对查询模板按钮的function计算接口的实现 
+            by 贾世义 2009-1-28
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.QueryFunction.HasFunction">
+            <summary>
+            返回是否有此功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFunction.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFunction.FunctionCode">
+            <summary>
+            按钮对应的FunctionCode
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFunction.User">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="T:MyQuery.BAL.QueryValidate">
+            <summary>
+            针对编辑模板服务器校验接口的实现 
+            by jiashiyi 2010-05-18
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.QueryValidate.Validate">
+            <summary>
+            返回未通过验证的提示信息 通过则返回null
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.BAL.QueryValidate.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryValidate.Column">
+            <summary>
+            当前处理的列
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryValidate.DataColumns">
+            <summary>
+            当前处理的数据列的集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryValidate.User">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="T:MyQuery.BAL.DataDeal">
+            <summary>
+            封装Dao数据库操作处理、简化页面控件与数据库交互处理
+            by 贾世义 2009-1-28
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.#ctor(MyQuery.Utils.DBType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dbtype">数据库类型</param>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.#ctor(MyQuery.Utils.DBType,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="connectionString">连接字符串</param>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetDataSet(System.String,System.Data.IDataParameter[])">
+            <summary>
+            根据输入的SQL语句得到DataSet对象
+            </summary>
+            <param name="sql">SQL语句 多条用;分割</param>
+            <param name="paramters">参数集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetDataSet(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            根据MySqlParameters对象得到DataSet对象，适用于带参数语句
+            </summary>
+            <param name="parameters">自定义Sql及参数列表 </param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetTable(System.String,System.Data.IDataParameter[])">
+            <summary>
+            根据输入的SQL语句获得DataTable
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="paramters">参数集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetTable(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            根据MySqlParameters对象得到DataTable，适用于带参数语句
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetDataReader(System.String,System.Data.IDataParameter[])">
+            <summary>
+            按SQL语句获得指定DataReader对象(一定记得在使用完DataReader后关闭)
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="paramters">参数集合</param>
+            <returns>DataReader对象</returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetDataReader(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            根据MySqlParameters对象得到DataReader对象(一定记得在使用完DataReader后关闭)
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <returns>DataReader对象</returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetScalar(System.String,System.Data.IDataParameter[])">
+            <summary>
+            根据输入SQL执行查询，并返回查询结果集中的第一行，第一列的值,忽略其他列和行
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="paramters">参数集合</param>
+            <returns>返回第一行第一列的值 空为空格</returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetScalar(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            根据MySqlParameters对象执行查询，并返回查询结果集中的第一行，第一列的值,忽略其他列和行
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.SqlExecute(System.String,System.Data.IDataParameter[])">
+            <summary>
+            根据传入的SQL在数据库中执行SQl操作
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="paramters">参数集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.SqlExecute(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            根据MySqlParameters对象在数据库中执行SQl操作
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.SqlExecuteFail(System.String)">
+            <summary>
+            执行一条Sql语句是否出错（insert/update/delete）不再抛出异常
+            </summary>
+            <param name="sql">Sql语句</param>
+            <returns>是否出错(判断数据提交是否出错) true表示出现错误</returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.SqlExecuteFail(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            根据MySqlParameters对象执行一条Sql语句是否出错（insert/update/delete）不再抛出异常
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <returns>是否出错(判断数据提交是否出错) true表示出现错误</returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.SqlExecute(System.Collections.Generic.List{System.String})">
+            <summary>
+            事物批量执行SQL
+            </summary>
+            <param name="sqls">SQL语句集合,空语句忽略</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.ProcedureExecute(System.String,MyQuery.Utils.MySqlParameters)">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="procName">存储过程名称</param>
+            <param name="parameters">自定义Sql参数列表 null表示无参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetDataSetProcedure(System.String,MyQuery.Utils.MySqlParameters)">
+            <summary>
+            执行存储过程，返回DataSet
+            </summary>
+            <param name="procName">存储过程名称</param>
+            <param name="parameters">自定义Sql参数列表 null表示无参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetDataTableProcedure(System.String,MyQuery.Utils.MySqlParameters)">
+            <summary>
+            执行存储过程，返回DataTable
+            </summary>
+            <param name="procName">存储过程名称</param>
+            <param name="parameters">自定义Sql参数列表 null表示无参数</param>
+            <returns>不存在时为null</returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetTable(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            获得DataTable
+            </summary>
+            <param name="table">表名</param>
+            <param name="field">字段 多个用,分割</param>
+            <param name="where">条件表达式(参数用{0}比表示) 不包含where</param>
+            <param name="value">替换表达式的参数值</param>
+            <param name="count">获取数量 小于1表示不限制</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetTable(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            获得DataTable
+            </summary>
+            <param name="table">表名</param>
+            <param name="field">字段 多个用,分割</param>
+            <param name="endSql">from后表达式 可包含join或where或group by或order by 或空</param>
+            <param name="count">获取数量 小于1表示不限制</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.TransactionBegin">
+            <summary>
+            开始执行事务(在事务提交前为一个完整的事务,即使多次开启也是同一事务)
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.TransactionCommit">
+            <summary>
+            提交事务
+            </summary>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.TransactionRollback">
+            <summary>
+            事务回滚
+            </summary>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.Detail(System.String[],System.Web.UI.Control[],MyQuery.Utils.MySqlParameters)">
+            <summary>
+            读出详细信息赋给相应控件,控件包括Label,TextBox,CheckBox,RichTextBox,UserCtrls,ListControl
+            </summary>
+            <param name="selFields">选择字段数组,可以加表名及运算，比如：string[] selFields={"title","content","Derivation","convert(varchar(10),Dates,20) as Dates"};</param>
+            <param name="ctrls">控件数组与字段数组按顺序一一对应，比如：Control[] ctrls={txtTitle,txtContent,txtDerivation,cdrDates};</param>
+            <param name="parameters">自定义Sql及参数列表 SQL语句只要表名及条件语句（包含from）</param>
+            <returns>有无记录</returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.Detail(System.String[],System.Web.UI.Control[],System.String)">
+            <summary>
+            读出详细信息赋给相应控件,控件包括Label,TextBox,CheckBox,RichTextBox,UserCtrls,ListControl
+            </summary>
+            <param name="selFields">选择字段数组,可以加表名及运算，比如：string[] selFields={"title","content","Derivation","convert(varchar(10),Dates,20) as Dates"};</param>
+            <param name="ctrls">控件数组与字段数组按顺序一一对应，比如：Control[] ctrls={txtTitle,txtContent,txtDerivation,cdrDates};</param>
+            <param name="tblNameWhere">SQL语句只要表名及条件语句（不包含from）</param>
+            <returns>有无记录</returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.DetailVar(System.String[],System.String[],System.String)">
+            <summary>
+            从查询中读出字段数组详细信息赋给预先定义好的变量数组
+            </summary>
+            <param name="selFields">选择字段数组,可以加表名及运算，比如：string[] selFields={"title","content","Derivation","convert(varchar(10),Dates,20) as Dates"};</param>
+            <param name="vars">变量数组与字段按顺序一一对应,string[] refVariables={"",""}变量数组的个数与字段数相同</param>
+            <param name="tblNameWhere">SQL语句只要表名及条件语句（不包含from）</param>
+            <returns>有无记录</returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.BindCtrl(System.String,System.Web.UI.WebControls.Repeater)">
+            <summary>
+            绑定Repeater控件不分页
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="rpt">控件id</param>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.BindListCtrl(System.String,System.Web.UI.WebControls.ListControl,System.Boolean)">
+            <summary>
+            绑定DropDownList，CheckBoxList，RadioButtonList，ListBox控件
+            </summary>
+            <param name="sql">SQL语句（至少需1个字段 0列值 1列显示 2列=="1"选择 3列=="1"加(*)标记）</param>
+            <param name="listCtrl">DropDownList，CheckBoxList，RadioButtonList，ListBox控件id值</param>
+            <param name="isAll">有否“请选择”</param>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.BindCodeList(System.String,System.Web.UI.WebControls.ListControl,System.Boolean)">
+            <summary>
+            绑定DropDownList，CheckBoxList，RadioButtonList，ListBox控件
+            </summary>
+            <param name="id">代码ID</param>
+            <param name="listCtrl">DropDownList，CheckBoxList，RadioButtonList，ListBox控件id值</param>
+            <param name="isAll">有否“全部”</param>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetCodeTable(System.String)">
+            <summary>
+            获得字典数据
+            </summary>
+            <param name="id">代码ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.IsExistInTable(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            判断数据是否存在表中 提供的MySqlParameters 需指定name和条件
+            </summary>
+            <param name="mySql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.BindDepartList(System.String,System.Web.UI.WebControls.ListControl,System.Boolean)">
+            <summary>
+            部门列表绑定DropDownList控件
+            </summary>
+            <param name="parentID">parentID</param>
+            <param name="listCtrl">DropDownList</param>
+            <param name="isAll">有否“全部”</param>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.setCtrlValue(System.Web.UI.Control,System.Object)">
+            <summary>
+            给指定控件赋值(Label,TextBox,CheckBox,RichTextBox,UserCtrls,ListControl,HypeLink)
+            </summary>
+            <param name="ctrl">控件ID</param>
+            <param name="obj">值</param>
+        </member>
+        <member name="M:MyQuery.BAL.DataDeal.GetComName(System.String)">
+            <summary>
+            获得社区名称
+            </summary>
+            <param name="id"></param>
+            <returns>名称</returns>
+        </member>
+        <member name="P:MyQuery.BAL.DataDeal.Dbtype">
+            <summary>
+            返回数据库类型
+            </summary>
+        </member>
+        <member name="T:MyQuery.BAL.QueryRow">
+            <summary>
+            针对查询模板自定义行计算接口的实现 
+            by 贾世义 2009-1-28
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.QueryRow.Add">
+            <summary>
+            返回增加了新处理的行数据的数据源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.BAL.QueryRow.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryRow.DataColumns">
+            <summary>
+            当前处理的数据列的集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryRow.DataSource">
+            <summary>
+            当前处理的DataSet 当前的DataTable索引为0
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryRow.Parameter">
+            <summary>
+            配置的参数值字符串
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryRow.User">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryRow.RowName">
+            <summary>
+            当前处理行的名称
+            </summary>
+        </member>
+        <member name="T:MyQuery.BAL.QueryDefault">
+            <summary>
+            针对查询模板Foot的列计算接口的实现 
+            by 贾世义 2009-1-28
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.QueryDefault.GetValue">
+            <summary>
+            返回有Parameter计算的来的值
+            注意当else if多于10个时建议再仿照此类另建一个实现类，配置中配成新实现的类名即可
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.BAL.QueryDefault.Parameter">
+            <summary>
+            配置的参数值字符串
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryDefault.User">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="T:MyQuery.BAL.MailDeal">
+            <summary>
+            邮件处理封装
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.MailDeal.#ctor(MyQuery.Utils.MyUser)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.MailDeal.SendMailTask(System.String,System.String,System.String)">
+            <summary>
+            给常规任务相关人发邮件
+            </summary>
+            <param name="mailContent">内容</param>
+            <param name="userids">多个用,分割</param>
+            <param name="userid">不空时 则通知其部门领导</param>
+        </member>
+        <member name="M:MyQuery.BAL.MailDeal.SendMailTask(System.Int32)">
+            <summary>
+            给常规任务相关人发邮件
+            </summary>
+            <param name="id">id</param>
+        </member>
+        <member name="M:MyQuery.BAL.MailDeal.SendMailProject(System.String,System.String,System.Int32)">
+            <summary>
+            给部门经理发邮件
+            </summary>
+            <param name="mailContent"></param>
+            <param name="depid"></param>
+            <param name="projectId"></param>
+        </member>
+        <member name="M:MyQuery.BAL.MailDeal.SendMailNoPass(System.String,System.String,System.Boolean)">
+            <summary>
+            发送未通邮件
+            </summary>
+            <param name="mailContent"></param>
+            <param name="ids"></param>
+            <param name="isLog"></param>
+        </member>
+        <member name="T:MyQuery.BAL.TimerTaskUnWrite">
+            <summary>
+            未填写日志提醒邮件 定时任务
+            by 贾世义 2011-07-04
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.TimerTaskUnWrite.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="days">超n天未填写日志，则发邮件提醒</param>
+            <param name="toHeader">是否 同时发邮件提醒部门经理督促</param>
+        </member>
+        <member name="M:MyQuery.BAL.TimerTaskUnWrite.Run">
+            <summary>
+            执行任务
+            </summary>
+        </member>
+        <member name="T:MyQuery.BAL.WFFunction">
+            <summary>
+            自动任务执行类
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.WFFunction.Run">
+            <summary>
+            执行处理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.BAL.WFFunction.WFDeal">
+            <summary>
+            工作流处理对象
+            </summary>
+        </member>
+        <member name="T:MyQuery.BAL.QueryButton">
+            <summary>
+            针对查询模板按钮接口的实现 
+            注意 为了记录按钮操作日志 请使用DataDeal 而不直接实用Dao
+            by 贾世义 2009-1-27
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.QueryButton.Deal">
+            <summary>
+            返回运行的脚本则执行之 空或空字符串则忽略
+            注意当case多于10个时建议再仿照此类另建一个实现类，配置中配成新实现的类名即可
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.QueryButton.getHtmls(System.String,System.String)">
+            <summary>
+            批量生成静态网页
+            </summary>
+            <param name="url"></param>
+            <param name="city"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.BAL.QueryButton.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryButton.Button">
+            <summary>
+            对应的按钮对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryButton.Id">
+            <summary>
+            处理的选中行的ID 行的ID有keycolumnnames获得（多个用,分割）多选时多个ID用;分割
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryButton.Columns">
+            <summary>
+            处理的列集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryButton.QueryString">
+            <summary>
+            按钮所在页面的Page.Request.QueryString
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryButton.User">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="T:MyQuery.BAL.QueryFooter">
+            <summary>
+            针对查询模板Foot的列计算接口的实现 
+            by 贾世义 2009-1-28
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.QueryFooter.GetValue">
+            <summary>
+            返回计算列的值
+            注意当case多于10个时建议再仿照此类另建一个实现类，配置中配成新实现的类名即可
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFooter.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFooter.Column">
+            <summary>
+            当前处理的列
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFooter.DataColumns">
+            <summary>
+            当前处理的数据列的集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFooter.DataSource">
+            <summary>
+            当前处理的DataTable
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFooter.User">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="T:MyQuery.BAL.QueryWhere">
+            <summary>
+            针对查询模板append中sys类型条件计算接口的实现 
+            by 贾世义 2009-1-28
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.QueryWhere.GetValue">
+            <summary>
+            返回替换条件表达式中{0}的值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.BAL.QueryWhere.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryWhere.Parameter">
+            <summary>
+            配置的参数值字符串
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryWhere.User">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="T:MyQuery.BAL.LogDeal">
+            <summary>
+            系统日志处理
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.LogDeal.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.LogDeal.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.LogDeal.Write(System.String)">
+            <summary>
+            计入一条日志
+            </summary>
+            <param name="des"></param>
+        </member>
+        <member name="T:MyQuery.BAL.Authenticate">
+            <summary>
+            用户认证业务类
+            by 贾世义 2011-9-8
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.Authenticate.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.Authenticate.IsPass(System.String,System.String)">
+            <summary>
+            是否能够通过认证
+            </summary>
+            <param name="userAccount"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.Authenticate.getUserTable(System.String,System.String)">
+            <summary>
+            获得用户信息
+            </summary>
+            <param name="userAccount"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.Authenticate.setUserApd(MyQuery.Utils.MyUser,System.Data.DataTable)">
+            <summary>
+            设定扩展信息
+            </summary>
+            <param name="myUser"></param>
+            <param name="dt"></param>
+        </member>
+        <member name="M:MyQuery.BAL.Authenticate.GetUser(System.String)">
+            <summary>
+            通过ID 获得user对象
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.Authenticate.UpdatePwd(System.String,System.String)">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="old"></param>
+            <param name="pwd"></param>
+        </member>
+        <member name="P:MyQuery.BAL.Authenticate.Error">
+            <summary>
+            获取错误信息 失败时才有值
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.Authenticate.MyUser">
+            <summary>
+            获取错误信息 成功时有效
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.Authenticate.Table">
+            <summary>
+            认证表
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.Authenticate.Email">
+            <summary>
+            邮件地址
+            </summary>
+        </member>
+    </members>
+</doc>

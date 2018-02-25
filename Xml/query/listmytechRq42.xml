@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="我的科技需求（审阅中）" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true">
+    <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+
+      <column name="id" visible="false">
+        TechRequire.Rq_ID
+      </column>
+      <column name="eid" visible="false">
+        TechRequire.Enp_ID
+      </column>
+      <column name="Enp_Name" title="企业名称" width="100px" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailEnterprise&amp;id={0}" usefields="eid" target="_blank">
+        Enterprise.Enp_Name
+      </column>
+       <column name="Rq_Name" title="科技需求名称" width="100px" type="link" urlformatstring="../EasyTechFunc/ReviewChange.aspx?ConcernID={0}" usefields="id" target="_blank">
+        TechRequire.Rq_Name
+      </column>
+      <column name="Rq_EnpDes" title="科技需求内容" width="150px" maxlength="10">
+        TechRequire.Rq_EnpDes
+      </column>
+      <!--column name="Keywords" title="关键词" width="100px">
+        Rq_words_alg.Rq_Keywords
+      </column-->
+      <column name="Rq_Fields" title="所属领域" width="150px" maxlength="10">
+        TechRequire.Rq_Fields
+      </column>
+      <column name="Rq_Type" title="科技需求类型" width="100px">
+        Rq_Type.name
+      </column>
+      <column name="marks" title="标签内容" width="100px">
+        dbo.f_GetMark('tech',TechRequire.Rq_ID)
+      </column>
+      <column name="Rq_Expect" title="预期结果" width="150px" maxlength="10">
+        TechRequire.Rq_Expect
+      </column>
+      <column name="Rq_DueDay" title="预期完成时间" width="80px" dataformat="{0:yyyy-MM-dd}">
+        TechRequire.Rq_DueDay
+      </column>
+      <column name="Rq_Fund" title="拟提供技术资金" width="100px" maxlength="10">
+        TechRequire.Rq_Fund
+      </column>
+      <column name="Rq_ResolveManner" title="拟解决方式" width="150px" maxlength="10">
+        TechRequire.Rq_ResolveManner
+      </column>
+      <column name="Rq_flag" title="科技需求状态" width="100px">
+        Rq_flag.name
+      </column>
+<column name="Name" title="当前处理者" width="100px">
+       S_User.Name
+      </column>
+      <column name="edit" title="操作" width="120px" type="excelno">
+       <![CDATA['
+        &nbsp;<a onclick=openDialogRefresh("../EasyTechFunc/EditMark.aspx?entity=tech&id='+cast(TechRequire.Rq_ID as varchar)+'",800,600) style="color: #0055BA;cursor: pointer;">打标签</a>
+&nbsp;<a  href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="iframeContent" style="color: #0055BA;cursor: pointer;">关注</a> 
+ &nbsp;<a href="../EasyTechFunc/SubmitFailure.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">审阅不通过</a>
+ &nbsp;<a href="../EasyTechFunc/SubmitSuccess.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">审阅通过</a>
+  ']]>
+      </column>
+    </select>
+    <from type="table">
+      <table title="科技需求">TechRequire</table>
+      <table title="企业">left join Enterprise on Enterprise.Enp_ID=TechRequire.Enp_ID</table>
+      <table title="关键词">left join Rq_words_alg on TechRequire.Rq_ID=Rq_words_alg.Rq_ID</table>
+      <table title="代码表">left join f_code Rq_flag on Rq_flag.id='Rq_flag' and Rq_flag.code=TechRequire.Rq_flag</table>
+      <table title="代码表">left join f_code Rq_Type on Rq_Type.id='Rq_Type' and Rq_Type.code=TechRequire.Rq_Type</table>
+ <table title="用户表">left join S_User on S_User.id= TechRequire.Rq_Owner</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="true">
+       
+      <append type="querystring" name="ID" title="所属科技需求类型">
+        TechRequire.Rq_Owner={0} and TechRequire.Rq_flag=2
+      </append>
+     
+     
+
+    </where>
+    <order>
+      TechRequire.Rq_ID
+    </order>
+      
+     
+   
+  </myquery>
+</root>

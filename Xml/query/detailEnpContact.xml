@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="企业联系人" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="100px"/>
+        <col width="300px"/>
+        <col width="100px"/>
+        <col/>
+      </colgroup>
+      <column name="Name" title="联系人名称">
+        Contact.Name
+      </column>
+      <column name="Enp_Name" title="企业名称">
+        Enterprise.Enp_Name
+      </column>
+      <column name="Department" title="部门名称">
+        Contact.Department
+      </column>
+      <column name="Email" title="邮箱">
+        Contact.Email
+      </column>
+      <column name="Tel" title="手机">
+        Contact.Tel
+      </column>
+      <column name="Officephone" title="座机">
+        Contact.Officephone
+      </column>
+      <column name="qq" title="QQ号码">
+        Contact.qq
+      </column>
+      <column name="weichat" title="微信">
+        Contact.weichat
+      </column>
+      <column name="title" title="头衔">
+        Contact.title
+      </column>
+      <column name="Fax" title="传真">
+        Contact.Fax
+      </column>
+      <column name="UserID" title="用户ID">
+        Contact.UserID
+      </column>
+      <column name="status" title="状态" type="select" urlformatstring="0,unactive;1,active">
+        case when Contact.status=0 then 'unactive' else 'active' end
+      </column>
+    </select>
+    <from type="table">
+      <table title="企业联系人">Contact</table>
+      <table title="企业">left join Enterprise on Enterprise.Enp_ID=Contact.Enp_ID</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="querystring" name="id">
+        Contact.ID={0}
+      </append>
+    </where>
+  </myquery>
+</root>

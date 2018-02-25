@@ -1,0 +1,929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://121.18.78.216" xmlns="http://121.18.78.216">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="myquery" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="title" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="parameters" type="multiplevalues" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="select" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="colgroup" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="col" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="width" type="widthtype" />
+                                  <xs:attribute name="style" type="xs:string" />
+                                  <xs:attribute name="cssclass" type="cssclass" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="column" minOccurs="1" maxOccurs="unbounded">
+                      <xs:complexType mixed="true">
+                        <xs:sequence>
+                          <xs:element name="validates" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="validate" minOccurs="1" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute name="type" type="validatetype" use="required" />
+                                        <xs:attribute name="title" type="xs:string" />
+                                        <xs:attribute name="scope" type="scope" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                            <xs:unique name="validateUnique">
+                              <xs:selector xpath="validate"/>
+                              <xs:field xpath="@type"/>
+                            </xs:unique>
+                          </xs:element>
+                          <xs:element name="column" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType mixed="true">
+                              <xs:sequence>
+                                <xs:element name="validates" minOccurs="0" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="validate" minOccurs="1" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute name="type" type="validatetype" use="required" />
+                                              <xs:attribute name="title" type="xs:string" />
+                                              <xs:attribute name="scope" type="scope" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="name" type="nametype" use="required" />
+                              <xs:attribute name="title" type="xs:string" />
+                              <xs:attribute name="dataformat" type="dataformat" />
+                              <xs:attribute name="width" type="widthtype" />
+                              <xs:attribute name="visible" type="logicvalue" />
+                              <xs:attribute name="issort" type="logicvalue" />
+                              <xs:attribute name="sort" type="xs:string" />
+                              <xs:attribute name="cssclass" type="xs:string" />
+                              <xs:attribute name="type" type="columntype" />
+                              <xs:attribute name="urlformatstring" type="urltype" />
+                              <xs:attribute name="usefields" type="multiplevalues" />
+                              <xs:attribute name="target" type="nametype" />
+                              <xs:attribute name="calctype" type="nametype" />
+                              <xs:attribute name="value" type="xs:string" />
+                              <xs:attribute name="colspan" type="xs:integer" />
+                              <xs:attribute name="rowspan" type="xs:integer" />
+                              <xs:attribute name="maxlength" type="xs:integer" />
+                              <xs:attribute name="notes" type="xs:string" />
+                              <xs:attribute name="functioncode" type="nametype" />
+							  <xs:attribute name="parameter" type="nametype" />
+                              <xs:attribute name="parametervalue" type="xs:string" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="nametype" use="required" />
+                        <xs:attribute name="title" type="xs:string" />
+                        <xs:attribute name="dataformat" type="dataformat" />
+                        <xs:attribute name="width" type="widthtype" />
+                        <xs:attribute name="visible" type="logicvalue" />
+                        <xs:attribute name="issort" type="logicvalue" />
+                        <xs:attribute name="sort" type="xs:string" />
+                        <xs:attribute name="cssclass" type="cssclass" />
+                        <xs:attribute name="type" type="columntype" />
+                        <xs:attribute name="urlformatstring" type="urltype" />
+                        <xs:attribute name="usefields" type="multiplevalues" />
+                        <xs:attribute name="target" type="nametype" />
+                        <xs:attribute name="calctype" type="nametype" />
+                        <xs:attribute name="value" type="xs:string" />
+                        <xs:attribute name="colspan" type="xs:integer" />
+                        <xs:attribute name="rowspan" type="xs:integer" />
+                        <xs:attribute name="maxlength" type="xs:integer" />
+                        <xs:attribute name="notes" type="xs:string" />
+                        <xs:attribute name="functioncode" type="nametype" />
+                        <xs:attribute name="parameter" type="nametype" />
+                        <xs:attribute name="parametervalue" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="javascript" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="paranames" type="multiplevalues" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="keycolumnnames" type="multiplevalues" />
+                  <xs:attribute name="ismultiselect" type="logicvalue" />
+                  <xs:attribute name="issingleselect" type="logicvalue" />
+                  <xs:attribute name="isshowrownum" type="logicvalue" />
+                  <xs:attribute name="sortdirection" type="sortdirection" />
+                  <xs:attribute name="mergecolumns" type="multiplevalues" />
+                  <xs:attribute name="parentcolumnname" type="nametype" />
+                  <xs:attribute name="childcolumnname" type="nametype" />
+                  <xs:attribute name="parentchilddisplay" type="nametype" />
+                  <xs:attribute name="isallopenchilds" type="logicvalue" />
+                  <xs:attribute name="iscrosstable" type="logicvalue" />
+                  <xs:attribute name="ifunctioncalc" type="nametype" />
+                </xs:complexType>
+                <xs:unique name="selectcolumnUnique">
+                  <xs:selector xpath="column"/>
+                  <xs:field xpath="@name"/>
+                </xs:unique>
+              </xs:element>
+              <xs:element name="from" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="table" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="title" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="type" type="fromtype" />
+                  <xs:attribute name="dbtype" type="dbtype" />
+                  <xs:attribute name="procedurename" type="nametype" />
+                  <xs:attribute name="connectionstring" type="xs:string" />
+                  <xs:attribute name="method" type="urlmethod" />
+                  <xs:attribute name="parameters" type="xs:string" />
+                </xs:complexType>
+                <xs:unique name="tableUnique">
+                  <xs:selector xpath="table"></xs:selector>
+                  <xs:field xpath="."></xs:field>
+                </xs:unique>
+              </xs:element>
+              <xs:element name="where" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="append" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType mixed="true">
+                        <xs:sequence>
+                          <xs:element name="sql" type="xs:string" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="value" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="when" type="xs:string" use="required" />
+                                  <xs:attribute name="title" type="xs:string" use="required" />
+                                  <xs:attribute name="where" type="xs:string" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="type" type="appendtype" use="required" />
+                        <xs:attribute name="name" type="nametype" use="required" />
+                        <xs:attribute name="title" type="xs:string" />
+                        <xs:attribute name="value" type="xs:string" />
+                        <xs:attribute name="datatype" type="datatype" />
+                        <xs:attribute name="functioncode" type="nametype" />
+                        <xs:attribute name="parameter" type="nametype" />
+                        <xs:attribute name="parametervalue" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="colgroup" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="col" minOccurs="2" >
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="width" type="widthtype" />
+                                  <xs:attribute name="style" type="xs:string" />
+                                  <xs:attribute name="cssclass" type="cssclass" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="column" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType mixed="true">
+                        <xs:attribute name="name" type="nametype" use="required" />
+                        <xs:attribute name="title" type="xs:string" />
+                        <xs:attribute name="dataformat" type="dataformat" />
+                        <xs:attribute name="width" type="widthtype" />
+                        <xs:attribute name="visible" type="logicvalue" />
+                        <xs:attribute name="issort" type="logicvalue" />
+                        <xs:attribute name="sort" type="xs:string" />
+                        <xs:attribute name="cssclass" type="cssclass" />
+                        <xs:attribute name="type" type="columntype" />
+                        <xs:attribute name="urlformatstring" type="urltype" />
+                        <xs:attribute name="usefields" type="multiplevalues" />
+                        <xs:attribute name="target" type="nametype" />
+                        <xs:attribute name="calctype" type="nametype" />
+                        <xs:attribute name="value" type="xs:string" />
+                        <xs:attribute name="colspan" type="xs:integer" />
+                        <xs:attribute name="rowspan" type="xs:integer" />
+                        <xs:attribute name="maxlength" type="xs:integer" />
+                        <xs:attribute name="notes" type="xs:string" />
+                        <xs:attribute name="functioncode" type="nametype" />
+                        <xs:attribute name="parameter" type="nametype" />
+                        <xs:attribute name="parametervalue" type="xs:string" />
+                     </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="isparameter" type="logicvalue" />
+                  <xs:attribute name="isshowappend" type="logicvalue" />
+                  <xs:attribute name="issession" type="logicvalue" />
+                  <xs:attribute name="isquerybutton" type="logicvalue" />
+                  <xs:attribute name="isquerysubject" type="logicvalue" />
+                  <xs:attribute name="ifunctioncalc" type="nametype" />
+                </xs:complexType>
+                <xs:unique name="wherecolumnUnique">
+                  <xs:selector xpath="column|append"/>
+                  <xs:field xpath="@name"/>
+                </xs:unique>
+              </xs:element>
+              <xs:element name="group" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="order" type="xs:string" minOccurs="0" maxOccurs="1" />
+              <xs:element name="addrows" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="row" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="name" type="nametype" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+                <xs:unique name="rowUnique">
+                  <xs:selector xpath="row"/>
+                  <xs:field xpath="@name"/>
+                </xs:unique>
+              </xs:element>
+              <xs:element name="chart" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="titles" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="title" minOccurs="0" maxOccurs="2">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="docking" type="docking" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="areas" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="area" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="legend" minOccurs="0" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute name="name" type="nametype" use="required" />
+                                        <xs:attribute name="docking" type="docking" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="datasource" minOccurs="0" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute name="paranames" type="multiplevalues" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="series" minOccurs="0" maxOccurs="1">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="serie" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute name="name" type="nametype" use="required" />
+                                              <xs:attribute name="title" type="xs:string" />
+                                              <xs:attribute name="charttype" type="charttype" />
+                                              <xs:attribute name="isvalueshownaslabel" type="logicvalue" />
+                                              <xs:attribute name="dataformat" type="formattype" />
+                                              <xs:attribute name="urlformatstring" type="urltype" />
+                                              <xs:attribute name="usefields" type="multiplevalues" />
+                                              <xs:attribute name="istooltip" type="logicvalue" />
+                                              <xs:attribute name="color" type="rgb" />
+                                              <xs:attribute name="customproperty" type="xs:string" />
+                                              <xs:attribute name="markersize" type="xs:integer" />
+                                              <xs:attribute name="markerstyle" type="markerstyle" />
+                                              <xs:attribute name="markercolor" type="rgb" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                  <xs:unique name="serieUnique">
+                                    <xs:selector xpath="serie"/>
+                                    <xs:field xpath="@name"/>
+                                  </xs:unique>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="name" type="nametype" use="required" />
+                              <xs:attribute name="xfield" type="nametype" />
+                              <xs:attribute name="isshow3d" type="logicvalue" />
+                              <xs:attribute name="isclustered" type="logicvalue" />
+                              <xs:attribute name="isrightangleaxes" type="logicvalue" />
+                              <xs:attribute name="rotation" type="xs:integer" />
+                              <xs:attribute name="inclination" type="xs:integer" />
+                              <xs:attribute name="lightstyle" type="lightstyle" />
+                              <xs:attribute name="pointdepth" type="xs:integer" />
+                              <xs:attribute name="pointgapdepth" type="xs:integer" />
+                              <xs:attribute name="xdataformat" type="formattype" />
+                              <xs:attribute name="ydataformat" type="formattype" />
+                              <xs:attribute name="xvaluetype" type="valuetype" />
+                              <xs:attribute name="yvaluetype" type="valuetype" />
+                              <xs:attribute name="isdatatable" type="logicvalue" />
+                              <xs:attribute name="rows" type="multiplevalues" />
+                              <xs:attribute name="xinterval" type="xs:integer" />
+                              <xs:attribute name="yinterval" type="xs:integer" />
+                              <xs:attribute name="xminimum" type="xs:integer" />
+                              <xs:attribute name="yminimum" type="xs:integer" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="nametype" use="required" />
+                  <xs:attribute name="width" type="xs:integer" />
+                  <xs:attribute name="height" type="xs:integer" />
+                  <xs:attribute name="template" type="template" />
+				  <xs:attribute name="button" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="buttons" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="button" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType mixed="true">
+                        <xs:sequence minOccurs="0">
+                          <xs:element maxOccurs="unbounded" name="sql">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="title" type="xs:string" />
+                                  <xs:attribute name="value" type="xs:string" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="nametype" use="required" />
+                        <xs:attribute name="title" type="xs:string" />
+                        <xs:attribute name="type" type="buttontype" use="required" />
+                        <xs:attribute name="isselectedrow" type="logicvalue" />
+                        <xs:attribute name="width" type="widthtype" />
+                        <xs:attribute name="cssclass" type="cssclass" />
+                        <xs:attribute name="windowwidth" type="xs:integer" />
+                        <xs:attribute name="windowheight" type="xs:integer" />
+                        <xs:attribute name="confirminfo" type="xs:string" />
+                        <xs:attribute name="parameters" type="multiplevalues" />
+                        <xs:attribute name="functioncode" type="nametype" />
+                        <xs:attribute name="parameter" type="nametype" />
+                        <xs:attribute name="parametervalue" type="xs:string" />
+                        <xs:attribute name="imgsrc" type="urltype" />
+                        <xs:attribute name="isnexttab" type="logicvalue" />
+                        <xs:attribute name="tabindex" type="xs:integer" />
+						<xs:attribute name="isreload" type="logicvalue" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="position" type="position" />
+                  <xs:attribute name="notes" type="xs:string" />
+                  <xs:attribute name="ifunctioncalc" type="nametype" />
+                </xs:complexType>
+                <xs:unique name="buttonUnique">
+                  <xs:selector xpath="button"/>
+                  <xs:field xpath="@name"/>
+                </xs:unique>
+              </xs:element>
+              <xs:element name="updatesqls" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="sql" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="ismodify" type="runtype" />
+                            <xs:attribute name="columnnames" type="multiplevalues" />
+                            <xs:attribute name="paranames" type="multiplevalues" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="isautoid" type="logicvalue" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="sql" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="name" type="nametype" use="required" />
+                      <xs:attribute name="title" type="xs:string" />
+                      <xs:attribute name="paranames" type="multiplevalues" />
+					  <xs:attribute name="value" type="xs:string" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="import" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="table" minOccurs="1" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="column" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="name" type="nametype" use="required" />
+                                  <xs:attribute name="title" type="xs:string" />
+                                  <xs:attribute name="datatype" type="datatype" />
+                                  <xs:attribute name="maxlength" type="xs:integer" />
+                                  <xs:attribute name="isnull" type="logicvalue" />
+                                  <xs:attribute name="expression" type="xs:string" />
+                                  <xs:attribute name="error" type="xs:string" />
+                                  <xs:attribute name="scope" type="scope" />
+                                  <xs:attribute name="remove" type="xs:string" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="where" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="column" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute name="name" type="nametype" use="required" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="keycolumnnames" type="multiplevalues" />
+                            </xs:complexType>
+                            <xs:unique name="importwherecolumnUnique">
+                              <xs:selector xpath="column"/>
+                              <xs:field xpath="@name"/>
+                            </xs:unique>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="nametype" use="required" />
+                        <xs:attribute name="title" type="xs:string" />
+                        <xs:attribute name="isbase" type="logicvalue" />
+                        <xs:attribute name="isone" type="logicvalue" />
+                      </xs:complexType>
+                      <xs:unique name="tablecolumnUnique">
+                        <xs:selector xpath="column"/>
+                        <xs:field xpath="@name"/>
+                      </xs:unique>
+                    </xs:element>
+                    <xs:element name="javascript" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="paranames" type="multiplevalues" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="notes" type="xs:string" minOccurs="0" maxOccurs="1" />
+                  </xs:sequence>
+                  <xs:attribute name="dbtype" type="dbtype" />
+                  <xs:attribute name="connectionstring" type="xs:string" />
+                  <xs:attribute name="isparameter" type="logicvalue" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="url" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="urltype">
+                      <xs:attribute name="type" type="nametype" />
+                      <xs:attribute name="paranames" type="multiplevalues" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="title" type="xs:string" />
+            <xs:attribute name="islogicdeal" type="logicvalue" />
+            <xs:attribute name="isfirstload" type="logicvalue" />
+            <xs:attribute name="allowsorting" type="logicvalue" />
+            <xs:attribute name="allowpaging" type="logicvalue" />
+            <xs:attribute name="pagesize" type="xs:integer" />
+            <xs:attribute name="pagervisible" type="logicvalue" />
+            <xs:attribute name="footervisible" type="logicvalue" />
+            <xs:attribute name="issavedata" type="logicvalue" />
+            <xs:attribute name="ifunctioncalc" type="nametype" />
+            <xs:attribute name="functioncode" type="nametype" />
+            <xs:attribute name="parameter" type="nametype" />
+            <xs:attribute name="parametervalue" type="xs:string" />
+            <xs:attribute name="height" type="widthtype" />
+            <xs:attribute name="width" type="widthtype" />
+            <xs:attribute name="fixedcols" type="xs:integer" />
+            <xs:attribute name="notes" type="xs:string" />
+          </xs:complexType>
+          <xs:unique name="sqlUnique">
+            <xs:selector xpath="sql"/>
+            <xs:field xpath="@name"/>
+          </xs:unique>
+        </xs:element>
+        <xs:element name="buttons" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="button" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="name" type="nametype" use="required" />
+                      <xs:attribute name="title" type="xs:string" />
+                      <xs:attribute name="type" type="buttontype" use="required" />
+                      <xs:attribute name="isselectedrow" type="logicvalue" />
+                      <xs:attribute name="width" type="widthtype" />
+                      <xs:attribute name="cssclass" type="cssclass" />
+                      <xs:attribute name="windowwidth" type="xs:integer" />
+                      <xs:attribute name="windowheight" type="xs:integer" />
+                      <xs:attribute name="confirminfo" type="xs:string" />
+                      <xs:attribute name="parameters" type="multiplevalues" />
+                      <xs:attribute name="functioncode" type="nametype" />
+                      <xs:attribute name="parameter" type="nametype" />
+                      <xs:attribute name="parametervalue" type="nametype" />
+                      <xs:attribute name="imgsrc" type="urltype" />
+                      <xs:attribute name="isnexttab" type="logicvalue" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="position" type="position" />
+            <xs:attribute name="ifunctioncalc" type="nametype" />
+          </xs:complexType>
+          <xs:unique name="allbuttonUnique">
+            <xs:selector xpath="button"/>
+            <xs:field xpath="@name"/>
+          </xs:unique>
+        </xs:element>
+        <xs:element name="javascript" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="paranames" type="multiplevalues" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="scriptsrc" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="src" type="urltype" />
+            </xs:sequence>
+          </xs:complexType>
+          <xs:unique name="srcUnique">
+            <xs:selector xpath="src"/>
+            <xs:field xpath="."/>
+          </xs:unique>
+        </xs:element>
+        <xs:element name="functionsql" type="xs:string" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="logicvalue">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="false" />
+      <xs:enumeration value="true" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="fromtype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="table" />
+      <xs:enumeration value="procedure" />
+      <xs:enumeration value="xml" />
+      <xs:enumeration value="xls" />
+      <xs:enumeration value="urlxml" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="dbtype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="sql2005" />
+      <xs:enumeration value="sql2000" />
+      <xs:enumeration value="oracle" />
+      <xs:enumeration value="oledb" />
+      <xs:enumeration value="odbcmysql" />
+      <xs:enumeration value="odbcdb2" />
+      <xs:enumeration value="odbcinformix" />
+      <xs:enumeration value="odbc" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="urlmethod">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="" />
+      <xs:enumeration value="STOR" />
+      <xs:enumeration value="GET" />
+      <xs:enumeration value="POST" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="sortdirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="descending" />
+      <xs:enumeration value="ascending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="columntype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="text" />
+      <xs:enumeration value="textint" />
+      <xs:enumeration value="textdouble2" />
+      <xs:enumeration value="textdouble" />
+      <xs:enumeration value="textdate" />
+      <xs:enumeration value="texttime" />
+      <xs:enumeration value="textajax" />
+      <xs:enumeration value="textarea" />
+      <xs:enumeration value="texteditor" />
+      <xs:enumeration value="select" />
+      <xs:enumeration value="selectint" />
+      <xs:enumeration value="selectdouble" />
+      <xs:enumeration value="selectdate" />
+      <xs:enumeration value="selectlist" />
+      <xs:enumeration value="auto" />
+      <xs:enumeration value="checkbox" />
+      <xs:enumeration value="radiobox" />
+      <xs:enumeration value="fromto" />
+      <xs:enumeration value="fromtoint" />
+      <xs:enumeration value="fromtodate" />
+      <xs:enumeration value="fromtodouble" />
+      <xs:enumeration value="fromtoselectint" />
+      <xs:enumeration value="fromtoselectdouble" />
+      <xs:enumeration value="fileinput" />
+      <xs:enumeration value="getvalue" />
+	    <xs:enumeration value="hidden" />
+      <xs:enumeration value="link" />
+      <xs:enumeration value="image" />
+      <xs:enumeration value="calcscript" />
+      <xs:enumeration value="calccs" />
+      <xs:enumeration value="calcsql" />
+      <xs:enumeration value="button" />
+      <xs:enumeration value="linkbutton" />
+      <xs:enumeration value="imagebutton" />
+      <xs:enumeration value="chart" />
+      <xs:enumeration value="detail" />
+      <xs:enumeration value="composite" />
+      <xs:enumeration value="title" />
+      <xs:enumeration value="textnowrap" />
+      <xs:enumeration value="formula" />
+      <xs:enumeration value="excelout" />
+      <xs:enumeration value="excelno" />
+      <xs:enumeration value="fieldwhere" />
+      <xs:enumeration value="singleselect" />
+      <xs:enumeration value="multiselect" />
+      <xs:enumeration value="iframe" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="validatetype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="isnotnull" />
+      <xs:enumeration value="regex" />
+      <xs:enumeration value="js" />
+      <xs:enumeration value="jquery" />
+	  <xs:enumeration value="isexit" />
+      <xs:enumeration value="servervalidate" />
+      <xs:enumeration value="isuserexit" />	  
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="scope">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="all" />
+      <xs:enumeration value="edit" />
+      <xs:enumeration value="add" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="appendtype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="default" />
+      <xs:enumeration value="querystring" />
+      <xs:enumeration value="session" />
+      <xs:enumeration value="sql" />
+      <xs:enumeration value="sys" />
+      <xs:enumeration value="querystring||sys" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="datatype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="string" />
+      <xs:enumeration value="int" />
+      <xs:enumeration value="double" />
+      <xs:enumeration value="date" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="position">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="all" />
+      <xs:enumeration value="top" />
+      <xs:enumeration value="bottom" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="buttontype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="dialog" />
+      <xs:enumeration value="redirect" />
+      <xs:enumeration value="deal" />
+      <xs:enumeration value="open" />
+      <xs:enumeration value="toexcel" />
+      <xs:enumeration value="doscript" />
+      <xs:enumeration value="save" />
+      <xs:enumeration value="reset" />
+      <xs:enumeration value="runsql" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="docking">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="right" />
+      <xs:enumeration value="left" />
+      <xs:enumeration value="top" />
+      <xs:enumeration value="bottom" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="template">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="" />
+      <xs:enumeration value="skyblue" />
+      <xs:enumeration value="warmtones" />
+      <xs:enumeration value="whitewmoke" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="lightstyle">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Simplistic" />
+      <xs:enumeration value="Realistic" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="valuetype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="auto" />
+      <xs:enumeration value="date" />
+      <xs:enumeration value="datetime" />
+      <xs:enumeration value="time" />
+      <xs:enumeration value="datetimeoffset" />
+      <xs:enumeration value="double" />
+      <xs:enumeration value="int32" />
+      <xs:enumeration value="int64" />
+      <xs:enumeration value="string" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="charttype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="column" />
+      <xs:enumeration value="line" />
+      <xs:enumeration value="pie" />
+      <xs:enumeration value="fastline" />
+      <xs:enumeration value="area" />
+      <xs:enumeration value="bar" />
+      <xs:enumeration value="boxplot" />
+      <xs:enumeration value="bubble" />
+      <xs:enumeration value="candlestick" />
+      <xs:enumeration value="doughnut" />
+      <xs:enumeration value="fastpoint" />
+      <xs:enumeration value="kagi" />
+      <xs:enumeration value="funnel" />
+      <xs:enumeration value="point" />
+      <xs:enumeration value="pointandfigure" />
+      <xs:enumeration value="polar" />
+      <xs:enumeration value="pyramid" />
+      <xs:enumeration value="radar" />
+      <xs:enumeration value="range" />
+      <xs:enumeration value="rangebar" />
+      <xs:enumeration value="rangecolumn" />
+      <xs:enumeration value="renko" />
+      <xs:enumeration value="spline" />
+      <xs:enumeration value="splinearea" />
+      <xs:enumeration value="splinerange" />
+      <xs:enumeration value="stackedarea100" />
+      <xs:enumeration value="stackedbar" />
+      <xs:enumeration value="stackedbar100" />
+      <xs:enumeration value="stackedcolumn" />
+      <xs:enumeration value="stackedcolumn100" />
+      <xs:enumeration value="stepline" />
+      <xs:enumeration value="stock" />
+      <xs:enumeration value="threelinebreak" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="markerstyle">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Square" />
+      <xs:enumeration value="Circle" />
+      <xs:enumeration value="Diamond" />
+      <xs:enumeration value="Triangle" />
+      <xs:enumeration value="Cross" />
+      <xs:enumeration value="Star4" />
+      <xs:enumeration value="Star5" />
+      <xs:enumeration value="Star6" />
+      <xs:enumeration value="Star10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="runtype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="all" />
+      <xs:enumeration value="true" />
+      <xs:enumeration value="false" />
+      <xs:enumeration value="pagefirstload" />
+	  <xs:enumeration value="beforesave" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="cssclass">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="input_text" />
+      <xs:enumeration value="input_num" />
+      <xs:enumeration value="text_date" />
+      <xs:enumeration value="text_time" />
+      <xs:enumeration value="text_ajax" />
+      <xs:enumeration value="input_button" />
+      <xs:enumeration value="text_muti" />
+      <xs:enumeration value="title" />
+      <xs:enumeration value="td_delete" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="nametype">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^[-._\w]+$"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="widthtype">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^[1-9]+\d*(px|%|\d)?$"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="multiplevalues">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^\w*[.,_\w-]*\w*$"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="rgb">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^\d+,\d+,\d+$"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="dataformat">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(\w*{?0?:?[ \w-:]+}?\w*)|(\w*,+\w+;?)+"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="formattype">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^\w*{?0?:?[ \w-:]+}?\w*$"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="urltype">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(sql|xml|url|javascript|cs)?:?(http://)?([\w-]+\.)*[\w-]*(/?[_\w- 　./?%&amp;={}>!',;()（）#]*)?"></xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="已添加的研究人员信息列表" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true">
+    <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">     
+	  <column visible="false" name="id"> myresearcher.id </column>    
+	   <column name="researcherId" visible="false" >
+        Researcher.id
+      </column>       
+	  <column name="name" title="姓名" width="80px" type="link" usefields="researcherId" 
+	  urlformatstring="Tmp/MyDetail.aspx?n=detailResearcher&amp;id={0}" target="_blank">
+        Researcher.name
+      </column>
+      <column name="Department" title="单位部门" width="220px">
+        Researcher.Department
+      </column>
+      <column name="Extract" title="研究方向" maxlength="20">
+        Researcher.Extract
+      </column>
+      <column name="PrimaryDetail" title="详细信息" maxlength="40">
+        Researcher.PrimaryDetail
+      </column>
+      <!--<column name="marks" title="标签内容" width="100px">
+        dbo.f_GetMark('researcher',Researcher.id)
+      </column>-->
+      <!--<column name="Proc" title="操作" width="100px" maxlength="20">
+        <![CDATA['<a href="../SendEmail.aspx?id='+cast(TechRequire.Rq_ID as varchar)+'&researcherId='+ConcernResearcher.ConcernID+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">完成方案</a>']]>
+      </column>-->
+	   <column name="state" title="状态" width="100px" maxlength="40">
+        EmailR_flag.name
+      </column>
+	<column name="sendEmail" title="操作" width="80px" type="link" 
+	urlformatstring="../SendEmail.aspx?rqid={0}&amp;researcherId={1}&amp;type=toResearcher" 
+	usefields="rqid,researcherId" target="_blank">
+        '发送邮件'
+      </column>
+    </select>
+    <from type="table">
+      <table title="信息列表">myresearcher</table>
+      <table title="研究人员表">left join Researcher on Researcher.id = myresearcher.fid</table>
+      <table title="代码列表">left join f_code EmailR_flag on EmailR_flag.id='EmailR_flag' and EmailR_flag.code= myresearcher.contact_researcher_status</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+   
+    <append type="querystring" name="rqid" title="计划编号">
+        myresearcher.rq_id={0}
+      </append>
+      <colgroup>
+        <col width="80px"/>
+        <col width="100px"/>
+        <col width="80px"/>
+        <col width="100px"/>
+        <col width="80px"/>
+        <col width="100px"/>
+        <col width="80px"/>
+        <col width="100px"/>
+        <col width="80px"/>
+        <col/>
+      </colgroup>
+      <column name="name" title="姓名" width="100px" target="all" cssclass="input_text">
+        Researcher.name like {0}
+      </column>
+      <column name="Department" title="单位部门" width="100px" target="all" cssclass="input_text">
+        Researcher.Department like {0}
+      </column>
+      <column name="Extract" title="研究方向" width="100px" target="all" cssclass="input_text">
+        Researcher.Extract like {0}
+      </column>
+      <column name="PrimaryDetail" title="详细信息" width="100px" target="all" cssclass="input_text">
+        Researcher.PrimaryDetail like {0}
+      </column>
+      <column name="marks" title="标签" width="100px" target="all" cssclass="input_text">
+         dbo.f_GetMark('researcher',Researcher.id) like {0}
+      </column>
+
+
+
+    </where>
+    <order>
+      myresearcher.contact_researcher_status desc
+    </order>
+    <buttons position="top">
+
+     <button name="btnRefresh" title="自动获取" type="redirect" parameters="rqid" cssclass="input_button">
+        EasyTechFunc/RefResearcher.aspx
+      </button> 
+     <button name="btnMark" title="刷新" type="redirect" parameters="rqid" cssclass="input_button">
+        tmp/myQuery.aspx?n=listplanResearcher
+        
+      </button>
+      <button name="delnot" title="删除" type="runsql"   isselectedrow="true" cssclass="input_button" confirminfo="确认删除选中的记录吗？">
+        <sql>delete from myresearcher where  ID={0}    </sql>
+      </button>
+     
+    </buttons>
+  </myquery>
+
+</root>

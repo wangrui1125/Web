@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="我的科技服务" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true">
+    <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+
+      <column name="id" visible="false">
+        dfg_service_ticket.id
+      </column>
+	  <column name="order_no" title="订单号" width="100px">
+        dfg_service_ticket.order_no
+      </column>
+      <column name="service_type" title="服务类型" width="100px">
+        dfg_service_ticket.service_type
+      </column>
+      <column name="keyword" title="服务关键词" width="100px">
+        dfg_service_ticket.keyword
+      </column>     
+	  <column name="pay_type" title="支付状态" width="100px">
+        pay_type.name
+      </column>
+	  <column name="amount" title="支付金额" width="100px">
+        dfg_service_ticket.amount
+      </column>
+	  <column name="pay_time" title="支付时间" width="100px">
+        dfg_service_ticket.pay_time
+      </column>
+	      
+      <column name="process_state" title="服务状态" width="150px" maxlength="10">
+        dfg_service_ticket.process_state
+      </column>
+      <column name="create_at" title="创建时间" width="100px">
+        dfg_service_ticket.create_at
+      </column>     
+      <column name="update_at" title="更新时间" width="150px" maxlength="10">
+        dfg_service_ticket.update_at
+      </column>
+      <column name="service_status" title="订单状态" width="80px">
+        service_status.name
+      </column>
+      <column name="phone" title="电话" width="100px" maxlength="10">
+        dfg_service_ticket.phone
+      </column> 
+			  
+      <column name="edit" title="操作" width="120px" type="excelno">	  
+       <![CDATA['&nbsp; <a href="../EasyTechFunc/ServiceEdit.aspx?id='+cast(dfg_service_ticket.id as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">编辑服务单</a>']]>
+      </column>
+	  
+    </select>
+    <from type="table">
+      <table title="科技服务">dfg_service_ticket</table>  
+	  <table title="代码表">left join dfg_f_code pay_type on pay_type.id='pay_type' and pay_type.code=dfg_service_ticket.pay_type</table>	  
+	  <table title="代码表2">left join dfg_f_code service_status on service_status.id='service_status' and service_status.code=dfg_service_ticket.service_status</table>	  
+	  <table title="用户表">left join S_UserWeb on S_UserWeb.id= dfg_service_ticket.user_id</table>
+    </from>
+	 <where isparameter="true" isshowappend="true" issession="true">
+	 <colgroup>
+        <col width="80px"/>
+        <col width="100px"/>
+        <col width="100px"/>
+        <col width="100px"/>
+        <col width="100px"/>
+        <col width="100px"/>
+        <col width="100px"/>
+        <col/>
+      </colgroup>      
+	  <column name="service_type" title="服务类型" width="100px" target="all" cssclass="input_text">
+        dfg_service_ticket.service_type like {0}
+      </column>      
+      <column name="process_state" title="服务状态" width="100px" target="all" cssclass="input_text">
+	  
+        dfg_service_ticket.service_status like {0}
+      </column>
+      <column name="service_status" title="订单状态" type="selectint" dataformat=",全部" urlformatstring="sql:select code,name from dfg_f_code where iflag=1 and id='service_status' order by sn"  width="105px">
+        dfg_service_ticket.service_status={0}
+      </column>
+      <column name="keyword" title="关键词" width="100px" target="all" cssclass="input_text">
+        dfg_service_ticket.keyword like {0}
+      </column>
+	 </where>
+    <order>
+      dfg_service_ticket.id desc
+    </order>
+      
+  </myquery>
+</root>

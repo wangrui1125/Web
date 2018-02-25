@@ -1,0 +1,74 @@
+﻿body
+{
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFF;
+	font: normal 10.5pt Arial, Verdana, Lucida, Helvetica, simsun, sans-serif;
+}
+table
+{
+	border-collapse: collapse;
+	width: 648px;
+	border: 1px solid black;
+}
+td
+{
+	text-align:left;
+	padding-left:2px;
+	font-size:12pt;
+}
+th
+{
+	height:35px;
+}
+.noborder
+{
+    width: 19cm;
+    border:0;
+}
+.noborder td
+{
+    height: 30px;
+    border:0;
+    text-align: left;
+    padding-left: 2px;
+}
+.noborder th
+{
+    border:0;
+}
+.operation
+{
+	text-align: center;
+	height: 35px;
+	padding-top: 10px;
+	font-size:12px;
+}
+@media print
+{
+	.operation
+	{
+		display: none;
+	}
+}
+.title
+{
+	height: 50px; 
+	font-size: 18pt;
+	text-align: center;
+}
+.sign
+{
+	text-align:right;
+}
+.line
+{
+	height: 1px; 
+	border-bottom:#eee 1px solid;
+}
+.note
+{
+	text-align:left;
+	width:648px;
+	font-size:10pt;
+}

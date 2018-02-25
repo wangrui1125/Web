@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="流程模型基本信息" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="80px"/>
+        <col width="150px" />
+        <col width="80px"/>
+        <col width="150px" />
+        <col width="80px" />
+        <col />
+      </colgroup>
+      <column name="processName" colspan="5" title="流程名称">
+        <![CDATA[case when wf_process.processName is null then wf_model.modelName else wf_process.processName end]]>
+      </column>
+
+      <column name="modelclass" title="归属分类">
+        <![CDATA[wf_class.des]]>
+      </column>
+      <column name="modelupdatedtime" title="模型修改时间" dataformat="yyyy-M-d H:m:s">
+        <![CDATA[wf_model.updatedtime]]>
+      </column>
+      <column name="modelstatus" title="模型状态">
+        <![CDATA[case when wf_model.modelstatus=1 then '停用' else '正常' end]]>
+      </column>
+
+      <column name="userName" title="发起流程人">
+        <![CDATA[s_user.Name]]>
+      </column>
+      <column name="createdtime" title="创建时间" dataformat="yyyy-M-d H:m:s">
+        <![CDATA[wf_process.createdtime]]>
+      </column>
+      <column name="processstatus" title="流程状态">
+        <![CDATA[case wf_process.processstatus when 0 then '办理中' when 1 then '挂起' when 2 then '终止' when 3 then '取消' else '结束' end]]>
+      </column>
+
+      <column name="OpuserName" title="状态调整人">
+        <![CDATA[opuser.Name]]>
+      </column>
+      <column name="updatedtime" title="最后修改时间" dataformat="yyyy-M-d H:m:s">
+        <![CDATA[wf_process.updatedtime]]>
+      </column>
+      <column name="notes" title="流程变动备注">
+        <![CDATA[wf_process.notes]]>
+      </column>
+
+      <column name="modelPic" colspan="5" title="图形">
+        <![CDATA['<img src="../WorkFlow/ProcessChart.aspx?modelid='+cast(wf_model.modelid as varchar)
+        +'&processid='+ case when wf_process.processid is null then '0' else cast(wf_process.processid as varchar) end
+        +'"/>']]>
+      </column>
+
+      <column name="modelmemo" colspan="5" title="模型备注">
+        <![CDATA[wf_model.modelmemo]]>
+      </column>
+    </select>
+    <from type="table">
+      <table title="模型信息表">wf_model</table>
+      <table title="分类表">left join wf_class on wf_class.id = wf_model.modelclass</table>
+      <table title="流程表">left join wf_process on wf_process.modelid = wf_model.modelid and wf_process.processid=@processid</table>
+      <table title="人员表">left join s_user on s_user.id=wf_process.userid</table>
+      <table title="人员表">left join s_user opuser on opuser.id=wf_process.opuserid</table>
+    </from>
+    <where isparameter="true">
+      <append type="querystring" name="modelid" datatype="int">
+        <![CDATA[and wf_model.modelid={0}]]>
+      </append>
+      <append type="querystring" name="processid" datatype="int">
+        <![CDATA[or wf_process.processid={0}]]>
+      </append>
+    </where>
+  </myquery>
+
+  <myquery title="流程处理列表" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="false" footervisible="false">
+    <select>
+      <column name="taskname" title="名称" width="150px">
+        <![CDATA[wf_task.taskName]]>
+      </column>
+      <column name="userid" title="处理人员" sort="wf_instance.userid" width="70px">
+        s_user.name
+      </column>
+      <column name="instancestatus" title="处理状态" width="50px" sort="wf_instance.instancestatus">
+        case wf_instance.instancestatus when 0 then '待办' when 1 then '在办' when 4 then '结束' end
+      </column>
+      <column name="instancetype" title="处理类型" width="50px" sort="wf_instance.instancetype">
+        case wf_instance.instancetype when 0 then '正常' when 1 then '转办' when 2 then '退回' else '' end
+      </column>
+      <column name="instancedate" title="任务创建时间" width="120px" dataformat="yyyy-M-d H:m:s">
+        <![CDATA[wf_instance.createdtime]]>
+      </column>
+      <column name="accepttime" title="任务接受时间" width="120px" dataformat="yyyy-M-d H:m:s">
+        <![CDATA[wf_instance.accepttime]]>
+      </column>
+      <column name="updatedtime" title="最近修改时间" width="120px" dataformat="yyyy-M-d H:m:s">
+        <![CDATA[wf_instance.updatedtime]]>
+      </column>
+      <column name="taskpage" title="表单页面" issort="false" width="60px">
+        <![CDATA['<a href="../'+case when wf_task.taskview='' then wf_task.taskpage+'&view=1' else wf_task.taskview end 
+        +'&model=' +cast(wf_instance.modelId as varchar) + '&task='+ cast(wf_instance.taskId as varchar) + '&process=' + cast(wf_instance.processId as varchar) + '&instance=' + cast(wf_instance.instanceId as varchar)+'" target="_blank">查看</a>']]>
+      </column>
+      <column name="approveNotes" title="审批情况" sort="wf_instance.isAgree">
+        <![CDATA[wf_instance.approveNotes]]>
+      </column>
+    </select>
+    <from type="table">
+      <table title="流程实例">wf_instance</table>
+      <table title="任务">inner join wf_task on wf_instance.taskid=wf_task.taskid and wf_instance.modelid=wf_task.modelid</table>
+      <table title="人员表">inner join s_user on s_user.id=wf_instance.userid</table>
+    </from>
+    <where isparameter="true">
+      <append type="querystring" name="modelid" datatype="int">
+        <![CDATA[and wf_instance.modelid={0}]]>
+      </append>
+      <append type="querystring" name="processid" datatype="int">
+        <![CDATA[and wf_instance.processid={0}]]>
+      </append>
+    </where>
+    <group>
+    </group>
+    <order>
+      <![CDATA[wf_instance.instanceid]]>
+    </order>
+  </myquery>
+
+  <buttons position="bottom">
+    <button name="btnReturn" title="关 闭" type="doscript" cssclass="input_button">
+      window.opener=null;window.open('','_self');window.close();
+    </button>
+  </buttons>
+
+</root>

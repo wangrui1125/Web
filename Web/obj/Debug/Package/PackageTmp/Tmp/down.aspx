@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="down.aspx.cs" Inherits="MyQuery.Web.Tmp.down" %>

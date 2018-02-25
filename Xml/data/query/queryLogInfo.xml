@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="日志信息列表" islogicdeal="false" isfirstload="false" allowsorting="true" allowpaging="true" pagervisible="true" functioncode="910">
+    <select ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+      <column name="optime" title="操作时间" width="120px" dataformat="{0:yyyy-M-d H:m:s}">
+        LogInfo.optime
+      </column>
+      <column name="id" title="帐户" width="80px">
+        s_user.id
+      </column>
+      <column name="name" title="姓名" width="100px" type="link" urlformatstring="tmp/MyDetail.aspx?n=detailuser&amp;id={0}" usefields="id" target="_blank">
+        s_user.name
+      </column>
+      <column name="ip" title="IP地址" width="150px">
+        LogInfo.ip
+      </column>
+      <column name="des" title="操作" width="150px" issort="false">
+        LogInfo.des
+      </column>
+    </select>
+    <from type="table">
+      <table title="登录记录表">LogInfo</table>
+      <table title="用户表">inner join s_user on LogInfo.userid=s_user.id</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="sql" name="sql" title="角色数据权限:">
+        <value when="" title="自己的" where="#USERID#"><![CDATA[and LogInfo.userid={0}]]></value>
+        <value when="0" title="自己的" where="#USERID#"><![CDATA[and LogInfo.userid={0}]]></value>
+        <value when="1" title="所在部门的" where="#USERDEPID#%"><![CDATA[and s_user.depid like {0}]]></value>
+      </append>
+      <colgroup>
+        <col width="80px"/>
+        <col width="100px"/>
+        <col width="80px"/>
+        <col/>
+      </colgroup>
+      <column name="uid" title="用户" width="100px" target="all" cssclass="input_text">
+        and (s_user.id like {0} or s_user.name like {0})
+      </column>
+      <column name="optime" title="操作时间" cssclass="text_date" value="getweekfromtodate" type="fromtodate">
+        <![CDATA[and (datediff(day,{0},LogInfo.optime)>=0 and datediff(day,{1},LogInfo.optime)<=0)]]>
+      </column>
+
+      <column name="IP" title="IP地址" width="100px" target="all" cssclass="input_text">
+        and LogInfo.IP like {0}
+      </column>
+      <column name="des" title="操作" width="211px" target="all" cssclass="input_text">
+        and LogInfo.des like {0}
+      </column>
+    </where>
+    <order>
+      LogInfo.optime desc,s_user.id
+    </order>
+    <buttons position="top">
+      <button name="toexcel" title="导出Excel" type="toexcel" cssclass="input_button">
+      </button>
+    </buttons>
+  </myquery>
+</root>

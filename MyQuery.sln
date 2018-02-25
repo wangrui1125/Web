@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyQuery.Web", "Web\MyQuery.Web.csproj", "{9F0CB942-698E-46CE-9F5E-0B2E08F57861}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyQuery.BAL", "BAL\MyQuery.BAL.csproj", "{55AEB7C8-2B7D-4A8F-B244-2E9FFCABFA1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyQuery.Entity", "Entity\MyQuery.Entity.csproj", "{A3F17072-3968-402A-9F11-A5C03A2E8EAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F0CB942-698E-46CE-9F5E-0B2E08F57861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F0CB942-698E-46CE-9F5E-0B2E08F57861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F0CB942-698E-46CE-9F5E-0B2E08F57861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0CB942-698E-46CE-9F5E-0B2E08F57861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55AEB7C8-2B7D-4A8F-B244-2E9FFCABFA1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55AEB7C8-2B7D-4A8F-B244-2E9FFCABFA1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55AEB7C8-2B7D-4A8F-B244-2E9FFCABFA1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55AEB7C8-2B7D-4A8F-B244-2E9FFCABFA1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3F17072-3968-402A-9F11-A5C03A2E8EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F17072-3968-402A-9F11-A5C03A2E8EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F17072-3968-402A-9F11-A5C03A2E8EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F17072-3968-402A-9F11-A5C03A2E8EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

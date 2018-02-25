@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="科技需求" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="120px"></col>
+        <col width="300px"></col>
+        <col width="100px"></col>
+        <col></col>
+      </colgroup>
+   
+      <column name="Rq_Name" type ="text" width="99%" title="科技需求名称" maxlength="150">
+        <validates>
+          <validate type="isnotnull"></validate>
+        </validates>
+      </column>
+      <column name="Rq_techConsultID" title="指定技术顾问" width="200px" type="textajax" urlformatstring="WebService.asmx" usefields="GetConsultUserList" dataformat="{0:ID}" maxlength="1" cssclass="text_ajax">
+        
+        <validates>
+					<validate type="isnotnull" scope="edit">
+					</validate>
+          <validate type="regex" title="请输入账号或姓名，并在下拉列表中选择">
+            ^.+\\[\\w+\\]$
+          </validate>
+					<validate type="servervalidate" title="人员必须存在" scope="edit">
+						MyQuery.BAL.QueryValidate
+					</validate>
+				</validates>
+			</column>
+       
+      <column name="Rq_Dotime" visible="false" value="gettime">
+      </column>
+      <column name="Rq_DoID" visible="false" value="useraccount">
+      </column>
+ 
+      <column name="Rq_flag" title="科技需求状态" type="selectint" urlformatstring="sql:select code,name from f_code where iflag=1 and id='Rq_flag' and sn=5 order by sn"  width="300px">
+      </column>
+       
+    </select>
+    <from type="table">
+      <table title="科技需求">TechRequire</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="querystring" name="id">
+        TechRequire.Rq_ID={0}
+      </append>
+    </where>
+    <buttons position="bottom">
+      <button name="save" title="提 交" type="save" cssclass="input_button">
+      </button>
+      <button name="btnMark" title="打标签" type="dialog" parameters="id" cssclass="input_button" windowwidth="330" windowheight="330">
+        tmp/MyEdit.aspx?n=editMark&amp;entity=tech
+      </button>
+      <!--button name="btnReturn" title="取 消" type="doscript" cssclass="input_button">
+        window.opener=null;window.open('','_self');window.close();
+      </button-->
+    </buttons>
+  </myquery>
+</root>

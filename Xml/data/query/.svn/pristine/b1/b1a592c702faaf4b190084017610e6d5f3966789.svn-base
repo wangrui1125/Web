@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <myquery title="下一步处理人员列表(可以增加或设置visible=false，请不要删除已配置的字段)" islogicdeal="true" issavedata="false" isfirstload="true" allowsorting="false" allowpaging="false" pagervisible="false" height="300px">
+    <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+      <column name="id" title="帐户" width="100px"></column>
+      <column name="name" title="姓名" width="100px"></column>
+      <column name="depname" title="所在部门" width="150px"></column>
+      <column name="email" title="邮箱"></column>
+      <column name="tel" title="联系方式" width="150px"></column>
+      <column name="depid" visible="false"></column>
+    </select>
+  </myquery>
+</root>

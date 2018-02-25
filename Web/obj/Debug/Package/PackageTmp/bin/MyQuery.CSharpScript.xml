@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyQuery.CSharpScript</name>
+    </assembly>
+    <members>
+        <member name="T:MyQuery.CSharpScript.CsharpEngine">
+            <summary>
+            C#字符串表达式 计算引擎
+            by 贾世义 2012-5-23
+            </summary>
+        </member>
+        <member name="M:MyQuery.CSharpScript.CsharpEngine.Eval(System.String)">
+            <summary>
+            C#表达式计算 注意区分大小写
+            </summary>
+            <param name="expression">普通的C#字符串表达式</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.CSharpScript.EngineHelper.GetResult(System.String,System.String,System.String,System.String)">
+            <summary>
+            计算表达式
+            </summary>
+            <param name="expression">计算表单式</param>
+            <param name="soperator">比较符</param>
+            <param name="svalue">值</param>
+            <param name="scriptBody">脚本函数</param>
+            <returns>返回计算结果</returns>
+        </member>
+        <member name="M:MyQuery.CSharpScript.EngineHelper.GetResult(System.String,System.String,System.Boolean)">
+            <summary>
+            计算结果
+            </summary>
+            <param name="expression">表达式</param>
+            <param name="scriptBody">脚本函数</param>
+            <param name="isSplit">是否需要拆开优化处理</param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.CSharpScript.RunErrorHandler">
+            <summary>
+            脚本运行错误代理
+            </summary>
+        </member>
+        <member name="T:MyQuery.CSharpScript.RunTimeoutHandler">
+            <summary>
+            脚本运行超时代理
+            </summary>
+        </member>
+        <member name="T:MyQuery.CSharpScript.ScriptEngine">
+            <summary>
+            脚本处理引擎
+            by 开源盛世-源代码下载网 基于网络文章整理开发，是学习自定义脚本的产物
+            </summary>
+        </member>
+        <member name="M:MyQuery.CSharpScript.ScriptEngine.#ctor">
+             <summary>
+            构造函数
+             </summary>
+        </member>
+        <member name="M:MyQuery.CSharpScript.ScriptEngine.#ctor(MyQuery.CSharpScript.ScriptLanguage)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="language">脚本类型</param>
+        </member>
+        <member name="M:MyQuery.CSharpScript.ScriptEngine.Eval(System.String,System.String)">
+            <summary>
+            运行Eval方法
+            </summary>
+            <param name="expression">表达式</param>
+            <param name="codeBody">函数体</param>
+            <returns>返回值object</returns>
+        </member>
+        <member name="M:MyQuery.CSharpScript.ScriptEngine.Eval(MyQuery.CSharpScript.ScriptLanguage,System.String,System.String)">
+            <summary>
+            运行Eval方法
+            </summary>
+            <param name="language">脚本语言</param>
+            <param name="expression">表达式</param>
+            <param name="codeBody">函数体</param>
+            <returns>返回值object</returns>
+        </member>
+        <member name="M:MyQuery.CSharpScript.ScriptEngine.Run(System.String,System.Object[],System.String)">
+            <summary>
+            运行Run方法
+            </summary>
+            <param name="mainFunctionName">入口函数名称</param>
+            <param name="parameters">参数</param>
+            <param name="codeBody">函数体</param>
+            <returns>返回值object</returns>
+        </member>
+        <member name="M:MyQuery.CSharpScript.ScriptEngine.Run(MyQuery.CSharpScript.ScriptLanguage,System.String,System.Object[],System.String)">
+            <summary>
+            运行Run方法
+            </summary>
+            <param name="language">脚本语言</param>
+            <param name="mainFunctionName">入口函数名称</param>
+            <param name="parameters">参数</param>
+            <param name="codeBody">函数体</param>
+            <returns>返回值object</returns>
+        </member>
+        <member name="M:MyQuery.CSharpScript.ScriptEngine.Reset">
+            <summary>
+            放弃所有已经添加到 ScriptControl 中的 Script 代码和对象
+            </summary>
+        </member>
+        <member name="M:MyQuery.CSharpScript.ScriptEngine.OnError">
+            <summary>
+            RunError事件激发
+            </summary>
+        </member>
+        <member name="M:MyQuery.CSharpScript.ScriptEngine.OnTimeout">
+            <summary>
+            OnTimeout事件激发
+            </summary>
+        </member>
+        <member name="E:MyQuery.CSharpScript.ScriptEngine.RunError">
+            <summary>
+            定义脚本运行错误事件
+            </summary>
+        </member>
+        <member name="E:MyQuery.CSharpScript.ScriptEngine.RunTimeout">
+            <summary>
+            定义脚本运行超时事件
+            </summary>
+        </member>
+        <member name="P:MyQuery.CSharpScript.ScriptEngine.Language">
+            <summary>
+            获取或设置脚本语言
+            </summary>
+        </member>
+        <member name="P:MyQuery.CSharpScript.ScriptEngine.Timeout">
+            <summary>
+            获取或设置脚本执行时间，单位为毫秒
+            </summary>
+        </member>
+        <member name="P:MyQuery.CSharpScript.ScriptEngine.AllowUI">
+            <summary>
+            设置是否显示用户界面元素
+            </summary>
+        </member>
+        <member name="P:MyQuery.CSharpScript.ScriptEngine.UseSafeSubset">
+            <summary>
+            宿主应用程序是否有保密性要求
+            </summary>
+        </member>
+        <member name="T:MyQuery.CSharpScript.ScriptLanguage">
+            <summary>
+            脚本语言枚举
+            </summary>
+        </member>
+        <member name="F:MyQuery.CSharpScript.ScriptLanguage.JScript">
+            <summary>
+            JScript脚本语言
+            </summary>
+        </member>
+        <member name="F:MyQuery.CSharpScript.ScriptLanguage.VBScript">
+            <summary>
+            VBscript脚本语言
+            </summary>
+        </member>
+        <member name="F:MyQuery.CSharpScript.ScriptLanguage.JavaScript">
+            <summary>
+            JavaScript脚本语言
+            </summary>
+        </member>
+    </members>
+</doc>

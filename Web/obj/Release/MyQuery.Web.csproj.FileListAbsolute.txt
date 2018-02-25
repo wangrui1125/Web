@@ -1,0 +1,2 @@
+D:\EasyTech\code\Web\obj\Release\ResolveAssemblyReference.cache
+D:\EasyTech\code\Web\obj\Release\MyQuery.Web.csproj.ResolveComReference.cache

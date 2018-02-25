@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="分组成员信息" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="80px"/>
+        <col/>
+      </colgroup>
+      <column name="gid" title="所属分组" width="205px" type="selectint" urlformatstring="sql:select id,name from wf_group where iflag=1 and parentid='0' order by parentid,id" cssclass="select">
+      </column>
+      <column name="uid" title="帐户姓名" width="200px" type="textajax" dataformat="{0:ID}" urlformatstring="WebService.asmx" usefields="GetUserNameList" maxlength="1" cssclass="text_ajax">
+        <validates>
+          <validate type="isnotnull">
+          </validate>
+          <validate type="servervalidate" title="人员必须存在">
+            MyQuery.BAL.QueryValidate
+          </validate>
+        </validates>
+      </column>
+      <column name="id" type="auto" visible="false">
+      </column>
+    </select>
+    <from type="table">
+      <table title="分组工作人员">wf_groupuser</table>
+    </from>
+    <where isparameter="true">
+      <append type="querystring" name="id">
+        id={0}
+      </append>
+    </where>
+    <buttons position="bottom">
+      <button name="save" title="提 交" type="save" cssclass="input_button">
+      </button>
+      <button name="btnReturn" title="取 消" type="doscript" cssclass="input_button">
+        window.opener=null;window.open('','_self');window.close();
+      </button>
+    </buttons>
+  </myquery>
+</root>

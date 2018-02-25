@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="用户基本信息" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="80px"/>
+        <col width="150px"/>
+        <col width="80px"/>
+        <col/>
+      </colgroup>
+      <column name="id" title="帐户">
+        s_user.id
+      </column>
+      <column name="name" title="姓名">
+        s_user.name
+      </column>
+      <column name="depname" title="科室名称">
+        s_dep.name
+      </column>
+      <column name="tel" title="联系方式">
+        s_user.tel
+      </column>
+      <column name="email" title="邮箱">
+        s_user.email
+      </column>
+      <column name="iflag" title="状态">
+        f_code.name
+      </column>
+    </select>
+    <from type="table">
+      <table title="用户表">s_user</table>
+      <table title="科室表">inner join s_dep on s_dep.id=s_user.depid</table>
+      <table title="状态表">inner join f_code on f_code.id='userflag' and f_code.code=s_user.iflag</table>
+    </from>
+    <where isparameter="true">
+      <append type="querystring" name="id">
+        s_user.id={0}
+      </append>
+    </where>
+  </myquery>
+
+  <myquery title="角色信息列表" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="false">
+    <select>
+      <column name="id" title="标示" width="80px">
+        s_role.id
+      </column>
+      <column name="name" title="名称" width="100px">
+        s_role.name
+      </column>
+      <column name="des" title="描述">
+        s_role.des
+      </column>
+    </select>
+    <from type="table">
+      <table title="角色表">s_role</table>
+      <table title="角色用户表">inner join s_roleuser on s_roleuser.roleid=s_role.id</table>
+    </from>
+    <where isparameter="true">
+      <append type="querystring" name="id">
+        s_roleuser.uid={0}
+      </append>
+    </where>
+    <order>
+      s_role.id
+    </order>
+  </myquery>
+  <buttons position="bottom">
+    <button name="btnReturn" title="返 回" type="doscript" cssclass="input_button">
+      window.opener=null;window.open('','_self');window.close();
+    </button>
+  </buttons>
+</root>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="科技需求" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="120px"></col>
+        <col width="300px"></col>
+        <col width="100px"></col>
+        <col></col>
+      </colgroup>
+ 
+ 
+       
+      
+      <column name="Rq_ConsultDes" title="顾问审阅意见" type="textarea" width="99%" colspan="3" urlformatstring="3">
+      </column>
+     
+    </select>
+    <from type="table">
+      <table title="科技需求">TechRequire</table>
+     
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="querystring" name="id">
+        TechRequire.Rq_ID={0}
+      </append>
+    </where>
+    <buttons position="bottom">
+      <button name="save" title="提 交" type="save" cssclass="input_button">
+      </button>
+      <button name="btnMark" title="打标签" type="dialog" parameters="id" cssclass="input_button" windowwidth="330" windowheight="330">
+        tmp/MyEdit.aspx?n=editMark&amp;entity=tech
+      </button>
+      <!--button name="btnReturn" title="取 消" type="doscript" cssclass="input_button">
+        window.opener=null;window.open('','_self');window.close();
+      </button-->
+    </buttons>
+  </myquery>
+</root>

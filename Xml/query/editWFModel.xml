@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="流程模型信息" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="80px"/>
+        <col/>
+      </colgroup>
+      <column name="modelname" title="名称" width="300px" maxlength="50" cssclass="input_text">
+        <validates>
+          <validate type="isnotnull">
+          </validate>
+        </validates>
+      </column>
+      <column name="modelclass" title="分类" width="305px" type="selectint" dataformat=",无" urlformatstring="sql:select id,des from wf_class order by parentid,id">
+      </column>
+      <column name="modelmemo" title="备注" width="300px" maxlength="250" type="textarea" urlformatstring="3">
+      </column>
+      <column name="modelstatus" title="状态" width="105px" type="selectint" urlformatstring="1,启用;0,停用"
+              notes="正常为启用，停用后则停止使用">
+      </column>
+    </select>
+    <from type="table">
+      <table title="模型表">wf_model</table>
+    </from>
+    <where isparameter="true">
+      <append type="querystring" name="id">
+        modelid={0}
+      </append>
+    </where>
+    <buttons>
+      <button name="save" title="提 交" type="save" cssclass="input_button">
+      </button>
+      <button name="btnReturn" title="取 消" type="doscript" cssclass="input_button">
+        window.opener=null;window.open('','_self');window.close();
+      </button>
+    </buttons>
+  </myquery>
+</root>

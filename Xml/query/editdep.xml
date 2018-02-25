@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+	<myquery title="部门信息编辑" pagesize="0" notes="用于维护单位部门的基本信息">
+		<select>
+			<colgroup>
+				<col width="100px"/>
+				<col/>
+			</colgroup>
+			<column name="id" title="编号" width="100px" maxlength="20" visible="false" cssclass="input_text">
+				<validates>
+					<validate type="js" scope="add">checkid()</validate>
+					<validate type="isexit" title="编号已经存在不能重复" scope="add">
+					</validate>
+				</validates>
+			</column>
+			<column name="name" title="名称" width="200px" maxlength="25" cssclass="input_text">
+				<validates>
+					<validate type="isnotnull">
+					</validate>
+				</validates>
+			</column>
+			<column name="manager" title="部门主任" width="200px" type="textajax" urlformatstring="WebService.asmx" usefields="GetUserNameList" dataformat="{0:ID}" maxlength="1" cssclass="text_ajax">
+        (select name+'['+id+']' from s_user where id=manager)
+        <validates>
+					<validate type="isnotnull" scope="edit">
+					</validate>
+          <validate type="regex" title="请输入账号或姓名，并在下拉列表中选择">
+            ^.+\\[\\w+\\]$
+          </validate>
+					<validate type="servervalidate" title="人员必须存在" scope="edit">
+						MyQuery.BAL.QueryValidate
+					</validate>
+				</validates>
+			</column>
+
+			<column name="parentid" title="上级部门" width="205px" type="select" dataformat="0,无" urlformatstring="sql:select id,name from s_dep where iflag=1 order by parentid,sn" cssclass="select">
+			</column>
+			<column name="sn" title="排序" type="textint" width="100px" maxlength="6" value="0" cssclass="input_num">
+				<validates>
+					<validate type="isnotnull">
+					</validate>
+				</validates>
+			</column>
+			<column name="iflag" title="状态" width="105px" type="selectint" urlformatstring="1,启用;0,停用"
+					notes="正常为启用，停用后则停止使用">
+			</column>
+			<javascript>
+				<![CDATA[function checkid()
+          {
+            var objid = document.getElementById('id');
+            if (objid)
+            {
+                if (objid.value.search(/^[0-9a-zA-Z]+$/)==-1)
+                {
+                  alert('不是有效的部门编号,不能为空且必须为字母和数字');
+                  objid.select();
+			            objid.focus();
+                  return false;
+                }
+            }
+            var objparentid = document.getElementById('parentid');
+            if (objid && objparentid && objparentid.value!='0')
+            {
+              if (objid.value.indexOf(objparentid.value)!=0 || objid.value.length<=objparentid.value.length)
+              {
+                alert("编号必须以上级部门的编号作为开始，如"+objparentid.value+"01");
+                objid.select();
+			          objid.focus();
+                return false;
+              }
+            }
+            return true;
+          }]]>
+			</javascript>
+		</select>
+		<from type="table">
+			<table title="部门表">s_dep</table>
+		</from>
+		<where isparameter="true">
+			<append type="querystring" name="id">
+				id={0}
+			</append>
+		</where>
+		<buttons position="bottom">
+			<button name="save" title="提 交" type="save" cssclass="input_button">
+			</button>
+			<button name="btnReturn" title="取 消" type="doscript" cssclass="input_button">
+				window.opener=null;window.open('','_self');window.close();
+			</button>
+		</buttons>
+	</myquery>
+</root>

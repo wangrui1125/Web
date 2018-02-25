@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="科研人员详细信息" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="120px"></col>
+        <col width="300px"></col>
+        <col width="120px"></col>
+        <col></col>
+      </colgroup>
+      <column name="name" title="姓名">
+        Researcher.Name
+      </column>
+     
+      <column name="Department" title="单位部门" colspan="3">
+        Researcher.Department
+      </column>
+      <column name="PrimaryDetail" title="详细信息" dataformat="{0:M}" colspan="3">
+        Researcher.PrimaryDetail
+      </column>
+      <column name="Extract" title="研究方向" dataformat="{0:M}" colspan="3">
+        Researcher.Extract
+      </column>
+      <column name="PrimaryURL" title="个人主页" colspan="3">
+        <![CDATA['<a href="'+Researcher.PrimaryURL+'" target="_blank">'+Researcher.PrimaryURL+'</a>']]>
+      </column>
+    </select>
+    <from type="table">
+      <table title="科技需求">Researcher</table>
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="querystring" name="id">
+        Researcher.ID={0}
+      </append>
+    </where>
+  </myquery>
+</root>

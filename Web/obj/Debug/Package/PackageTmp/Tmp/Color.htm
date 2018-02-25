@@ -1,0 +1,88 @@
+﻿<html>
+<head>
+    <title>颜色编辑器</title>
+    <link href="../Css/common.css" rel="stylesheet" type="text/css" />
+</head>
+<body bgcolor="D4D0C8" topmargin="0" leftmargin="0" onload="onloads()">
+    <center>
+        &nbsp;<br>
+        <table width="255" border="0" cellspacing="2" cellpadding="0" style='font-size: 25px'
+            id="tds">
+            <tr>
+                <td bgcolor="white" onmouseup='mov(a)'>
+                    <table width="20" height="100%" style='position: relative' id="a">
+                        <tr>
+                            <td bgcolor="red">
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="white" onmouseup='mov(b)'>
+                    <table width="20" height="100%" style='position: relative' id="b">
+                        <tr>
+                            <td bgcolor="green">
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="white" onmouseup='mov(c)'>
+                    <table width="20" height="100%" style='position: relative' id="c">
+                        <tr>
+                            <td bgcolor="blue">
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table width="255" height="50" border="0" bgcolor="#FFFFFF">
+            <tr>
+                <td id="d" bgcolor="black">
+                    &nbsp;
+                </td>
+            </tr>
+        </table>
+        <div id="e">
+            <font color="red">红:0 </font><font color="green">绿:0 </font><font color="blue">蓝:0
+            </font>
+        </div>
+        <p>
+            <input type="button" onclick="ok()" value="确认输入" />
+            &nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="window.close()" value="取 消" />
+            <script type="text/javascript">
+                function mov(who) {
+                    who.style.posLeft = event.offsetX;
+                    d.bgColor = 'rgb(' + a.style.posLeft + ',' + b.style.posLeft + ',' + c.style.posLeft + ')';
+                    e.innerHTML = "<font color=red>红:" + a.style.posLeft + " </font><font color=green>绿:" + b.style.posLeft + " </font><font color=blue>蓝:" + c.style.posLeft;
+                }
+                function ok() {
+                    if (a.style.posLeft >= 0 && b.style.posLeft >= 0 && b.style.posLeft >= 0) {
+                        returnValue = a.style.posLeft + "," + b.style.posLeft + "," + c.style.posLeft;
+                    }
+                    window.close();
+                }
+                function onloads() {
+                    if (dialogArguments) {
+                        var colors=dialogArguments.split(",");
+                        a.style.posLeft = colors[0];
+                        b.style.posLeft = colors[1];
+                        c.style.posLeft = colors[2];
+                    } else {
+                        a.style.posLeft = -1;
+                        b.style.posLeft = -1;
+                        c.style.posLeft = -1;
+                    }
+                    d.bgColor = 'rgb(' + a.style.posLeft + ',' + b.style.posLeft + ',' + c.style.posLeft + ')';
+                    e.innerHTML = "<font color=red>红:" + a.style.posLeft + " </font><font color=green>绿:" + b.style.posLeft + " </font><font color=blue>蓝:" + c.style.posLeft;
+                }
+            </script>
+</body>
+</html>

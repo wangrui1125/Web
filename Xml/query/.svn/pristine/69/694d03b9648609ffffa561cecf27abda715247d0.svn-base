@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="我的企业（关注的）" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true">
+    <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+      <column name="id" visible="false">
+        Enterprise.Enp_ID
+      </column>
+      <column name="Enp_Name" title="企业名称" width="200px" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailEnterprise011&amp;id={0}" usefields="id" target="_blank">
+      Enterprise.Enp_Name
+      </column>
+      <column name="Enp_Address" title="企业地址" width="150px">
+          Enterprise.Enp_Address
+      </column>
+      <column name="Enp_Des" title="企业简介" width="150px" maxlength="20">
+       Enterprise.Enp_Des
+      </column>
+ <column name="edit" title="操作" width="60px" type="excelno">
+        <![CDATA['<a a href="../EasyTechFunc/DeleteConcern.aspx?ConcernID='+cast(Enterprise.Enp_ID as varchar)+'&flag=1" target="_self" style="color: #0055BA;cursor: pointer;">取消关注</a>']]>
+    
+
+     
+      </column>
+    </select>
+    <from type="table">
+      <table title="企业信息">Enterprise</table>
+      <table>left join Concern on Enterprise.Enp_ID=Concern.ConcernID</table>
+      
+       
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="querystring" name="ID" title="用户ID">
+        Concern.UserID={0}  and Concern.flag=1
+      </append>
+    
+      
+    </where>
+    <order>
+      Enterprise.Enp_ID
+    </order>
+     
+  </myquery>
+</root>

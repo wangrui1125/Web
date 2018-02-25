@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="代码字典列表" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true" functioncode="905" >
+    <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+      <column name="id" title="代码" width="100px">
+        f_codelib.id
+      </column>
+      <column name="name" title="名称" width="100px">
+        f_codelib.name
+      </column>
+      <column name="des" title="描述">
+        f_codelib.des
+      </column>
+      <column name="sn" title="排序" width="40px">
+        f_codelib.sn
+      </column>
+      <column name="iflag" title="状态" width="40px" sort="f_codelib.iflag">
+        case when f_codelib.iflag=1 then '' else '停用' end
+      </column>
+    </select>
+    <from type="table">
+      <table title="状态表">f_codelib</table>
+    </from>
+    <where isparameter="true" isshowappend="false" issession="false">
+      <colgroup>
+        <col width="80px"/>
+        <col width="100px"/>
+        <col width="80px"/>
+        <col/>
+      </colgroup>
+      <column name="name" title="名称" width="100px" target="all" cssclass="input_text">
+        and f_codelib.des like {0}
+      </column>
+      <column name="iflag" title="状态" type="selectint" dataformat=",全部" urlformatstring="1,启用;0,停用">
+        and f_codelib.iflag={0}
+      </column>
+    </where>
+    <order>
+      f_codelib.sn
+    </order>
+    <buttons position="top">
+      <button name="btnAdd" title="新 增" type="dialog" cssclass="input_button" windowwidth="350" windowheight="350">
+        tmp/MyEdit.aspx?n=editcodelib
+      </button>
+      <button name="btnEdit" title="编 辑" type="dialog" cssclass="input_button" isselectedrow="true" windowwidth="350" windowheight="350">
+        tmp/MyEdit.aspx?n=editcodelib&amp;id={0}
+      </button>
+      <button name="toexcel" title="导出Excel" type="toexcel" cssclass="input_button">
+      </button>
+      <button name="delnot" title="删除|停用" type="runsql" isselectedrow="true" cssclass="input_button" confirminfo="确认删除选中的记录吗？">
+        <sql title="选中字典项已经有代码值，不能删除">select case when count(*)>0 then 1 else 0 end from f_code where id='{0}'</sql>
+        <sql value="1" title="选择记录停用成功">update f_codelib set iflag=0 where id='{0}'</sql>
+        <sql value="0">delete from f_code where id='{0}'</sql>
+        <sql value="0" title="选择记录删除成功">delete from f_codelib where id='{0}'</sql>
+      </button>
+      <button name="btnUser" title="代码值管理" type="redirect" cssclass="input_button" isselectedrow="true">
+        tmp/MyQuery.aspx?n=listcode&amp;id={0}
+      </button>
+    </buttons>
+  </myquery>
+</root>

@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyQuery.DAL</name>
+    </assembly>
+    <members>
+        <member name="T:MyQuery.DAL.Dao">
+            <summary>
+            数据库访问封装 使用微软的AdoHelper
+            by 贾世义 2009-1-22
+            </summary>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.#ctor">
+            <summary>
+            构造函数 按照config配置的数据库处理
+            </summary>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.#ctor(MyQuery.Utils.DBType)">
+            <summary>
+            构造函数 传入参数初始化数据库参数
+            </summary>
+            <param name="dbtype">数据库类型</param>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.#ctor(MyQuery.Utils.DBType,System.String)">
+            <summary>
+            构造函数 传入参数初始化数据库参数
+            </summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="connectionString">连接字符串</param>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.GetAdoHelper">
+            <summary>
+            根据配置文件中的信息生成AdoHelper对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.TransactionBegin">
+            <summary>
+            开始执行事务(在事务提交前为一个完整的事务,即使多次开启也是同一事务)
+            </summary>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.TransactionCommit">
+            <summary>
+            提交事务
+            </summary>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.TransactionRollback">
+            <summary>
+            事务回滚
+            </summary>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.GetDataSet(System.String,System.Data.IDataParameter[])">
+            <summary>
+            根据输入的SQL语句得到DataSet对象
+            </summary>
+            <param name="sql"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.GetDataSet(System.String,System.String[])">
+            <summary>
+            根据输入的SQL语句得到DataSet对象
+            </summary>
+            <param name="sql">多余一条用;分割</param>
+            <param name="tableNames">对应表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.GetDataTable(System.String,System.Data.IDataParameter[])">
+            <summary>
+            根据SQL返回DataTable
+            </summary>
+            <param name="sql"></param>
+            <param name="parameters"></param>
+            <returns>不存在时为null</returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.GetDataReader(System.String,System.Data.IDataParameter[])">
+            <summary>
+            按SQL语句获得指定DataReader对象(一定记得在使用完DataReader后关闭)
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="parameters"></param>
+            <returns>DataReader对象</returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.SqlExecute(System.String,System.Data.IDataParameter[])">
+            <summary>
+            根据传入的SQL在数据库中执行SQl操作
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="parameters">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.SqlExecute(System.Collections.Generic.List{System.String})">
+            <summary>
+            批量执行SQL
+            </summary>
+            <param name="sqls">集合空语句忽略</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.GetScalar(System.String,System.Data.IDataParameter[])">
+            <summary>
+            执行查询，并返回查询结果集中的第一行，第一列的值,忽略其他列和行
+            </summary>
+            <param name="sql"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.ProcedureExecute(System.String,System.Data.IDataParameter[])">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="procName"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.GetDataSetProcedure(System.String,System.Data.IDataParameter[])">
+            <summary>
+            执行存储过程，返回DataSet
+            </summary>
+            <param name="procName"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.GetDataTableProcedure(System.String,System.Data.IDataParameter[])">
+            <summary>
+            执行存储过程，返回DataTable
+            </summary>
+            <param name="procName"></param>
+            <param name="parameters"></param>
+            <returns>不存在时为null</returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.SqlExecute(MyQuery.Utils.MySqlParameters,System.Boolean)">
+            <summary>
+            根据MySqlParameters对象在数据库中执行SQl操作
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <param name="isParameter">是否使用参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.GetScalar(MyQuery.Utils.MySqlParameters,System.Boolean)">
+            <summary>
+            根据MySqlParameters对象执行查询，并返回查询结果集中的第一行，第一列的值,忽略其他列和行
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <param name="isParameter">是否使用参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.GetDataTable(MyQuery.Utils.MySqlParameters,System.Boolean)">
+            <summary>
+            根据MySqlParameters对象得到DataTable，适用于带参数语句
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <param name="isParameter">是否使用参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.GetDataSet(MyQuery.Utils.MySqlParameters,System.Boolean)">
+            <summary>
+            根据MySqlParameters对象得到DataSet对象，适用于带参数语句
+            </summary>
+            <param name="parameters">自定义Sql及参数列表 </param>
+            <param name="isParameter">是否使用参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.GetDataReader(MyQuery.Utils.MySqlParameters,System.Boolean)">
+            <summary>
+            根据MySqlParameters对象得到DataReader对象，适用于带参数语句
+            </summary>
+            <param name="parameters">自定义Sql及参数列表 </param>
+            <param name="isParameter">是否使用参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.IsExist(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            判断记录是否存在
+            </summary>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.Dao.IsExist(System.String,System.String,System.Object)">
+            <summary>
+            判断记录是否存在
+            </summary>
+            <param name="tableName"></param>
+            <param name="filedName"></param>
+            <param name="fieldValue"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.DAL.Dao.Dbtype">
+            <summary>
+            处理的数据库类型
+            </summary>
+        </member>
+        <member name="T:MyQuery.DAL.FileData">
+            <summary>
+            封装获取xml的数据
+            by 贾世义 2009-1-25
+            </summary>
+        </member>
+        <member name="M:MyQuery.DAL.FileData.GetDataFromExcel(System.String,System.Boolean)">
+            <summary>
+            加载指定的Excel数据 返回DataSet
+            </summary>
+            <param name="fileName">文件名 多个可以用,分割</param>
+            <param name="isFirstTitle">首行是否为标题行</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.FileData.GetDataFromXml(System.String)">
+            <summary>
+            加载指定的Xml数据 返回DataSet
+            </summary>
+            <param name="fileName">文件名 多个可以用,分割</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.DAL.FileData.GetDataFromTxt(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            加载指定的Txt数据 返回DataSet
+            </summary>
+            <param name="fileName">文件名 多个可以用,分割</param>
+            <param name="encoding">字符类型 默认GBK</param>
+            <param name="split">分割字符 默认TAB</param>
+            <param name="isFirstTitle">首行是否为标题行</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

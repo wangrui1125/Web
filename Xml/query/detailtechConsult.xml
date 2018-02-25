@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="处理" pagesize="0">
+    <select>
+      <colgroup>
+        <col width="120px"></col>
+        <col width="300px"></col>
+        <col width="120px"></col>
+        <col></col>
+      </colgroup>
+      <column name="Rq_Name" title="科技需求名称" colspan="3">
+        TechRequire.Rq_Name
+      </column>
+      <column name="Rq_ConsultName" title="默认处理人">
+        s_user.name
+      </column>
+        
+    </select>
+    <from type="table">
+      <table title="科技需求">TechRequire</table>
+     
+      <table title="用户">left join s_user on s_user.ID=TechRequire.Rq_techConsultID</table>
+     
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+      <append type="querystring" name="id">
+        TechRequire.Rq_ID={0}
+      </append>
+    </where>
+  </myquery>
+</root>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="企业信息列表" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true">
+    <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+      <column name="id" visible="false">
+        Enterprise.Enp_ID
+      </column>
+      <column name="Enp_Name" title="企业名称" width="200px" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailEnterprise&amp;id={0}" usefields="id" target="_blank">
+        Enterprise.Enp_Name
+      </column>
+      <column name="Enp_Address" title="企业地址" width="150px">
+        Enterprise.Enp_Address
+      </column>
+      <column name="Enp_Des" title="企业简介" width="150px" maxlength="20">
+        Enterprise.Enp_Des
+      </column>
+    </select>
+    <from type="table">
+      <table title="企业表">Enterprise</table>
+     
+    </from>
+    <where isparameter="true" isshowappend="true" issession="false">
+     
+
+      <append type="querystring" name="ID" title="用户">
+       and  Enterprise.createrid={0}
+      </append>
+    
+   
+    </where>
+      <order>
+      Enterprise.Enp_ID
+    </order>
+    <buttons position="top">
+      <button name="btnAdd" title="新 增" type="redirect" cssclass="input_button">
+        tmp/MyEdit.aspx?n=editEnterprise
+      </button>
+      <button name="btnEdit" title="编 辑" type="redirect" cssclass="input_button" isselectedrow="true">
+        tmp/MyEdit.aspx?n=editEnterprise&amp;id={0}
+      </button>
+      <button name="btnRequire" title="科技需求" type="redirect" cssclass="input_button" isselectedrow="true">
+        tmp/MyQuery.aspx?n=listtechRequire&amp;eid={0}
+      </button>
+      <button name="btnContact" title="联系人" type="redirect" cssclass="input_button" isselectedrow="true">
+        tmp/MyQuery.aspx?n=listEnpContact&amp;eid={0}
+      </button>
+      <button name="toexcel" title="导出Excel" type="toexcel" cssclass="input_button">
+      </button>
+      <button name="delnot" title="删除" type="runsql" isselectedrow="true" cssclass="input_button" confirminfo="确认删除选中的记录吗？">
+        <sql>delete from TechRequire where Enp_ID={0};delete from Enterprise where Enp_ID={0}</sql>
+      </button>
+    </buttons>
+
+   
+  </myquery>
+</root>

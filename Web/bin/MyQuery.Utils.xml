@@ -1,0 +1,4261 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyQuery.Utils</name>
+    </assembly>
+    <members>
+        <member name="T:MyQuery.Utils.LanguageResource">
+            <summary>
+            界面语言静态类
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.BaseResourceManager">
+            <summary>
+            资源管理基类
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.BaseResourceManager.GetString(System.String)">
+            <summary>
+            获得字符串
+            </summary>
+            <param name="key">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.BaseResourceManager.GetString(System.String,System.String)">
+            <summary>
+             获得字符串
+            </summary>
+            <param name="key">主键</param>
+            <param name="language">语言</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.BaseResourceManager.GetResource">
+            <summary>
+            加载配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.BaseResourceManager.GetResource(System.String)">
+            <summary>
+            加载配置
+            </summary>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_N">
+            <summary>
+            运行时参数不正确
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_Reason">
+            <summary>
+            原因
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_XmlRead">
+            <summary>
+            读取xml失败
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_XmlError">
+            <summary>
+            xml文件不是定制配置文件
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_NoPower">
+            <summary>
+            你无权进行此操作
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_InitError">
+            <summary>
+            初始化失败
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_DealError">
+            <summary>
+            执行失败
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_SubmitError">
+            <summary>
+            提交失败
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_UpError">
+            <summary>
+            上传文件失败
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_UrlError">
+            <summary>
+            不正确的访问方式，试图越过程序控制
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_Design">
+            <summary>
+            设计
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_Wait">
+            <summary>
+            处理中，请稍候...
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_Select">
+            <summary>
+            --请选择--
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_Page">
+            <summary>
+            页
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_PageTotal">
+            <summary>
+            共
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_PageRecord">
+            <summary>
+            条
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_PageFirst">
+            <summary>
+            首页
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_PageNext">
+            <summary>
+            下一页
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_PageUp">
+            <summary>
+            上一页
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_PageLast">
+            <summary>
+            尾页
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_WF_N">
+            <summary>
+            提供运行时参数不正确
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.BaseResourceManager.PUBLIC_Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.BaseResourceManager.RootPath">
+            <summary>
+            设置获取 根目录
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.BaseResourceManager.DefaultLanguage">
+            <summary>
+            设置获取 默认语言
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.BaseResourceManager.FileName">
+            <summary>
+            设置获取 资源文件名
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.LanguageResource.IsLanguage">
+            <summary>
+            是否使用语言资源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.Utils.LanguageResource.Current">
+            <summary>
+            静态对象
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.XmlHelper">
+            <summary>
+            封装XmlDocument的处理
+            by 贾世义 2009-1-12
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.XmlHelper.OLD_LESS">
+            <summary>
+            小于符号(&lt;)
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.XmlHelper.NEW_LESS">
+            <summary>
+            小于符号(&lt;) 
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.XmlHelper.OLD_GREATER">
+            <summary>
+            大于符号(&gt;)
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.XmlHelper.NEW_GREATER">
+            <summary>
+            大于符号(&gt;)
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.XmlHelper.OLD_WITH">
+            <summary>
+            &amp;
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.XmlHelper.NEW_WITH">
+            <summary>
+            &amp;
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.XmlHelper.OLD_DOUBLE_QUOTATION">
+            <summary>
+            双引号(&quot;)
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.XmlHelper.NEW_DOUBLE_QUOTATION">
+            <summary>
+            双引号(&quot;)
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.XmlHelper.OLD_SINGLE_QUOTATION">
+            <summary>
+            单引号(&apos;)
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.XmlHelper.NEW_SINGLE_QUOTATION">
+            <summary>
+            单引号(&apos;)
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetDataSetFromUrl(System.String,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            从指定Url获取xml数据 返回DataSet
+            </summary>
+            <param name="url">URL地址</param>
+            <param name="method">默认POST</param>
+            <param name="nvParams">需要提交的name和value的集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetDataFromXml(System.String)">
+            <summary>
+            加载xml数据到DataSet
+            </summary>
+            <param name="fileName">完整路径xml文件名 以.xml为后缀</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetXmlDocument(System.String)">
+            <summary>
+            加载xml文件
+            </summary>
+            <param name="fileName">完整路径xml文件名 以.xml为后缀</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetXmlDocument(System.Boolean)">
+            <summary>
+            获得空xml文档
+            </summary>
+            <param name="isMyquery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetFormatXml(System.Xml.XmlDocument)">
+            <summary>
+            返回经过格式化处理的xml文档
+            </summary>
+            <param name="doc">xml文档对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetFormatXml(System.String)">
+            <summary>
+            返回经过格式化处理的xml字符串（增加换行）
+            </summary>
+            <param name="xml">xml字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.IsXml(System.String)">
+            <summary>
+            判断字符串是否xml格式
+            </summary>
+            <param name="value">字符串</param>
+            <returns>是否xml格式</returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.IsXml(System.String,System.String)">
+            <summary>
+            判断字符串是否xml格式
+            </summary>
+            <param name="value">字符串</param>
+            <param name="key">xml的节点name</param>
+            <returns>是否xml格式</returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.CheckXmlContent(System.String)">
+            <summary>
+            根据Demo.xsd校验 xml文件或字符串
+            </summary>
+            <param name="xml">xml的文件必须以.xml结尾 或 xml的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.dealValidationError(System.Object,System.Xml.Schema.ValidationEventArgs)">
+            <summary>
+            错误处理程序
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetNode(System.Xml.XmlNode,System.String)">
+            <summary>
+             获得node下node指定的子节点实体
+             </summary>
+             <param name="node">节点</param>
+             <param name="nodeName">node下子节点名称，多个时用/隔开</param>
+             <returns>node下nodeName指定的子节点实体，若null没找到，否则返回第一个匹配的</returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetNodes(System.Xml.XmlNode,System.String)">
+            <summary>
+             获得node下node指定的子节点的集合
+             </summary>
+             <param name="node">节点</param>
+             <param name="nodeName">node下子节点名称，多个时用/隔开</param>
+             <returns>node下nodeName指定的子节点的集合，若null没找到</returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.getNamespaceManager(System.Xml.XmlNode,System.String@)">
+            <summary>
+            获得命名空间 并根据情况调整nodeName
+            </summary>
+            <param name="node"></param>
+            <param name="nodeName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.HasChildNode(System.Xml.XmlNode,System.String)">
+            <summary>
+            判断节点下是否有子节点name
+            </summary>
+            <param name="node">节点实体</param>
+            <param name="name">节点名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.Exists(System.Xml.XmlNode,System.String)">
+            <summary>
+            节点下是否有子节点name
+            </summary>
+            <param name="node">节点</param>
+            <param name="name">node下子节点名称，多个时用/隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetValue(System.Xml.XmlNode)">
+            <summary>
+            获得节点的值
+            </summary>
+            <param name="node">节点实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetValue(System.Xml.XmlNode,System.String)">
+            <summary>
+            获得节点的值
+            </summary>
+            <param name="node">节点实体</param>
+            <param name="nodeName">node下子节点名称，多个时用/隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetFormatInnerXml(System.Xml.XmlNode)">
+            <summary>
+            获得格式化的节点内部xml
+            </summary>
+            <param name="node">节点实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.SetNode(System.Xml.XmlNode,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得新增的节点
+            </summary>
+            <param name="node">节点</param>
+            <param name="nodeName">新节点名称</param>
+            <param name="value">新节点值</param>
+            <param name="attribte">新节点属性名称</param>
+            <param name="attrValue">新节点属性值</param>
+            <returns>新节点</returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.SetNode(System.Xml.XmlNode,System.String,System.String)">
+            <summary>
+            获得新增的节点
+            </summary>
+            <param name="node">节点</param>
+            <param name="nodeName">新节点名称</param>
+            <param name="value">新节点值</param>
+            <returns>新节点</returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.SetNode(System.Xml.XmlNode,System.String)">
+            <summary>
+            获得新增的节点
+            </summary>
+            <param name="node">节点</param>
+            <param name="nodeName">新节点名称</param>
+            <returns>新节点</returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.CreateNode(System.Xml.XmlNode,System.String)">
+            <summary>
+            获得新增的节点
+            </summary>
+            <param name="node">节点</param>
+            <param name="nodeName">新节点名称</param>
+            <returns>新节点</returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.RemoveNode(System.Xml.XmlNode,System.String)">
+            <summary>
+            删除节点 并向上删除空节点( 到跟截止）
+            </summary>
+            <param name="node"></param>
+            <param name="nodeName">如空 则删除自己</param>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.SetInnerText(System.Xml.XmlNode,System.String)">
+            <summary>
+            给节点赋值
+            </summary>
+            <param name="node">节点</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.SetInnerXml(System.Xml.XmlNode,System.String)">
+            <summary>
+            给节点赋值
+            </summary>
+            <param name="node">节点</param>
+            <param name="value">值为xml</param>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetAttribute(System.Xml.XmlNode,System.String)">
+            <summary>
+            获得指定的属性的值
+            </summary>
+            <param name="node">节点实体</param>
+            <param name="name">属性</param>
+            <returns>获得指定的属性的值 不存在则返回空字符串</returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetAttribute(System.Xml.XmlNode,System.String,System.String)">
+            <summary>
+            获得指定的属性的值
+            </summary>
+            <param name="node">节点实体</param>
+            <param name="nodeName">node下子节点名称，多个时用/隔开</param>
+            <param name="name">属性</param>
+            <returns>获得指定的属性的值 不存在则返回空字符串</returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetAttributeDef(System.Xml.XmlNode,System.String,System.String)">
+            <summary>
+            获得指定的属性的值 如null或空字符串则返回默认值
+            </summary>
+            <param name="node">节点实体</param>
+            <param name="name">属性</param>
+            <param name="def">默认值</param>
+            <returns>获得指定的属性的值 不存在则返回空字符串</returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetTitle(System.Xml.XmlNode)">
+            <summary>
+            获得title属性的值
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetName(System.Xml.XmlNode)">
+            <summary>
+            获得name属性的值
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetDataFormat(System.Xml.XmlNode)">
+            <summary>
+            获得dataformat属性的值
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetType(System.Xml.XmlNode)">
+            <summary>
+            获得type属性的值
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.SetAttribute(System.Xml.XmlNode,System.String,System.Object)">
+            <summary>
+            给指定的属性赋值
+            </summary>
+            <param name="node">节点实体 空不能赋值</param>
+            <param name="name">属性名 空不能赋值</param>
+            <param name="value">值对象 空或ToString()==""则不赋值 去除特殊字符</param>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.SetAttribute(System.Xml.XmlNode,System.String,System.String,System.Object)">
+            <summary>
+            给指定的节点的最后一个子节点的属性赋值
+            </summary>
+            <param name="node">节点实体 空不能赋值</param>
+            <param name="nodeName">node下子节点名称，多个时用/隔开</param>
+            <param name="name">属性名 为空不能赋值</param>
+            <param name="value">值对象 空或ToString()==""则不赋值 去除特殊字符</param>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.SetAttribute(System.Xml.XmlNode,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            给指定的节点的属性赋值
+            </summary>
+            <param name="node">节点实体 空不能赋值</param>
+            <param name="nvc">属性及值集合</param>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.SetAttribute(System.Xml.XmlNode,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            给指定的节点的最后一个子节点的属性赋值
+            </summary>
+            <param name="node">节点实体 空不能赋值</param>
+            <param name="nodeName">node下子节点名称，多个时用/隔开</param>
+            <param name="nvc">属性及值集合</param>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.RemoveAttribute(System.Xml.XmlNode,System.String)">
+            <summary>
+            移除属性
+            </summary>
+            <param name="node">节点实体 空不处理</param>
+            <param name="name">属性名 空不处理</param>
+        </member>
+        <member name="M:MyQuery.Utils.XmlHelper.GetAttributeValue(System.String)">
+            <summary>
+            替换属性值中不符合xml要求的字符
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Utils.MySqlParameters">
+            <summary>
+            封装了自定义Sql参数及其列表
+            by 贾世义 2009-1-13
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.MySqlParameters.IsModify">
+            <summary>
+            是否为修改 仅当编辑时有效
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.MySqlParameters.EditSqlMode">
+            <summary>
+            编辑语句类别 insert或update
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.MySqlParameters.appendSqls">
+            <summary>
+            附加的SQL语句
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.MySqlParameters.IsAddGetIDSql">
+            <summary>
+            是否在Insert时生成的SQL增加获取当前ID的语句
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.MySqlParameters.MainTable">
+            <summary>
+            主表名
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name">对应查询的名称（或表名） session缓存条件使用</param>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.#ctor(MyQuery.Utils.SqlMode)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="mode">处理类型</param>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.AppendSql(System.String)">
+            <summary>
+            添加附加的SQL语句
+            </summary>
+            <param name="sql"></param>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.Add(MyQuery.Utils.MySqlParameter)">
+            <summary>
+            添加指定的Sql参数属性类。
+            </summary>
+            <param name="parameter">Sql参数属性类。</param>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.Add(System.String)">
+            <summary>
+            根据指定属性创建一个Sql参数属性类（查询字段使用）
+            </summary>
+            <param name="name">字段名称</param>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.Add(System.String,System.Object)">
+            <summary>
+            根据指定属性创建一个Sql参数属性类（编辑字段使用）
+            </summary>
+            <param name="name">字段名称</param>
+            <param name="value">参数值对象</param>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.Add(System.String,System.Object,System.String)">
+            <summary>
+            根据指定属性创建一个Sql条件参数属性类（条件表达式使用）
+            </summary>
+            <param name="name">字段名称</param>
+            <param name="value">参数值对象</param>
+            <param name="expression">where表达式 带参数(用{0}表示) 不带where关键字且必须以and或or开头</param>
+            <returns>MySqlParameter实例</returns>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.IndexOf(MyQuery.Utils.MySqlParameter)">
+            <summary>
+            查找指定的Sql参数属性类。
+            </summary>
+            <param name="parameter">要查找的Sql参数属性类。</param>
+            <returns>找到的Sql参数属性类的索引，如未找到则返回-1。</returns>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.IndexOf(System.String)">
+            <summary>
+            查找指定name的索引
+            </summary>
+            <param name="name">要查找的Sql参数属性类的名称</param>
+            <returns>找到的Sql参数属性类的索引，如未找到则返回-1</returns>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.Remove(System.String)">
+            <summary>
+            移除name的项 不存在则不处理
+            </summary>
+            <param name="name">name 忽略大小写</param>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.OnInsert(System.Int32,System.Object)">
+            <summary>
+            插入对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.OnRemove(System.Int32,System.Object)">
+            <summary>
+            移除对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.OnSet(System.Int32,System.Object,System.Object)">
+            <summary>
+            设置对象时类型检查。
+            </summary>
+            <param name="index">位置索引。</param>
+            <param name="oldValue">原对象。</param>
+            <param name="newValue">新对象。</param>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.OnValidate(System.Object)">
+            <summary>
+            验证时类型检查。
+            </summary>
+            <param name="value">对象。</param>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.GetDataParamters(MyQuery.Utils.DBType)">
+            <summary>
+            根据SqlParameters返回IDataParameter[]
+            </summary>
+            <param name="dbtype">数据库类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.GetWhere(MyQuery.Utils.DBType,System.Boolean)">
+            <summary>
+            获得条件表达式 不包含Where
+            </summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="isParameter">是否参数方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.GetSql(MyQuery.Utils.DBType,System.Boolean)">
+            <summary>
+            获得SQL语句
+            </summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="isParameter">是否参数方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameters.GetPre(MyQuery.Utils.DBType)">
+            <summary>
+            获得参数前字符
+            </summary>
+            <param name="dBType"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.Utils.MySqlParameters.Name">
+            <summary>
+            Sql参数列表对应的查询名称（或表名 增删改语句使用）
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.MySqlParameters.SqlWhere">
+            <summary>
+            where表达式 不包含where，可能以and或or开头
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.MySqlParameters.Sql">
+            <summary>
+            设置的sql（select时为from（含）部分，其它则为全部）
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.MySqlParameters.SqlEnd">
+            <summary>
+            设置的sql尾部部分（如group或order） 仅select有效
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.MySqlParameters.PageIndex">
+            <summary>
+            查询列表对应的页索引
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.MySqlParameters.Item(System.Int32)">
+            <summary>
+            索引器
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.MySqlParameters.Item(System.String)">
+            <summary>
+            索引器 忽略大小写
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.MySqlParameter">
+            <summary>
+            Sql参数属性类
+            by 贾世义 2009-1-13
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.MySqlParameter.Name">
+            <summary>
+            名称(不包含前缀)
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.MySqlParameter.Value">
+            <summary>
+            参数值对象
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.MySqlParameter.Expression">
+            <summary>
+            参数对应的表达式（{0}表示参数，不带where关键字且必须以and或or开头）
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameter.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameter.#ctor(System.String,System.Object)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameter.GetExpression(MyQuery.Utils.DBType,System.Boolean)">
+            <summary>
+            获取替换了参数的条件表达式
+            </summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="isParameter">是否参数方式</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.MySqlParameter.GetValue">
+            <summary>
+            返回当前值的字符串 去除了%
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Utils.SqlMode">
+            <summary>
+            SQL语句类别
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.SqlMode.Select">
+            <summary>
+            查询语句
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.SqlMode.Insert">
+            <summary>
+            插入语句
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.SqlMode.Update">
+            <summary>
+            修改语句
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.SqlMode.Delete">
+            <summary>
+            删除语句
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.ExcelBase">
+            <summary>
+            使用Excel应用导出Excel文件
+            贾世义 2012-9-8
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelBase.#ctor">
+            <summary>
+            构建函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelBase.createDoc">
+            <summary>
+            创建资源
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelBase.InsertData(MyQuery.Utils.ExcelBE)">
+            <summary>
+            写入数据
+            </summary>
+            <param name="be"></param>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelBase.OutExcel(System.Web.UI.Page,System.String)">
+            <summary>
+            输出
+            </summary>
+            <param name="page"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelBase.ReleaseObj(System.Object)">
+            <summary>
+            释放对象，内部调用
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelBase.Close">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelBase.SetRowsHeight(System.String,System.Double)">
+            <summary>
+            设置行高
+            </summary>
+            <param name="rowRange">范围表示 如1:1</param>
+            <param name="height">高度</param>
+        </member>
+        <member name="T:MyQuery.Utils.ExcelBE">
+            <summary>
+            Excel格数据
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelBE.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.Int32,System.Boolean,System.Int32,System.Int32,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="row">行索引 从1开始</param>
+            <param name="col">列索引 从1开始</param>
+            <param name="text">文本</param>
+            <param name="startCell">开始格 如A1</param>
+            <param name="endCell">结束格 如A1</param>
+            <param name="interiorColor">内部背景颜色 0自动 1黑色 2白色 3红色 4鲜绿 5蓝色 6黄色 7粉红 8 青绿 9深红 10绿色 11深蓝 12深黄</param>
+            <param name="isMerge">是否合并</param>
+            <param name="size">列宽</param>
+            <param name="fontColor">字体颜色</param>
+            <param name="format">格式 pic表示插入图片</param>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelBE.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="row">行索引 从1开始</param>
+            <param name="col">列索引 从1开始</param>
+            <param name="text">文本</param>
+            <param name="startCell">开始格 如A1</param>
+            <param name="endCell">结束格 如A1</param>
+            <param name="isMerge">是否合并</param>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelBE.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="cell">写入格 如A1</param>
+            <param name="text">文本</param>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelBE.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.ExcelBE.Row">
+            <summary>
+            行索引
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.ExcelBE.Col">
+            <summary>
+            列索引
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.ExcelBE.Text">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.ExcelBE.StartCell">
+            <summary>
+            开始Cell
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.ExcelBE.EndCell">
+            <summary>
+            截止Cell
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.ExcelBE.InteriorColor">
+            <summary>
+            颜色
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.ExcelBE.IsMerge">
+            <summary>
+            是否合并
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.ExcelBE.Size">
+            <summary>
+            列宽
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.ExcelBE.FontColor">
+            <summary>
+            字体颜色
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.ExcelBE.Formart">
+            <summary>
+            格式
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.TimerTask.TimerTaskDelegate">
+            <summary>
+            定时任务委托方法
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.TimerTask.ITimerTask">
+            <summary>
+            定时任务接口类
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.TimerTask.ITimerTask.Run">
+            <summary>
+            执行
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.TimerTask.TimerTaskService">
+             <summary>
+             定时任务服务类
+             作者：Duyong 修改：贾世义
+             编写日期：2010-07-25 2011-07-01
+            </summary> 
+        </member>
+        <member name="M:MyQuery.Utils.TimerTask.TimerTaskService.#ctor(MyQuery.Utils.TimerTask.TimerInfo,MyQuery.Utils.TimerTask.ITimerTask)">
+            <summary>
+            根据定时信息和执行具体任务的实例构造定时任务服务
+            </summary>
+            <param name="_timer">定时信息</param>
+            <param name="_interface">执行具体任务的实例</param>
+        </member>
+        <member name="M:MyQuery.Utils.TimerTask.TimerTaskService.#ctor(MyQuery.Utils.TimerTask.TimerInfo,MyQuery.Utils.TimerTask.TimerTaskDelegate)">
+            <summary>
+            根据定时信息和执行具体任务的委托方法构造定时任务服务
+            </summary>
+            <param name="_timer">定时信息</param>
+            <param name="trd">执行具体任务的委托方法</param>
+        </member>
+        <member name="M:MyQuery.Utils.TimerTask.TimerTaskService.setParm(System.Object[])">
+            <summary>
+            设置参数
+            </summary>
+            <param name="_parm"></param>
+        </member>
+        <member name="M:MyQuery.Utils.TimerTask.TimerTaskService.Start">
+            <summary>
+            启动定时任务
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.TimerTask.TimerTaskService.CheckTimer">
+            <summary>
+            检查定时器
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.TimerTask.TimerTaskService.TimeOut(System.Object,System.EventArgs)">
+            <summary>
+            定时器执行
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.Utils.TimerTask.TimerTaskService.getNextRunTime">
+            <summary>
+            计算下一次执行时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.TimerTask.TimerTaskService.CreateTimerTaskService(MyQuery.Utils.TimerTask.TimerInfo,MyQuery.Utils.TimerTask.TimerTaskDelegate,System.Object[])">
+            <summary>
+            使用委托方法创建定时任务
+            </summary>
+            <param name="info"></param>
+            <param name="_ptrd"></param>
+            <param name="parm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.TimerTask.TimerTaskService.CreateTimerTaskService(MyQuery.Utils.TimerTask.TimerInfo,MyQuery.Utils.TimerTask.ITimerTask)">
+            <summary>
+            使用实现定时接口ITimerTask的实例创建定时任务
+            </summary>
+            <param name="info"></param>
+            <param name="_ins"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Utils.TimerTask.TimerInfo">
+            <summary>
+            定时信息类
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.TimerTask.TimerInfo.Type">
+            <summary>
+            类型：EveryDay(每天),DayOfWeek(每周),DayOfMonth(每月),DesDate(指定日期),LoopDays(循环天数)
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.TimerTask.TimerInfo.Value">
+            <summary>
+            日期值：DayOfWeek,值为1-7表示周一到周日；DayOfMonth,值为1-31表示1号到31号；TimeSpan,值为间隔分钟数；TimerType为其它值时,此值无效
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.TimerTask.TimerInfo.StartDate">
+            <summary>
+            指定开始执行日期
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.TimerTask.TimerInfo.RunTime">
+            <summary>
+            设置的执行时间 仅时间有效
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.TimerTask.TimerTypes">
+            <summary>
+            循环类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.TimerTask.TimerTypes.EveryDay">
+            <summary>
+            每天
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.TimerTask.TimerTypes.DayOfWeek">
+            <summary>
+            每周 几
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.TimerTask.TimerTypes.DayOfMonth">
+            <summary>
+            每月 几日
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.TimerTask.TimerTypes.TimeSpan">
+            <summary>
+            每隔几分钟执行一次
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.FileHelper">
+            <summary>
+            封装二进制文件处理
+            by 贾世义 2011-8-21
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.FileHelper.GetContent(System.String)">
+            <summary>
+            获得文件数据
+            </summary>
+            <param name="fileName">完整路径文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.FileHelper.WriteToFile(System.String,System.Byte[],System.Boolean)">
+            <summary>
+            将内容写入文件
+            </summary>
+            <param name="name">完整文件名</param>
+            <param name="content">内容</param>
+            <param name="isCover">是否覆盖存在文件</param>
+        </member>
+        <member name="T:MyQuery.Utils.LinkXmlHelper">
+            <summary>
+            Linq处理Xml文档的封装
+            by 贾世义 2008-11-03
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetElement(System.Xml.Linq.XElement,System.Xml.Linq.XName,System.Xml.Linq.XName,System.String)">
+            <summary>
+            获得子节点实体
+            </summary>
+            <param name="element">节点</param>
+            <param name="nodeName">子节点的定义</param>
+            <param name="name">子节点的属性名称</param>
+            <param name="value">子节点的属性值</param>
+            <returns>子节点属性值为指定值的，若null没找到，否则返回第一个匹配的</returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetElement(System.Xml.Linq.XElement,System.Xml.Linq.XName[])">
+            <summary>
+            获得节点name数组指定的最后一个节点
+            </summary>
+            <param name="element">节点</param>
+            <param name="names">节点name数组</param>
+            <returns>name数组指定的最后一个节点，若null没找到，否则返回第一个匹配的</returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetElement(System.Xml.Linq.XElement,System.Xml.Linq.XName)">
+            <summary>
+            获得element下node指定的子节点实体
+            </summary>
+            <param name="element">节点</param>
+            <param name="node">element下子节点名称</param>
+            <returns>element下node指定的子节点实体，若null没找到，否则返回第一个匹配的</returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetElement(System.Xml.Linq.XDocument,System.Xml.Linq.XName)">
+            <summary>
+            获得root下node指定的节点实体
+            </summary>
+            <param name="doc">XDocument实体</param>
+            <param name="node">root下节点名称</param>
+            <returns>root下node指定的节点实体，若null没找到，否则返回第一个匹配的</returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetElements(System.Xml.Linq.XElement,System.Xml.Linq.XName[])">
+            <summary>
+            获得节点name数组指定的最后一个节点的集合
+            </summary>
+            <param name="element">节点</param>
+            <param name="names">节点name数组</param>
+            <returns>name数组指定的最后一个节点的集合，若null没找到，否则返回集合</returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetElements(System.Xml.Linq.XElement,System.Xml.Linq.XName[],System.Xml.Linq.XName,System.Xml.Linq.XName,System.String)">
+            <summary>
+            获得节点name数组指定的最后一个节点的集合
+            </summary>
+            <param name="element">节点</param>
+            <param name="names">节点name数组</param>
+            <param name="nodeName">子节点的定义</param>
+            <param name="name">子节点的属性名称</param>
+            <param name="value">子节点的属性值</param>
+            <returns>name数组指定的最后一个节点的集合的nodeName子节点属性值为指定值的，若null没找到，否则返回集合</returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.SetValue(System.Xml.Linq.XElement,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            给指定的节点赋值(如果节点不存在则创建)
+            </summary>
+            <param name="element">节点</param>
+            <param name="nvs">节点及值集合</param>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetAttributeOriginal(System.Xml.Linq.XElement,System.Xml.Linq.XName)">
+            <summary>
+            获得指定属性值
+            </summary>
+            <param name="element">节点实体</param>
+            <param name="name">属性名</param>
+            <returns>属性值（原始值）,若""则未设置此属性</returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetAttribute(System.Xml.Linq.XElement,System.Xml.Linq.XName)">
+            <summary>
+            获得指定属性值（已转化为小写）
+            </summary>
+            <param name="element">节点实体</param>
+            <param name="name">属性名</param>
+            <returns>属性值（已转化为小写）,若""则未设置此属性</returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetAttribute(System.Xml.Linq.XElement,System.Xml.Linq.XName,System.String)">
+            <summary>
+            获得指定属性值 若""则返回默认值def （已转化为小写）
+            </summary>
+            <param name="element">节点实体</param>
+            <param name="name">属性名</param>
+            <param name="def"></param>
+            <returns>属性值（已转化为小写）,若""则返回默认值def</returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetIntValue(System.Xml.Linq.XElement,System.String,System.Int32)">
+            <summary>
+            获得属性的数值
+            </summary>
+            <param name="element">节点</param>
+            <param name="name">属性</param>
+            <param name="def">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetValue(System.Xml.Linq.XElement)">
+            <summary>
+            获得节点的值
+            </summary>
+            <param name="element">节点实体</param>
+            <returns>值,若""则无值</returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetValue(System.Xml.Linq.XElement,System.Xml.Linq.XName[])">
+            <summary>
+            获得节点的值
+            </summary>
+            <param name="element"></param>
+            <param name="xNames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.SetAttribute(System.Xml.Linq.XElement,System.Xml.Linq.XName,System.Object)">
+            <summary>
+            给指定的属性赋值
+            </summary>
+            <param name="element">节点实体 空不能赋值</param>
+            <param name="name">属性值 属性值为空不能赋值</param>
+            <param name="value">值对象 空或ToString()==""则不赋值 去除特殊字符</param>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.SetAttribute(System.Xml.Linq.XElement,System.Xml.Linq.XName[],System.Xml.Linq.XName,System.String)">
+            <summary>
+            给指定的属性赋值
+            </summary>
+            <param name="element">节点</param>
+            <param name="names">节点name数组 给最后一个节点的属性赋值 为空不能赋值</param>
+            <param name="attName">属性值 属性值为空不能赋值</param>
+            <param name="value">值对象 空或ToString()==""则不赋值 去除特殊字符</param>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.SetAttribute(System.Xml.Linq.XElement,System.Xml.Linq.XName[],System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            给指定的属性赋值
+            </summary>
+            <param name="element">节点</param>
+            <param name="names">节点name数组 给最后一个节点的属性赋值 为空不能赋值</param>
+            <param name="nvs">属性及值集合</param>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetTitle(System.Xml.Linq.XElement)">
+            <summary>
+            获得节点title原始值
+            </summary>
+            <param name="element">节实体</param>
+            <returns>获得节点title原始值,返回""则未配置</returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetDataFormat(System.Xml.Linq.XElement)">
+            <summary>
+            获得节点dataformat原始值
+            </summary>
+            <param name="element">节实体</param>
+            <returns>获得节点dataformat原始值,返回""则未配置</returns>
+        </member>
+        <member name="M:MyQuery.Utils.LinkXmlHelper.GetName(System.Xml.Linq.XElement)">
+            <summary>
+            获得节点title值
+            </summary>
+            <param name="element">节实体</param>
+            <returns>获得节点name小写值,返回""则未配置</returns>
+        </member>
+        <member name="T:MyQuery.Utils.SqlHelper">
+            <summary>
+            封装SQL语句及参数处理的工具
+            by 贾世义 2009-1-16
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetAlternative(System.String,MyQuery.Utils.MyUser)">
+            <summary>
+            将字符串中的替代字符 更换为当前用户id和当前用户部门id
+            </summary>
+            <param name="sql">替代字符串</param>
+            <param name="user">当前用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetSqls(System.Web.UI.WebControls.TreeView,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            将TreeView中选中的节点形成SQL
+            </summary>
+            <param name="tv">TreeView</param>
+            <param name="sqls">集合</param>
+            <param name="sql">SQL语句，其中{0}将替换为节点的值</param>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetSqls(System.Web.UI.WebControls.TreeNode,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            将TreeView节点中选中的节点形成SQL
+            </summary>
+            <param name="parentNode">TreeView的节点</param>
+            <param name="sqls">集合</param>
+            <param name="sql">SQL语句，其中{0}将替换为节点的值</param>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetFromSql(System.String,System.String)">
+            <summary>
+            获取sql主语句的keyWord及后部分（取主语句的包含keyWord 如from、where、group by、order by）
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="keyWord">关键字（SQL中的关键字 如from、where、group by、order by）</param>
+            <returns>sql主语句的keyWord及后部分（包含keyWord），如无则返回null</returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.IsSelectSql(System.String)">
+            <summary>
+            判断语句是否为select语句
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.IsAggregateSql(System.String)">
+            <summary>
+            是否包含聚合函数sum、avg、count、max、min并且不是子查询
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetStartWith(System.String,System.String)">
+            <summary>
+            获得开始处keyWord后的位置 当未发现关键字时返回0
+            </summary>
+            <param name="sql"></param>
+            <param name="keyWord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetFromSqlWhere(System.String)">
+            <summary>
+            获取sql的where及后部分（取主语句的包含where 如无where(依次取之后的group by、order by)）
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns>sql的where及后部分（包含where）</returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetOrderSql(System.String,System.String)">
+            <summary>
+            将新的orderby字段拼入sql
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="orderby">新的orderby字段 不含order by</param>
+            <returns>将新的orderby字段拼入后的SQL</returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetWhere(MyQuery.Utils.DBType,System.String,System.String[])">
+            <summary>
+            按照expression获得带参数name的Where
+            </summary>
+            <param name="dbType">数据类型</param>
+            <param name="expression">where的表达式</param>
+            <param name="names">参数名数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetWhere(System.String)">
+            <summary>
+            获取sql的where表达式（去掉开头的and 或or）
+            </summary>
+            <param name="sql">SQL语句</param>
+            <returns>sql的where表达式（去掉开头的and 或or）</returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetWhere(MyQuery.Utils.MySqlParameters,MyQuery.Utils.DBType,System.Data.IDataParameter[]@)">
+            <summary>
+            获得条件表达式 带where
+            </summary>
+            <param name="sqlWhere"></param>
+            <param name="dbtype"></param>
+            <param name="myDataParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetSql(System.String,System.String)">
+            <summary>
+            将新的where（必须不包含where，可能以and或or开头）条件拼入sql主语句
+            </summary>
+            <param name="sql">SQL语句</param>
+            <param name="where">where条件 （必须不包含where，可能以and或or开头）</param>
+            <returns>将新的where条件替换并拼入sql</returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetPageSql(MyQuery.Utils.DBType,System.String,System.Int32,System.Int32)">
+            <summary>
+            将语句转化为分页SQL语句，两条包含分页的获取数据SQL；获取记录数SQL
+            </summary>
+            <param name="dbtype">支持数据类型（Sql2005、Oracle、Db2、Infomix）</param>
+            <param name="sql">SQL语句（Sql2005、Oracle、Db2必须包含order by，正常的一条SQL语句）</param>
+            <param name="pageIndex">开始（从0开始）</param>
+            <param name="pageSize">分页大小（0不分页）</param>
+            <returns>两条语句，包含分页的获取数据SQL；获取记录数SQL</returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetSql(MyQuery.Utils.DBType,System.String,System.Data.IDataParameter[])">
+            <summary>
+            将参数转化为字符串
+            </summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="sql">SQL</param>
+            <param name="iDataParameter">参数集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetSql(MyQuery.Utils.MySqlParameters,MyQuery.Utils.DBType)">
+            <summary>
+            将MySqlParameters转换为 SQL语句
+            </summary>
+            <param name="mySql">MySqlParameters对象</param>
+            <param name="dbtype">数据库类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetSql(System.Collections.ArrayList,MyQuery.Utils.DBType)">
+            <summary>
+            将MySqlParameters集合转换为 SQL语句
+            </summary>
+            <param name="mySqls">MySqlParameters集合</param>
+            <param name="dbtype">数据库类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetSql(System.Collections.Generic.List{System.String})">
+            <summary>
+            将字符串数组转化为;分割的字符串 空则忽略
+            </summary>
+            <param name="sqls">对象集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetCountSql(MyQuery.Utils.DBType,System.String,System.Int32)">
+            <summary>
+            获得指定记录数的SQL语句
+            </summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="sql">SQL语句（不包含获取条数的写法）</param>
+            <param name="count">获取数量 小于1表示不限制</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetCurrentIDSql(System.String,MyQuery.Utils.DBType)">
+            <summary>
+            获得当前新增数据的ID
+            </summary>
+            <param name="tableName">表名</param>
+            <param name="dbType">数据类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetSelect(System.String[])">
+            <summary>
+            按照给定字段生成SELECT部分
+            </summary>
+            <param name="selFields">选择字段数组,可以加表名及运算，比如：string[] selFields={"title","content","Derivation","convert(varchar(10),Dates,20) as Dates"};</param>
+            <return>SELECT部分字符串</return>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetLikeValue(System.String,MyQuery.Utils.LikeType)">
+            <summary>
+            当有like时获取加上%的字符串
+            </summary>
+            <param name="value"></param>
+            <param name="likeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetSqlValue(MyQuery.Utils.DBType,System.Object)">
+            <summary>
+            获取正确的SQL认可的值 当为字符时返回时包括了'
+            </summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="obj">值对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetSqlInWhere(System.String)">
+            <summary>
+            获得in条件表达式(包含in关键字)
+            </summary>
+            <param name="strs">字符串(,或;分割)</param>
+            <returns>表达式如：in ('字符串','字符串')</returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetProcedure(MyQuery.Utils.DBType,System.String,System.Data.IDataParameter[])">
+            <summary>
+            获得存储过程执行语句
+            </summary>
+            <param name="dbtype">数据库类型</param>
+            <param name="name">存储过程</param>
+            <param name="iDataParameter">参数集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetDBType(System.String)">
+            <summary>
+            获取DBType类型
+            </summary>
+            <param name="dbtype">类型字符串 空则获取web.cofig的配置</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:MyQuery.Utils.SqlHelper.GetLikeType(System.String)">
+            <summary>
+            获取LikeType类型
+            </summary>
+            <param name="liketype">类型字符串</param>
+            <returns>值</returns>
+        </member>
+        <member name="T:MyQuery.Utils.DBType">
+            <summary>
+            支持的数据库类型枚举
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.DBType.Sql2000">
+            <summary>
+            sql2000
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.DBType.Sql2005">
+            <summary>
+            sql2005
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.DBType.Oracle">
+            <summary>
+            oracle
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.DBType.OleDb">
+            <summary>
+            OleDb 如access
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.DBType.OdbcMySql">
+            <summary>
+            Odbc连接的MySql
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.DBType.OdbcDb2">
+            <summary>
+            Odbc连接的db2
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.DBType.OdbcInformix">
+            <summary>
+            Odbc连接的informix
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.DBType.Odbc">
+            <summary>
+            Odbc连接的其它数据库
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.DBType.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.LikeType">
+            <summary>
+            %增加位置枚举
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.LikeType.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.LikeType.Right">
+            <summary>
+            %加在值后面
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.LikeType.Left">
+            <summary>
+            %加在值前面
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.LikeType.All">
+            <summary>
+            %加在值两面 并将中间的空格替换为%
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.TextBoxVal">
+            <summary>
+            扩展TextBox 主要用于验证和提示
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.TextBoxVal.ClientValidate">
+            <summary>
+            验证格式
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.MailHelper">
+            <summary>
+            封装邮件处理
+            by 贾世义 2011-6-3
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.MailHelper.SetParameters(System.String,System.Int32,System.Boolean,System.String,System.String)">
+            <summary>
+            设置发送邮件参数
+            </summary>
+            <param name="host">smtp服务器地址或名称</param>
+            <param name="port">smtp服务端口 一般为25</param>
+            <param name="isUserCredentials">是否需要认证</param>
+            <param name="account">需要认证时的用户</param>
+            <param name="password">需要认证时的用户的密码</param>
+        </member>
+        <member name="M:MyQuery.Utils.MailHelper.setParameters">
+            <summary>
+            设置发送邮件参数 取配置
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.MailHelper.SendMail(System.String,System.String,System.String,System.String)">
+            <summary>
+            发送邮件 发送邮件错误不会抛出异常
+            </summary>
+            <param name="receivers">收件人</param>
+            <param name="title">标题/主题</param>
+            <param name="content">信件内容</param>
+            <param name="sender">发件人 空则取系统配置</param>
+        </member>
+        <member name="T:MyQuery.Utils.WordHelper">
+            <summary>
+            使用Word应用工具类
+            by 贾世义 2013-4-13
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.WordHelper.WordToHtml(System.String,System.String)">
+            <summary>
+            将word保存为htm文件
+            </summary>
+            <param name="wordFileName">完整的文件名</param>
+            <param name="savePath">保存的路径</param>
+            <returns>保存后的文件名</returns>
+        </member>
+        <member name="T:MyQuery.Utils.WebHelper">
+            <summary>
+            封装WEB页面及控件处理的工具类
+            by 贾世义 2009-1-15
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetWaitDiv(System.String,System.String)">
+            <summary>
+            获得等待提示div
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetPageName(System.Web.UI.Page)">
+            <summary>
+            获得页面的文件名（去除ASP.和_aspx 无后缀 小写 目录用_分割）
+            </summary>
+            <param name="page">页面</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetPageFileName(System.Web.UI.Page)">
+            <summary>
+            获得页面的文件名（去除ASP.和目录 小写）
+            </summary>
+            <param name="page">页面</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetPageFilePath(System.Web.UI.Page)">
+            <summary>
+            获得页面的文件名（去除ASP. 获得URL，带根路径 小写）
+            </summary>
+            <param name="page">页面</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.HeaderAddControl(System.Web.UI.Page,System.Web.UI.Control)">
+            <summary>
+            将控件加入Head，如果不存在Head则加入Page
+            </summary>
+            <param name="page"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.HeaderAddJs(System.Web.UI.Page,System.String)">
+            <summary>
+            引入脚本文件
+            </summary>
+            <param name="page">页面</param>
+            <param name="fileName">文件名（不包含路径，文件必须在Js目录下,包含路径必须包括http://）</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.HeaderAddCss(System.Web.UI.Page,System.String)">
+            <summary>
+            引入公共样式文件
+            </summary>
+            <param name="page">页面</param>
+            <param name="fileName">文件名（不包含路径，文件必须在Css目录下,包含路径必须包括http://）</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.HeaderAddTheme(System.Web.UI.Page,System.String)">
+            <summary>
+            引入主题样式文件
+            </summary>
+            <param name="page">页面</param>
+            <param name="theme">文件名（文件必须在www/Themes目录下的主题目录）</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetBrowser(System.Web.HttpBrowserCapabilities)">
+            <summary>
+            获得浏览器类型字符 
+            </summary>
+            <param name="browser"></param>
+            <returns>FF(Firfox) SF(Safari) OE(Opera) IE</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetSession(System.String)">
+            <summary>
+            获得Session得字符串值
+            </summary>
+            <param name="name">Session的name(支持从Session对象中返回字段值 如user.DepID)</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHttpPath">
+            <summary>
+            获得URL根路径 带http地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetRelativePath(System.String)">
+            <summary>
+            将本Web完整路径改为相对根路径的相对路径（去除根）
+            </summary>
+            <param name="fullpath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetRootPath">
+            <summary>
+            获得URL根路径 不带http地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetRootServerPath">
+            <summary>
+            获得物理根路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetUrlParams(System.String,System.String,System.String)">
+            <summary>
+            获得拼入新id、value的URL地址
+            </summary>
+            <param name="url">原URL</param>
+            <param name="id">拼入的键</param>
+            <param name="value">拼入的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetUrlParams(System.String,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            将parameters中指定的参数及从QueryString获取的值拼入url
+            </summary>
+            <param name="url"></param>
+            <param name="parameters"></param>
+            <param name="QueryString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetUrl(System.String)">
+            <summary>
+            获得带http://的URL地址 如果是javascript:开头则直接返回
+            </summary>
+            <param name="url">原URL</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.OutExcel(System.Web.UI.Page,System.Xml.XmlDocument,System.String)">
+            <summary>
+            输出Excel的xml文件
+            </summary>
+            <param name="page">输出文件的页面</param>
+            <param name="doc">xml document</param>
+            <param name="name">文件名</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.OutFile(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+            输出文件
+            </summary>
+            <param name="page">输出文件的页面</param>
+            <param name="name">文件名</param>
+            <param name="title">下载提示文件名</param>
+            <returns>文件不存在返回false</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetUrlData(System.String,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            从指定Url获取数据
+            </summary>
+            <param name="url">URL地址</param>
+            <param name="method">默认POST</param>
+            <param name="nvParams">需要提交的name和value的集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.RegisterWriteScript(System.Web.UI.Page,System.String)">
+            <summary>
+            在页面输出脚本
+            </summary>
+            <param name="page">页面实例</param>
+            <param name="script">脚本</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.RegisterStartupScript(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+            注册启动脚本（在From结束前）
+            </summary>
+            <param name="page">页面实例</param>
+            <param name="key">键</param>
+            <param name="script">脚本</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.RegisterClientScriptBlock(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+            注册脚本（在From内开始处）
+            </summary>
+            <param name="page">页面实例</param>
+            <param name="key">键</param>
+            <param name="script">脚本</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.Alert(System.Web.UI.Page,System.Int32,System.String,System.String)">
+            <summary>
+            弹出指定信息
+            </summary>
+            <param name="page">页面实例</param>
+            <param name="index">序号</param>
+            <param name="message">提示信息</param>
+            <param name="id">控件id</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.Alert(System.Web.UI.Page,System.String)">
+            <summary>
+            注册启动脚本alert
+            </summary>
+            <param name="page">页面实例</param>
+            <param name="message">alert信息</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.Confirm(System.Web.UI.Page,System.String,System.String,System.String)">
+            <summary>
+            注册启动脚本alert或confirm后导航到新页面
+            </summary>
+            <param name="page">页面实例</param>
+            <param name="message">alert信息</param>
+            <param name="urlYes">完整或相对本页的URL地址</param>
+            <param name="urlNo">完整或相对本页的URL地址 选否时进入（空时为alert提示 非空时为confirm提示）</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.Confirm(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+            注册启动脚本confirm点击确认后导航到新页面
+            </summary>
+            <param name="page">页面实例</param>
+            <param name="message">confirm信息</param>
+            <param name="url">完整或相对本页的URL地址</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.AlertEnd(System.Web.UI.Page,System.String)">
+            <summary>
+            弹出指定信息，调用后页面终止并输出
+            </summary>
+            <param name="page">页面实例</param>
+            <param name="message">提示信息</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetSafeScript(System.String)">
+            <summary>
+            获得正确的脚本或提示信息 将'替换为\'
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlControl(System.String)">
+            <summary>
+            获得html控件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlLabel(System.String,System.String)">
+            <summary>
+            返回label标签
+            </summary>
+            <param name="title">内容</param>
+            <param name="id">for对象id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlFileInput(System.String,System.String,System.String)">
+            <summary>
+            file input
+            </summary>
+            <param name="id"></param>
+            <param name="width"></param>
+            <param name="cssclass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlTable">
+            <summary>
+            table
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlImg(System.String,System.String,System.String)">
+            <summary>
+            img
+            </summary>
+            <param name="url"></param>
+            <param name="title"></param>
+            <param name="width"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlIframe(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            iframe
+            </summary>
+            <param name="id"></param>
+            <param name="url"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmla(System.String,System.String,System.String)">
+            <summary>
+            获得链接html a
+            </summary>
+            <param name="title"></param>
+            <param name="href"></param>
+            <param name="traget"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlA(System.String,System.String,System.String)">
+            <summary>
+            a
+            </summary>
+            <param name="url"></param>
+            <param name="title"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlA(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            a 按照maxlength截取title
+            </summary>
+            <param name="url"></param>
+            <param name="title"></param>
+            <param name="target"></param>
+            <param name="maxlength"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlInput(System.String,System.String,System.String,System.String)">
+            <summary>
+            input
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+            <param name="width"></param>
+            <param name="cssclass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlText(System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            input text
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+            <param name="width"></param>
+            <param name="maxlength"></param>
+            <param name="cssclass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlArea(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            area
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+            <param name="width"></param>
+            <param name="rows"></param>
+            <param name="maxLength"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlButton(System.String,System.String,System.String,System.String)">
+            <summary>
+            input button
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+            <param name="width"></param>
+            <param name="cssclass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetImageButton(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            生成图片按钮 如图片不存在则为普通按钮
+            </summary>
+            <param name="id"></param>
+            <param name="imgSrc"></param>
+            <param name="title"></param>
+            <param name="width"></param>
+            <param name="cssclass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlCheckBox(System.String,System.String,System.String)">
+            <summary>
+            input checkbox
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+            <param name="cssclass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlCheckBox(System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            input checkbox
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="isCheck">是否选中</param>
+            <param name="cssclass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlRadio(System.String,System.String,System.String,System.String)">
+            <summary>
+            input redio button
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="cssclass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlRadio(System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            input redio button
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <param name="isCheck">是否选中</param>
+            <param name="cssclass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlSelect(System.String,System.String,System.String,System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            select
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+            <param name="width"></param>
+            <param name="selects">标题值的集合 值做展示内容</param>
+            <param name="cssclass"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlSpan(System.String)">
+            <summary>
+            获得span
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetLiteral(System.String)">
+            <summary>
+            获取文字控件
+            </summary>
+            <param name="text">文字值</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetSpace">
+            <summary>
+            获取空格控件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlDiv(System.Boolean,System.Web.UI.Control)">
+            <summary>
+            获得div
+            </summary>
+            <param name="isCenter">是否居中</param>
+            <param name="control">放置控件</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetHtmlStrong(System.String)">
+            <summary>
+            strong
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.setWidth(System.Web.UI.HtmlControls.HtmlGenericControl,System.String)">
+            <summary>
+            设置控件宽度
+            </summary>
+            <param name="control"></param>
+            <param name="width"></param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfInt(System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            给input控件增加 数字控制属性
+            </summary>
+            <param name="input">input对象</param>
+            <returns>返回需要注册的脚本函数</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfInt(System.Web.UI.HtmlControls.HtmlInputText)">
+            <summary>
+            给input控件增加 数字控制属性
+            </summary>
+            <param name="input">input对象</param>
+            <returns>返回需要注册的脚本函数</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfInt(System.Web.UI.WebControls.TextBox)">
+            <summary>
+            给TextBox控件增加 数字控制属性
+            </summary>
+            <param name="txt">TextBox控件对象</param>
+            <returns>返回需要注册的脚本函数</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfDouble2(System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            给input控件增加 double控制属性(两位小数)
+            </summary>
+            <param name="input">input对象</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfDouble2(System.Web.UI.WebControls.TextBox)">
+            <summary>
+            给TextBox控件增加 double控制属性(两位小数)
+            </summary>
+            <param name="txt">TextBox控件对象</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfDouble(System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            给input控件增加 double控制属性
+            </summary>
+            <param name="input">input对象</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfDouble(System.Web.UI.HtmlControls.HtmlInputText)">
+            <summary>
+            给input控件增加 double控制属性
+            </summary>
+            <param name="input">input对象</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfDouble(System.Web.UI.WebControls.TextBox)">
+            <summary>
+            给TextBox控件增加 double控制属性
+            </summary>
+            <param name="txt">TextBox控件对象</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfDate(System.Web.UI.HtmlControls.HtmlGenericControl,System.Boolean)">
+            <summary>
+            给input控件增加 日期控制属性
+            </summary>
+            <param name="input">input对象</param>
+            <param name="isUseTime">是否含时间</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfDate(System.Web.UI.HtmlControls.HtmlInputText,System.Boolean)">
+            <summary>
+            给input控件增加 日期控制属性
+            </summary>
+            <param name="input">input对象</param>
+            <param name="isUseTime">是否含时间</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfDate(System.Web.UI.WebControls.TextBox,System.Boolean)">
+            <summary>
+            给TextBox控件增加 日期控制属性
+            </summary>
+            <param name="txt">TextBox控件对象</param>
+            <param name="isUseTime">是否含时间</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfChar(System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            给input控件增加 数字字母控制属性
+            </summary>
+            <param name="input">input对象</param>
+            <returns>返回需要注册的脚本函数</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfChar(System.Web.UI.HtmlControls.HtmlInputText)">
+            <summary>
+            给input控件增加 数字字母控制属性
+            </summary>
+            <param name="input">input对象</param>
+            <returns>返回需要注册的脚本函数</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfChar(System.Web.UI.WebControls.TextBox)">
+            <summary>
+            给TextBox控件增加 数字字母控制属性
+            </summary>
+            <param name="txt">TextBox控件对象</param>
+            <returns>返回需要注册的脚本函数</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetAttributesOfFile(System.Web.UI.HtmlControls.HtmlInputFile)">
+            <summary>
+            设定file控件属性
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.IsNotUpFile(System.String)">
+            <summary>
+            判断是否为不能上传的文件类型
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.IsImageFile(System.String)">
+            <summary>
+            判断是否为Img标签支持的图片
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.IsExceedLength(System.Web.UI.HtmlControls.HtmlInputFile)">
+            <summary>
+            上传文件是否超过了限制
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.IsExceedLength(System.Web.HttpPostedFile,System.Double)">
+            <summary>
+            上传文件是否超过了限制
+            </summary>
+            <param name="file"></param>
+            <param name="maxRequestLength">最大大小KB</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.IsNullOrEmpty(System.Web.UI.HtmlControls.HtmlInputFile)">
+            <summary>
+            判断上传文件是否为空
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetCtrlSelValue(System.Web.UI.WebControls.ListControl)">
+            <summary>
+            获得DropDownList,CheckBoxList,RadioButtonList,ListBox控件所有选中值并以逗号格开,形式："1,2,3,4"
+            </summary>
+            <param name="listCtrl">DropDownList,CheckBoxList,RadioButtonList,ListBox控件</param>
+            <returns>字符串</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetSelCtrl(System.String,System.Web.UI.WebControls.ListControl)">
+            <summary>
+            获得DropDownList,CheckBoxList,RadioButtonList,ListBox控件所有选中值并以逗号格开,形式："1,2,3,4"
+            </summary>
+            <param name="strValue">值 多个值以逗号格开,形式："1,2,3,4"</param>
+            <param name="lstCtrl">DropDownList,CheckBoxList,RadioButtonList,ListBox控件对象</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetControlAttributes(System.Web.UI.WebControls.Button,System.Web.UI.Control[],System.String[],System.String[],System.String)">
+            <summary>
+            设定控件脚本控制（针对num float date3种）和提交按钮校验脚本 
+            </summary>
+            <param name="btn">提交按钮对象</param>
+            <param name="ctrls">校验控件对象列表Control[] ctrls={txtID,txtTitle};</param>
+            <param name="valids">对应控件的校验规则string[] valids={"r_num","r_china"} 说明有r_时为不能为空 num正确的整数 可以使用num>或小于 float正确的数值 date 日期 china需包括中文信息 nchar仅英文字符或数字 chinese仅中文字符 char仅字母 addr含汉字和数值 PID身份证 linker联系电话 tel固话 mobile手机 email邮件 file上传文件 photo上传图片</param>
+            <param name="msgs">提示信息，对应校验的提示，空时用默认提示</param>
+            <param name="js">自定义的脚本表达式（必须返回true或false; 必须以&amp;&amp; 或|| 开头;必须用alert进行提示） 可以是自己在页面定义的函数</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetControlAttributes(System.Web.UI.WebControls.Button,System.Web.UI.Control[],System.String[])">
+            <summary>
+            设定控件脚本控制（针对num float date3种）和提交按钮校验脚本 
+            </summary>
+            <param name="btn">提交按钮对象</param>
+            <param name="ctrls">校验控件对象列表Control[] ctrls={txtID,txtTitle}</param>
+            <param name="valids">对应控件的校验规则string[] valids={"r_num","r_china"} 说明有r_时为不能为空 num正确的整数 可以使用num>或小于 float正确的数值 date 日期 china需包括中文信息 nchar仅英文字符或数字 chinese仅中文字符 char仅字母 addr含汉字和数值 linker联系电话 tel固话 mobile手机 email邮件 file上传文件 photo上传图片</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetControlAttributes(System.Web.UI.WebControls.Button,MyQuery.Utils.TextBoxVal[])">
+            <summary>
+            设定控件脚本控制（针对TextBoxEx）和提交按钮校验脚本
+            </summary>
+            <param name="btn">提交按钮对象</param>
+            <param name="ctrls">校验控件对象列表Control[] ctrls={txtID,txtTitle}</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetControlAttributes(System.Web.UI.WebControls.Button,MyQuery.Utils.TextBoxVal[],System.String)">
+            <summary>
+            设定控件脚本控制（针对TextBoxEx）和提交按钮校验脚本
+            </summary>
+            <param name="btn">提交按钮对象</param>
+            <param name="ctrls">校验控件对象列表Control[] ctrls={txtID,txtTitle}</param>
+            <param name="js">附加的脚本 必须返回true false</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetValidateScript(MyQuery.Utils.TextBoxVal[])">
+            <summary>
+            获得验证脚本 无时返回null
+            </summary>
+            <param name="ctrls">校验控件对象列表Control[] ctrls={txtID,txtTitle}</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.getMessage(System.String,System.String)">
+            <summary>
+            获得提示信息
+            </summary>
+            <param name="valid"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.BindListCtrl(System.Data.DataTable,System.Web.UI.WebControls.ListControl,System.Boolean)">
+            <summary>
+            绑定DropDownList，CheckBoxList，RadioButtonList，ListBox控件
+            </summary>
+            <param name="dt">数据（至少需2个字段 0列值 1列显示 2列是标志是否选中）</param>
+            <param name="listCtrl">DropDownList，CheckBoxList，RadioButtonList，ListBox控件id值</param>
+            <param name="isAll">有否“请选择”</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.BindListCtrl(System.Web.UI.WebControls.ListControl,System.Data.DataTable,System.String,System.String)">
+            <summary>
+            绑定DropDownList，CheckBoxList，RadioButtonList，ListBox控件
+            </summary>
+            <param name="listCtrl">DropDownList，CheckBoxList，RadioButtonList，ListBox控件id值</param>
+            <param name="dt">数据</param>
+            <param name="valueField">值列</param>
+            <param name="textField">展示列</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.BindByCopy(System.Web.UI.WebControls.ListControl,System.Web.UI.WebControls.ListControl)">
+            <summary>
+            从另一个列表控件拷贝绑定
+            </summary>
+            <param name="listTo"></param>
+            <param name="listForm"></param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.FindControls(System.Web.UI.Control,System.String)">
+            <summary>
+            根据ID查找控件,查找方式为模糊查找
+            </summary>
+            <param name="parent"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.FindControls(System.Web.UI.Control,System.Type)">
+            <summary>
+            根据控件类型查找控件
+            </summary>
+            <param name="parent"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.FindControls(System.Web.UI.Control,System.String,System.Type)">
+            <summary>
+            根据控件ID和控件类型查找控件
+            </summary>
+            <param name="parent"></param>
+            <param name="id"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper._FindControls(System.Collections.ArrayList,System.Web.UI.Control,System.String)">
+            <summary>
+            递归调用将找到的控件加入arrayList
+            </summary>
+            <param name="controlCollection"></param>
+            <param name="parent"></param>
+            <param name="id"></param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper._FindControls(System.Collections.ArrayList,System.Web.UI.Control,System.Type)">
+            <summary>
+            递归调用将找到的控件加入arrayList
+            </summary>
+            <param name="arrayList"></param>
+            <param name="parent"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper._FindControls(System.Collections.ArrayList,System.Web.UI.Control,System.String,System.Type)">
+            <summary>
+            递归调用将找到的控件加入arrayList
+            </summary>
+            <param name="arrayList"></param>
+            <param name="parent"></param>
+            <param name="id"></param>
+            <param name="type"></param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetWidth(System.String)">
+            <summary>
+            获得宽度值
+            </summary>
+            <param name="width"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetMySql(MyQuery.Utils.MySqlParameters,System.Web.UI.WebControls.WebControl)">
+            <summary>
+            将控件ID作为字段，并将控件的值添加到MySqlParameters集合中 注意控件不可用时忽略
+            </summary>
+            <param name="mySql">集合对象</param>
+            <param name="ctrl">支持TextBoxVal（推荐）、TextBox、ListControl、CheckBox、Label</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetMySql(MyQuery.Utils.MySqlParameters,System.Web.UI.WebControls.TextBox,System.Boolean)">
+            <summary>
+            将控件ID作为字段，并将控件的值添加到MySqlParameters集合中 注意控件不可用时忽略
+            仅处理name[id]格式
+            </summary>
+            <param name="mySql">集合对象</param>
+            <param name="ctrl">支持TextBoxVal（推荐）、TextBox</param>
+            <param name="isId">是否取id 否则取name</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.SetControl(System.Data.DataTable,System.Web.UI.WebControls.WebControl)">
+            <summary>
+            给控件赋值 注意只取表第一条记录 控件ID为字段名
+            </summary>
+            <param name="dt">数据表 至少有一条数据</param>
+            <param name="ctrl">支持TextBox、ListControl、CheckBox、Label</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.BindTreeView(System.Data.DataTable,System.String,System.Web.UI.WebControls.TreeView)">
+            <summary>
+            绑定TreeView控件数据
+            </summary>
+            <param name="dt">数据：0列为id标示，1列为text展示，2列为checked是否选中(1标示选中)，3列为parentid上级id，4列为sn排序</param>
+            <param name="parentID">parentid条件（当null时无条件）</param>
+            <param name="tv">TreeView控件</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.BindTreeView(System.Data.DataTable,System.Web.UI.WebControls.TreeNode)">
+            <summary>
+            绑定TreeView控件节点的数据
+            </summary>
+            <param name="dt">数据：0列为id标示，1列为text展示，2列为checked是否选中，3列为parentid上级id，4列为sn排序</param>
+            <param name="parentNode">TreeView控件节点</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetTreeSelects(System.Web.UI.WebControls.TreeNode,System.Boolean)">
+            <summary>
+            递归获得选中值
+            </summary>
+            <param name="parentNode"></param>
+            <param name="isBracket">是否为name[id]显示</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetAppConfig(System.String)">
+            <summary>
+            获取指定的在AppSettings节name的配置值
+            </summary>
+            <param name="name">配置</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetMyXmlPath">
+            <summary>
+            获取指定的在AppSettings节myxmlpath的配置值
+            </summary>
+            <returns>值</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetDbType">
+            <summary>
+            获取指定的在AppSettings制定CurrentDBType的配置值，并转为DbType类型
+            </summary>
+            <returns>值</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetConnectionString(MyQuery.Utils.DBType)">
+            <summary>
+            根据数据库类型获得AppSettings节的连接字符串
+            </summary>
+            <param name="dbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetPageSize">
+            <summary>
+            获取指定的在AppSettings节PageSize的配置值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetPublicKey">
+            <summary>
+            获取指定的在AppSettings节publickey的配置值
+            </summary>
+            <returns>值</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetIsSysLog">
+            <summary>
+            获取指定的在AppSettings节IsSysLog的配置值
+            </summary>
+            <returns>是否启用系统操作语句日志</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetFilePath">
+            <summary>
+            获取指定的在AppSettings节filepath的配置值
+            </summary>
+            <returns>值</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetIsAdminDegion">
+            <summary>
+            获取指定的在AppSettings节publickey的配置值
+            </summary>
+            <returns>值</returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetUserCompany">
+            <summary>
+            用户名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.GetMaxRequestLength">
+            <summary>
+            获取Web.config中maxRequestLength配置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.CookieWrite(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            添加Cookie
+            </summary>
+            <param name="name">名称</param>
+            <param name="key">键</param>
+            <param name="value">值</param>
+            <param name="days">保存天数</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.CookieWrite(System.String,System.String)">
+            <summary>
+            添加Cookie user的值
+            </summary>
+            <param name="key"></param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.CookieRead(System.String,System.String)">
+            <summary>
+            取Cookie值
+            </summary>
+            <param name="name">名称</param>
+            <param name="key">键 空则取cookie的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.CookieRead(System.String)">
+            <summary>
+            取Cookie user的值
+            </summary>
+            <param name="key">键 空则取cookie的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.CookieRemove(System.String)">
+            <summary>
+            删除Cookie
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.WSInvokeMethod(System.String,System.String,System.String,System.Object[])">
+            <summary>
+            动态调用WebService
+            </summary>
+            <param name="url">如：WebService.asmx</param>
+            <param name="ns">如：MyQuery.Web</param>
+            <param name="method">方法</param>
+            <param name="args">参数</param>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.createWSProxy(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ns"></param>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.WebHelper.getWsdl(System.String)">
+            <summary>
+            使用 WebClient 下载 WSDL 信息
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Utils.FormListItem">
+            <summary>
+            winform下拉列表绑定对象
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.FormListItem.ToString">
+            <summary>
+            值对象字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.FormListItem.#ctor(System.String,System.Object)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="text"></param>
+            <param name="value"></param>
+        </member>
+        <member name="P:MyQuery.Utils.FormListItem.Text">
+            <summary>
+            显示字符串
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.FormListItem.Value">
+            <summary>
+            实际值
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.MachineHelper">
+            <summary>
+            封装获得机器信息
+            by 贾世义 2011-4-26
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.MachineHelper.GetVolumeSerial(System.String)">
+            <summary>
+            return   Volume   Serial   Number   from   hard   drive   
+            </summary>   
+            <param   name="strDriveLetter">[optional]   Drive   letter</param>   
+            <returns>[string]   VolumeSerialNumber</returns>   
+        </member>
+        <member name="M:MyQuery.Utils.MachineHelper.GetMACAddress">
+            <summary>   
+            Returns   MAC   Address   from   first   Network   Card   in   Computer   
+            </summary>   
+            <returns>[string]   MAC   Address</returns>   
+        </member>
+        <member name="M:MyQuery.Utils.MachineHelper.GetCPUId">
+            <summary>   
+            Return   processorId   from   first   CPU   in   machine   
+            </summary>   
+            <returns>[string]   ProcessorId</returns>   
+        </member>
+        <member name="M:MyQuery.Utils.MachineHelper.GetBIOSNumber">
+            <summary>   
+            Return   processorId   from   first   CPU   in   machine   
+            </summary>   
+            <returns>[string]   ProcessorId</returns>   
+        </member>
+        <member name="T:MyQuery.Utils.LogHelper">
+            <summary>
+            封装自定义文本日志处理
+            by 贾世义 2011-07-01
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.LogHelper.WriteToFile(System.String,System.String)">
+            <summary>
+            写日志 文件将保存在 配置的filepath目录下的log文件夹中并按照指定的前缀名形成日期文档
+            </summary>
+            <param name="filePre">文件名称前缀</param>
+            <param name="message"></param>
+        </member>
+        <member name="T:MyQuery.Utils.DataHelper">
+            <summary>
+            封装数据的辅助处理工具
+            by 贾世义 2009-1-1
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetCrossTable(System.Data.DataTable)">
+            <summary>
+            将DataTable的第二列的值转化为列（即将原来的行表，转化成交叉表，没有对应值则默认0）
+            </summary>
+            <param name="dt">必须三列，第三列为值</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetDataTableValue(System.Data.DataTable,System.Int32,System.String)">
+            <summary>
+            获取指定行、列值
+            </summary>
+            <param name="dt"></param>
+            <param name="index">行号</param>
+            <param name="colName"></param>
+            <returns>如无此列返回null</returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetValue(System.Data.DataRow,System.String)">
+            <summary>
+            获得行的指定列的值对象 不存在则从Request中取
+            </summary>
+            <param name="dr"></param>
+            <param name="colName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetValue(System.Object,System.String)">
+            <summary>
+            获得行的指定列的值对象
+            </summary>
+            <param name="obj">DataRow或DataRowView对象</param>
+            <param name="colName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetValue(System.Data.DataRow,System.String,System.String)">
+            <summary>
+            获得行的指定列的值
+            </summary>
+            <param name="dr">DataRow对象</param>
+            <param name="colName">列名</param>
+            <param name="format">格式串，不提供则直接返回ToString()的值</param>
+            <returns>不会返回null，可能返回空</returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetSelects(System.Data.DataTable)">
+            <summary>
+            将dt的0列作为值 存入NameValueCollection集合
+            </summary>
+            <param name="dt">第一列为值 二列为文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetSelects(System.String)">
+            <summary>
+            将值,文本;值,文本 存入NameValueCollection集合
+            </summary>
+            <param name="str">格式：值,文本;值,文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetDataFirstCol(System.Data.DataTable)">
+            <summary>
+            将DataTable的第一列转化为字符串数组
+            </summary>
+            <param name="dt"></param>
+            <returns>字符串数组，如无数据则返回空数组</returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.ReSetDataSet(System.Data.DataSet,System.Data.DataView)">
+            <summary>
+            将dv.ToTable替换调ds的第一个DataTable
+            </summary>
+            <param name="ds">数据集</param>
+            <param name="dv">视图</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetBoolValue(System.Object)">
+            <summary>
+            转换为bool值
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.HasEmptyValue(System.Object[])">
+            <summary>
+            判断集合对象中是否有空值
+            </summary>
+            <param name="objs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.IsNullOrEmpty(System.Data.DataTable)">
+            <summary>
+            判断DataTable是否为null或空
+            </summary>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.IsNullOrHollow(System.Object)">
+            <summary>
+            判断集合对象是否为null或空集合
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.ReverseString(System.String)">
+            <summary>
+            将字符串反置
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.IsFormatIn(System.String)">
+            <summary>
+            替换符{0}是否存在
+            </summary>
+            <param name="str">字符串</param>
+            <returns>存在返回true</returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetColor(System.String)">
+            <summary>
+            将RGB转成颜色
+            </summary>
+            <param name="str">格式255,255,255或#FFFFFF</param>
+            <returns>值为空或错误时返回null</returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetUniqueCode">
+            <summary>
+            获得20位唯一值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetBlockIn(System.String,System.String,System.Int32)">
+            <summary>
+            获得指定标记之间的字符串
+            </summary>
+            <param name="result">包含标记的字符串</param>
+            <param name="mark">标记</param>
+            <param name="p">标记开始位置</param>
+            <returns>不符合则返回null</returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetBlockIn(System.String,System.String)">
+            <summary>
+            获得指定标记之间的字符串
+            </summary>
+            <param name="result">包含标记的字符串</param>
+            <param name="mark">标记</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.TrimSBCSpace(System.String)">
+            <summary>
+            去除字符串前后的所有空字符
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.RemoveSpace(System.String)">
+            <summary>
+            去除字符串所有空白字符
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetValue(System.Object)">
+            <summary>
+            获取对象的字符串值 当日期时转换为指定格式 若不大于指定的最小值则为""
+            </summary>
+            <param name="obj"></param>
+            <returns>当null时返回""</returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetValue(System.String,System.Object)">
+            <summary>
+            按照指定格式获得输出的字符串
+            </summary>
+            <param name="format">当数据源为DataRow时format可表示列名</param>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetStringNoHtml(System.String)">
+            <summary>
+            将Html标签转化为空
+            </summary>
+            <param name="strHtml">待转化的字符串</param>
+            <returns>经过转化的字符串</returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetSuitValue(System.Object,System.String)">
+            <summary>
+            获得符合长度的数据
+            </summary>
+            <param name="value"></param>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetSuitValue(System.String,System.Int32)">
+            <summary>
+            获得符合长度的数据
+            </summary>
+            <param name="value"></param>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetDataFormat(System.Type)">
+            <summary>
+            根据数据类型返回默认格式
+            </summary>
+            <param name="dataType">数据类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetCount(System.String,System.String)">
+            <summary>
+            获得字符串中包含字串的个数
+            </summary>
+            <param name="str">字符串</param>
+            <param name="sub">子字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetByteLength(System.String)">
+            <summary>
+            获得字符串的字节数
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.InStrings(System.String,System.String)">
+            <summary>
+            判断字符串name是否在names（,分割的字符串）中
+            </summary>
+            <param name="names"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetStrings(System.String)">
+            <summary>
+            将,分割的字符串转化为字符串数组
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetStrings(System.String,System.Char)">
+            <summary>
+            将分割的字符串转化为字符串数组
+            </summary>
+            <param name="str"></param>
+            <param name="split"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetString(System.Collections.ICollection,System.String)">
+            <summary>
+            将字符串数组转化为,分割的字符串 空则忽略
+            </summary>
+            <param name="objs">对象集合</param>
+            <param name="dataformat">数据格式 当数据源为DataRow集合时format可表示列名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetStringStart(System.String,System.String)">
+            <summary>
+            获得字符串中 split之前的字符串
+            </summary>
+            <param name="str"></param>
+            <param name="split"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetStringEnd(System.String,System.String)">
+            <summary>
+            获得字符串中 split之后的字符串
+            </summary>
+            <param name="str"></param>
+            <param name="split"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.IsNullOrEmpty(System.Object)">
+            <summary>
+            判断数据对象是否为null或空
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetKeyValue(System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            按照value获得NameValueCollection中的key
+            </summary>
+            <param name="selects"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetHtmlFormat(System.String)">
+            <summary>
+            获得html标示字符串
+            </summary>
+            <param name="strContent">输入引用字符串</param>
+            <returns>html标示字符串</returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetIDFromBracket(System.String)">
+            <summary>
+            从名字[ID]获取ID
+            </summary>
+            <param name="nameID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetNameFromBracket(System.String)">
+            <summary>
+            从名字[ID]获取名字
+            </summary>
+            <param name="nameID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.SetBracketNameID(System.String,System.String)">
+            <summary>
+            设置为名字[ID]样式
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.Equals(System.Object,System.Int32)">
+            <summary>
+            判断字符串是否与数值相同(当字符串为空时按照0对待）
+            </summary>
+            <param name="value"></param>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.Equals(System.String,System.DateTime)">
+            <summary>
+            判断字符串是否与日期相同(当字符串为空时按照当日对待对待）
+            </summary>
+            <param name="str"></param>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.IsNumeric(System.Object)">
+            <summary>
+            是否是数字(能转换为Double的数据)
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetDoubleValue(System.Object,System.Double)">
+            <summary>
+            安全获得Double的值
+            </summary>
+            <param name="value"></param>
+            <param name="def">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetSingleValue(System.Object,System.Single)">
+            <summary>
+            安全获得Single的值
+            </summary>
+            <param name="value"></param>
+            <param name="def">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetIntValue(System.Object,System.Int32)">
+            <summary>
+            安全获取int型数据
+            </summary>
+            <param name="value"></param>
+            <param name="def">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetDateFromPID(System.String)">
+            <summary>
+            从身份证中获得出生日期
+            </summary>
+            <param name="pid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.IsDateNull(System.DateTime)">
+            <summary>
+            若不大于指定的最小值则为true
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetDate(System.Object)">
+            <summary>
+            获取日期 如不能转换 则为null
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetDataDate(System.DateTime)">
+            <summary>
+            获得数据库认可的日期值 超出的返回最小或最大值
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetDateValue(System.Object)">
+            <summary>
+            安全获取DateTime型的字符串数据
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetDateValue(System.Object,System.DateTime)">
+            <summary>
+            安全获取DateTime型数据
+            </summary>
+            <param name="value"></param>
+            <param name="def">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetMaxValue(System.String,System.String)">
+            <summary>
+            获得不大于maxvalue的日期
+            </summary>
+            <param name="value"></param>
+            <param name="maxvalue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetWeekStart(System.String,System.Int32)">
+            <summary>
+            获得当周起始日期
+            </summary>
+            <param name="dateTimeString">提供日期</param>
+            <param name="weekStart">周开始(0为周日 1周一 2周二 3周三 4周四 5 周五 6 周六)</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetWeekStart(System.DateTime,System.Int32)">
+            <summary>
+            获得当周起始日期
+            </summary>
+            <param name="startDate">提供日期</param>
+            <param name="weekStart">周开始(0为周日 1周一 2周二 3周三 4周四 5 周五 6 周六)</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetDateDiff(System.DateTime,System.DateTime)">
+            <summary>
+            获得日期间隔的天数
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetWeekOfYear(System.DateTime)">
+            <summary>   
+            获取某一日期是该年中的第几周   
+            </summary>   
+            <param name="dt">日期</param>   
+            <returns>该日期在该年中的周数</returns>   
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetOverDate(System.Int32,System.Object)">
+            <summary>
+            获取可超期日期
+            </summary>
+            <param name="days">天数</param>
+            <param name="sdate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.DataHelper.GetOverDate(System.Double,System.Object,System.Object)">
+            <summary>
+            获取可超期日期
+            </summary>
+            <param name="timeLimitPercent"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Utils.IniHelper">
+            <summary>
+            ini 文件处理封装
+            by 贾世义 2012-1-20
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.IniHelper.IniWriteValue(System.String,System.String,System.String,System.String)">
+            <summary>
+            写INI文件
+            </summary>
+            <param name="section">段</param>
+            <param name="key">主键</param>
+            <param name="value">值</param>
+            <param name="filename">INI文件完整名</param>
+        </member>
+        <member name="M:MyQuery.Utils.IniHelper.IniReadValueString(System.String,System.String,System.String,System.String)">
+            <summary>
+            读INI文件
+            </summary>
+            <param name="section">段</param>
+            <param name="key">主键</param>
+            <param name="def">默认值</param>
+            <param name="filename">INI文件完整名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.IniHelper.IniReadValueInt(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            读INI文件
+            </summary>
+            <param name="section">段</param>
+            <param name="key">主键</param>
+            <param name="def">默认值</param>
+            <param name="filename">INI文件完整名</param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Utils.EncryptHelper">
+            <summary>
+            加解密处理方法工具
+            by 贾世义 2009-3-5
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.EncryptHelper.GetPassword(System.String)">
+            <summary>
+            获得MD5加密后的字符串（不可逆）
+            </summary>
+            <param name="password">明码</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.EncryptHelper.DesEncode(System.String,System.String,System.String)">
+            <summary>
+            获得Des加密后字符串
+            </summary>
+            <param name="data">待加密字符</param>
+            <param name="keyCode1">密钥</param>
+            <param name="keyCode2">密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.EncryptHelper.DesDecode(System.String,System.String,System.String)">
+            <summary>
+            获得Des解密后字符串
+            </summary>
+            <param name="data">待解密字符串</param>
+            <param name="keyCode1">密钥</param>
+            <param name="keyCode2">密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.EncryptHelper.XmlEncode(System.String,System.String)">
+            <summary>
+            Xml文档加密
+            </summary>
+            <param name="xmlstring">待加密字符串</param>
+            <param name="keyCode1">密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.EncryptHelper.XmlDecode(System.Xml.XmlDocument,System.String,System.String)">
+            <summary>
+            Xml文档解密
+            </summary>
+            <param name="doc">待解密Xml</param>
+            <param name="keyCode1">密钥</param>
+            <param name="keyCode2">密钥</param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Utils.ADHelper">
+            <summary>
+            活动目录辅助类。封装一系列活动目录操作相关的方法。
+            by 贾世义 2013-1-30
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.DomainName">
+            <summary>
+            域名
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADPath">
+            <summary>
+            LDAP根路径,如"LDAP://dev-dc"
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADDomain">
+            <summary>
+            LDAP域名,如"DC=km,DC=com,DC=cn"
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADRootOU">
+            <summary>
+            LDAP根OU,如"OU=长城宽带"
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADUser">
+            <summary>
+            超级管理员登录帐号
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADPassword">
+            <summary>
+            超级管理员登录密码
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.impersonate">
+            <summary>
+            扮演类实例
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetADBasicPathString">
+            <summary>
+            <date>2013-1-15</date>
+            <developer>黄瑞</developer>
+            <function>获得一个LDAP原始路径的字符串</function>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetADPathString">
+            <summary>
+            <date>2005-11-3</date>
+            <developer>IRD-黄瑞</developer>
+            <function>获得一个LDAP路径的字符串</function>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetADPathString(System.String)">
+            <summary>
+            <date>2005-11-3</date>
+            <developer>IRD-黄瑞</developer>
+            <function>获得一个LDAP路径的字符串</function>
+            </summary>
+            <param name="strADPath">传入当前的LDAP成员</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetDirectoryObject">
+            <summary>
+            获得在webconfig中配置的根DirectoryEntry对象实例,以管理员登陆AD
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetDirectoryObject(System.String)">
+            <summary>
+            获得给定LDAP路径下的DirectoryEntry对象实例,以管理员登陆AD
+            </summary>
+            <param name="strFullLDAPPath">LDAP全路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetDirectoryEntry(System.String,System.String)">
+            <summary>
+            根据用户公共名称取得用户的对象
+            </summary>
+            <param name="strLDAPPath">LDAP全路径</param>
+            <param name="commonName">用户公共名称</param>
+            <returns>如果找到该用户，则返回用户的对象；否则返回 null</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetDirectoryEntryByAccount(System.String)">
+            <summary>
+            根据用户帐号取得webconfig中配置的LDAP根路径下用户的对象
+            </summary>
+            <param name="sAMAccountName">用户帐号名</param>
+            <returns>如果找到该用户，则返回用户的对象；否则返回 null</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetDirectoryEntryByAccount(System.String,System.String)">
+            <summary>
+            根据用户帐号取得给定LDAP路径下用户的对象
+            </summary>
+            <param name="strLDAPPath">LDAP全路径</param>
+            <param name="sAMAccountName">用户帐号名</param>
+            <returns>如果找到该用户，则返回用户的对象；否则返回 null</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetDirectoryEntryOfGroup(System.String,System.String)">
+            <summary>
+            根据组名取得用户组的对象
+            </summary>
+            <param name="strLDAPPath">LDAP全路径</param>
+            <param name="groupName">组名</param>
+            <returns><see cref="T:System.DirectoryServices.DirectoryEntry"/></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.ModifyUserPropertyInOU(System.String,System.String,System.String)">
+            <summary>
+            修改给定OU下所有人员的部门信息,用于特殊用途,不通用
+            </summary>
+            <param name="strLDAPPath"></param>
+            <param name="strOldDepName"></param>
+            <param name="strNewDepName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetProperty(System.DirectoryServices.DirectoryEntry,System.String)">
+            <summary>
+            获得指定属性名对应的值
+            </summary>
+            <param name="de"><see cref="!:System.DirectoryService.DirectoryEntry"/></param>
+            <param name="propertyName">属性名称</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetProperty(System.DirectoryServices.SearchResult,System.String)">
+            <summary>
+            获得指定搜索结果中指定属性名对应的值
+            </summary>
+            <param name="searchResult"><see cref="T:System.DirectoryServices.SearchResult"/></param>
+            <param name="propertyName">属性名称</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.SetProperty(System.DirectoryServices.DirectoryEntry,System.String,System.String)">
+            <summary>
+            设置指定的属性值
+            </summary>
+            <param name="de"><see cref="T:System.DirectoryServices.DirectoryEntry"/></param>
+            <param name="propertyName">属性名称</param>
+            <param name="propertyValue">属性值</param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.CreateNewOU(System.String)">
+            <summary>
+            在webconfig中配置的根下创建新的组织单元
+            </summary>
+            <param name="strOUName">名称</param>
+            <returns><see cref="T:System.DirectoryServices.DirectoryEntry"/></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.CreateNewOU(System.String,System.String)">
+            <summary>
+            在给定的根下创建新的组织单元
+            </summary>
+            <param name="strOUName">名称</param>
+            <param name="strLDAPPath">给定的LDAP路径</param>
+            <returns><see cref="T:System.DirectoryServices.DirectoryEntry"/></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetExistOU(System.String,System.String)">
+            <summary>
+            判断在给定的根下组织单元是否存在
+            </summary>
+            <param name="strOUName">名称</param>
+            <param name="strLDAPPath">给定的LDAP路径</param>
+            <returns><see cref="T:System.DirectoryServices.DirectoryEntry"/></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.IsOUExist(System.String)">
+            <summary>
+            判断在给定的根下组织单元是否存在
+            </summary>
+            <param name="strOUName"></param>
+            <param name="strLDAPPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.ModifyOldOU(System.String,System.String)">
+            <summary>
+            根据DirectoryEntry的路径修改已有的组织单元
+            </summary>
+            <param name="strOUName">名称</param>
+            <param name="strLDAPPath">DirectoryEntry路径</param>
+            <returns><see cref="T:System.DirectoryServices.DirectoryEntry"/></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.DeleteOldOU(System.String)">
+            <summary>
+            根据DirectoryEntry的路径删除已有的组织单元
+            </summary>
+            <param name="strLDAPPath">DirectoryEntry路径</param>
+            <returns>true/false</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.CreateNewUser(System.String)">
+            <summary>
+            创建新的用户
+            </summary>
+            <param name="sAMAccountName">帐号</param>
+            <returns><see cref="T:System.DirectoryServices.DirectoryEntry"/></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.ModifyOldUser(System.String,System.String,System.String)">
+            <summary>
+            修改人员信息
+            </summary>
+            <param name="sAMAccountName"></param>
+            <param name="strNewName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.CreateCDOEXMailBox(System.String,System.String,System.String)">
+            <summary>
+            创建邮箱
+            </summary>
+            <param name="strADSIUserPath">用户LDAP路径</param>
+            <param name="strExchServer">Exchange服务器名</param>
+            <param name="strDomainName">域名</param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.IsUserExists(System.String,System.String)">
+            <summary>
+            判断指定公共名称的用户是否存在
+            </summary>
+            <param name="strLDAPPath">LDAP全路径</param>
+            <param name="commonName">用户公共名称</param>
+            <returns>如果存在，返回 true；否则返回 false</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.IsUserExists(System.String)">
+            <summary>
+            判断指定帐号的用户是否存在
+            </summary>
+            <param name="strsAMAccountName">用户帐号</param>
+            <returns>如果存在，返回 true；否则返回 false</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.IsAccountActive(System.Int32)">
+            <summary>
+            判断用户帐号是否激活
+            </summary>
+            <param name="userAccountControl">用户帐号属性控制器</param>
+            <returns>如果用户帐号已经激活，返回 true；否则返回 false</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.Login(System.String,System.String,System.String)">
+            <summary>
+            判断用户与密码是否足够以满足身份验证进而登录
+            </summary>
+            <param name="strLDAPPath">LDAP全路径</param>
+            <param name="commonName">用户公共名称</param>
+            <param name="password">密码</param>
+            <returns>如能可正常登录，则返回 true；否则返回 false</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.LoginByAccount(System.String,System.String)">
+            <summary>
+            判断用户帐号与密码是否足够以满足身份验证进而登录
+            </summary>
+            <param name="sAMAccountName">用户帐号</param>
+            <param name="password">密码</param>
+            <returns>如能可正常登录，则返回 true；否则返回 false</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.SetPassword(System.String,System.String,System.String)">
+            <summary>
+            设置用户密码，管理员可以通过它来修改指定用户的密码。
+            </summary>
+            <param name="strLDAPPath">LDAP全路径</param>
+            <param name="commonName">用户公共名称</param>
+            <param name="newPassword">用户新密码</param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.SetPasswordByAccount(System.String,System.String)">
+            <summary>
+            设置帐号密码，管理员可以通过它来修改指定帐号的密码。
+            </summary>
+            <param name="sAMAccountName">用户帐号</param>
+            <param name="newPassword">用户新密码</param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.EnableUser(System.String,System.String)">
+            <summary>
+            启用指定公共名称的用户
+            </summary>
+            <param name="strLDAPPath">LDAP全路径</param>
+            <param name="commonName">用户公共名称</param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.EnableUserByAccount(System.String)">
+            <summary>
+            启用指定帐号的用户
+            </summary>
+            <param name="commonName">用户帐号</param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.EnableUser(System.DirectoryServices.DirectoryEntry)">
+            <summary>
+            启用指定 <see cref="!:System.DirectoryService.DirectoryEntry"/> 的用户
+            </summary>
+            <param name="de"><see cref="!:System.DirectoryService.DirectoryEntry"/></param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.DeleteUser(System.String)">
+            <summary>
+            根据帐号删除用户
+            </summary>
+            <param name="strsAMAccountName">帐号</param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.DisableUser(System.String,System.String)">
+            <summary>
+            禁用指定公共名称的用户
+            </summary>
+            <param name="commonName">用户公共名称</param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.DisableUserByAccount(System.String)">
+            <summary>
+            禁用指定帐号的用户
+            </summary>
+            <param name="strsAMAccountName">用户帐号</param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.DisableUser(System.DirectoryServices.DirectoryEntry)">
+            <summary>
+            禁用指定 <see cref="!:System.DirectoryService.DirectoryEntry"/> 的用户
+            </summary>
+            <param name="de"><see cref="!:System.DirectoryService.DirectoryEntry"/></param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.AddUserToGroup(System.String,System.String,System.String)">
+            <summary>
+            将指定的用户添加到指定的组中。
+            </summary>
+            <param name="strLDAPPath">LDAP全路径</param>
+            <param name="strsAMAccountName">用户帐号</param>
+            <param name="groupName">组名</param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.RemoveUserFromGroup(System.String,System.String,System.String)">
+            <summary>
+            将用户从指定组中移除。
+            </summary>
+            <param name="strLDAPPath">LDAP全路径</param>
+            <param name="strsAMAccountName">用户帐号</param>
+            <param name="groupName">组名</param>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.MoveUser(System.String,System.String)">
+            <summary>
+            把用户移动到新的OU
+            </summary>
+            <param name="strsAMAccountName">用户帐号</param>
+            <param name="strNewLDAPPath">要移动到OU的LDAP路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetShortDomain(System.String)">
+            <summary>
+            从LDAP域中获取短域名,DC=km,DC=com,DC=cn ---> km.com.cn
+            </summary>
+            <param name="strLDAPDomain"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetUserCountInOU(System.String)">
+            <summary>
+            获取分公司的邮箱数目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ADHelper.GetAllUserCount">
+            <summary>
+            获取所有的邮箱数目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Utils.ADHelper.LoginResult">
+            <summary>
+            用户登录验证结果
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.LoginResult.LOGIN_USER_OK">
+            <summary>
+            正常登录
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.LoginResult.LOGIN_USER_DOESNT_EXIST">
+            <summary>
+            用户不存在
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.LoginResult.LOGIN_USER_ACCOUNT_INACTIVE">
+            <summary>
+            用户帐号被禁用
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.LoginResult.LOGIN_USER_PASSWORD_INCORRECT">
+            <summary>
+            用户密码不正确
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM">
+            <summary>
+            用户属性定义标志
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_SCRIPT">
+            <summary>
+            登录脚本标志。如果通过 ADSI LDAP 进行读或写操作时，该标志失效。如果通过 ADSI WINNT，该标志为只读。
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_ACCOUNTDISABLE">
+            <summary>
+            用户帐号禁用标志
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_HOMEDIR_REQUIRED">
+            <summary>
+            主文件夹标志
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_LOCKOUT">
+            <summary>
+            过期标志
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_PASSWD_NOTREQD">
+            <summary>
+            用户密码不是必须的
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_PASSWD_CANT_CHANGE">
+            <summary>
+            密码不能更改标志
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_ENCRYPTED_TEXT_PASSWORD_ALLOWED">
+            <summary>
+            使用可逆的加密保存密码
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_TEMP_DUPLICATE_ACCOUNT">
+            <summary>
+            本地帐号标志
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_NORMAL_ACCOUNT">
+            <summary>
+            普通用户的默认帐号类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_INTERDOMAIN_TRUST_ACCOUNT">
+            <summary>
+            跨域的信任帐号标志
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_WORKSTATION_TRUST_ACCOUNT">
+            <summary>
+            工作站信任帐号标志
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_SERVER_TRUST_ACCOUNT">
+            <summary>
+            服务器信任帐号标志
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_DONT_EXPIRE_PASSWD">
+            <summary>
+            密码永不过期标志
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_MNS_LOGON_ACCOUNT">
+            <summary>
+            MNS 帐号标志
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_SMARTCARD_REQUIRED">
+            <summary>
+            交互式登录必须使用智能卡
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_TRUSTED_FOR_DELEGATION">
+            <summary>
+            当设置该标志时，服务帐号（用户或计算机帐号）将通过 Kerberos 委托信任
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_NOT_DELEGATED">
+            <summary>
+            当设置该标志时，即使服务帐号是通过 Kerberos 委托信任的，敏感帐号不能被委托
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_USE_DES_KEY_ONLY">
+            <summary>
+            此帐号需要 DES 加密类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_DONT_REQUIRE_PREAUTH">
+            <summary>
+            不要进行 Kerberos 预身份验证
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_PASSWORD_EXPIRED">
+            <summary>
+            用户密码过期标志
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ADHelper.ADS_USER_FLAG_ENUM.ADS_UF_TRUSTED_TO_AUTHENTICATE_FOR_DELEGATION">
+            <summary>
+            用户帐号可委托标志
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.IdentityImpersonation">
+            <summary>
+            用户模拟角色类。实现在程序段内进行用户角色模拟。
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.IdentityImpersonation.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="impersonationUsername">所要模拟的用户的用户名</param>
+            <param name="impersonationPassword">所要模拟的用户的密码</param>
+            <param name="impersonationDomain">所要模拟的用户所在的域</param>
+        </member>
+        <member name="M:MyQuery.Utils.IdentityImpersonation.Finalize">
+            <summary>
+            析构函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.IdentityImpersonation.BeginImpersonate">
+            <summary>
+            开始身份角色模拟。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.IdentityImpersonation.StopImpersonate">
+            <summary>
+            停止身分角色模拟。
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.TxtHelper">
+            <summary>
+            封装Txt文件处理
+            by 贾世义 2011-5-27
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.TxtHelper.GetDataFromTxt(System.String,System.String,System.Char,System.Boolean)">
+            <summary>
+            加载txt数据到DataSet
+            </summary>
+            <param name="fileName">完整路径txt文件名 以.txt为后缀</param>
+            <param name="encoding">字符类型 默认GBK</param>
+            <param name="split">分割字符</param>
+            <param name="isFirstTitle">首行是否为标题行</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.TxtHelper.IsTxtFile(System.String)">
+            <summary>
+            是否为Txt读取支持的后缀类型
+            </summary>
+            <param name="fileName">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.TxtHelper.GetString(System.String)">
+            <summary>
+            读取文本
+            </summary>
+            <param name="fileName">完整文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.TxtHelper.WriteToFile(System.String,System.String,System.Boolean)">
+            <summary>
+            将文本写入文本文件
+            </summary>
+            <param name="name">完整文件名</param>
+            <param name="content">内容</param>
+            <param name="isCover">是否覆盖存在文件</param>
+        </member>
+        <member name="T:MyQuery.Utils.ExcelHelper">
+            <summary>
+            封装Excel的处理
+            by 贾世义 2009-1-19
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelHelper.EXCEL_COLS_MAX">
+            <summary>
+            Excel支持最大列数
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelHelper.EXCEL_ROWS_MAX">
+            <summary>
+            Excel支持最大行数
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.GetExcel">
+            <summary>
+            获得Excel的标准xml
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.CreateSheet(System.Xml.XmlDocument,System.String)">
+            <summary>
+            增加一个工作表
+            </summary>
+            <param name="doc"></param>
+            <param name="sheetName">工作表名称</param>
+            <returns>Worksheet的Table节点</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.CreateColumn(System.Xml.XmlNode,System.Int32,System.Double)">
+            <summary>
+            增加一列
+            </summary>
+            <param name="sheetTable">Worksheet的Table节点</param>
+            <param name="index">索引 从1开始</param>
+            <param name="width">宽度</param>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.CreateRow(System.Xml.XmlNode)">
+            <summary>
+            增加一行
+            </summary>
+            <param name="sheetTable">Worksheet的Table节点</param>
+            <returns>Row节点</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.CreateCell(System.Xml.XmlNode,System.Object,MyQuery.Utils.ExcelDataType,MyQuery.Utils.ExcelStyleType,System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            增加一个单元格
+            </summary>
+            <param name="row">Row节点</param>
+            <param name="value">值</param>
+            <param name="dataType">数据类型</param>
+            <param name="styleType">样式类型</param>
+            <param name="MergeAcross">向右另占列数</param>
+            <param name="MergeDown">向下另占行数</param>
+            <param name="HRef">链接URL</param>
+            <param name="index">索引 从1开始 0忽略</param>
+            <returns>Cell节点</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.CreateCell(System.Xml.XmlNode)">
+            <summary>
+            增加一个空单元格
+            </summary>
+            <param name="row">Row节点</param>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.GetPoint(System.String)">
+            <summary>
+            根据Excel中位置字母数字 获得Point
+            </summary>
+            <param name="strPoint">位置字符 如A1</param>
+            <returns>[x列索引,y行索引]</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.OutExcel(System.Data.DataSet)">
+            <summary>
+            根据ds导出Excel
+            </summary>
+            <param name="ds">要输出的DataSet</param>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.GetXmlDocument(System.String)">
+            <summary>
+            获取Excel的xml对象
+            </summary>
+            <param name="fileName"></param>
+            <returns>不符合时返回null</returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.GetDate(System.String)">
+            <summary>
+            根据Excel的日期字符串 返回日期值
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.getValue(System.String)">
+            <summary>
+            去掉日期的T和之后的时间
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.GetDataType(System.String)">
+            <summary>
+            根据配置的格式返回ExcelDataType
+            </summary>
+            <param name="dataFormat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.GetStyleType(System.String)">
+            <summary>
+            根据配置的格式返回ExcelStyleType
+            </summary>
+            <param name="dataFormat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.GetDataFormXml(System.String,System.Boolean)">
+            <summary>
+            将Excel的xml数据加载到DataSet中
+            </summary>
+            <param name="fileName">Xml完整文件名</param>
+            <param name="isFirstTitle">首行是否为标题行</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.GetDataFromExcel(System.String,System.Boolean)">
+            <summary>
+            获得Excel的数据到DataSet
+            </summary>
+            <param name="fileName">Excel完整文件名</param>
+            <param name="isFirstTitle">首行是否为标题行</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.IsExcelFile(System.String)">
+            <summary>
+            是否为Excel读取支持的后缀类型
+            </summary>
+            <param name="fileName">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ExcelHelper.OutExcel(System.Web.UI.Page,System.Data.DataTable,System.String)">
+            <summary>
+            将DataTable数据导出到excel
+            </summary>
+            <param name="page"></param>
+            <param name="ds"></param>
+            <param name="filename"></param>
+        </member>
+        <member name="T:MyQuery.Utils.ExcelDataType">
+            <summary>
+            支持的数据类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelDataType.String">
+            <summary>
+            文字
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelDataType.Number">
+            <summary>
+            数字
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelDataType.DateTime">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.ExcelStyleType">
+            <summary>
+            支持的样式类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelStyleType.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelStyleType.sCenter">
+            <summary>
+            居中
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelStyleType.sRight">
+            <summary>
+            居右
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelStyleType.sBold">
+            <summary>
+            加粗
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelStyleType.sCenterBold">
+            <summary>
+            居中加粗
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelStyleType.sDate">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelStyleType.sTime">
+            <summary>
+            日期带时间
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelStyleType.sLink">
+            <summary>
+            链接样式
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.ExcelStyleType.sPercent">
+            <summary>
+            百分数
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.Constants">
+            <summary>
+            常量
+            by 贾世义 2009-1-1
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.TRUE_ID">
+            <summary>
+            表示逻辑是的字符串1 多为Iflag的取值
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.FALSE_ID">
+            <summary>
+            表示逻辑否的字符串0 多为Iflag的取值
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.DATE_VALUE_MIN">
+            <summary>
+            日期的最小值(当小于等于最小值时显示为空) 1900-01-01
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.DATE_FORMART">
+             <summary>
+            日期输出的格式 yyyy-MM-dd
+             </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.TIME_FORMART">
+             <summary>
+            时间输出的格式 hh:mm:ss
+             </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.NORMAL_SPACE">
+            <summary>
+            正常间隔空白 4个空格
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.MYQUERY_RESET">
+            <summary>
+            查询模板 重置按钮的ID myquery_reset
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.MYQUERY_FROM">
+            <summary>
+            查询模板 开始的控件ID前缀 from_
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.MYQUERY_TO">
+            <summary>
+            查询模板 截止的控件ID前缀 to_
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.MYQUERY_AMOUNT">
+            <summary>
+            记录数列名 amount
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.MYQUERY_ORDERBY">
+            <summary>
+            orderby参数名称 orderby
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.MYQUERY_PAGEINDEX">
+            <summary>
+            pageindex参数名称 pageindex
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.MYQUERY_PAGESIZE">
+            <summary>
+            pagesize参数名称 pagesize
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.MYQUERY_RECORDCOUNT">
+            <summary>
+            行记录数 隐藏域的name
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.FROM_TO">
+            <summary>
+            FromToInt与FromToDate两个值的分割符 ~
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.MYGRIDVIEW">
+            <summary>
+            MyGridView使用的方法等命名前缀 mygridview_
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.MYQUERY_SELECTID">
+            <summary>
+            查询模板 选中行ID的隐藏域ID _selectid(前面需再加上Name) 
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.MYQUERY_NAME">
+            <summary>
+            模板接收xml文件名的参数name n
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.AREGUMENT_COMM">
+             <summary>
+            按钮回发前缀 comm$
+             </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.AREGUMENT_TAB">
+             <summary>
+            Tab回发前缀 tab$
+             </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.AREGUMENT_SORT">
+            <summary>
+            排序回发前缀 sort$
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.AREGUMENT_PAGE">
+            <summary>
+            页号回发前缀 page$
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.AREGUMENT_NAME">
+            <summary>
+            .NET 回发的命令参数名 __EVENTARGUMENT
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.MY_SPLIT">
+            <summary>
+            字符串默认分割字符,
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.SEMICOLON_SPLIT">
+            <summary>
+            列表中区分多个选项使用;
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.EQUAL">
+            <summary>
+            等于号 =
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.SQL_NULL">
+            <summary>
+            SQL的空值 NULL
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.HTML_SUFFIX">
+            <summary>
+            html文件的后缀 .htm
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.Constants.XML_SUFFIX">
+            <summary>
+            xml文件的后缀 .xml
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.Constants.GetMinDate">
+            <summary>
+            获得数据库认可的最小日期 1900-01-01
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.Constants.GetMaxDate">
+            <summary>
+            获得数据库认可的最大日期 9999-12-31
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Utils.MyUser">
+            <summary>
+            用户实体类
+            by 贾世义 2009-1-21
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.MyUser.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.MyUser.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id">用户账号</param>
+            <param name="password">密码</param>
+            <param name="name">姓名</param>
+        </member>
+        <member name="M:MyQuery.Utils.MyUser.IsAdmin">
+            <summary>
+            是否为管理员
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.MyUser.IsAdmin(MyQuery.Utils.MyUser)">
+            <summary>
+            是否为admin用户
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.Utils.MyUser.Id">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.MyUser.Name">
+            <summary>
+            用户姓名
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.MyUser.Password">
+            <summary>
+            存储以备调用外部资源时使用
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.MyUser.DepID">
+            <summary>
+            部门ID
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.MyUser.DataScope">
+            <summary>
+            数据范围
+            </summary>
+        </member>
+        <member name="P:MyQuery.Utils.MyUser.Functions">
+            <summary>
+            功能code 多个用,分割
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.DataScope">
+            <summary>
+            数据权限范围枚举
+            by 贾世义 2012-2-10
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.DataScope.Dep">
+            <summary>
+            部门 1
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.DataScope.Self">
+            <summary>
+            自己 0
+            </summary>
+        </member>
+        <member name="F:MyQuery.Utils.DataScope.All">
+            <summary>
+            全部 2
+            </summary>
+        </member>
+        <member name="T:MyQuery.Utils.ChinaHelper">
+            <summary>
+            封装中国特色的处理
+            by 贾世义 2011-8-24
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.ChinaHelper.GetChineseDay(System.DateTime)">
+            <summary>
+            获得农历日期
+            </summary>
+            <param name="m_Date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChinaHelper.GetChineseDate(System.DateTime)">
+            <summary>
+            获得农历日期  农历正月廿三
+            </summary>
+            <param name="m_Date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChinaHelper.GetDate(System.DateTime)">
+            <summary>
+            获得公历日期 格式：2008年08月08日
+            </summary>
+            <param name="m_Date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChinaHelper.GetWeek(System.DateTime)">
+            <summary>
+             返回格式化的星期显示 格式：星期日
+            </summary>
+            <param name="m_Date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChinaHelper.GetRMB(System.Double)">
+            <summary>
+            获得人民币大写（带整）
+            </summary>
+            <param name="val">小写</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChinaHelper.GetBrief(System.String)">
+            <summary>
+            返回给定字符串的首字母串 空格忽略
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChinaHelper.GetGbkX(System.String)">
+            <summary>
+            根据根据测字拼音排序得到首字母
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChinaHelper.NumberToEnglish(System.Double)">
+            <summary>
+            数字转英文（保留两位小数）
+            </summary>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChinaHelper.w2(System.String)">
+            <summary>
+            用来制作2位数字转英文
+            </summary>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Utils.SerializeHelper">
+            <summary>
+            序列号工具
+            by 贾世义 2013-1-12
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.SerializeHelper.Serialize(System.Object)">
+            <summary>
+            序列化对象，输出字符串
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.SerializeHelper.Deserialize(System.String)">
+            <summary>
+            从字符串反序列化对象
+            </summary>
+            <param name="serializeText"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Utils.ChartHelper">
+            <summary>
+            封装对MsChart相关配置
+            by 贾世义 2009-2-18
+            </summary>
+        </member>
+        <member name="M:MyQuery.Utils.ChartHelper.GetTemplate(System.String)">
+            <summary>
+            获得Chart模板对应的xml文件名
+            </summary>
+            <param name="template">skyblue,天蓝;warmtones,柔和;whitewmoke,白色;其它(样式自定义)</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChartHelper.GetDocking(System.String)">
+            <summary>
+            获得位置 默认Top
+            </summary>
+            <param name="docking">top:顶|bottom:底|left:左|right:右</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChartHelper.GetChartType(System.String)">
+            <summary>
+            获得图形类型 默认Column
+            </summary>
+            <param name="type">charttype="图像类型[area,区域范围;bar,条棒;boxplot,箱点;bubble,泡泡;candlestick,烛台;column,列;doughnut,圆环;fastline,快线;fastpoint,快点;kagi,升降;funnel,漏斗;line,线;pie,饼;point,点;pointandfigure,点绘;polar,极线;pyramid,金字塔;radar,雷达;range,范围;rangebar,范围条棒;rangecolumn,范围柱;renko,浮动;spline,齿条;splinearea,齿条区域;splinerange,齿条范围;stackedarea,艳丽区域;stackedarea100,艳丽区域100;stackedbar,艳丽条棒;stackedbar100,艳丽条棒100;stackedcolumn,艳丽柱;stackedcolumn100,艳丽柱100;stepline,直线条;stock,股票;threelinebreak,分割线]</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChartHelper.GetValueType(System.String)">
+            <summary>
+            获得值显示类型
+            </summary>
+            <param name="type">auto,自动;date,日期;datetime,日期时间;datetimeoffset,日期偏移量;double,双精度;int32,整数;int64,整数;string,字符串;time,时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChartHelper.GetLightStyle(System.String)">
+            <summary>
+            获得照明模式
+            </summary>
+            <param name="type">None,无;Simplistic,简单化的照明;Realistic,写实照明样式</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Utils.ChartHelper.GetMarkerStyle(System.String)">
+            <summary>
+            获得标记点形状
+            </summary>
+            <param name="type">None,无标记;Square,方形;Circle,圆形;Diamond,菱形;Triangle,三角;Cross,十字星;Star4,4角;Star5,五角;Star6,六角;Star10,十角</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

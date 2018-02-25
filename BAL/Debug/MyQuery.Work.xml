@@ -1,0 +1,2379 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyQuery.Work</name>
+    </assembly>
+    <members>
+        <member name="T:MyQuery.Work.BaseExpand">
+            <summary>
+            封装使用XML扩展页面的基类
+            普通窗口 继承MyQuery.Work.BasePage 使用扩展则继承MyQuery.Work.BaseExpand
+            使用扩展信息注意 1、仅支持一个表 2、不能支持验证 3、仅处理select部分 4、扩展字段不能和已处理的字段重复 5、需要开发人员拷贝示例代码
+            by 贾世义 2011-7-19 
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.BasePage">
+            <summary>
+            封装页面的基类
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.BaseWWW">
+            <summary>
+            针对网站访问页面的基类
+            by 贾世义 2011-8-28
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseWWW.QueryString">
+            <summary>
+            替代Page.Request.QueryString
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseWWW.name">
+            <summary>
+            xml名称或文件名（无后缀，目录用_代替）
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseWWW.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad排除注入代码和处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:MyQuery.Work.BaseWWW.AlertIndex">
+            <summary>
+            形成注册脚本唯一主键 防止注册不成功
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseWWW.Alert(System.String,System.String)">
+            <summary>
+            弹出指定信息
+            </summary>
+            <param name="message">提示信息</param>
+            <param name="id">控件id</param>
+        </member>
+        <member name="M:MyQuery.Work.BaseWWW.Alert(System.String)">
+            <summary>
+            弹出指定信息
+            </summary>
+            <param name="message">提示信息</param>
+        </member>
+        <member name="M:MyQuery.Work.BaseWWW.Redirect(System.String)">
+            <summary>
+            重定向
+            </summary>
+            <param name="relativeUrl">相对于当前页面地址或应用程序根路径下的 Web 路径或指定http://</param>
+        </member>
+        <member name="M:MyQuery.Work.BaseWWW.RedirectError(System.String)">
+            <summary>
+            定位到错误页
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseWWW.Close(System.String,System.Boolean)">
+            <summary>
+            关闭弹出的页面
+            </summary>
+            <param name="message">提示信息 无提示则直接关闭</param>
+            <param name="isReturn">是否返回true</param>
+        </member>
+        <member name="M:MyQuery.Work.BaseWWW.Close(System.String)">
+            <summary>
+            关闭弹出的页面
+            </summary>
+            <param name="message">提示信息 无提示则直接关闭</param>
+        </member>
+        <member name="M:MyQuery.Work.BaseWWW.SetSessionUser(MyQuery.Utils.MyUser)">
+            <summary>
+            将user对象保存到session
+            </summary>
+            <param name="myUser"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseWWW.IsAdmin">
+            <summary>
+            验证用户是否为管理员
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.BaseWWW.InitLanguage">
+            <summary>
+            加载语言
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseWWW.GetError(System.Exception)">
+            <summary>
+            获取详细的错误描述(原因开头)
+            </summary>
+            <param name="error">异常对象</param>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.Work.BaseWWW.Logger">
+            <summary>
+            系统日志接口
+            </summary>
+        </member>
+        <member name="P:MyQuery.Work.BaseWWW.CurrentUser">
+            <summary>
+            获得当前用户
+            </summary>
+        </member>
+        <member name="P:MyQuery.Work.BaseWWW.CookieUserAccount">
+            <summary>
+            获取或设置 当前用户的账户Cookie
+            </summary>
+        </member>
+        <member name="P:MyQuery.Work.BaseWWW.CookieUserCity">
+            <summary>
+            获取或设置 当前用户的城市Cookie
+            </summary>
+        </member>
+        <member name="P:MyQuery.Work.BaseWWW.IsModal">
+            <summary>
+            是否模式窗体
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BasePage.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad进行验证和处理
+            by 贾世义 2011-7-19 
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.Work.BasePage.IsRightUser">
+            <summary>
+            验证用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:MyQuery.Work.BaseExpand.mySql">
+            <summary>
+            SQL语句处理控件
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseExpand.myQuery">
+            <summary>
+            当前处理的配置集合
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseExpand.dataFrom">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseExpand.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad进行验证和处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseExpand.InitExpand(MyQuery.MyControl.MyInputs)">
+            <summary>
+            初始化扩展控件
+            </summary>
+            <param name="MyInputs1">控件</param>
+        </member>
+        <member name="M:MyQuery.Work.BaseExpand.SetExpand(MyQuery.MyControl.MyInputs,System.Data.DataTable)">
+            <summary>
+            扩展控件赋值
+            </summary>
+            <param name="MyInputs1"></param>
+            <param name="dt">数据表 只取第一行</param>
+        </member>
+        <member name="M:MyQuery.Work.BaseExpand.SetExpandDefaultValue(MyQuery.MyControl.MyInputs)">
+            <summary>
+            扩展控件赋值
+            </summary>
+            <param name="MyInputs1"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseExpand.DataBind(MyQuery.MyControl.MyInputs)">
+            <summary>
+            绑定扩展控件
+            </summary>
+            <param name="MyInputs1"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseExpand.AddMySql(MyQuery.MyControl.MyInputs)">
+            <summary>
+            将字段、值 加入mySql
+            </summary>
+            <param name="MyInputs1"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseExpand.GetValidateScript(MyQuery.MyControl.MyInputs,System.Boolean)">
+            <summary>
+            获得扩展字段的客户端验证脚本
+            </summary>
+            <param name="MyInputs1"></param>
+            <param name="isModify"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Work.Template">
+            <summary>
+            封装模板处理的封装
+            by 贾世义 2009-2-25
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.Template.SetGridViewStyle(MyQuery.MyControl.MyGridView)">
+            <summary>
+            初始化MyGridView1的样式等
+            </summary>
+            <param name="MyGridView1"></param>
+        </member>
+        <member name="M:MyQuery.Work.Template.GetMessage(MyQuery.Work.DataFrom,MyQuery.Utils.MySqlParameters,System.Boolean)">
+            <summary>
+            获得logger信息
+            </summary>
+            <param name="dataFrom"></param>
+            <param name="sqlParameters"></param>
+            <param name="isParameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.Template.GetValidateScript(MyQuery.MyControl.MyColumns,System.Boolean,System.String)">
+            <summary>
+            编辑列集合
+            </summary>
+            <param name="myColumns">列集合</param>
+            <param name="isModify">是否修改</param>
+            <param name="myinputid">MyInput.ID</param>
+            /// <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.Template.GetValidateMsg(MyQuery.MyControl.MyColumns,MyQuery.Work.DataFrom,System.Collections.Specialized.NameValueCollection,MyQuery.Utils.MySqlParameters,System.String,System.String,System.String)">
+            <summary>
+            获得获得控件的值 并Server端认证失败的消息 空为验证通过
+            </summary>
+            <param name="myColumns">数据列集合</param>
+            <param name="dataFrom">数据源</param>
+            <param name="formString">Form参数集合</param>
+            <param name="sqlParameters">条件集合</param>
+            <param name="tableName">编辑表名</param>
+            <param name="name">模板对应xml的name</param>
+            <param name="myinputid">MyInput.ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.Template.GetColumnValue(MyQuery.MyControl.MyColumn,System.Collections.Specialized.NameValueCollection,System.String,MyQuery.MyControl.MyColumns,MyQuery.Work.DataFrom)">
+            <summary>
+            获得控件的值
+            </summary>
+            <param name="myColumn">数据列</param>
+            <param name="formString">Form参数集合</param>
+            <param name="myinputid">MyInput.ID</param>
+            <param name="myColumns">列集合</param>
+            <param name="dataFrom">数据源</param>
+        </member>
+        <member name="M:MyQuery.Work.Template.GetSaveSql(MyQuery.MyControl.MyColumns,MyQuery.Utils.MySqlParameters,MyQuery.Work.DataFrom)">
+            <summary>
+            获得保存的Sql参数集合
+            </summary>
+            <param name="myColumns">列集合</param>
+            <param name="sqlParameters">sql参数条件</param>
+            <param name="dataFrom">数据库类型</param>
+            <returns>返回经过处理的sql参数集合</returns>
+        </member>
+        <member name="M:MyQuery.Work.Template.GetSubjectData(System.String,MyQuery.MyControl.MyColumns,System.String)">
+            <summary>
+            从xml中获取查询方案数据
+            </summary>
+            <param name="name">查询名称</param>
+            <param name="myColumns">列集合</param>
+            <param name="userAccount">用户ID</param>
+        </member>
+        <member name="M:MyQuery.Work.Template.GetSubjectValue(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            获得查询主题的值
+            </summary>
+            <param name="dt"></param>
+            <param name="fid"></param>
+            <param name="colName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.Template.SetSubjectParameters(MyQuery.Utils.MySqlParameters,MyQuery.MyControl.MyColumns,System.String)">
+            <summary>
+            将保存方案的条件赋给sql参数
+            </summary>
+            <param name="sqlParameters">sql参数集合</param>
+            <param name="myColumns">列集合</param>
+            <param name="id">方案ID</param>
+        </member>
+        <member name="M:MyQuery.Work.Template.SaveSubjectData(MyQuery.Utils.MySqlParameters,MyQuery.MyControl.MyColumns)">
+            <summary>
+            保存当前查询方案
+            </summary>
+            <param name="mySqlParameters">方案值集合</param>
+            <param name="myColumns">列集合</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:MyQuery.Work.Template.DelSubjectData(System.String,System.String)">
+            <summary>
+            删除查询方案
+            </summary>
+            <param name="id">主键</param>
+            <param name="userAccount">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.Template.SetButtons(System.String,MyQuery.MyControl.MyBtns,MyQuery.MyControl.MyBtns)">
+            <summary>
+            设定按钮区域
+            </summary>
+            <param name="position"></param>
+            <param name="MyBtns1"></param>
+            <param name="MyBtns2"></param>
+        </member>
+        <member name="M:MyQuery.Work.Template.UploadFile(System.Web.UI.Page,MyQuery.MyControl.MyColumn,System.String)">
+            <summary>
+            处理上传文件
+            </summary>
+            <param name="Page"></param>
+            <param name="fileColumn"></param>
+            <param name="name"></param>
+            <returns>返回校验或处理错误</returns>
+        </member>
+        <member name="M:MyQuery.Work.Template.GetRelatedChilds(MyQuery.Utils.MySqlParameters,MyQuery.MyControl.MyColumns,System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            执行关联子表处理
+            </summary>
+            <param name="sqlParameters"></param>
+            <param name="myColumns"></param>
+            <param name="formValues"></param>
+            <param name="id"></param>
+            <returns>MySqlParameters集合 无为长度为0</returns>
+        </member>
+        <member name="M:MyQuery.Work.Template.GetMessage(System.String)">
+            <summary>
+            获得相关提示
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.HtmlGenerate">
+            <summary>
+            封装静态网页生成的封装
+            by 贾世义 2009-2-25
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.HtmlGenerate.IMPORT_FILE">
+            <summary>
+            引入文件标记 #IMPORT_FILE#
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.HtmlGenerate.QUERYSTRING">
+            <summary>
+            获取QueryString值标签 #QUERYSTRING#
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.HtmlGenerate.IFISEMPTY">
+            <summary>
+            判断是否为空值标签 #IFISEMPTY#
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.HtmlGenerate.IFISEQUAL">
+            <summary>
+            判断是否相等标签 #IFISEQUAL#
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.HtmlGenerate.IFNOTEQUAL">
+            <summary>
+            判断是否不相等标签 #IFNOTEQUAL#
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.HtmlGenerate.IFCASE">
+            <summary>
+            多项判断标签 #IFCASE#
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.HtmlGenerate.PAGE_BREAK_AFTER">
+            <summary>
+            分页标记 #PAGE-BREAK-AFTER#
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.HtmlGenerate.REPEAT_CONTENT">
+            <summary>
+            详述页内容标记 #REPEAT-CONTENT# 有分页时此段重复写入
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.HtmlGenerate.PAGE_CONTENT">
+            <summary>
+            详述页替换内容标记 #PAGE-CONTENT# 需替换为分页的内容
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.HtmlGenerate.PAGE_ASPX">
+            <summary>
+            动态网页路径 site
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.HtmlGenerate.PAGE_HTML">
+            <summary>
+            静态网页路径 html
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.HtmlGenerate.CITY">
+            <summary>
+            city参数名称
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.GetHtml(System.String,System.Collections.Specialized.NameValueCollection,MyQuery.Utils.MyUser)">
+            <summary>
+            读取htm模板 及对应xml进行 替换后输出 模板格式要求 用#tablename.rownumber.fieldname#代替真正的值 
+            </summary>
+            <param name="name">模板和xml的名称（无后缀）</param>
+            <param name="QueryString">页面参数集合</param>
+            <param name="CurrentUser">用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.ReplaceHtml(System.Text.StringBuilder,MyQuery.MyControl.MyColumns,MyQuery.Work.DataFrom,System.Int32)">
+            <summary>
+            替换自定义标签
+            </summary>
+            <param name="htmlBuilder"></param>
+            <param name="myColumns">列数组</param>
+            <param name="dataFrom">数据对象</param>
+            <param name="tabindex">Tab索引</param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceGlobeMark(System.Text.StringBuilder,MyQuery.Utils.MyUser,System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            替换公共标签
+            </summary>
+            <param name="result"></param>
+            <param name="CurrentUser"></param>
+            <param name="QueryString"></param>
+            <param name="aspxname"></param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceTable(System.Text.StringBuilder,System.Data.DataTable,MyQuery.MyControl.MyColumns)">
+            <summary>
+            按照数据替换标签
+            </summary>
+            <param name="result"></param>
+            <param name="dt"></param>
+            <param name="myColumns"></param>
+            <returns>true时本表处理提前结束</returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceMarkPager(System.Text.StringBuilder,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            替换分页标签
+            </summary>
+            <param name="result"></param>
+            <param name="name"></param>
+            <param name="QueryString"></param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceMarkMax(System.Text.StringBuilder,System.String)">
+            <summary>
+            循环处理 #MAX# 标签 
+            </summary>
+            <param name="result"></param>
+            <param name="mark"></param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceMarkRMB(System.Text.StringBuilder,System.Boolean)">
+            <summary>
+            循环处理 #RMB#或#ENGLISH# 标签 
+            </summary>
+            <param name="result"></param>
+            <param name="isRMB"></param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceQueryString(System.Text.StringBuilder,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            循环处理 #QUERYSTRING# 标签 
+            </summary>
+            <param name="result"></param>
+            <param name="QueryString"></param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.getMark(System.String,System.String)">
+            <summary>
+            获得标记
+            </summary>
+            <param name="markStart">开始标记</param>
+            <param name="tableName">表名（小写）</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceMarkImport(System.Text.StringBuilder,System.Collections.Specialized.NameValueCollection,MyQuery.Utils.MyUser)">
+            <summary>
+            循环处理包含的文件
+            </summary>
+            <param name="result"></param>
+            <param name="QueryString"></param>
+            <param name="CurrentUser"></param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceMarkRepeatCol(System.Text.StringBuilder,System.Data.DataTable,MyQuery.MyControl.MyColumns,System.Int32,System.String)">
+            <summary>
+            替换循环列标签
+            </summary>
+            <param name="result"></param>
+            <param name="dt"></param>
+            <param name="myColumns"></param>
+            <param name="p"></param>
+            <param name="mark"></param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceMarkRepeatRow(System.Text.StringBuilder,System.Data.DataTable,MyQuery.MyControl.MyColumns,System.Int32,System.String)">
+            <summary>
+            替换循环行标签
+            </summary>
+            <param name="result"></param>
+            <param name="dt"></param>
+            <param name="myColumns"></param>
+            <param name="p"></param>
+            <param name="mark"></param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.getRepeatOption(System.Text.StringBuilder,MyQuery.MyControl.MyColumn)">
+            <summary>
+            替换循环重复标签
+            </summary>
+            <param name="result"></param>
+            <param name="column"></param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceMarkRepeatSame(System.Text.StringBuilder,System.Data.DataTable,MyQuery.MyControl.MyColumns,System.Int32,System.String)">
+            <summary>
+            行中same字段为指定字符的重复内容
+            </summary>
+            <param name="result"></param>
+            <param name="dt"></param>
+            <param name="myColumns"></param>
+            <param name="p"></param>
+            <param name="mark"></param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceMarkBlank(System.String)">
+            <summary>
+            将所有#配置#中常量及替换为空格
+            </summary>
+            <param name="result">字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.getCityName(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            获得城市
+            </summary>
+            <param name="QueryString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceMarkIf(System.Text.StringBuilder,System.String)">
+            <summary>
+            循环处理判断标签 IFISEMPTY或IFMARK
+            </summary>
+            <param name="result"></param>
+            <param name="mark"></param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.getResult(System.String,System.String)">
+            <summary>
+            获得条件表达式的值
+            </summary>
+            <param name="exp"></param>
+            <param name="mark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.replaceMark(System.Text.StringBuilder,System.Data.DataTable,MyQuery.MyControl.MyColumns)">
+            <summary>
+            替换字符串中#带替换符#
+            </summary>
+            <param name="result">可变字符串对象</param>
+            <param name="dt">数据表</param>
+            <param name="myColumns">列集合配置</param>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.getString(System.Data.DataRow,System.String,MyQuery.MyControl.MyColumns)">
+            <summary>
+            根据设定格式获得数据
+            </summary>
+            <param name="dr"></param>
+            <param name="colName"></param>
+            <param name="myColumns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.GetFile(System.String,System.Collections.Specialized.NameValueCollection,MyQuery.Utils.MyUser)">
+            <summary>
+            生成一个静态网页并返回网页内容
+            </summary>
+            <param name="name">模板和xml的名称（无后缀）</param>
+            <param name="QueryString">页面参数集合</param>
+            <param name="CurrentUser">用户</param>
+            <returns>返回网页内容</returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.GetHtmls(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            批生成静态网页
+            </summary>
+            <param name="city">站点</param>
+            <param name="QueryString">页面参数集合</param>
+            <returns>日志信息</returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.GetHtmls(System.String,System.String,System.String,MyQuery.Utils.MyUser)">
+            <summary>
+            根据发布内容生成对应首页及栏目和详述
+            </summary>
+            <param name="root">网站栏目的根</param>
+            <param name="fid">网站栏目分类</param>
+            <param name="where">条件</param>
+            <param name="currentUser">当前用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.GetDetailHtml(System.String,System.String)">
+            <summary>
+            生成详述的Html
+            </summary>
+            <param name="name">配置名</param>
+            <param name="where">条件</param>
+            <returns>生成的静态页地址</returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.getPager(System.Int32)">
+            <summary>
+            获得分页器html
+            </summary>
+            <param name="pageCount">页数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.GetHtmlUrl(System.String)">
+            <summary>
+            获得HTML网页完整URL
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.GetHtmlRelativeUrl(System.String)">
+            <summary>
+            获得HTML网页相对URL
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.GetHtmlFileName(System.String)">
+            <summary>
+            获得HTML网页完整物理地址
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.getHtmlFileName(System.String,System.String)">
+            <summary>
+            获得html路径
+            </summary>
+            <param name="name"></param>
+            <param name="p">路径字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.GetAspxUrl(System.String)">
+            <summary>
+            根据html模板获得预览url
+            </summary>
+            <param name="htmlUrl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.GetHtmlTemplate(System.Object,System.String,System.String)">
+            <summary>
+            获得添加模板 MySqlParameters
+            </summary>
+            <param name="data"></param>
+            <param name="filename"></param>
+            <param name="userid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.HtmlGenerate.GetMessage(System.String)">
+            <summary>
+            获得相关提示
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.BaseHtmlGenerate">
+            <summary>
+            封装自定义展示HTM页面模板的基类
+            参数：n对应的详述定制xml的名字（不含后缀，同名htm文件在tpl目录下）
+            by 贾世义 2011-8-19 
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseHtmlGenerate.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad进行页面处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:MyQuery.Work.BaseTplDetail">
+            <summary>
+            封装自定义展示HTM页面模板的基类
+            参数：n对应的详述定制xml的名字（不含后缀，同名htm文件在tpl目录下）
+            by 贾世义 2011-7-19 
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseTplDetail.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad进行验证和处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:MyQuery.Work.UpFile">
+            <summary>
+            UpFile处理CKEditor中的文件
+            by 贾世义 2011-7-19 
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.UpFile.ITYPE_ZOOM_IMG">
+            <summary>
+            缩略图类型标记 zoomImg
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.UpFile.ITYPE_IMG">
+            <summary>
+            图片类型标记 pic
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.UpFile.#ctor(MyQuery.Work.DataFrom,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dataFrom"></param>
+            <param name="id"></param>
+            <param name="userId"></param>
+            <param name="relativepath">设置的相对地址必须以/结束，空时默认为../images/f用户id</param>
+            <param name="iscontent">是否将内容保存到数据库</param>
+        </member>
+        <member name="M:MyQuery.Work.UpFile.UpLocalFile(System.Web.HttpPostedFile)">
+            <summary>
+            上传本地文件
+            </summary>
+            <param name="myfile">对象</param>
+            <returns>返回文件相对地址</returns>
+        </member>
+        <member name="M:MyQuery.Work.UpFile.SaveCkFinderFile(System.String)">
+            <summary>
+            匹配上传文件的URL并写入InfoAdds 外网的则下载到本地 并将引用文件的路径改为html的相对路径
+            </summary>
+            <param name="content"></param>
+            <returns>返回处理后的内容</returns>
+        </member>
+        <member name="M:MyQuery.Work.UpFile.RunSqlPara(System.String[],System.Object[],System.String,System.String)">
+            <summary>
+            执行一条带参数insert/update语句
+            </summary>
+            <param name="ParamNames">参数及字段</param>
+            <param name="objs">对象数组比如仅支持string StringBuilder和PostedFile控件：object[] ctrls={str,strBuilder,PostedFile};</param>
+            <param name="tblName">操作表名</param>
+            <param name="strWhere">编辑时指定的条件可空（空为insert语句编辑时必须指定）</param>
+        </member>
+        <member name="T:MyQuery.Work.GetMachineInfo">
+            <summary>
+            获得机器信息
+            by 贾世义 2011-7-20 
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.GetMachineInfo.getid">
+            <summary>
+            getid
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.GetMachineInfo.GetRegCode">
+            <summary>
+            GetRegCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.GetMachineInfo.GetRegCode(System.String,System.String)">
+            <summary>
+            GetRegCode
+            </summary>
+            <param name="id"></param>
+            <param name="i"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.GetMachineInfo.GetRegCode(System.String)">
+            <summary>
+            GetRegCode
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Work.FromXml">
+            <summary>
+            封装从xml中获取配置 以及界面的其它封装
+            by 贾世义 2009-1-24
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetFromSql(System.Xml.XmlNode)">
+            <summary>
+            获得from及连接表语句部分
+            </summary>
+            <param name="myquery">myquery节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetGroupBy(System.Xml.XmlNode)">
+            <summary>
+            根据配置group获得group by（包含group by）
+            </summary>
+            <param name="node">group节实体</param>
+            <returns>获得group by（包含group by）,返回""则未配置</returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetOrderBy(System.Xml.XmlNode)">
+            <summary>
+            根据配置order获得order by（包含order by）
+            </summary>
+            <param name="node">order节实体</param>
+            <returns>获得order by（包含order by）,返回""则未配置</returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetSelectColumns(System.Xml.XmlNodeList,MyQuery.MyControl.MyColumn,MyQuery.Work.DataFrom,System.String,System.String,System.String)">
+            <summary>
+            从select的column节点获得列集合
+            </summary>
+            <param name="nodes">select的column节点</param>
+            <param name="parent">父列</param>
+            <param name="dataFrom">数据来源</param>
+            <param name="name">配置名称</param>
+            <param name="ifunctioncalc">配置权限接口</param>
+            <param name="functionsql">配置权限sql</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetAppend(System.Xml.XmlNodeList,MyQuery.Utils.MySqlParameters,System.Web.HttpRequest,MyQuery.Work.DataFrom)">
+            <summary>
+            设定默认条件
+            </summary>
+            <param name="nodes">where下append节点集合</param>
+            <param name="mySqlParameters">参数集合</param>
+            <param name="request">Page.Request</param>
+            <param name="dataFrom">数据来源</param>
+            <returns>默认条件描述 多个用；分割</returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetAppendPro(System.Xml.XmlNode,MyQuery.Utils.MySqlParameters,System.Web.HttpRequest,MyQuery.Work.DataFrom)">
+            <summary>
+            设定默认条件 现将根节点下where加入
+            </summary>
+            <param name="myquery">myquery节点</param>
+            <param name="sqlParameters">参数集合</param>
+            <param name="request">Page.Request</param>
+            <param name="dataFrom">数据来源</param>
+            <returns>是否使用参数</returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetColGrop(System.Xml.XmlNode)">
+            <summary>
+            根据colgroup的配置获得MyCols集合
+            </summary>
+            <param name="node">colgroup节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetInputColumns(System.Xml.XmlNodeList,MyQuery.MyControl.MyColumn,MyQuery.Work.DataFrom,System.String,System.String,System.String)">
+            <summary>
+            从select或where的column节点获得列集合
+            </summary>
+            <param name="nodes">select或where的column节点</param>
+            <param name="parent">上级节点</param>
+            <param name="dataFrom">数据源</param>
+            <param name="name">配置名称</param>
+            <param name="functionsql"></param>
+            <param name="ifunctioncalc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetInputColumns(MyQuery.MyControl.MyInputs,System.Xml.XmlNode,MyQuery.Work.DataFrom,System.String)">
+            <summary>
+            当MyInputs1.Columns为null时从select的column节点获得列集合 确保列集合正确
+            </summary>
+            <param name="myInputs1"></param>
+            <param name="myquery">myquery节点</param>
+            <param name="dataFrom">数据源</param>
+            <param name="name">配置名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetDefaultValue(MyQuery.Work.DataFrom,System.String)">
+            <summary>
+            获得默认值
+            </summary>
+            <param name="dataFrom">数据源</param>
+            <param name="value"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetDefaultValue(MyQuery.Work.DataFrom,MyQuery.MyControl.MyColumn)">
+            <summary>
+            获得默认值
+            </summary>
+            <param name="dataFrom">数据源</param>
+            <param name="mycolumn"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetButtons(System.Xml.XmlNodeList,System.String,MyQuery.Work.DataFrom)">
+            <summary>
+            从buttons的button节点获得按钮集合
+            </summary>
+            <param name="nodes">buttons的button节点</param>
+            <param name="name"></param>
+            <param name="dataFrom">数据来源</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetTabs(System.Collections.Generic.List{System.Xml.XmlNode},System.Int32,System.Web.UI.Page,MyQuery.Work.DataFrom)">
+            <summary>
+            获得Tab
+            </summary>
+            <param name="nodes">myquery节点集合</param>
+            <param name="index">当前所在索引</param>
+            <param name="page">Page</param>
+            <param name="dataFrom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetMyQuerys(System.Xml.XmlNodeList,System.String,MyQuery.Work.DataFrom)">
+            <summary>
+            返回myquery的集合
+            </summary>
+            <param name="nodes">myquery节点集合</param>
+            <param name="name"></param>
+            <param name="dataFrom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.HasFunction(MyQuery.Work.DataFrom,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            是否拥有此功能（按钮、列、条件、myquery）
+            </summary>
+            <param name="dataFrom"></param>
+            <param name="ifunctioncalc">xml配置的实现了IFunctionCalc接口的类</param>
+            <param name="name">查询名称</param>
+            <param name="functionsql">xml配置的判断权限的语句</param>
+            <param name="functionCode">功能编号 对应s_fun中的id 空则有此功能</param>
+            <param name="parameter">提供对应参数name</param>
+            <param name="parametervalue">提供对应参数name的值，与parameter成对配置，当匹配时按钮才加入</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.getTitle(System.Xml.XmlNode,System.String)">
+            <summary>
+            获得标题
+            </summary>
+            <param name="node">node节点</param>
+            <param name="xmlName">xml配置名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetTitle(System.Xml.XmlNode,MyQuery.Work.DataFrom,System.String)">
+            <summary>
+            获得myquery的标题
+            </summary>
+            <param name="myquery">myquery节点</param>
+            <param name="dataFrom">数据来源</param>
+            <param name="xmlName">xml配置名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetDetailData(System.Xml.XmlNode,MyQuery.Work.DataFrom,MyQuery.MyControl.MyCommandEventArgs,System.Web.UI.WebControls.PlaceHolder,MyQuery.Utils.MySqlParameters,System.Boolean,System.Int32,System.Boolean,System.String)">
+            <summary>
+            获得详述展示的数据 输出Excel或屏幕
+            </summary>
+            <param name="myquery"></param>
+            <param name="dataFrom">数据来源</param>
+            <param name="e">当为空时给得到的数据展示控件给phContent展示</param>
+            <param name="phContent"></param>
+            <param name="sqlParameters"></param>
+            <param name="isParameter"></param>
+            <param name="pageIndex"></param>
+            <param name="isAsc"></param>
+            <param name="sortExpression"></param>
+            <returns>如错误返回错误信息</returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetSize(MyQuery.MyControl.MyInputs,System.Xml.XmlNode)">
+            <summary>
+            设定高度和宽度
+            </summary>
+            <param name="MyInputs1"></param>
+            <param name="myquery"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetSize(MyQuery.MyControl.MyGridView,System.Xml.XmlNode)">
+            <summary>
+            设定高度和宽度
+            </summary>
+            <param name="MyGridView1"></param>
+            <param name="myquery"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetExcelSelect(System.Xml.XmlNodeList,MyQuery.Work.DataFrom,System.String,System.String,System.String)">
+            <summary>
+            获得输出Excel需要选择的列 列名增加了Constants.FROM_TO + i
+            </summary>
+            <param name="myquerys">myquery节点集合</param>
+            <param name="dataFrom">数据来源</param>
+            <param name="name">配置名称</param>
+            <param name="ifunctioncalc">配置权限接口</param>
+            <param name="functionsql">配置权限sql</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetTableName(System.Xml.XmlNode)">
+            <summary>
+            获得table的name
+            </summary>
+            <param name="myquery">myquery节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetChart(System.Xml.XmlNode,MyQuery.Work.DataFrom,System.String)">
+            <summary>
+            按照chartNode配置构建Chart的MyChart
+            </summary>
+            <param name="chartNode">chart节点</param>
+            <param name="dataFrom">数据来源</param>
+            <param name="name">查询配置名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitButtton(System.Xml.XmlNode,MyQuery.MyControl.MyBtns,MyQuery.Work.DataFrom)">
+            <summary>
+            获得按钮并展示
+            </summary>
+            <param name="myquery">myquery节点</param>
+            <param name="MyBtns1">按钮控件</param>
+            <param name="dataFrom">数据来源</param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetSubjectColumns(System.Xml.XmlNode,MyQuery.Work.DataFrom,MyQuery.MyControl.MyInputs,MyQuery.Utils.MySqlParameters)">
+            <summary>
+            获得查询方案的列集合
+            </summary>
+            <param name="myquery">myquery节点</param>
+            <param name="dataFrom">数据源</param>
+            <param name="myInputs1">编辑控件</param>
+            <param name="sqlParameters">条件集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetXml(System.String)">
+            <summary>
+            获得xml
+            </summary>
+            <param name="name">名字</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetGridViewPage(MyQuery.MyControl.MyGridView,System.Int32)">
+            <summary>
+            初始化MyGridView1的分页属性等
+            </summary>
+            <param name="MyGridView1">列表控件</param>
+            <param name="pageSize">分页行数 0不分页</param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetGridViewPage(System.Xml.XmlNode,MyQuery.MyControl.MyGridView)">
+            <summary>
+            初始化MyGridView1的分页属性等
+            </summary>
+            <param name="myquery">myquery节点 空时MyGridView1为默认属性</param>
+            <param name="MyGridView1">列表控件</param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetGridViewColumn(System.Xml.XmlNode,MyQuery.MyControl.MyGridView,MyQuery.Work.DataFrom)">
+            <summary>
+            设置MyGridView1查询及展示的列属性与集合
+            </summary>
+            <param name="myquery">myquery节点</param>
+            <param name="MyGridView1">列表控件</param>
+            <param name="dataFrom">数据源</param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetGridViewData(System.Xml.XmlNode,MyQuery.MyControl.MyGridView,MyQuery.Work.DataFrom,MyQuery.Utils.MySqlParameters,System.Boolean,System.Object[])">
+            <summary>
+            设定MyGridView的数据源
+            </summary>
+            <param name="myquery">myquery节点</param>
+            <param name="MyGridView1"></param>
+            <param name="dataFrom">数据来源</param>
+            <param name="sqlParameters"></param>
+            <param name="isParameter"></param>
+            <param name="dtAll">获取所有数据</param>
+            <returns>错误信息 空为正确</returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetEditData(System.Xml.XmlNode,MyQuery.Work.DataFrom,MyQuery.Utils.MySqlParameters,MyQuery.MyControl.MyInputs)">
+            <summary>
+            获得编辑的展示数据
+            </summary>
+            <param name="myquery">myquery节点</param>
+            <param name="dataFrom">数据来源</param>
+            <param name="sqlParameters">参数集合</param>
+            <param name="MyInputs1">编辑控件</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.RegisterClientScript(System.Web.UI.Page,System.Xml.XmlNode,MyQuery.Work.DataFrom)">
+            <summary>
+            注册配置的脚本和脚本文件
+            </summary>
+            <param name="page"></param>
+            <param name="myquery"></param>
+            <param name="dataFrom"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitNotes(System.Xml.XmlNode,System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            初始化界面备注说明信息
+            </summary>
+            <param name="myquery">myquery节点</param>
+            <param name="divNotes">展示div</param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitSqls(System.Web.UI.WebControls.DataList,System.Xml.XmlNode,System.Boolean,System.Boolean)">
+            <summary>
+            初始化Sql
+            </summary>
+            <param name="dl"></param>
+            <param name="myquery"></param>
+            <param name="isAdd"></param>
+            <param name="isWorkFlow">是否为工作流配置</param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetSqlXml(System.Web.UI.WebControls.DataList,System.Xml.XmlNode,MyQuery.Work.DataFrom,System.Boolean)">
+            <summary>
+            设置Sql节的XML
+            </summary>
+            <param name="dl"></param>
+            <param name="myquery">不能为空</param>
+            <param name="dataFrom"></param>
+            <param name="isWorkFlow">是否为工作流配置</param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitButtons(System.Web.UI.WebControls.DataList,System.Xml.XmlNodeList,System.Boolean)">
+            <summary>
+            初始化按钮配置展示
+            </summary>
+            <param name="dl"></param>
+            <param name="nodes"></param>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetButtonsXml(System.Web.UI.WebControls.DataList,System.Xml.XmlNode,MyQuery.Work.DataFrom,System.String)">
+            <summary>
+            根据界面值设置buttons节XML
+            </summary>
+            <param name="dl"></param>
+            <param name="parentNode">如果不存在 在此节点上增加</param>
+            <param name="dataFrom"></param>
+            <param name="functionsql"></param>
+            <returns>返回错误提示</returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitChartTitle(System.Web.UI.WebControls.DataList,System.Xml.XmlNodeList,System.Boolean)">
+            <summary>
+            初始化图形标题配置展示
+            </summary>
+            <param name="dlTitles"></param>
+            <param name="nodes"></param>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetChartTitleXml(System.Xml.XmlNode,System.Web.UI.WebControls.DataList)">
+            <summary>
+            设置chart/title节
+            </summary>
+            <param name="nodeTitles"></param>
+            <param name="dlTitles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitAddRows(System.Web.UI.WebControls.DataList,System.Xml.XmlNodeList,System.Boolean)">
+            <summary>
+            初始化自定义的增加行配置展示
+            </summary>
+            <param name="dlAddrows"></param>
+            <param name="nodes"></param>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetAddRowXml(System.Xml.XmlNode,System.Web.UI.WebControls.DataList)">
+            <summary>
+            设置add/row节
+            </summary>
+            <param name="node"></param>
+            <param name="dlAddrows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitChartSeries(System.Web.UI.WebControls.DataList,System.Xml.XmlNode,System.Boolean)">
+            <summary>
+            初始化图形系列配置展示
+            </summary>
+            <param name="dlSeries"></param>
+            <param name="parentNode"></param>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetChartSeriasXml(System.Xml.XmlNode,System.Web.UI.WebControls.DataList,System.String)">
+            <summary>
+            设置series/serie节
+            </summary>
+            <param name="nodeSeries"></param>
+            <param name="dlSeries"></param>
+            <param name="datasource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitColGroup(System.Web.UI.WebControls.DataList,System.Xml.XmlNode,System.Boolean)">
+            <summary>
+            列摆放设置
+            </summary>
+            <param name="dl"></param>
+            <param name="nodeRoot"></param>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetColGroupXml(System.Web.UI.WebControls.DataList,System.Xml.XmlNode,System.Boolean)">
+            <summary>
+            根据界面值设置colgroup节XML
+            </summary>
+            <param name="dl"></param>
+            <param name="parentNode">如果不存在 在此节点上增加</param>
+            <param name="isDouble">是否编辑配置</param>
+            <returns>返回错误提示</returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitSrcipSrc(System.Xml.XmlNodeList,System.Web.UI.WebControls.DataList,System.Boolean)">
+            <summary>
+            初始化引入的脚本文件配置展示
+            </summary>
+            <param name="dlScriptsrc"></param>
+            <param name="nodes"></param>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetScriptSrcXml(System.Xml.XmlNode,System.Web.UI.WebControls.DataList)">
+            <summary>
+            设置scriptsrc的src节
+            </summary>
+            <param name="node"></param>
+            <param name="dlScriptsrc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitUpdateSqls(System.Xml.XmlNodeList,System.Web.UI.WebControls.DataList,System.Boolean)">
+            <summary>
+            编辑增加需执行的SQL语句配置展示
+            </summary>
+            <param name="nodes"></param>
+            <param name="dlUpdatesqls"></param>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetUpdateSqlXml(System.Web.UI.WebControls.DataList,System.Xml.XmlNode)">
+            <summary>
+            设置updatesql的sql节
+            </summary>
+            <param name="dlUpdatesqls"></param>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitColumn(System.Web.UI.WebControls.DataList,System.Xml.XmlNode,System.Boolean)">
+            <summary>
+            列设置初始化
+            </summary>
+            <param name="dl"></param>
+            <param name="parentNode"></param>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetColumnXml(System.Web.UI.WebControls.DataList,System.Xml.XmlNode,MyQuery.Work.DataFrom,System.String,System.String,System.Boolean)">
+            <summary>
+            根据界面值设置column节XML
+            </summary>
+            <param name="dl"></param>
+            <param name="parentNode"></param>
+            <param name="dataFrom">数据源</param>
+            <param name="tablename">表名（可能指定)</param>
+            <param name="dbtype">来源类型</param>
+            <param name="ischeck">是否检查sql</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitAppend(System.Xml.XmlNodeList,System.Web.UI.WebControls.DataList,System.Boolean)">
+            <summary>
+            默认条件初始化
+            </summary>
+            <param name="nodes">table节点集合</param>
+            <param name="dlAppends"></param>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetAppendXml(System.Xml.XmlNode,System.Web.UI.WebControls.DataList,MyQuery.Work.DataFrom,System.String,System.String,System.Boolean)">
+            <summary>
+            设置where的append节
+            </summary>
+            <param name="node"></param>
+            <param name="dlAppends"></param>
+            <param name="dataFrom">数据源</param>
+            <param name="tablename">表名（可能指定)</param>
+            <param name="dbtype">来源类型</param>
+            <param name="ischeck">是否检查sql</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.InitFrom(System.Xml.XmlNodeList,System.Web.UI.WebControls.DataList,System.Boolean,System.Boolean)">
+            <summary>
+            数据源配置展示
+            </summary>
+            <param name="nodes">table节点集合</param>
+            <param name="dlTables"></param>
+            <param name="isAdd">是否新增</param>
+            <param name="hasTable">是否包含主表即第一个</param>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.SetFromTableXml(System.Xml.XmlNode,System.Web.UI.WebControls.DataList,System.String@)">
+            <summary>
+            设置from的table节
+            </summary>
+            <param name="node">from节点</param>
+            <param name="dlTables"></param>
+            <param name="sql">返回的不包含from的语句</param>
+            <returns>校验提示</returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.getControlValue(System.Web.UI.WebControls.DataListItem,System.String,System.String)">
+            <summary>
+            从DataListItem中获得控件的值
+            </summary>
+            <param name="dataListItem"></param>
+            <param name="idPre"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.IsRightXml(System.String)">
+            <summary>
+            校验是否有语法错误
+            </summary>
+            <param name="xmlStr">xml</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.IsRightSql(System.Xml.XmlNode,System.String,System.Boolean,MyQuery.Work.DataFrom,System.String,System.String,System.Boolean)">
+            <summary>
+            判断访问列是否正确
+            </summary>
+            <param name="myQuery"></param>
+            <param name="str"></param>
+            <param name="isFiled">是否为字段</param>
+            <param name="dataFrom"></param>
+            <param name="tablename">表名（可能指定)</param>
+            <param name="dbtype">来源类型</param>
+            <param name="ischeck">是否检查sql</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.IsRightSql(System.String,MyQuery.Work.DataFrom)">
+            <summary>
+            判断语句是否能正确执行
+            </summary>
+            <param name="sql"></param>
+            <param name="dataFrom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.isSelect(System.Xml.XmlNode)">
+            <summary>
+            判断是否为列节
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.IsRightColumnSelects(System.String,System.String,MyQuery.Work.DataFrom)">
+            <summary>
+            判断能否正确获得下拉列表的绑定值
+            </summary>
+            <param name="urlformatstring"></param>
+            <param name="usefields"></param>
+            <param name="dataFrom"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.IsRightUrl(System.String,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            验证Url是否能访问
+            </summary>
+            <param name="url">URL地址</param>
+            <param name="method">默认POST</param>
+            <param name="nvParams">需要提交的name和value的集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.ExitsColumn(System.Xml.XmlNode,System.String)">
+            <summary>
+            判断字段name集合中配置的name是否在展示列中
+            </summary>
+            <param name="node">包含column的父节点</param>
+            <param name="value">字段name集合中配置值</param>
+            <returns>不存在返回错误信息</returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.isRepeatButtonName(System.String,System.Xml.XmlNode)">
+            <summary>
+            判断按钮的name是否重复
+            </summary>
+            <param name="nameValue"></param>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.ExitsFunction(System.String,System.String,MyQuery.Work.DataFrom)">
+            <summary>
+            获得是否有此功能
+            </summary>
+            <param name="functionsql">SQL</param>
+            <param name="code">功能代码</param>
+            <param name="dataFrom">数据来源</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.IsMainSub(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            是否为主子表
+            </summary>
+            <param name="type">Page.Request.QueryString</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.GetSelectedColumns(MyQuery.MyControl.MyColumns,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            获得选中的列集合
+            </summary>
+            <param name="myColumns">原始列集合</param>
+            <param name="fix">符合列名的后缀 不能为null</param>
+            <param name="Form"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.FromXml.isSelected(MyQuery.MyControl.MyColumn,System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            判断是否是选中列 合并列时其子集必须有选中列
+            </summary>
+            <param name="myColumn"></param>
+            <param name="fix"></param>
+            <param name="Form"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Work.DataFrom">
+            <summary>
+            数据来源类封装
+            by 贾世义 2009-1-24
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.DataFrom.Dbtype">
+            <summary>
+            获得数据库类型
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.DataFrom.Value">
+            <summary>
+            根据类型不同含义不同
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.DataFrom.ProcedureName">
+            <summary>
+            存储过程名
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.DataFrom.Method">
+            <summary>
+            提交方法
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.DataFrom.Parameters">
+            <summary>
+            设置url访问的默认参数集合字符串
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.#ctor(MyQuery.Utils.MyUser)">
+            <summary>
+            构造函数
+            <param name="currentUser">当前用户</param>
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.#ctor(MyQuery.Utils.MyUser,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            构造函数
+            <param name="currentUser">当前用户</param>
+            <param name="queryString">Url的参数集合</param>
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.#ctor(System.Xml.XmlNode,MyQuery.Utils.MyUser,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="node">myquery节点，为null时按web.config初始化数据库连接</param>
+            <param name="currentUser">当前用户</param>
+            <param name="queryString">Url的参数集合</param>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetFromType(System.String)">
+            <summary>
+            获得FromType
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetParams">
+            <summary>
+            获得配置的默认参数的键值集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetParams(System.Data.IDataParameter[])">
+            <summary>
+            获取url访问的参数集合
+            </summary>
+            <param name="iDataParameter">参数集合</param>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetParamString(System.Data.IDataParameter[])">
+            <summary>
+            获取url访问的参数集合字符串
+            </summary>
+            <param name="iDataParameter">参数集合</param>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.SetDao(System.Boolean)">
+            <summary>
+            重新获得dao访问对象
+            </summary>
+            <param name="isParameter">是否使用参数</param>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.SqlExecute(System.String,System.Data.IDataParameter[])">
+            <summary>
+            调用Dao的执行语句
+            </summary>
+            <param name="sql"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.SqlExecute(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            根据MySqlParameters对象在数据库中执行SQl操作
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.SqlExecute(System.Collections.Generic.List{System.String})">
+            <summary>
+            批量执行SQL
+            </summary>
+            <param name="sqls">集合空语句忽略</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetScalar(System.String,System.Data.IDataParameter[])">
+            <summary>
+            调用Dao的GetScalar
+            </summary>
+            <param name="sql"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetScalar(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            根据MySqlParameters对象执行查询，并返回查询结果集中的第一行，第一列的值,忽略其他列和行
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetDataSet(System.String,System.String[])">
+            <summary>
+            调用Dao的根据输入的SQL语句得到DataSet对象
+            </summary>
+            <param name="sql">多余一条用;分割</param>
+            <param name="tableNames">对应表名</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetDataSet(System.String,System.Data.IDataParameter[])">
+            <summary>
+            调用Dao的根据输入的SQL语句得到DataSet对象
+            </summary>
+            <param name="sql">多余一条用;分割</param>
+            <param name="parameters">参数集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetDataSet(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            根据MySqlParameters对象得到DataSet对象，适用于带参数语句
+            </summary>
+            <param name="parameters">自定义Sql及参数列表 </param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetDataTable(System.String,System.Data.IDataParameter[])">
+            <summary>
+            调用Dao的根据输入的SQL语句得到DataTable对象
+            </summary>
+            <param name="sql"></param>
+            <param name="parameters"></param>
+            <returns>不存在时为null</returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetDataTable(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            调用Dao的根据输入MySqlParameters对象执行查询
+            </summary>
+            <param name="parameters">自定义Sql及参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetDataSetProcedure(System.String,System.Data.IDataParameter[])">
+            <summary>
+            调用Dao的执行存储过程得到DataSet对象
+            </summary>
+            <param name="procName"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.TransactionBegin">
+            <summary>
+            开始执行事务(在事务提交前为一个完整的事务,即使多次开启也是同一事务)
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.TransactionCommit">
+            <summary>
+            提交事务
+            </summary>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.TransactionRollback">
+            <summary>
+            事务回滚
+            </summary>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.IsExit(MyQuery.Utils.MySqlParameters)">
+            <summary>
+            判断记录是否存在
+            </summary>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.BindCodeList(System.String,System.Web.UI.WebControls.ListControl,System.Boolean)">
+            <summary>
+            绑定DropDownList，CheckBoxList，RadioButtonList，ListBox控件
+            </summary>
+            <param name="id">代码ID</param>
+            <param name="listCtrl">DropDownList，CheckBoxList，RadioButtonList，ListBox控件id值</param>
+            <param name="isAll">有否“全部”</param>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetCodeTable(System.String)">
+            <summary>
+            获得字典数据
+            </summary>
+            <param name="id">代码ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.BindListCtrl(System.String,System.Web.UI.WebControls.ListControl,System.Boolean)">
+            <summary>
+            绑定DropDownList，CheckBoxList，RadioButtonList，ListBox控件
+            </summary>
+            <param name="sql">SQL语句（至少需1个字段 0列值 1列显示 2列=="1"选择 3列=="1"加(*)标记）</param>
+            <param name="listCtrl">DropDownList，CheckBoxList，RadioButtonList，ListBox控件id值</param>
+            <param name="isAll">有否“请选择”</param>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.BindListCtrl(MyQuery.Utils.MySqlParameters,System.Web.UI.WebControls.ListControl,System.Boolean)">
+            <summary>
+            绑定DropDownList，CheckBoxList，RadioButtonList，ListBox控件
+            </summary>
+            <param name="parameters">自定义Sql及参数列表（至少需1个字段 0列值 1列显示 2列=="1"选择 3列=="1"加(*)标记）</param>
+            <param name="listCtrl">DropDownList，CheckBoxList，RadioButtonList，ListBox控件id值</param>
+            <param name="isAll">有否“请选择”</param>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.BindDepartList(System.String,System.Web.UI.WebControls.ListControl,System.Boolean)">
+            <summary>
+            部门列表绑定DropDownList控件
+            </summary>
+            <param name="parentID">parentID</param>
+            <param name="listCtrl">DropDownList</param>
+            <param name="isAll">有否“全部”</param>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetUserID(System.String)">
+            <summary>
+            判断用户是否存在 并返回name[id]
+            </summary>
+            <param name="idorname">账号或名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.SetLogInfo(System.String)">
+            <summary>
+            记录日志 (发生错误忽略)
+            </summary>
+            <param name="des">内容</param>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.GetDataTable(System.String,System.String)">
+            <summary>
+            根据配置字符串获得数据DataTable
+            </summary>
+            <param name="expression">表达式</param>
+            <param name="paraNames">参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.ReplaceParanames(System.String,System.String)">
+            <summary>
+            替换{n}为参数namen值
+            </summary>
+            <param name="str"></param>
+            <param name="paraNames">QueryString优先 Session次之</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.SetColumnSelects(MyQuery.MyControl.MyColumn)">
+            <summary>
+            获得下拉列表的绑定值
+            </summary>
+            <param name="myColumn">列</param>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.RunUpdateSQL(System.Xml.XmlNodeList,MyQuery.MyControl.MyColumns,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            获得并执行扩展SQL
+            </summary>
+            <param name="updatesqls">SQL语句节点集合</param>
+            <param name="myColumns">列集合</param>
+            <param name="isModify">sqlParameters.IsModify</param>
+            <param name="isautoid">是否自增id</param>
+            <param name="id">自增id值</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.getUpdateSql(System.String,MyQuery.MyControl.MyColumns,System.String,System.String,System.String)">
+            <summary>
+            获得扩展语句
+            </summary>
+            <param name="subSql"></param>
+            <param name="myColumns"></param>
+            <param name="id"></param>
+            <param name="pcolumnnames"></param>
+            <param name="pparanames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.RunUpdateSQL(System.Xml.XmlNodeList,MyQuery.MyControl.MyColumns)">
+            <summary>
+            获得并执行扩展SQL
+            </summary>
+            <param name="updatesqls">SQL语句节点集合</param>
+            <param name="myColumns">列集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.DealRunSql(System.Xml.XmlNodeList,System.String)">
+            <summary>
+            获得并执行扩展SQL
+            </summary>
+            <param name="updatesqls">SQL语句节点集合</param>
+            <param name="ids">选中行ids</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.getSql(System.String,System.String,System.Xml.XmlNode)">
+            <summary>
+            获得SQL语句
+            </summary>
+            <param name="sql"></param>
+            <param name="id"></param>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.setRunSql(System.Collections.Generic.List{System.String},System.Xml.XmlNodeList,System.String,System.String)">
+            <summary>
+            获取执行语句
+            </summary>
+            <param name="sqls"></param>
+            <param name="updatesqls"></param>
+            <param name="selectValue"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.HasFunction(System.String,System.String)">
+            <summary>
+            当前用户是否有此功能
+            </summary>
+            <param name="functionsql">配置的判断权限的语句</param>
+            <param name="functionCode">功能代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.DataFrom.hasFunction(System.String)">
+            <summary>
+            当前用户是否有此功能
+            </summary>
+            <param name="functionCode">功能代码</param>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.Work.DataFrom.Type">
+            <summary>
+            获得类型
+            </summary>
+        </member>
+        <member name="P:MyQuery.Work.DataFrom.User">
+            <summary>
+            创建者对象
+            </summary>
+        </member>
+        <member name="P:MyQuery.Work.DataFrom.QueryString">
+            <summary>
+            页面的Url参数集合
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.FromType">
+            <summary>
+            支持的数据来源枚举
+            by 贾世义 2009-1-24
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.FromType.Table">
+            <summary>
+            表 由配置生成SQL
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.FromType.Procedure">
+            <summary>
+            存储过程
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.FromType.Xml">
+            <summary>
+            xml文件
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.FromType.UrlXml">
+            <summary>
+            数据来自Url（必须返回xml数据）
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.FromType.Xls">
+            <summary>
+            Excel文件
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.FromType.Txt">
+            <summary>
+            txt文本文件
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.BaseMain">
+            <summary>
+            封装自定义弹出Tab页卡窗体的基类
+            参数：n对应的详述定制xml的名字（不含后缀，同名htm文件在tpl目录下）
+            by 贾世义 2011-9-22 
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseMain.Url">
+            <summary>
+            首次加载的URL
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseMain.PageLoad(MyQuery.MyControl.MyTabPage)">
+            <summary>
+            页面初始化
+            </summary>
+            <param name="MyTabPage1"></param>
+        </member>
+        <member name="T:MyQuery.Work.BaseEdit">
+            <summary>
+            编辑模板基类
+            参数：n对应的编辑定制xml的名字（不含后缀）
+            by 贾世义 
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseEdit.myQuerys">
+            <summary>
+            当前处理的配置集合
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseEdit.dataFrom">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseEdit.sqlParameters">
+            <summary>
+            Sql参数集合
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseEdit.isButtonCommond">
+            <summary>
+            是否按钮回发
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseEdit.isTabCommond">
+            <summary>
+            是否TAB回发
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseEdit.IsParameter">
+            <summary>
+            SQL是否使用参数
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseEdit.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad进行验证和处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseEdit.PageLoad(MyQuery.MyControl.MyInputs,MyQuery.MyControl.MyBtns,MyQuery.MyControl.MyBtns,System.Web.UI.HtmlControls.HtmlForm,System.Web.UI.HtmlControls.HtmlGenericControl,System.Web.UI.HtmlControls.HtmlGenericControl,System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            初始化界面
+            </summary>
+            <param name="MyInputs1"></param>
+            <param name="MyBtns1"></param>
+            <param name="MyBtns2"></param>
+            <param name="form1"></param>
+            <param name="divTab"></param>
+            <param name="hrFirefox"></param>
+            <param name="divNotes"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseEdit.InitData(System.Boolean)">
+            <summary>
+             初始化tab中的内容
+            </summary>
+            <param name="firstLoad"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseEdit.ButtonCommand(MyQuery.MyControl.MyCommandEventArgs)">
+            <summary>
+            执行配置按钮
+            </summary>
+            <param name="e">按钮参数</param>
+        </member>
+        <member name="M:MyQuery.Work.BaseEdit.IsMainSub">
+            <summary>
+            是否为主子表编辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.BaseEdit.GetSubPageSize">
+            <summary>
+            获得内嵌iframe列表指定的记录数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.BaseEdit.GetSubHeight">
+            <summary>
+            获得内嵌iframe的高度，默认300px
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.BaseEdit.GetUrlParams">
+            <summary>
+            获得传递参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.Work.BaseEdit.TabIndex">
+            <summary>
+            当前tab的Index
+            </summary>
+        </member>
+        <member name="P:MyQuery.Work.BaseEdit.IsModify">
+            <summary>
+            是否编辑
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.TimerGenerateStaticHtml">
+            <summary>
+            生成静态网页
+            by 贾世义 2011-08-19
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.TimerGenerateStaticHtml.Run">
+            <summary>
+            执行
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.BaseImport">
+            <summary>
+            封装导入页面的基类
+            参数：n对应的详述定制xml的名字（不含后缀）
+            by 贾世义 2011-8-23 
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseImport.PageLoad(System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.Button,System.Web.UI.WebControls.Button,System.Web.UI.WebControls.DropDownList,System.Web.UI.HtmlControls.HtmlTableRow,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.TextBox,System.Web.UI.WebControls.TextBox,System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.TextBox,System.Web.UI.WebControls.CheckBox,System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            页面初始化
+            </summary>
+            <param name="ddlTitle"></param>
+            <param name="btnAdmin"></param>
+            <param name="btnSubmit"></param>
+            <param name="type"></param>
+            <param name="trDatabase"></param>
+            <param name="dbtype"></param>
+            <param name="connectionstring"></param>
+            <param name="procedurename"></param>
+            <param name="method"></param>
+            <param name="parameters"></param>
+            <param name="IsFirstTitle"></param>
+            <param name="ulContent"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseImport.initData">
+            <summary>
+            初始化数据
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseImport.getTable(System.Xml.XmlNodeList)">
+            <summary>
+            获得表名
+            </summary>
+            <param name="xmlNodeList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.BaseImport.SubmitClick(System.Web.UI.WebControls.FileUpload,System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            提交
+            </summary>
+            <param name="fileImport"></param>
+            <param name="divErrFile"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseImport.setWhereColumns(MyQuery.Utils.MySqlParameters,System.Xml.XmlNodeList,MyQuery.Utils.MySqlParameters)">
+            <summary>
+            设定列条件
+            </summary>
+            <param name="mySel"></param>
+            <param name="whereColumns"></param>
+            <param name="myImport"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseImport.AddErrContent(System.String)">
+            <summary>
+            增加提示
+            </summary>
+            <param name="err"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseImport.TitleSelectedIndexChanged">
+            <summary>
+            更换导入
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseImport.typeSelectedIndexChanged(System.Web.UI.WebControls.FileUpload)">
+            <summary>
+            变更数据源类型
+            </summary>
+            <param name="fileImport"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseImport.GetMessage(System.String)">
+            <summary>
+            获得相关提示
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.MenuDeal">
+            <summary>
+            封装的菜单处理业务类
+            注意：用户及功能多时建议改为数据库
+            by 贾世义 2009-2-7
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.MenuDeal.#ctor(MyQuery.Utils.MyUser)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="currentUser">用户</param>
+        </member>
+        <member name="M:MyQuery.Work.MenuDeal.GetMainMenu(System.Web.UI.HtmlControls.HtmlGenericControl,System.String)">
+            <summary>
+            获得主菜单
+            </summary>
+            <param name="ul"></param>
+            <param name="id"></param>
+        </member>
+        <member name="M:MyQuery.Work.MenuDeal.buildSql(System.String,System.Boolean)">
+            <summary>
+            构建SQL
+            </summary>
+            <param name="p"></param>
+            <param name="isSub">是否只取下级</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.MenuDeal.BuildMenuItem(System.Data.DataRow,System.Boolean)">
+            <summary>
+            构造菜单项
+            </summary>
+            <param name="dr"></param>
+            <param name="isLeaf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.MenuDeal.GetLeftMenu(System.Web.UI.HtmlControls.HtmlGenericControl,System.String)">
+            <summary>
+            获得子菜单
+            </summary>
+            <param name="ul"></param>
+            <param name="p"></param>
+            <returns>返回第一个子菜单url</returns>
+        </member>
+        <member name="M:MyQuery.Work.MenuDeal.GetSubMenu(System.Web.UI.HtmlControls.HtmlGenericControl,System.String)">
+            <summary>
+            获得所有下级菜单
+            </summary>
+            <param name="left"></param>
+            <param name="id"></param>
+            <returns>返回第一个子菜单url</returns>
+        </member>
+        <member name="T:MyQuery.Work.BaseDetail">
+            <summary>
+            封装详述页面的基类
+            参数：n对应的详述定制xml的名字（不含后缀）
+            by 贾世义 2011-7-19 
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseDetail.myQuerys">
+            <summary>
+            当前处理的配置集合
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseDetail.dataFrom">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseDetail.isButtonCommond">
+            <summary>
+            是否点击按钮回发
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseDetail.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad进行验证和处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseDetail.PageLoad(MyQuery.MyControl.MyBtns,MyQuery.MyControl.MyBtns,System.Web.UI.WebControls.PlaceHolder,System.Web.UI.HtmlControls.HtmlGenericControl,System.Web.UI.HtmlControls.HtmlGenericControl,System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            初始化界面
+            </summary>
+            <param name="MyBtns1"></param>
+            <param name="MyBtns2"></param>
+            <param name="phContent"></param>
+            <param name="divTab"></param>
+            <param name="hrFirefox"></param>
+            <param name="divNotes"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseDetail.SetData(System.Xml.XmlNode,System.Web.UI.WebControls.PlaceHolder,MyQuery.MyControl.MyCommandEventArgs)">
+            <summary>
+            获得数据并初始化
+            </summary>
+            <param name="myquery"></param>
+            <param name="phContent"></param>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.BaseDetail.GetColumns(System.Web.UI.WebControls.PlaceHolder)">
+            <summary>
+            获得列集合
+            </summary>
+            <param name="phContent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.BaseDetail.InitData(System.Xml.XmlNode)">
+            <summary>
+            初始化tab中的内容
+            </summary>
+            <param name="myquery"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseDetail.ButtonCommand(MyQuery.MyControl.MyCommandEventArgs)">
+            <summary>
+            按钮回发
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:MyQuery.Work.BaseDetail.TabIndex">
+            <summary>
+            当前tab的Index
+            </summary>
+        </member>
+        <member name="P:MyQuery.Work.BaseDetail.PageIndex">
+            <summary>
+            ViewState缓存当前页
+            </summary>
+        </member>
+        <member name="P:MyQuery.Work.BaseDetail.IsAsc">
+            <summary>
+            ViewState缓存当前排序方式
+            </summary>
+        </member>
+        <member name="P:MyQuery.Work.BaseDetail.SortExpression">
+            <summary>
+            ViewState缓存排序字段表达式
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.BaseExcel">
+            <summary>
+            导出模板基类
+            参数：n对应的导出定制xml的名字（不含后缀）
+            s是否提供选择
+            f对应的查询 当无时导出与查询为同一个配置文件
+            by 贾世义 2011-7-19 
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseExcel.myQuerys">
+            <summary>
+            当前处理的配置集合
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseExcel.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad进行验证和处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseExcel.PageLoad(System.Web.UI.WebControls.Button,MyQuery.MyControl.MyInputs,System.Web.UI.WebControls.PlaceHolder)">
+            <summary>
+            页面初始化
+            </summary>
+            <param name="btnAdmin"></param>
+            <param name="MyInputs1"></param>
+            <param name="phContent"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseExcel.OutToExcel(System.Boolean)">
+            <summary>
+            输出Excel
+            </summary>
+            <param name="isSelected">选中的列后输出</param>
+        </member>
+        <member name="T:MyQuery.Work.Authenticate">
+            <summary>
+            用户认证业务类
+            by 贾世义 2009-1-21
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.Authenticate.dao">
+            <summary>
+            数据库处理对象
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.Authenticate._error">
+            <summary>
+            错误提示
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.Authenticate.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.Authenticate.GetAuthType">
+            <summary>
+            获得认证类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.Authenticate.IsPass(System.String,System.String)">
+            <summary>
+            是否能够通过认证
+            </summary>
+            <param name="userAccount"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.Authenticate.getUserTable(System.String,System.String,System.String)">
+            <summary>
+            获得用户信息
+            </summary>
+            <param name="sql"></param>
+            <param name="userAccount"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.Authenticate.setUserApd(System.Data.DataTable)">
+            <summary>
+            设定扩展信息
+            </summary>
+            <param name="dt"></param>
+        </member>
+        <member name="M:MyQuery.Work.Authenticate.GetUser(System.String)">
+            <summary>
+            通过ID 获得user对象
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.Authenticate.GetMessage(System.String)">
+            <summary>
+            获得相关提示
+            </summary>
+        </member>
+        <member name="P:MyQuery.Work.Authenticate.Error">
+            <summary>
+            获取错误信息 失败时才有值
+            </summary>
+        </member>
+        <member name="P:MyQuery.Work.Authenticate.MyUser">
+            <summary>
+            获取错误信息 成功时有效
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.AuthType">
+            <summary>
+            认证方式
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.AuthType.Xml">
+            <summary>
+            xml认证
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.AuthType.Domain">
+            <summary>
+            域认证
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.AuthType.Db">
+            <summary>
+            数据库认证
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.AuthType.Url">
+            <summary>
+            外部Url或WebServise认证
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.DefaultMenu">
+            <summary>
+            封装的菜单处理业务类
+            注意：用户及功能多时建议改为数据库
+            by 贾世义 2009-2-7
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.DefaultMenu.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.DefaultMenu.#ctor(MyQuery.Utils.MyUser)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="currentUser">用户</param>
+        </member>
+        <member name="M:MyQuery.Work.DefaultMenu.SetFunctions(MyQuery.Utils.MyUser)">
+            <summary>
+            获得并给用户设定功能
+            </summary>
+            <param name="currentUser"></param>
+        </member>
+        <member name="M:MyQuery.Work.DefaultMenu.BuildMenu(System.Web.UI.HtmlControls.HtmlGenericControl,System.String)">
+            <summary>
+            构造菜单
+            </summary>
+            <param name="menuItem"></param>
+            <param name="parentid"></param>
+        </member>
+        <member name="M:MyQuery.Work.DefaultMenu.BuildMenuItem(System.Data.DataRow)">
+            <summary>
+            构造菜单项
+            </summary>
+            <param name="dr"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MyQuery.Work.DefaultMenu.Url">
+            <summary>
+            获得默认首页Url
+            </summary>
+        </member>
+        <member name="T:MyQuery.Work.BaseQuery">
+            <summary>
+            查询模板基类
+            参数：n对应的编辑定制xml的名字（不含后缀）
+            by 贾世义 2011-7-19 
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseQuery.dataFrom">
+            <summary>
+            获取数据源
+            </summary>
+        </member>
+        <member name="F:MyQuery.Work.BaseQuery.myquery">
+            <summary>
+            xml配置
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseQuery.setSqlParameters">
+            <summary>
+            设置参数集合 (Session保存 导航到其他页使用)
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseQuery.getSqlParameters">
+            <summary>
+            获取参数集合 (Session保存 导航到其他页使用)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Work.BaseQuery.OnLoad(System.EventArgs)">
+            <summary>
+            重载OnLoad进行验证和处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseQuery.PageLoad(MyQuery.MyControl.MyInputs,MyQuery.MyControl.MyBtns,MyQuery.MyControl.MyBtns,MyQuery.MyControl.MyGridView,System.Web.UI.HtmlControls.HtmlInputButton,System.Web.UI.WebControls.Label,System.Web.UI.WebControls.Button,System.Web.UI.HtmlControls.HtmlTableRow,System.Web.UI.HtmlControls.HtmlTableRow,System.Web.UI.HtmlControls.HtmlTable,System.Web.UI.HtmlControls.HtmlGenericControl,System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            初始化页面
+            </summary>
+            <param name="MyInputs1"></param>
+            <param name="MyBtns1"></param>
+            <param name="MyBtns2"></param>
+            <param name="MyGridView1"></param>
+            <param name="btnSubject"></param>
+            <param name="lblDef"></param>
+            <param name="btnQuery"></param>
+            <param name="trToolTip"></param>
+            <param name="trQuery"></param>
+            <param name="tblSearch"></param>
+            <param name="divQuery"></param>
+            <param name="divNotes"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseQuery.SetCondition(System.Boolean,System.Web.UI.HtmlControls.HtmlTableRow,System.Web.UI.HtmlControls.HtmlInputButton,System.Web.UI.WebControls.Button,System.Web.UI.HtmlControls.HtmlTable,System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            查询条件区域是否可见
+            </summary>
+            <param name="isVisible"></param>
+            <param name="trQuery"></param>
+            <param name="btnSubject"></param>
+            <param name="btnQuery"></param>
+            <param name="tblSearch"></param>
+            <param name="divQuery"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseQuery.QueryClick">
+            <summary>
+            查询
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseQuery.ButtonCommand(MyQuery.MyControl.MyCommandEventArgs)">
+            <summary>
+            按钮回发
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseQuery.RowCommand">
+            <summary>
+            行按钮事件
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseQuery.PageIndexChanged">
+            <summary>
+            页变更回发事件
+            </summary>
+        </member>
+        <member name="M:MyQuery.Work.BaseQuery.Sorting(System.Web.UI.WebControls.GridViewSortEventArgs)">
+            <summary>
+            排序回发事件
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.Work.BaseQuery.GetMessage(System.String)">
+            <summary>
+            获得相关提示
+            </summary>
+        </member>
+    </members>
+</doc>

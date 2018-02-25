@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+	<myquery title="标签编辑" pagesize="0">
+		<select>
+			<colgroup>
+				<col width="100px"/>
+        <col width="200px"/>
+        <col width="100px"/>
+        <col/>
+      </colgroup>
+      <column name="EntityID" title="关联ID" visible="false" value="querystring,id" parameter="id" parametervalue="!">
+      </column>
+      <column name="Entity" title="关联对象" visible="false" value="querystring,entity" parameter="entity" parametervalue="!">
+      </column>
+      <column name="MarkColor" title="类型" width="100px" type="select" urlformatstring="sql:select code,name from f_code where iflag=1 and id='ColorType' order by sn">
+      </column>
+      <column name="MarkDes" title="标签" width="200px" type="textajax" urlformatstring="WebService.asmx" usefields="GetMarkList" dataformat="{0:ID}" maxlength="1" cssclass="text_ajax">
+        (select MarkDes+'['+Markid+']' from d_Mark where D_Mark.Markid=Mark.MarkDes)
+        <validates>
+					<validate type="isnotnull">
+					</validate>
+          <validate type="regex" title="请输入代码或描述，并在下拉列表中选择">
+            ^.+\\[\\w+\\]$
+          </validate>
+          <validate type="servervalidate" title="系统标签必须存在" scope="edit">
+            MyQuery.BAL.QueryValidate
+          </validate>
+        </validates>
+			</column>
+      <column name="Marks" usefields="entity,id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listMark&amp;entity={0}&amp;id={1}&amp;pagesize=8" maxlength="420" colspan="4">
+      </column>
+      <column name="Marker" visible="false" value="useraccount">
+      </column>
+      <column name="MarkTime" visible="false" value="gettime">
+      </column>
+    </select>
+		<from type="table">
+			<table title="部门表">Mark</table>
+		</from>
+		<where isparameter="true">
+			<append type="querystring" name="entityid">
+				id={0}
+			</append>
+		</where>
+		<buttons position="top">
+			<button name="save" title="提 交" type="save" cssclass="input_button" isreload="true">
+        javascript:alert("提交标签成功，您可以继续提交标签")
+      </button>
+      <button name="btnReturn" title="取 消" type="doscript" cssclass="input_button">
+				window.opener=null;window.open('','_self');window.close();
+			</button>
+		</buttons>
+	</myquery>
+</root>
