@@ -72,6 +72,9 @@
 
         }
 
+        function Button5_onclick() {
+        }
+
 // ]]>
     </script>
 </head>
@@ -127,9 +130,11 @@
             <td class="style16">
                 需要上传的文件：<br />
                 <asp:FileUpload ID="FileUpload1" runat="server" />
+                <asp:Button ID="Button5" runat="server" onclick="Button5_Click" Text="上传" />
                 <br />
                 备注：<br />
-                <asp:TextBox ID="TextBox3" runat="server" Height="125px" Width="210px"></asp:TextBox>
+                <asp:TextBox ID="TextBox3" runat="server" Height="125px" Width="210px" 
+                    ontextchanged="TextBox3_TextChanged" TextMode="MultiLine"></asp:TextBox>
                 <asp:Button ID="Button4" runat="server" Text="提交备注" />
             </td>
             <td class="style12">

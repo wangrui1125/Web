@@ -115,5 +115,50 @@ namespace MyQuery.Web.EasyTechFunc
         
         }
 
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            
+                // Specify the path on the server to  
+                // save the uploaded file to.  
+                String savePath =Server.MapPath("~/Uploaded/");
+
+                // Before attempting to perform operations  
+                // on the file, verify that the FileUpload   
+                // control contains a file.  
+                if (FileUpload1.HasFile)
+                {
+                    // Get the name of the file to upload.  
+                    String fileName = FileUpload1.FileName;
+
+                    // Append the name of the file to upload to the path.  
+                    savePath += fileName;
+
+
+                    // Call the SaveAs method to save the   
+                    // uploaded file to the specified path.  
+                    // This example does not perform all  
+                    // the necessary error checking.                 
+                    // If a file with the same name  
+                    // already exists in the specified path,    
+                    // the uploaded file overwrites it.  
+                    FileUpload1.SaveAs(savePath);
+
+                    // Notify the user of the name of the file  
+                    // was saved under.  
+                    TextBox3.Text = DateTime.Now.Date.ToString()+": Your file was saved as " + fileName;
+                }
+                else
+                {
+                    // Notify the user that a file was not uploaded.  
+                    TextBox3.Text = "You did not specify a file to upload.";
+                }
+            
+        }
+
+        protected void TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
