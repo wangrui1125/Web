@@ -68,6 +68,10 @@ namespace MyQuery.Web.EasyTechFunc
                 c = string.Format(" Update [dbtest].[dbo].[TechRequire] set Rq_flag=6,Rq_Owner=null,Rq_Time=GETDATE() where Rq_ID=  '{0}'", ConcernID);
                 com = new SqlCommand(c, m_Connection);
                 com.ExecuteNonQuery();
+                c = string.Format(" insert into [dbtest].[dbo].[dfg_tq_stage](stage,finish_time,[index],rq_id) values('{0}',GETDATE(),3,{1})", "免费咨询",ConcernID);
+                com = new SqlCommand(c, m_Connection);
+                com.ExecuteNonQuery();
+
                 // Label1.Text = "方案完成！";
                 news = "方案编写完成！";
             }
