@@ -68,6 +68,7 @@ namespace MyQuery.Web.EasyTechFunc
             string cower="";int typeid=0;
             if (type.Equals("review"))
             {
+                //审阅
                 cower = string.Format("update TechRequire set Rq_Owner='{0}',Rq_ConsultID='{0}',Rq_flag={1}," +
                                            "Rq_Manager='{2}',Rq_ManagerTime='{3}',Rq_Time='{3}'" +
                                            "where Rq_ID={4}", selectID, 2, name, datenow, rqid);
@@ -75,16 +76,21 @@ namespace MyQuery.Web.EasyTechFunc
             }
             else if (type.Equals("do"))
             {
+                //方案编写
                 cower = string.Format("update TechRequire set Rq_Owner='{0}',Rq_techConsultID='{0}',Rq_flag={1}," +
                                            "Rq_DoID='{2}',Rq_DoTime='{3}',Rq_Time='{3}'" +
                                            "where Rq_ID={4}", selectID, 5, name, datenow, rqid);
+                //cower = cower + ";" + string.Format("insert into [dbtest].[dbo].[dfg_tq_stage](stage,finish_time,[index],rq_id) values('{0}',GETDATE(),3,{1})", "免费咨询", rqid);
                 typeid=4;
             }
             else if (type.Equals("exe"))
             {
+                //方案执行
                 cower = string.Format("update TechRequire set Rq_Owner='{0}',Rq_techConsultID='{0}',Rq_flag={1}," +
                                            "Rq_ExeID='{2}',Rq_ExeTime='{3}',Rq_Time='{3}'" +
                                            "where Rq_ID={4}", selectID, 7, name, datenow, rqid);
+                cower = cower + ";" + string.Format("insert into [dbtest].[dbo].[dfg_tq_stage](stage,finish_time,[index],rq_id) values('{0}',GETDATE(),4,{1})", "签订合同", rqid);
+
                 typeid = 5;
             }
            

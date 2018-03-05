@@ -1,18 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
-  <myquery title="我的科技服务" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true">
+  <myquery title="科技需求列表" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true">
     <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">
 
-      <column name="id" visible="false">
+     <column name="id" visible="false">
         dfg_service_ticket.id
-      </column>	 
+      </column>
 	  <column name="order_no" title="订单号" width="100px">
         dfg_service_ticket.order_no
       </column>
-	  
-	    <column name="Name" title="责任人" width="100px">
-        S_User.Name
-      </column>
+	   <column name="responsible_Name" title="责任人" width="100px">
+        dfg_service_ticket.responsible_Name
+      </column>	
       <column name="service_type" title="服务类型" width="100px">
         dfg_service_ticket.service_type
       </column>
@@ -46,7 +45,9 @@
       </column> 
 			  
       <column name="edit" title="操作" width="120px" type="excelno">	  
-       <![CDATA['&nbsp; <a href="../EasyTechFunc/ServiceEdit.aspx?id='+cast(dfg_service_ticket.id as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">编辑服务单</a>']]>
+       <![CDATA['&nbsp; <a href="../EasyTechFunc/ServiceEdit.aspx?id='+cast(dfg_service_ticket.id as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">分配服务单</a>
+	    <a href="../EasyTechFunc/ServiceEdit.aspx?id='+cast(dfg_service_ticket.id as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">编辑服务单</a>'	   
+	   ]]>
       </column>
 	  
     </select>
@@ -55,7 +56,6 @@
 	  <table title="代码表">left join dfg_f_code pay_type on pay_type.id='pay_type' and pay_type.code=dfg_service_ticket.pay_type</table>	  
 	  <table title="代码表2">left join dfg_f_code service_status on service_status.id='service_status' and service_status.code=dfg_service_ticket.service_status</table>	  
 	  <table title="用户表">left join S_UserWeb on S_UserWeb.id= dfg_service_ticket.user_id</table>
-	  <table title="用户表1">left join S_User on S_User.id= dfg_service_ticket.responsible_ID</table>		  
     </from>
 	 <where isparameter="true" isshowappend="true" issession="true">
 	 <colgroup>
@@ -67,7 +67,10 @@
         <col width="100px"/>
         <col width="100px"/>
         <col/>
-      </colgroup> 
+      </colgroup>    
+	<column name="responsible_Name" title="责任人" width="100px" target="all" cssclass="input_text">
+        dfg_service_ticket.responsible_Name like {0}
+      </column>  		  
 	  <column name="service_type" title="服务类型" width="100px" target="all" cssclass="input_text">
         dfg_service_ticket.service_type like {0}
       </column>      
@@ -85,6 +88,10 @@
     <order>
       dfg_service_ticket.id desc
     </order>
+    <buttons position="top">
       
+      <button name="toexcel" title="导出Excel" type="toexcel" cssclass="input_button">
+      </button>
+    </buttons>
   </myquery>
 </root>

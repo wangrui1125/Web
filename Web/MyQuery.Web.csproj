@@ -136,6 +136,7 @@
     <Content Include="EasyTechFunc\SearchPlan.aspx" />
     <Content Include="EasyTechFunc\SearchSuccess.aspx" />
     <Content Include="EasyTechFunc\SendEmail.aspx" />
+    <Content Include="EasyTechFunc\ServiceAllot.aspx" />
     <Content Include="EasyTechFunc\ServiceEdit.aspx" />
     <Content Include="EasyTechFunc\StopPlan.aspx" />
     <Content Include="EasyTechFunc\Submit.aspx" />
@@ -449,6 +450,13 @@
     </Compile>
     <Compile Include="EasyTechFunc\SendEmail.aspx.designer.cs">
       <DependentUpon>SendEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\ServiceAllot.aspx.cs">
+      <DependentUpon>ServiceAllot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\ServiceAllot.aspx.designer.cs">
+      <DependentUpon>ServiceAllot.aspx</DependentUpon>
     </Compile>
     <Compile Include="EasyTechFunc\ServiceEdit.aspx.cs">
       <DependentUpon>ServiceEdit.aspx</DependentUpon>
