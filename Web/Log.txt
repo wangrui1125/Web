@@ -20874,3 +20874,895 @@ System.Data.SqlClient.SqlException (0x80131904): 列名 'responsible_Name' 无效。
    在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
    在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
 ClientConnectionId:d83d8a71-7fc2-46ca-b525-9c736757a792
+
+发生时间：2018-03-10 12:09:16,515
+线程ID：[12]
+级别：ERROR
+类：ASP.default_aspx
+日志消息：主页加载失败
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DefaultMenu.SetFunctions(MyUser currentUser)
+   在 MyQuery.Work.DefaultMenu..ctor(MyUser currentUser)
+   在 MyQuery.Web._Default.Page_Load(Object sender, EventArgs e) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\Default.aspx.cs:行号 96
+ClientConnectionId:d2ce65be-2323-4b2f-bb23-875e50e347a2
+
+发生时间：2018-03-10 12:09:18,815
+线程ID：[17]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:b856c55a-541d-4555-afbf-e8737cf074c7
+
+发生时间：2018-03-10 12:09:20,500
+线程ID：[14]
+级别：ERROR
+类：ASP.default_aspx
+日志消息：主页加载失败
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DefaultMenu.SetFunctions(MyUser currentUser)
+   在 MyQuery.Work.DefaultMenu..ctor(MyUser currentUser)
+   在 MyQuery.Web._Default.Page_Load(Object sender, EventArgs e) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\Default.aspx.cs:行号 96
+ClientConnectionId:0bc9edcd-f20c-47cc-a399-d70d839abd14
+
+发生时间：2018-03-10 12:09:22,151
+线程ID：[12]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:ba3b59e8-6840-4f35-9ab3-ca5f05a84182
+
+发生时间：2018-03-10 12:09:24,011
+线程ID：[17]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:80c98303-0a86-4d36-9fd1-2702a6ca429a
+
+发生时间：2018-03-10 12:09:40,686
+线程ID：[15]
+级别：ERROR
+类：ASP.login_aspx
+日志消息：登录失败
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.Authenticate.getUserTable(String sql, String userAccount, String password)
+   在 MyQuery.Work.Authenticate.IsPass(String userAccount, String password)
+   在 MyQuery.Web.Login.imgOk_Click(Object sender, ImageClickEventArgs e) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\Login.aspx.cs:行号 99
+ClientConnectionId:38ec4306-862a-47ac-ad28-970078b36cb1
+
+发生时间：2018-03-10 12:09:53,088
+线程ID：[12]
+级别：ERROR
+类：ASP.login_aspx
+日志消息：登录失败
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.Authenticate.getUserTable(String sql, String userAccount, String password)
+   在 MyQuery.Work.Authenticate.IsPass(String userAccount, String password)
+   在 MyQuery.Web.Login.imgOk_Click(Object sender, ImageClickEventArgs e) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\Login.aspx.cs:行号 99
+ClientConnectionId:8caa51ff-2424-4105-8d46-a8eec6d1c988
+
+发生时间：2018-03-10 12:09:53,866
+线程ID：[15]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:73d1970c-0f63-4eb9-ad22-96c908c222ad
+
+发生时间：2018-03-10 12:09:54,905
+线程ID：[15]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:fcef98da-b50c-407b-96ba-7855ea391c6f
+
+发生时间：2018-03-10 12:10:03,400
+线程ID：[12]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:8aaf5053-daf3-4939-81dd-3d94aa1bfb47
+
+发生时间：2018-03-10 12:10:07,050
+线程ID：[7]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:05a88246-cc28-420a-852e-857f74a815dc
+
+发生时间：2018-03-10 12:10:10,977
+线程ID：[12]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:de60eacc-0b96-407e-9dbd-bbf81f118c92
+
+发生时间：2018-03-10 12:10:28,533
+线程ID：[15]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:7ab98527-7b54-4d57-9dc5-3ef6180afb4b
+
+发生时间：2018-03-10 12:11:04,560
+线程ID：[12]
+级别：ERROR
+类：ASP.default_aspx
+日志消息：主页加载失败
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DefaultMenu.SetFunctions(MyUser currentUser)
+   在 MyQuery.Work.DefaultMenu..ctor(MyUser currentUser)
+   在 MyQuery.Web._Default.Page_Load(Object sender, EventArgs e) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\Default.aspx.cs:行号 96
+ClientConnectionId:92448710-7268-4c40-b3b0-2a065eca3e29
+
+发生时间：2018-03-10 12:11:07,891
+线程ID：[15]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:746f9985-ca5b-4bd7-b195-0e263d0e9440
+
+发生时间：2018-03-10 12:11:28,057
+线程ID：[16]
+级别：ERROR
+类：ASP.default_aspx
+日志消息：主页加载失败
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DefaultMenu.SetFunctions(MyUser currentUser)
+   在 MyQuery.Work.DefaultMenu..ctor(MyUser currentUser)
+   在 MyQuery.Web._Default.Page_Load(Object sender, EventArgs e) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\Default.aspx.cs:行号 96
+ClientConnectionId:f6d8f0ed-ca9d-4c12-978e-1c6443822223
+
+发生时间：2018-03-10 12:11:29,900
+线程ID：[11]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:c22717e8-7d02-4f1e-8a85-cba930a266e2
+
+发生时间：2018-03-10 12:12:54,505
+线程ID：[11]
+级别：ERROR
+类：ASP.login_aspx
+日志消息：登录失败
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.Authenticate.getUserTable(String sql, String userAccount, String password)
+   在 MyQuery.Work.Authenticate.IsPass(String userAccount, String password)
+   在 MyQuery.Web.Login.imgOk_Click(Object sender, ImageClickEventArgs e) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\Login.aspx.cs:行号 99
+ClientConnectionId:c5707752-ad4f-4342-8599-f07f8c6862c7
+
+发生时间：2018-03-10 12:13:09,257
+线程ID：[15]
+级别：ERROR
+类：ASP.default_aspx
+日志消息：主页加载失败
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DefaultMenu.SetFunctions(MyUser currentUser)
+   在 MyQuery.Work.DefaultMenu..ctor(MyUser currentUser)
+   在 MyQuery.Web._Default.Page_Load(Object sender, EventArgs e) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\Default.aspx.cs:行号 96
+ClientConnectionId:7f3f8119-d3cc-4cbe-9a7d-0b5a6a96abf2
+
+发生时间：2018-03-10 12:13:10,517
+线程ID：[11]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:1a39ec1f-9381-46f3-acf9-9f048c0d23ef
+
+发生时间：2018-03-10 12:13:13,384
+线程ID：[11]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:274390b7-21b9-4331-87a8-203c96e44956
+
+发生时间：2018-03-10 12:13:17,507
+线程ID：[11]
+级别：ERROR
+类：ASP.default_aspx
+日志消息：主页加载失败
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DefaultMenu.SetFunctions(MyUser currentUser)
+   在 MyQuery.Work.DefaultMenu..ctor(MyUser currentUser)
+   在 MyQuery.Web._Default.Page_Load(Object sender, EventArgs e) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\Default.aspx.cs:行号 96
+ClientConnectionId:3da39721-2424-4424-8f2f-934c2bf32023
+
+发生时间：2018-03-10 12:13:20,242
+线程ID：[11]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.Data.SqlClient.SqlException (0x80131904): 在从服务器接收结果时发生传输级错误。 (provider: TCP Provider, error: 0 - 句柄无效。) ---> System.ComponentModel.Win32Exception (0x80004005): 句柄无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+ClientConnectionId:6ca6c0af-addc-4379-9b1b-b1c1c1d67d16
+
+发生时间：2018-03-10 14:49:44,009
+线程ID：[27]
+级别：ERROR
+类：MyQuery.Web.WebService
+日志消息：获得等待任务条数错误
+System.InvalidOperationException: 超时时间已到。超时时间已到，但是尚未从池中获取连接。出现这种情况可能是因为所有池连接均在使用，并且达到了最大池大小。
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.PrepareCommand(IDbCommand command, IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, IDataParameter[] commandParameters, Boolean& mustCloseConnection)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Web.WebService.GetWFWaiting(String userid) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:行号 213
+
+发生时间：2018-03-10 14:50:16,679
+线程ID：[28]
+级别：ERROR
+类：ASP.default_aspx
+日志消息：主页加载失败
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.PrepareCommand(IDbCommand command, IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, IDataParameter[] commandParameters, Boolean& mustCloseConnection)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DefaultMenu.SetFunctions(MyUser currentUser)
+   在 MyQuery.Work.DefaultMenu..ctor(MyUser currentUser)
+   在 MyQuery.Web._Default.Page_Load(Object sender, EventArgs e) 位置 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\Default.aspx.cs:行号 96
+ClientConnectionId:00000000-0000-0000-0000-000000000000
