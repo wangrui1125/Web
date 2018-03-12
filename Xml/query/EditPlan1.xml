@@ -53,9 +53,9 @@
        EasyTechFunc/AddHelper.aspx
         
       </button>
-	   <button name="updateHetong" title="上传合同"  parameters="id,rqid" type="dialog" cssclass="input_button">
+	   <button name="updateHetong" title="上传合同"  parameters="rqid" type="dialog" cssclass="input_button">
       
-       EasyTechFunc/UpdateHetong.aspx
+       Tmp/MyQuery.aspx?n=listcontract
         
       </button>
 	  

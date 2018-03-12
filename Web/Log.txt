@@ -21766,3 +21766,256 @@ System.Data.SqlClient.SqlException (0x80131904): ÔÚÓë SQL Server ½¨Á¢Á¬½ÓÊ±³öÏÖÓ
    ÔÚ MyQuery.Work.DefaultMenu..ctor(MyUser currentUser)
    ÔÚ MyQuery.Web._Default.Page_Load(Object sender, EventArgs e) Î»ÖÃ C:\Users\Administrator\Desktop\kexiaomi\Web\Web\Default.aspx.cs:ÐÐºÅ 96
 ClientConnectionId:00000000-0000-0000-0000-000000000000
+
+·¢ÉúÊ±¼ä£º2018-03-12 13:29:15,402
+Ïß³ÌID£º[35]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myedit_aspx
+ÈÕÖ¾ÏûÏ¢£ºeditPlan1
+System.Xml.XmlException: ·ÖÎö EntityName Ê±³ö´í¡£ µÚ 58 ÐÐ£¬Î»ÖÃ 49¡£
+   ÔÚ System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   ÔÚ System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseEntityName()
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseEntityReference()
+   ÔÚ System.Xml.XmlTextReaderImpl.Read()
+   ÔÚ System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   ÔÚ System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   ÔÚ System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   ÔÚ System.Xml.XmlDocument.Load(XmlReader reader)
+   ÔÚ System.Xml.XmlDocument.Load(String filename)
+   ÔÚ MyQuery.Work.FromXml.GetXml(String name)
+   ÔÚ MyQuery.Work.BaseEdit.OnLoad(EventArgs e)
+
+·¢ÉúÊ±¼ä£º2018-03-12 13:37:17,785
+Ïß³ÌID£º[46]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistcontract»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_contract.id "id",dfg_contract.name "name",dfg_contract.account "account",dfg_contract.status "status",dfg_contract.rq_id "Enp_Des" from dfg_contract  where  dfg_contract.rq_id='15946' order by dfg_contract.id
+System.FormatException: Ë÷Òý(´ÓÁã¿ªÊ¼)±ØÐë´óÓÚ»òµÈÓÚÁã£¬ÇÒÐ¡ÓÚ²ÎÊýÁÐ±íµÄ´óÐ¡¡£
+   ÔÚ System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   ÔÚ System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   ÔÚ System.String.Format(String format, Object arg0)
+   ÔÚ MyQuery.MyControl.MyBtns.GetHref(MyButton button)
+   ÔÚ MyQuery.MyControl.MyBtns.OnButtonBound(MyBoundEventArgs e)
+   ÔÚ MyQuery.MyControl.MyBtns.OnCellDataBound(MyBoundEventArgs e)
+   ÔÚ MyQuery.MyControl.MyBtns.OnRowDataBound(MyBoundEventArgs e)
+   ÔÚ MyQuery.MyControl.MyBtns.DataBind()
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+
+·¢ÉúÊ±¼ä£º2018-03-12 13:38:16,470
+Ïß³ÌID£º[47]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistcontract»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_contract.id "id",dfg_contract.name "name",dfg_contract.account "account",dfg_contract.status "status",dfg_contract.rq_id "Enp_Des" from dfg_contract  where  dfg_contract.rq_id='15946' order by dfg_contract.id
+System.FormatException: Ë÷Òý(´ÓÁã¿ªÊ¼)±ØÐë´óÓÚ»òµÈÓÚÁã£¬ÇÒÐ¡ÓÚ²ÎÊýÁÐ±íµÄ´óÐ¡¡£
+   ÔÚ System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   ÔÚ System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   ÔÚ System.String.Format(String format, Object arg0)
+   ÔÚ MyQuery.MyControl.MyBtns.GetHref(MyButton button)
+   ÔÚ MyQuery.MyControl.MyBtns.OnButtonBound(MyBoundEventArgs e)
+   ÔÚ MyQuery.MyControl.MyBtns.OnCellDataBound(MyBoundEventArgs e)
+   ÔÚ MyQuery.MyControl.MyBtns.OnRowDataBound(MyBoundEventArgs e)
+   ÔÚ MyQuery.MyControl.MyBtns.DataBind()
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+
+·¢ÉúÊ±¼ä£º2018-03-12 13:40:07,203
+Ïß³ÌID£º[41]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistcontract»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_contract.id "id",dfg_contract.name "name",dfg_contract.account "account",dfg_contract.status "status",dfg_contract.rq_id "Enp_Des" from dfg_contract  where  dfg_contract.rq_id='15946' order by dfg_contract.id
+System.FormatException: Ë÷Òý(´ÓÁã¿ªÊ¼)±ØÐë´óÓÚ»òµÈÓÚÁã£¬ÇÒÐ¡ÓÚ²ÎÊýÁÐ±íµÄ´óÐ¡¡£
+   ÔÚ System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   ÔÚ System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   ÔÚ System.String.Format(String format, Object arg0)
+   ÔÚ MyQuery.MyControl.MyBtns.GetHref(MyButton button)
+   ÔÚ MyQuery.MyControl.MyBtns.OnButtonBound(MyBoundEventArgs e)
+   ÔÚ MyQuery.MyControl.MyBtns.OnCellDataBound(MyBoundEventArgs e)
+   ÔÚ MyQuery.MyControl.MyBtns.OnRowDataBound(MyBoundEventArgs e)
+   ÔÚ MyQuery.MyControl.MyBtns.DataBind()
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+
+·¢ÉúÊ±¼ä£º2018-03-12 13:46:09,428
+Ïß³ÌID£º[32]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistcontract»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_contract.id "id",dfg_contract.name "name",dfg_contract.account "account",dfg_contract.status "status",dfg_contract.rq_id "Enp_Des" from dfg_contract  where  dfg_contract.rq_id='15946' order by dfg_contract.id
+System.FormatException: Ë÷Òý(´ÓÁã¿ªÊ¼)±ØÐë´óÓÚ»òµÈÓÚÁã£¬ÇÒÐ¡ÓÚ²ÎÊýÁÐ±íµÄ´óÐ¡¡£
+   ÔÚ System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   ÔÚ System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   ÔÚ System.String.Format(String format, Object arg0)
+   ÔÚ MyQuery.MyControl.MyBtns.GetHref(MyButton button)
+   ÔÚ MyQuery.MyControl.MyBtns.OnButtonBound(MyBoundEventArgs e)
+   ÔÚ MyQuery.MyControl.MyBtns.OnCellDataBound(MyBoundEventArgs e)
+   ÔÚ MyQuery.MyControl.MyBtns.OnRowDataBound(MyBoundEventArgs e)
+   ÔÚ MyQuery.MyControl.MyBtns.DataBind()
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+
+·¢ÉúÊ±¼ä£º2018-03-12 14:07:49,157
+Ïß³ÌID£º[29]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistcontract¶ÁÈ¡xmlÊ§°Ü
+System.Xml.XmlException: ¡°<¡±(Ê®Áù½øÖÆÖµ 0x3C)ÊÇÎÞÐ§µÄÌØÐÔ×Ö·û¡£ µÚ 10 ÐÐ£¬Î»ÖÃ 7¡£
+   ÔÚ System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   ÔÚ System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow(Int32 curPos, Char quoteChar, NodeData attr)
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseAttributes()
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseElement()
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseElementContent()
+   ÔÚ System.Xml.XmlTextReaderImpl.Read()
+   ÔÚ System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   ÔÚ System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   ÔÚ System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   ÔÚ System.Xml.XmlDocument.Load(XmlReader reader)
+   ÔÚ System.Xml.XmlDocument.Load(String filename)
+   ÔÚ MyQuery.Work.FromXml.GetXml(String name)
+   ÔÚ MyQuery.Work.BaseQuery.OnLoad(EventArgs e)
+
+·¢ÉúÊ±¼ä£º2018-03-12 14:08:08,971
+Ïß³ÌID£º[37]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistcontract¶ÁÈ¡xmlÊ§°Ü
+System.Xml.XmlException: ¡°<¡±(Ê®Áù½øÖÆÖµ 0x3C)ÊÇÎÞÐ§µÄÌØÐÔ×Ö·û¡£ µÚ 10 ÐÐ£¬Î»ÖÃ 7¡£
+   ÔÚ System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   ÔÚ System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow(Int32 curPos, Char quoteChar, NodeData attr)
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseAttributes()
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseElement()
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseElementContent()
+   ÔÚ System.Xml.XmlTextReaderImpl.Read()
+   ÔÚ System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   ÔÚ System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   ÔÚ System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   ÔÚ System.Xml.XmlDocument.Load(XmlReader reader)
+   ÔÚ System.Xml.XmlDocument.Load(String filename)
+   ÔÚ MyQuery.Work.FromXml.GetXml(String name)
+   ÔÚ MyQuery.Work.BaseQuery.OnLoad(EventArgs e)
+
+·¢ÉúÊ±¼ä£º2018-03-12 14:40:39,191
+Ïß³ÌID£º[61]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myedit_aspx
+ÈÕÖ¾ÏûÏ¢£ºeditSuggestion1
+System.Xml.XmlException: µÚ 40 ÐÐ£¬Î»ÖÃ 5 ÉÏµÄ¿ªÊ¼±ê¼Ç¡°updatesqls¡±Óë½áÊø±ê¼Ç¡°myquery¡±²»Æ¥Åä¡£ µÚ 47 ÐÐ£¬Î»ÖÃ 5¡£
+   ÔÚ System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   ÔÚ System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   ÔÚ System.Xml.XmlTextReaderImpl.ThrowTagMismatch(NodeData startTag)
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseEndElement()
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseElementContent()
+   ÔÚ System.Xml.XmlTextReaderImpl.Read()
+   ÔÚ System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   ÔÚ System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   ÔÚ System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   ÔÚ System.Xml.XmlDocument.Load(XmlReader reader)
+   ÔÚ System.Xml.XmlDocument.Load(String filename)
+   ÔÚ MyQuery.Work.FromXml.GetXml(String name)
+   ÔÚ MyQuery.Work.BaseEdit.OnLoad(EventArgs e)
+
+·¢ÉúÊ±¼ä£º2018-03-12 21:54:38,138
+Ïß³ÌID£º[52]
+¼¶±ð£ºERROR
+Àà£ºMyQuery.Web.WebService
+ÈÕÖ¾ÏûÏ¢£º»ñµÃµÈ´ýÈÎÎñÌõÊý´íÎó
+System.Data.SqlClient.SqlException (0x80131904): ÔÚÓë SQL Server ½¨Á¢Á¬½ÓÊ±³öÏÖÓëÍøÂçÏà¹ØµÄ»òÌØ¶¨ÓÚÊµÀýµÄ´íÎó¡£Î´ÕÒµ½»òÎÞ·¨·ÃÎÊ·þÎñÆ÷¡£ÇëÑéÖ¤ÊµÀýÃû³ÆÊÇ·ñÕýÈ·²¢ÇÒ SQL Server ÒÑÅäÖÃÎªÔÊÐíÔ¶³ÌÁ¬½Ó¡£ (provider: Named Pipes Provider, error: 40 - ÎÞ·¨´ò¿ªµ½ SQL Server µÄÁ¬½Ó) ---> System.ComponentModel.Win32Exception (0x80004005): ÕÒ²»µ½ÍøÂçÂ·¾¶¡£
+   ÔÚ System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ÔÚ System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ÔÚ System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ÔÚ System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ÔÚ System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ÔÚ System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ÔÚ System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ÔÚ System.Data.SqlClient.SqlConnection.Open()
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.PrepareCommand(IDbCommand command, IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, IDataParameter[] commandParameters, Boolean& mustCloseConnection)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Web.WebService.GetWFWaiting(String userid) Î»ÖÃ C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:ÐÐºÅ 213
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+·¢ÉúÊ±¼ä£º2018-03-12 21:54:38,138
+Ïß³ÌID£º[57]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistplan»ñÈ¡Êý¾Ý,Óï¾ä: select [Plan].Plan_ID "id",[Plan].Plan_Title "Plan_Title",[Plan].Plan_Des "Plan_Des",[Plan].MeetAdd "MeetAdd",[Plan].MeetTime "MeetTime",[Plan].Remark "Remark",'<a href="../EasyTechFunc/AddResearcher.aspx?id='+cast([Plan].Plan_ID as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">±à¼­ÑÐ¾¿ÈËÔ±</a>
+ ' "edit" from [Plan] left join f_code Rq_flag on Rq_flag.id='Rq_flag' and Rq_flag.code=[Plan].Plan_Status  where  [Plan].Plan_Owner=155 order by [Plan].Plan_ID
+System.Data.SqlClient.SqlException (0x80131904): ÔÚÓë SQL Server ½¨Á¢Á¬½ÓÊ±³öÏÖÓëÍøÂçÏà¹ØµÄ»òÌØ¶¨ÓÚÊµÀýµÄ´íÎó¡£Î´ÕÒµ½»òÎÞ·¨·ÃÎÊ·þÎñÆ÷¡£ÇëÑéÖ¤ÊµÀýÃû³ÆÊÇ·ñÕýÈ·²¢ÇÒ SQL Server ÒÑÅäÖÃÎªÔÊÐíÔ¶³ÌÁ¬½Ó¡£ (provider: Named Pipes Provider, error: 40 - ÎÞ·¨´ò¿ªµ½ SQL Server µÄÁ¬½Ó) ---> System.ComponentModel.Win32Exception (0x80004005): ÕÒ²»µ½ÍøÂçÂ·¾¶¡£
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   ÔÚ System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   ÔÚ System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   ÔÚ System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   ÔÚ System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken)
+   ÔÚ System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   ÔÚ System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   ÔÚ System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   ÔÚ System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   ÔÚ System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ÔÚ System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ÔÚ System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ÔÚ System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ÔÚ System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ÔÚ System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ÔÚ System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ÔÚ System.Data.SqlClient.SqlConnection.Open()
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.PrepareCommand(IDbCommand command, IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, IDataParameter[] commandParameters, Boolean& mustCloseConnection)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+·¢ÉúÊ±¼ä£º2018-03-12 21:54:38,367
+Ïß³ÌID£º[53]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistcontract»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_contract.id "id",dfg_contract.name "name",dfg_contract.upload_time "upload_time",dfg_contract.status "status",dfg_contract.rq_id "rq_id",'<a a href="../EasyTechFunc/CancelContract.aspx?Contractid='+cast(dfg_contract.id as varchar)+'&flag=1" target="_self" style="color: #0055BA;cursor: pointer;">É¾³ý</a>' "edit" from dfg_contract  where  dfg_contract.rq_id='15946' order by dfg_contract.id
+System.Data.SqlClient.SqlException (0x80131904): ÔÚÓë SQL Server ½¨Á¢Á¬½ÓÊ±³öÏÖÓëÍøÂçÏà¹ØµÄ»òÌØ¶¨ÓÚÊµÀýµÄ´íÎó¡£Î´ÕÒµ½»òÎÞ·¨·ÃÎÊ·þÎñÆ÷¡£ÇëÑéÖ¤ÊµÀýÃû³ÆÊÇ·ñÕýÈ·²¢ÇÒ SQL Server ÒÑÅäÖÃÎªÔÊÐíÔ¶³ÌÁ¬½Ó¡£ (provider: Named Pipes Provider, error: 40 - ÎÞ·¨´ò¿ªµ½ SQL Server µÄÁ¬½Ó) ---> System.ComponentModel.Win32Exception (0x80004005): ÕÒ²»µ½ÍøÂçÂ·¾¶¡£
+   ÔÚ System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ÔÚ System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ÔÚ System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ÔÚ System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ÔÚ System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ÔÚ System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ÔÚ System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ÔÚ System.Data.SqlClient.SqlConnection.Open()
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.PrepareCommand(IDbCommand command, IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, IDataParameter[] commandParameters, Boolean& mustCloseConnection)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+·¢ÉúÊ±¼ä£º2018-03-12 21:54:38,911
+Ïß³ÌID£º[26]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistcontract»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_contract.id "id",dfg_contract.name "name",dfg_contract.upload_time "upload_time",dfg_contract.status "status",dfg_contract.rq_id "rq_id",'<a a href="../EasyTechFunc/CancelContract.aspx?Contractid='+cast(dfg_contract.id as varchar)+'&flag=1" target="_self" style="color: #0055BA;cursor: pointer;">É¾³ý</a>' "edit" from dfg_contract  where  dfg_contract.rq_id='15946' order by dfg_contract.id
+System.Data.SqlClient.SqlException (0x80131904): ÔÚÓë SQL Server ½¨Á¢Á¬½ÓÊ±³öÏÖÓëÍøÂçÏà¹ØµÄ»òÌØ¶¨ÓÚÊµÀýµÄ´íÎó¡£Î´ÕÒµ½»òÎÞ·¨·ÃÎÊ·þÎñÆ÷¡£ÇëÑéÖ¤ÊµÀýÃû³ÆÊÇ·ñÕýÈ·²¢ÇÒ SQL Server ÒÑÅäÖÃÎªÔÊÐíÔ¶³ÌÁ¬½Ó¡£ (provider: Named Pipes Provider, error: 40 - ÎÞ·¨´ò¿ªµ½ SQL Server µÄÁ¬½Ó) ---> System.ComponentModel.Win32Exception (0x80004005): ÕÒ²»µ½ÍøÂçÂ·¾¶¡£
+   ÔÚ System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ÔÚ System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   ÔÚ System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   ÔÚ System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ÔÚ System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   ÔÚ System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   ÔÚ System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   ÔÚ System.Data.SqlClient.SqlConnection.Open()
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.PrepareCommand(IDbCommand command, IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, IDataParameter[] commandParameters, Boolean& mustCloseConnection)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20

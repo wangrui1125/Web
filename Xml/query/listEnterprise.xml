@@ -5,9 +5,6 @@
       <column name="id" visible="false">
         Enterprise.Enp_ID
       </column>
-	  
-	  
-	  
       <column name="Enp_Name" title="企业名称" width="200px" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailEnterprise&amp;id={0}" usefields="id" target="_blank">
         Enterprise.Enp_Name
       </column>

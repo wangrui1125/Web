@@ -106,6 +106,7 @@
     <Content Include="EasyTechFunc\AddResearcher.aspx" />
     <Content Include="EasyTechFunc\AddTechConsult.aspx" />
     <Content Include="EasyTechFunc\AddTechManager.aspx" />
+    <Content Include="EasyTechFunc\CancelContract.aspx" />
     <Content Include="EasyTechFunc\ConcernAll.aspx" />
     <Content Include="EasyTechFunc\ConsultConcern.aspx" />
     <Content Include="EasyTechFunc\ConsultExecute.aspx" />
@@ -241,6 +242,13 @@
     </Compile>
     <Compile Include="EasyTechFunc\AddTechManager.aspx.designer.cs">
       <DependentUpon>AddTechManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\CancelContract.aspx.cs">
+      <DependentUpon>CancelContract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\CancelContract.aspx.designer.cs">
+      <DependentUpon>CancelContract.aspx</DependentUpon>
     </Compile>
     <Compile Include="EasyTechFunc\ConcernAll.aspx.cs">
       <DependentUpon>ConcernAll.aspx</DependentUpon>

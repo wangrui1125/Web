@@ -33,7 +33,8 @@ namespace MyQuery.Web.EasyTechFunc
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string id = Request["id"];
+           /*
+            //string id = Request["id"];
             string rqid = Request["rqid"];
             string SqlConnectionString = WebHelper.GetAppConfig("SqlConnectionString");
             SqlConnection m_Connection = new SqlConnection(SqlConnectionString);
@@ -76,7 +77,7 @@ namespace MyQuery.Web.EasyTechFunc
                 {
                     tr1[3] = "通过";
                 }
-                tr1[4] = id;
+                //tr1[4] = id;
                 tr1[5] = rqid;                
                 table.Rows.Add(tr1);
                 
@@ -91,7 +92,7 @@ namespace MyQuery.Web.EasyTechFunc
             }
             sdr.Close();
 
-            
+            */
 
 
 
@@ -120,7 +121,7 @@ namespace MyQuery.Web.EasyTechFunc
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string id = Request["id"];
+            //string id = Request["id"];
             string rqid = Request["rqid"];
             String savePath = Server.MapPath("~/Uploaded/")+"Tc_"+rqid+"//";
 
@@ -154,7 +155,7 @@ namespace MyQuery.Web.EasyTechFunc
                 m_Connection.Open();
                 string cp = ""; SqlCommand m_Command = null; SqlDataReader sdr = null;
 
-                cp = string.Format("select name from [dfg_contract] where rq_id={0}", id);
+                cp = string.Format("select name from [dfg_contract] where rq_id={0}", rqid);
                 m_Command = new SqlCommand(cp, m_Connection);
                 sdr = m_Command.ExecuteReader();
                 HashSet<string> names=new HashSet<string> ();
@@ -176,8 +177,9 @@ namespace MyQuery.Web.EasyTechFunc
                     }
                     sdr.Close();
                     string account = "000000000000000";
+                    string savePathweb = "/Uploaded" + "/Tc_" + rqid + "/" + fileName;
                     cp = string.Format("insert into dfg_contract(name,contract_draft_name,account,file_path,service_content,status,rq_id,upload_time)" +
-                        "values('{0}','{1}','{2}','{3}','{4}',0,'{5}','{6}')", fileName, fileName, account, savePath, plandes, rqid, DateTime.Now);
+                        "values('{0}','{1}','{2}','{3}','{4}',0,'{5}','{6}')", fileName, fileName, account, savePathweb, plandes, rqid, DateTime.Now);
 
                     m_Command = new SqlCommand(cp, m_Connection);
                     m_Command.ExecuteNonQuery();
@@ -185,8 +187,8 @@ namespace MyQuery.Web.EasyTechFunc
                 }
                 //string url = "~/Appointment.aspx";
                 //Response.Redirect("~/Appointment.aspx", true);
-                //Response.Write("<script>window.open('Appointment.aspx','_blank')</script>");
-                Response.AddHeader("Refresh", "0");
+                 Response.Write("<script>window.open('/Tmp/MyQuery.aspx?n=listcontract&rqid="+rqid+"','_blank')</script>");
+                //Response.AddHeader("Refresh", "0");
             }
             
         }
