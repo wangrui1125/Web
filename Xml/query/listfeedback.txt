@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
   <myquery title="编辑方案信息" pagesize="0">
     <select>
@@ -6,7 +6,6 @@
         <col style="width: 100px;" />
         <col />
       </colgroup>
-
       <column name="Plan_Title" title="方案名"  width="99%" maxlength="150">
         <validates>
           <validate type="isnotnull">
@@ -19,12 +18,8 @@
           </validate>
         </validates>
       </column>
-      
-
-<column name="Researcher" usefields="id,rqid" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listplanResearcher&amp;planID={0}&amp;rqid={1}&amp;pagesize=5" maxlength="310" colspan="2" parameter="id" parametervalue="!">
-	   </column>
-	  
-         <column name="zplan" usefields="id,rqid" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listplan&amp;pid={0}&amp;rqid={1}&amp;pagesize=5" maxlength="710" colspan="2" parameter="id" parametervalue="!">
+     
+         <column name="zplan" usefields="id" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listplan5&amp;pid={0}&amp;pagesize=5" maxlength="310" colspan="2" parameter="id" parametervalue="!">
       </column>
      
       <column name="Rq_ID" visible="false" value="querystring,rqid" parameter="rqid" parametervalue="!"></column>
@@ -42,27 +37,6 @@
         Plan_id={0}
       </append>
     </where>
-    <buttons position="top">
-      <button name="save" title="保 存" type="save" cssclass="input_button">
-      </button>
-     <button name="btnMark" title="研究人员" type="redirect" parameters="id,rqid" cssclass="input_button">        
-        EasyTechFunc/AddResearcher.aspx
-      </button>
-      <button name="btnhelp" title="协助" type="dialog" parameters="rqid" cssclass="input_button">
-      
-       EasyTechFunc/AddHelper.aspx
-        
-      </button>
-	   <button name="updateHetong" title="上传合同"  parameters="rqid" type="dialog" cssclass="input_button">
-      
-       Tmp/MyQuery.aspx?n=listcontract
-        
-      </button>
-	  
-      <button name="btnReturn" title="返 回" type="doscript" cssclass="input_button">
-        window.opener=null;window.open('','_self');window.close();
-      </button>
-    </buttons>
-   
+ 
   </myquery>
 </root>

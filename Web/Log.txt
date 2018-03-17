@@ -22019,3 +22019,417 @@ System.Data.SqlClient.SqlException (0x80131904): ÔÚÓë SQL Server ½¨Á¢Á¬½ÓÊ±³öÏÖÓ
    ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
 ClientConnectionId:00000000-0000-0000-0000-000000000000
 Error Number:53,State:0,Class:20
+
+·¢ÉúÊ±¼ä£º2018-03-17 10:30:27,515
+Ïß³ÌID£º[40]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myedit_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback
+System.Xml.XmlException: XML ×¢ÊÍÖÐ²»ÄÜ°üº¬¡°--¡±£¬²¢ÇÒ¡°-¡±²»ÄÜÊÇ×îºóÒ»¸ö×Ö·û¡£ µÚ 38 ÐÐ£¬Î»ÖÃ 1¡£
+   ÔÚ System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   ÔÚ System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseCDataOrComment(XmlNodeType type, Int32& outStartPos, Int32& outEndPos)
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseCDataOrComment(XmlNodeType type)
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseComment()
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseElementContent()
+   ÔÚ System.Xml.XmlTextReaderImpl.Read()
+   ÔÚ System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   ÔÚ System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   ÔÚ System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   ÔÚ System.Xml.XmlDocument.Load(XmlReader reader)
+   ÔÚ System.Xml.XmlDocument.Load(String filename)
+   ÔÚ MyQuery.Work.FromXml.GetXml(String name)
+   ÔÚ MyQuery.Work.BaseEdit.OnLoad(EventArgs e)
+
+·¢ÉúÊ±¼ä£º2018-03-17 10:55:15,708
+Ïß³ÌID£º[32]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_feedback.id "id",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedback2.msg "mes2" from dfg_feedback left join dfg_feedback2 on dfg_feedback.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedback2.replier_id order by dfg_feedback.create_at
+System.Data.SqlClient.SqlException (0x80131904): ¶ÔÏóÃû 'dfg_feedback2' ÎÞÐ§¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ÔÚ System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ÔÚ System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:6b77c781-ab97-4ba7-8c69-42ab0e55e116
+
+·¢ÉúÊ±¼ä£º2018-03-17 10:56:09,067
+Ïß³ÌID£º[30]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_feedback.id "id",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedbackreply.msg "mes2" from dfg_feedback left join dfg_feedbackreply on dfg_feedbackreply.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedback2.replier_id order by dfg_feedback.create_at des
+System.Data.SqlClient.SqlException (0x80131904): 'des' ¸½½üÓÐÓï·¨´íÎó¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ÔÚ System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ÔÚ System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:a4ba5b21-b694-4f55-ad80-e8ed8149d95e
+
+·¢ÉúÊ±¼ä£º2018-03-17 10:56:19,838
+Ïß³ÌID£º[30]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_feedback.id "id",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedbackreply.msg "mes2" from dfg_feedback left join dfg_feedbackreply on dfg_feedbackreply.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedback2.replier_id order by dfg_feedback.create_at
+System.Data.SqlClient.SqlException (0x80131904): ¶ÔÏóÃû 'dfg_feedbackreply' ÎÞÐ§¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ÔÚ System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ÔÚ System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:6b77c781-ab97-4ba7-8c69-42ab0e55e116
+
+·¢ÉúÊ±¼ä£º2018-03-17 10:56:39,482
+Ïß³ÌID£º[45]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_feedback.id "id",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedbackreply.msg "mes2" from dfg_feedback left join dfg_feedback on dfg_feedbackreply.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedback2.replier_id order by dfg_feedback.create_at
+System.Data.SqlClient.SqlException (0x80131904): FROM ×Ó¾äÖÐµÄ¶ÔÏó "dfg_feedback" ºÍ "dfg_feedback" ¾ßÓÐÏàÍ¬µÄ±íÏÖÃû³Æ¡£ÇëÊ¹ÓÃÏà¹ØÃû³ÆÀ´Çø·ÖËüÃÇ¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ÔÚ System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ÔÚ System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:ada88dd9-3b10-44dd-8200-5cc23cef229c
+
+·¢ÉúÊ±¼ä£º2018-03-17 10:57:05,688
+Ïß³ÌID£º[45]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_feedback.id "id",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedback2.msg "mes2" from dfg_feedback left join dfg_feedback2 on dfg_feedback2.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedback2.replier_id order by dfg_feedback.create_at
+System.Data.SqlClient.SqlException (0x80131904): ¶ÔÏóÃû 'dfg_feedback2' ÎÞÐ§¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ÔÚ System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ÔÚ System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:e4e68b06-7431-4226-8ebd-b3b404b84f13
+
+·¢ÉúÊ±¼ä£º2018-03-17 10:57:26,005
+Ïß³ÌID£º[45]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_feedback.id "id",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedback2.msg "mes2" from dfg_feedback left join dfg_feedback2 on dfg_feedback.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedback2.replier_id order by dfg_feedback.create_at
+System.Data.SqlClient.SqlException (0x80131904): ¶ÔÏóÃû 'dfg_feedback2' ÎÞÐ§¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ÔÚ System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ÔÚ System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:4ae1ada1-3dd3-47f2-a054-c8ad712ea215
+
+·¢ÉúÊ±¼ä£º2018-03-17 10:57:29,829
+Ïß³ÌID£º[45]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_feedback.id "id",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedback2.msg "mes2" from dfg_feedback left join dfg_feedback2 on dfg_feedback.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedback2.replier_id order by dfg_feedback.create_at
+System.Data.SqlClient.SqlException (0x80131904): ¶ÔÏóÃû 'dfg_feedback2' ÎÞÐ§¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ÔÚ System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ÔÚ System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:a2b66dba-1aee-42c4-bc01-ad3cd284199b
+
+·¢ÉúÊ±¼ä£º2018-03-17 10:57:57,754
+Ïß³ÌID£º[30]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_feedback.id "id",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedback2.msg "mes2" from dfg_feedback left join dfg_feedbackr on dfg_feedback.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedbackr.replier_id order by dfg_feedback.create_at
+System.Data.SqlClient.SqlException (0x80131904): ¶ÔÏóÃû 'dfg_feedbackr' ÎÞÐ§¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ÔÚ System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ÔÚ System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:a2b66dba-1aee-42c4-bc01-ad3cd284199b
+
+·¢ÉúÊ±¼ä£º2018-03-17 10:59:08,537
+Ïß³ÌID£º[8]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_feedback.id "id",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedback2.msg "mes2" from dfg_feedback left join dfg_feedback dfg_feedback2 on dfg_feedback2.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedback2.replier_id order by dfg_feedback.create_at
+System.Data.SqlClient.SqlException (0x80131904): ÔÚ½« nvarchar Öµ 'admin' ×ª»»³ÉÊý¾ÝÀàÐÍ int Ê±Ê§°Ü¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   ÔÚ System.Data.SqlClient.SqlDataReader.Read()
+   ÔÚ System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   ÔÚ System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   ÔÚ System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:4ae1ada1-3dd3-47f2-a054-c8ad712ea215
+
+·¢ÉúÊ±¼ä£º2018-03-17 11:38:25,261
+Ïß³ÌID£º[31]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback¶ÁÈ¡xmlÊ§°Ü
+System.Xml.XmlException: ¡°¡±¡±ÎªÒâÍâ±ê¼Ç¡£Ô¤ÆÚ±ê¼ÇÎª¡°"¡±»ò¡°'¡±¡£ µÚ 49 ÐÐ£¬Î»ÖÃ 38¡£
+   ÔÚ System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   ÔÚ System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   ÔÚ System.Xml.XmlTextReaderImpl.ThrowUnexpectedToken(String expectedToken1, String expectedToken2)
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseAttributes()
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseElement()
+   ÔÚ System.Xml.XmlTextReaderImpl.ParseElementContent()
+   ÔÚ System.Xml.XmlTextReaderImpl.Read()
+   ÔÚ System.Xml.XmlLoader.LoadNode(Boolean skipOverWhitespace)
+   ÔÚ System.Xml.XmlLoader.LoadDocSequence(XmlDocument parentDoc)
+   ÔÚ System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   ÔÚ System.Xml.XmlDocument.Load(XmlReader reader)
+   ÔÚ System.Xml.XmlDocument.Load(String filename)
+   ÔÚ MyQuery.Work.FromXml.GetXml(String name)
+   ÔÚ MyQuery.Work.BaseQuery.OnLoad(EventArgs e)
+
+·¢ÉúÊ±¼ä£º2018-03-17 12:11:00,618
+Ïß³ÌID£º[13]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_feedback.id "id",TechRequire.Rq_ID "rqid",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedback2.msg "mes2",'&nbsp;<a  href="../EasyTechFunc/ReplyFeedBack.aspx?feedbackid='+cast( id as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">»Ø¸´</a>
+		' "edit" from dfg_feedback left join dfg_feedback dfg_feedback2 on dfg_feedback2.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedback2.replier_id  where  dfg_feedback.service_type='1' and dfg_feedback.reply_to_id=0 order by dfg_feedback.create_at  desc
+System.Data.SqlClient.SqlException (0x80131904): ÁÐÃû 'id' ²»Ã÷È·¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ÔÚ System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ÔÚ System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:9c3ff432-46d4-49f8-9bb1-906bbebc73e4
+
+·¢ÉúÊ±¼ä£º2018-03-17 12:11:48,653
+Ïß³ÌID£º[13]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_feedback.id "fid",TechRequire.Rq_ID "rqid",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedback2.msg "mes2",'&nbsp;<a  href="../EasyTechFunc/ReplyFeedBack.aspx?feedbackid='+cast( fid as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">»Ø¸´</a>
+		' "edit" from dfg_feedback left join dfg_feedback dfg_feedback2 on dfg_feedback2.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedback2.replier_id  where  dfg_feedback.service_type='1' and dfg_feedback.reply_to_id=0 order by dfg_feedback.create_at  desc
+System.Data.SqlClient.SqlException (0x80131904): ÁÐÃû 'fid' ÎÞÐ§¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ÔÚ System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ÔÚ System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:a999f542-b5bb-4a97-8a25-95cf5112ec43
+
+·¢ÉúÊ±¼ä£º2018-03-17 12:12:32,349
+Ïß³ÌID£º[43]
+¼¶±ð£ºERROR
+Àà£ºASP.tmp_myquery_aspx
+ÈÕÖ¾ÏûÏ¢£ºlistfeedback»ñÈ¡Êý¾Ý,Óï¾ä: select dfg_feedback.id "fid",TechRequire.Rq_ID "rqid",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedback2.msg "mes2",'&nbsp;<a href="../EasyTechFunc/ReplyFeedBack.aspx?feedbackid='+cast( fid as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">»Ø¸´</a>
+		' "edit" from dfg_feedback left join dfg_feedback dfg_feedback2 on dfg_feedback2.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedback2.replier_id  where  dfg_feedback.service_type='1' and dfg_feedback.reply_to_id=0 order by dfg_feedback.create_at  desc
+System.Data.SqlClient.SqlException (0x80131904): ÁÐÃû 'fid' ÎÞÐ§¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ÔÚ System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ÔÚ System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   ÔÚ MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:9c3ff432-46d4-49f8-9bb1-906bbebc73e4

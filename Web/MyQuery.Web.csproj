@@ -130,6 +130,7 @@
     <Content Include="EasyTechFunc\QuerytechRq.aspx" />
     <Content Include="EasyTechFunc\recommand.aspx" />
     <Content Include="EasyTechFunc\RefResearcher.aspx" />
+    <Content Include="EasyTechFunc\ReplyFeedBack.aspx" />
     <Content Include="EasyTechFunc\ResearcherConcern.aspx" />
     <Content Include="EasyTechFunc\ResearcherExecute.aspx" />
     <Content Include="EasyTechFunc\Review.aspx" />
@@ -410,6 +411,13 @@
     </Compile>
     <Compile Include="EasyTechFunc\RefResearcher.aspx.designer.cs">
       <DependentUpon>RefResearcher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\ReplyFeedBack.aspx.cs">
+      <DependentUpon>ReplyFeedBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\ReplyFeedBack.aspx.designer.cs">
+      <DependentUpon>ReplyFeedBack.aspx</DependentUpon>
     </Compile>
     <Compile Include="EasyTechFunc\ResearcherConcern.aspx.cs">
       <DependentUpon>ResearcherConcern.aspx</DependentUpon>

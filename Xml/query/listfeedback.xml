@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns="http://121.18.78.216" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://121.18.78.216 ..\Demo.xsd">
+  <myquery title="回馈记录（需求）" islogicdeal="false" isfirstload="true" allowsorting="true" allowpaging="true" pagervisible="true">
+    <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">
+	<column name="id" visible="false">
+        dfg_feedback.id
+      </column>	  
+	<column name="rqid" title="需求id" width="20px">
+       TechRequire.Rq_ID
+     </column>
+	 
+    <column name="Rq_Name" title="科技需求名称" width="20px" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailTechRequire&amp;id={0}" usefields="rqid" target="_blank">
+        TechRequire.Rq_Name
+     </column>
+	 <column name="name" title="用户姓名" width="20px">
+       S_UserWeb.Name
+     </column>
+	 <column name="create_at" title="咨询时间" width="20px">
+       dfg_feedback.create_at
+     </column>
+	   <column name="mes" title="咨询内容" width="100px">
+       dfg_feedback.msg
+      </column>
+	  <column name="mes2" title="回复内容"  type="textarea" width="100px">
+       dfg_feedback2.msg
+      </column>
+	   <column name="edit" title="操作" width="120px" type="excelno">
+       <![CDATA['&nbsp;<a href="../EasyTechFunc/ReplyFeedBack.aspx?feedbackid='+cast( dfg_feedback.id as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">回复</a>
+		']]>  
+      </column>
+	  
+	  
+	  
+	  <!--
+      <column name="dfg_feedback" title="方案描述" type="textarea" width="99%">
+        <validates>
+          <validate type="isnotnull">
+          </validate>
+        </validates>
+      <column name="Rq_ID" visible="false" value="querystring,rqid" parameter="rqid" parametervalue="!"></column>
+      <column name="Plan_Owner" visible="false" value="0"></column>
+      <column name="Plan_CreaterID" visible="false" value="useraccount"></column>
+      <column name="Plan_CreateTime" visible="false" value="gettime()" parameter="id" parametervalue=""></column>
+      <column name="Plan_UpdateTime" visible="false" value="gettime()" parameter="id" parametervalue="!"></column>
+      -->
+	  
+    </select>
+    <from type="table">
+      <table title="回复表">dfg_feedback</table>	  
+	  <table title="回复表2">left join dfg_feedback dfg_feedback2 on dfg_feedback2.id=dfg_feedback.reply_to_id</table>
+	  <table title="需求表">left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id</table>
+	  <table title="web用户表">left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id</table>
+	  <table title="用户表">left join S_User on S_User.ID=dfg_feedback2.replier_id</table>	 
+    </from>
+    <where isparameter="true" isshowappend="true" issession="true">
+     
+	  <append type="querystring" name="type" title="咨询信息类型-需求">
+        dfg_feedback.service_type={0} and dfg_feedback.reply_to_id=0
+      </append>
+	   <colgroup>
+        <col width="80px"/>
+        <col width="80px"/>
+        <col width="80px"/>        
+        <col/>
+      </colgroup>
+      <column name="Rq_id" title="需求ID"  target="all" cssclass="input_text">
+        TechRequire.Rq_ID like {0}
+      </column>
+      <column name="Rq_Name" title="需求名称"  target="all" cssclass="input_text">
+        TechRequire.Rq_Name like {0}
+      </column>
+	  <column name="UserWeb_name" title="用户姓名" target="all" cssclass="input_text">
+        S_UserWeb.Name like {0}
+      </column>
+    </where>
+	<order>
+      dfg_feedback.create_at  desc
+    </order>
+  </myquery>
+</root>

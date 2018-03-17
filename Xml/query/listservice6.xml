@@ -9,8 +9,8 @@
 	  <column name="order_no" title="订单号" width="100px">
         dfg_service_ticket.order_no
       </column>
-	   <column name="responsible_Name" title="责任人" width="100px">
-        dfg_service_ticket.responsible_Name
+	   <column name="Name" title="责任人" width="100px">
+        S_User.Name
       </column>	
       <column name="service_type" title="服务类型" width="100px">
         dfg_service_ticket.service_type
@@ -56,6 +56,7 @@
 	  <table title="代码表">left join dfg_f_code pay_type on pay_type.id='pay_type' and pay_type.code=dfg_service_ticket.pay_type</table>	  
 	  <table title="代码表2">left join dfg_f_code service_status on service_status.id='service_status' and service_status.code=dfg_service_ticket.service_status</table>	  
 	  <table title="用户表">left join S_UserWeb on S_UserWeb.id= dfg_service_ticket.user_id</table>
+	  <table title="用户表2">left join S_User on S_User.id= dfg_service_ticket.responsible_ID</table>
     </from>
 	 <where isparameter="true" isshowappend="true" issession="true">
 	 <colgroup>
@@ -67,10 +68,7 @@
         <col width="100px"/>
         <col width="100px"/>
         <col/>
-      </colgroup>    
-	<column name="responsible_Name" title="责任人" width="100px" target="all" cssclass="input_text">
-        dfg_service_ticket.responsible_Name like {0}
-      </column>  		  
+      </colgroup> 
 	  <column name="service_type" title="服务类型" width="100px" target="all" cssclass="input_text">
         dfg_service_ticket.service_type like {0}
       </column>      
