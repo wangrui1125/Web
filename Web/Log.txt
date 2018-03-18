@@ -22433,3 +22433,176 @@ System.Data.SqlClient.SqlException (0x80131904): 列名 'fid' 无效。
    在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
    在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
 ClientConnectionId:9c3ff432-46d4-49f8-9bb1-906bbebc73e4
+
+发生时间：2018-03-18 16:03:46,234
+线程ID：[17]
+级别：ERROR
+类：ASP.tmp_myquery_aspx
+日志消息：listmytechRq77获取数据,语句: select TechRequire.Rq_ID "id",TechRequire.Enp_ID "eid",Enterprise.Enp_Name "Enp_Name",TechRequire.Rq_Name "Rq_Name",dbo.f_GetMark('tech',TechRequire.Rq_ID) "marks",Rq_Status.name "sate",TechRequire.Rq_DueDay "Rq_DueDay",TechRequire.Rq_Fund "Rq_Fund",TechRequire.Rq_ResolveManner "Rq_ResolveManner",Rq_flag.name "Rq_flag",S_User.Name "Name",Rq_Time "Rq_Time",' <a onclick=openDialogRefresh("../EasyTechFunc/EditMark.aspx?entity=tech&id='+cast(TechRequire.Rq_ID as varchar)+'",800,600) style="color: #0055BA;cursor: pointer;">打标签</a>
+        
+&nbsp;<a  href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="iframeContent" style="color: #0055BA;cursor: pointer;">关注</a> 
+&nbsp;<a href="../tmp/MyDetail.aspx?n=detailPlan1&rqid='+cast(TechRequire.Rq_ID as varchar)+'&id='+isnull((select cast(Plan_ID as varchar) from [Plan] where Plan_Owner=0 and Rq_ID=TechRequire.Rq_ID),'-1')+'" target="_blank" style="color: #0055BA;cursor: pointer;">方案</a>
+  ' "edit" from TechRequire left join Enterprise on Enterprise.Enp_ID=TechRequire.Enp_ID left join Rq_words_alg on TechRequire.Rq_ID=Rq_words_alg.Rq_ID left join f_code Rq_flag on Rq_flag.id='Rq_flag' and Rq_flag.code=TechRequire.Rq_flag left join f_code Rq_Type on Rq_Type.id='Rq_Type' and Rq_Type.code=TechRequire.Rq_Type left join f_code Rq_Status on Rq_Status.id='Rq_Status' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner left join ConcernHelper on ConcernHelper.UserID=TechRequire.Rq_ID  where  (TechRequire .Rq_ConsultID='111' or TechRequire .Rq_Manager='111' or TechRequire.Rq_DoID='111' or Rq_techConsultID='111' or Rq_CreaterID ='111') or (ConcernHelper.ConcernID='111'  and ConcernHelper.flag=7) order by TechRequire.Rq_Time desc
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 找不到网络路径。
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, SqlAuthenticationMethod authType)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.PrepareCommand(IDbCommand command, IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, IDataParameter[] commandParameters, Boolean& mustCloseConnection)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:53,State:0,Class:20
+
+发生时间：2018-03-18 16:33:47,688
+线程ID：[34]
+级别：ERROR
+类：ASP.tmp_myquery_aspx
+日志消息：listfeedback获取数据,语句: select dfg_feedback.id "id",TechRequire.Rq_ID "rqid",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedbackre.msg "mes2",'&nbsp;<a href="../EasyTechFunc/ReplyFeedBack.aspx?feedbackid='+cast( dfg_feedback.id as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">回复</a>
+		' "edit" from dfg_feedback left join dfg_feedback dfg_feedbackre on dfg_feedbackre.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedback2.replier_id  where  dfg_feedback.service_type='1' and dfg_feedback.reply_to_id=0 order by dfg_feedback.create_at  desc
+System.Data.SqlClient.SqlException (0x80131904): 无法绑定由多个部分组成的标识符 "dfg_feedback2.replier_id"。
+无法绑定由多个部分组成的标识符 "dfg_feedback2.replier_id"。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:0d10f921-fec5-409c-8f60-154eb1d9d9dd
+Error Number:4104,State:1,Class:16
+
+发生时间：2018-03-18 16:34:32,023
+线程ID：[31]
+级别：ERROR
+类：ASP.tmp_myquery_aspx
+日志消息：listfeedback获取数据,语句: select dfg_feedback.id "id",TechRequire.Rq_ID "rqid",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedbackre.msg "mes2",'&nbsp;<a href="../EasyTechFunc/ReplyFeedBack.aspx?feedbackid='+cast( dfg_feedback.id as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">回复</a>
+		' "edit" from dfg_feedback left join dfg_feedback dfg_feedbackre on c.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedbackre.replier_id  where  dfg_feedback.service_type='1' and dfg_feedback.reply_to_id=0 order by dfg_feedback.create_at  desc
+System.Data.SqlClient.SqlException (0x80131904): 无法绑定由多个部分组成的标识符 "c.id"。
+无法绑定由多个部分组成的标识符 "c.id"。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:2598672e-b700-4517-9e4c-d038c12c748f
+Error Number:4104,State:1,Class:16
+
+发生时间：2018-03-18 16:42:28,295
+线程ID：[30]
+级别：ERROR
+类：ASP.tmp_myquery_aspx
+日志消息：listfeedback获取数据,语句: select dfg_feedback.id "id",TechRequire.Rq_ID "rqid",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedbackre.id "mes2",'&nbsp;<a href="../EasyTechFunc/ReplyFeedBack.aspx?feedbackid='+cast( dfg_feedback.id as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">回复</a>
+		' "edit" from dfg_feedback left join dfg_feedbackre on dfg_feedbackre.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedbackre.replier_id  where  dfg_feedback.service_type='1' and dfg_feedback.reply_to_id=0 order by dfg_feedback.create_at  desc
+System.Data.SqlClient.SqlException (0x80131904): 对象名 'dfg_feedbackre' 无效。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:0d10f921-fec5-409c-8f60-154eb1d9d9dd
+Error Number:208,State:1,Class:16
+
+发生时间：2018-03-18 16:48:05,102
+线程ID：[25]
+级别：ERROR
+类：ASP.tmp_myquery_aspx
+日志消息：listfeedback获取数据,语句: select dfg_feedback.id "id",TechRequire.Rq_ID "rqid",TechRequire.Rq_Name "Rq_Name",S_UserWeb.Name "name",dfg_feedback.create_at "create_at",dfg_feedback.msg "mes",dfg_feedback.msg "mes2",'&nbsp;<a href="../EasyTechFunc/ReplyFeedBack.aspx?feedbackid='+cast( dfg_feedback.id as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">回复</a>
+		' "edit" from dfg_feedback left join dfg_feedback on dfg_feedback.id=dfg_feedback.reply_to_id left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id left join S_User on S_User.ID=dfg_feedbackre.replier_id  where  dfg_feedback.service_type='1' and dfg_feedback.reply_to_id=0 order by dfg_feedback.create_at  desc
+System.Data.SqlClient.SqlException (0x80131904): FROM 子句中的对象 "dfg_feedback" 和 "dfg_feedback" 具有相同的表现名称。请使用相关名称来区分它们。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:0d10f921-fec5-409c-8f60-154eb1d9d9dd
+Error Number:1013,State:1,Class:16

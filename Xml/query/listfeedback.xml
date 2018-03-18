@@ -9,7 +9,7 @@
        TechRequire.Rq_ID
      </column>
 	 
-    <column name="Rq_Name" title="科技需求名称" width="20px" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailTechRequire&amp;id={0}" usefields="rqid" target="_blank">
+    <column name="Rq_Name" title="科技需求名称" width="50px" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailTechRequire&amp;id={0}" usefields="rqid" target="_blank">
         TechRequire.Rq_Name
      </column>
 	 <column name="name" title="用户姓名" width="20px">
@@ -21,10 +21,13 @@
 	   <column name="mes" title="咨询内容" width="100px">
        dfg_feedback.msg
       </column>
-	  <column name="mes2" title="回复内容"  type="textarea" width="100px">
-       dfg_feedback2.msg
+	   <column name="backname" title="回复人"  width="20px">
+       S_User.name
+      </column>	  
+	  <column name="mes2" title="回复内容" width="100px">
+       feedback.msg
       </column>
-	   <column name="edit" title="操作" width="120px" type="excelno">
+	   <column name="edit" title="操作" width="20px" type="excelno">
        <![CDATA['&nbsp;<a href="../EasyTechFunc/ReplyFeedBack.aspx?feedbackid='+cast( dfg_feedback.id as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">回复</a>
 		']]>  
       </column>
@@ -47,10 +50,10 @@
     </select>
     <from type="table">
       <table title="回复表">dfg_feedback</table>	  
-	  <table title="回复表2">left join dfg_feedback dfg_feedback2 on dfg_feedback2.id=dfg_feedback.reply_to_id</table>
+	  <table title="回复表2">left join dfg_feedback feedback on feedback.reply_to_id=dfg_feedback.id</table>
 	  <table title="需求表">left join TechRequire on TechRequire.Rq_ID=dfg_feedback.service_id</table>
 	  <table title="web用户表">left join S_UserWeb on S_UserWeb.id=dfg_feedback.user_id</table>
-	  <table title="用户表">left join S_User on S_User.ID=dfg_feedback2.replier_id</table>	 
+	  <table title="用户表">left join S_User on S_User.ID=feedback.replier_id</table>	 
     </from>
     <where isparameter="true" isshowappend="true" issession="true">
      

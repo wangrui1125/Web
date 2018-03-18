@@ -12,11 +12,14 @@
     
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     
+        <br />
+    
     </div>
     <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
     <br />
+    <br />
     <asp:TextBox ID="TextBox1" runat="server" ontextchanged="TextBox1_TextChanged" 
-        TextMode="MultiLine"></asp:TextBox>
+        TextMode="MultiLine" Height="27px" Width="428px"></asp:TextBox>
     <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="回复" />
     <br />
     </form>
