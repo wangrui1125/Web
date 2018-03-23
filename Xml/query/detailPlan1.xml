@@ -39,6 +39,9 @@
       <column name="sendEmail" title="操作" width="80px" type="link" urlformatstring="../SendEmail.aspx?rqid={0}&amp;type=toEnp" usefields="rqid" target="_blank">
         '发送方案'       
       </column>
+	  <column name="uploadFile" title="操作" width="80px" type="link" urlformatstring="EasyTechFunc/UpdateFile.aspx?rqid={0}" usefields="rqid" target="_blank">
+        '上传文件'       
+      </column>
       <column name="Researcher" usefields="id,rqid" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listplanResearcher5&amp;planID={0}&amp;rqid={1}&amp;pagesize=5" maxlength="310" colspan="2" parameter="id" parametervalue="!">
       </column>
       <column name="zplan" usefields="id,rqid" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listplan1&amp;pid={0}&amp;rqid={1}&amp;pagesize=5" maxlength="310" colspan="2" parameter="id" parametervalue="!">

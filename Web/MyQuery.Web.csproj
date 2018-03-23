@@ -147,6 +147,7 @@
     <Content Include="EasyTechFunc\TechRequire.aspx" />
     <Content Include="EasyTechFunc\TechRqConcern.aspx" />
     <Content Include="EasyTechFunc\TechRqExecute.aspx" />
+    <Content Include="EasyTechFunc\UpdateFile.aspx" />
     <Content Include="EasyTechFunc\UpdateHetong.aspx" />
     <Content Include="EasyTechFunc\UserInfo.aspx" />
     <Content Include="EasyTechFunc\WeChatProgressReminder.aspx" />
@@ -530,6 +531,13 @@
     </Compile>
     <Compile Include="EasyTechFunc\TechRqExecute.aspx.designer.cs">
       <DependentUpon>TechRqExecute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EasyTechFunc\UpdateFile.aspx.cs">
+      <DependentUpon>UpdateFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyTechFunc\UpdateFile.aspx.designer.cs">
+      <DependentUpon>UpdateFile.aspx</DependentUpon>
     </Compile>
     <Compile Include="EasyTechFunc\UpdateHetong.aspx.cs">
       <DependentUpon>UpdateHetong.aspx</DependentUpon>

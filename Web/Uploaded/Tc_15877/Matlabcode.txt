@@ -1,0 +1,3 @@
+ 
+ #安装Matlab 
+ ./install -mode silent -fileInstallationKey 54422-40402-23817-20808-30933   -agreeToLicense yes -activationPropertiesFile /tmp/matlab/license.lic  -destinationFolder  /home

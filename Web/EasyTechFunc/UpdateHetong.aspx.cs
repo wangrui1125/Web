@@ -33,70 +33,7 @@ namespace MyQuery.Web.EasyTechFunc
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           /*
-            //string id = Request["id"];
-            string rqid = Request["rqid"];
-            string SqlConnectionString = WebHelper.GetAppConfig("SqlConnectionString");
-            SqlConnection m_Connection = new SqlConnection(SqlConnectionString);
-            m_Connection.Open();
-            string cp="";SqlCommand m_Command =null;SqlDataReader sdr=null;
-            
-            cp=string.Format("select Rq_Name from TechRequire where Rq_ID={0}",rqid);
-            m_Command=new SqlCommand(cp, m_Connection);
-            sdr = m_Command.ExecuteReader();
-            string rqname="";
-            if (sdr.Read())
-            {
-                rqname=sdr.GetString(sdr.GetOrdinal("Rq_Name"));
-            }
-            sdr.Close();
-            cp = string.Format("select id,name,upload_time,status from dfg_contract where rq_id={0}", rqid);
-
-            
-            m_Command = new SqlCommand(cp, m_Connection);
-            sdr = m_Command.ExecuteReader();
-            DataTable table = new DataTable();
-            table.Columns.Add("id", typeof(string));
-            table.Columns.Add("文件名",typeof(string));   
-            table.Columns.Add("上传时间",typeof(string));
-            table.Columns.Add("状态",typeof(string));
-            table.Columns.Add("方案ID",typeof(string));
-            table.Columns.Add("需求ID",typeof(string));            
-            while(sdr.Read())
-            {
-                DataRow tr1 = table.NewRow();
-                tr1[0] = sdr.GetInt32(sdr.GetOrdinal("id")).ToString();
-                tr1[1]=sdr.GetString(sdr.GetOrdinal("name"));
-                tr1[2] = sdr.GetDateTime(sdr.GetOrdinal("upload_time")).ToString();  
-                byte status = sdr.GetByte(sdr.GetOrdinal("status"));
-                if (status == 0)
-                {
-                    tr1[3] = "未通过";
-                }
-                else
-                {
-                    tr1[3] = "通过";
-                }
-                //tr1[4] = id;
-                tr1[5] = rqid;                
-                table.Rows.Add(tr1);
-                
-            }
-            m_Connection.Close();
-
-
-            if (!IsPostBack)
-            {
-                DataGrid1.DataSource = table.DefaultView;
-                DataGrid1.DataBind();
-            }
-            sdr.Close();
-
-            */
-
-
-
-
+          
         }
          
         protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
