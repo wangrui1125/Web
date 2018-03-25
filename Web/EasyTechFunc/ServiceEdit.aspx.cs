@@ -96,6 +96,16 @@ namespace MyQuery.Web.EasyTechFunc
         protected void Button1_Click(object sender, EventArgs e)
         {
 
+            //支付信息更改
+
+
+
+
+
+
+
+
+
         }
         private int selectIndex(string[] strs, string selstr)
         { 

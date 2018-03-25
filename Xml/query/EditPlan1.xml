@@ -21,12 +21,12 @@
       </column>
       
 
-<column name="Researcher" usefields="id,rqid" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listplanResearcher&amp;planID={0}&amp;rqid={1}&amp;pagesize=5" maxlength="310" colspan="2" parameter="id" parametervalue="!">
+		<column name="Researcher" usefields="id,rqid" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listplanResearcher&amp;planID={0}&amp;rqid={1}&amp;pagesize=5" maxlength="310" colspan="2" parameter="id" parametervalue="!">
 	   </column>
-	  
-         <column name="zplan" usefields="id,rqid" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listplan&amp;pid={0}&amp;rqid={1}&amp;pagesize=5" maxlength="710" colspan="2" parameter="id" parametervalue="!">
+	  <!--
+      <column name="zplan" usefields="id,rqid" type="iframe" urlformatstring="tmp/MyQuery.aspx?n=listplan&amp;pid={0}&amp;rqid={1}&amp;pagesize=5" maxlength="710" colspan="2" parameter="id" parametervalue="!">
       </column>
-     
+       -->
       <column name="Rq_ID" visible="false" value="querystring,rqid" parameter="rqid" parametervalue="!"></column>
       <column name="Plan_Owner" visible="false" value="0"></column>
       <column name="Plan_CreaterID" visible="false" value="useraccount"></column>
