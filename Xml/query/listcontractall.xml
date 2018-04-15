@@ -31,11 +31,7 @@
     <from type="table">
       <table title="合同列表">dfg_contract</table>	  
     </from>
-    <where isparameter="true" isshowappend="true" issession="false">
-     <append type="querystring" name="rqid" title="所属需求">
-        dfg_contract.rq_id={0}
-     </append>      
-    </where>
+    
     <order>
       dfg_contract.id
     </order>

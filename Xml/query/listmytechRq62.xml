@@ -100,8 +100,7 @@
 	  <table title="代码表">left join f_code Rq_Status on Rq_Status.id='Rq_Status' and Rq_Status.code=TechRequire.Rq_Status</table>	 
  <table title="用户表">left join S_User on S_User.id= TechRequire.Rq_Owner</table>
     </from>
-    <where isparameter="true" isshowappend="true" issession="true">
-       
+    <where isparameter="true" isshowappend="true" issession="true">       
       <append type="querystring" name="ID" title="所属科技需求类型">
         TechRequire.Rq_Owner={0} and TechRequire.Rq_flag=2
       </append>

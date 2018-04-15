@@ -6,7 +6,7 @@
       <column name="id" visible="false">
         TechRequire.Rq_ID
       </column>
-      <column name="eid">
+      <column name="eid" visible="false">
         TechRequire.Enp_ID
       </column>
       <column name="Enp_Name" title="企业名称" width="100px" type="link" urlformatstring="Tmp/MyDetail.aspx?n=detailEnterprise&amp;id={0}" usefields="eid" target="_blank">

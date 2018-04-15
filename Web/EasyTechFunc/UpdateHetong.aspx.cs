@@ -102,9 +102,10 @@ namespace MyQuery.Web.EasyTechFunc
                     names.Add(name);
                 }
                 sdr.Close();
+
                 if (!names.Contains(fileName))
                 {
-                    cp = string.Format("select Plan_Des from [Plan] where Plan_ID={0}", rqid);
+                    cp = string.Format("select Plan_Des from [Plan] where Rq_ID={0}", rqid);
                     m_Command = new SqlCommand(cp, m_Connection);
                     sdr = m_Command.ExecuteReader();
                     string plandes = "";

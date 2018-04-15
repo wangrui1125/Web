@@ -5,10 +5,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .style1 {
+            font-size: x-large;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
+        
+        <span class="style1">需求进度的微信提醒：</span><br />
         
         <asp:Table ID="Table1" runat="server" Height="236px" Width="575px" 
             BackColor="White">
