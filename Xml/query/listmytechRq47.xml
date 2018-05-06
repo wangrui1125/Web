@@ -52,7 +52,7 @@
        <![CDATA[' <a onclick=openDialogRefresh("../EasyTechFunc/EditMark.aspx?entity=tech&id='+cast(TechRequire.Rq_ID as varchar)+'",800,600) style="color: #0055BA;cursor: pointer;">打标签</a>
         
 &nbsp;<a  href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="iframeContent" style="color: #0055BA;cursor: pointer;">关注</a> 
-&nbsp;<a href="../tmp/MyDetail.aspx?n=detailPlan1&rqid='+cast(TechRequire.Rq_ID as varchar)+'&id='+isnull((select cast(Plan_ID as varchar) from [Plan] where Plan_Owner=0 and Rq_ID=TechRequire.Rq_ID),'-1')+'" target="_blank" style="color: #0055BA;cursor: pointer;">方案</a>
+&nbsp;<a href="../tmp/MyDetail.aspx?n=detailPlan2&rqid='+cast(TechRequire.Rq_ID as varchar)+'&id='+isnull((select cast(Plan_ID as varchar) from [Plan] where Plan_Owner=0 and Rq_ID=TechRequire.Rq_ID),'-1')+'" target="_blank" style="color: #0055BA;cursor: pointer;">方案</a>
   ']]>
       </column>
     </select>

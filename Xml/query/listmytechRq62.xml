@@ -87,7 +87,8 @@
 &nbsp;<a href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="iframeContent" style="color: #0055BA;cursor: pointer;">关注</a> 
  &nbsp;<a href="../EasyTechFunc/SubmitFailure.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_blank" style="color: #0055BA;cursor: pointer;">审阅不通过</a>
  &nbsp;<a href="../EasyTechFunc/SubmitSuccess.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">审阅通过</a>
-  ']]>
+  &nbsp;<a href="../Tmp/MyQuery.aspx?n=listfeedback&rqid='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">反馈信息</a>'
+  ]]>
   
       </column>
     </select>

@@ -37,7 +37,7 @@
 
 <column title="方案发送时间" type="text" issort="true" visible="true" name="Remark"> [Plan].Plan_sendtime </column>
 
-<column title="操作" width="80px" type="link" name="sendEmail" target="_blank" usefields="rqid" urlformatstring="../SendEmail.aspx?rqid={0}&amp;type=toEnp"> '发送方案' </column>
+
 
 
 

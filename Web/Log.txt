@@ -22696,3 +22696,265 @@ System.Xml.XmlException: “=”是意外的标记。标记应为“;”。 第 42 行，位置 121。
    在 System.Xml.XmlDocument.Load(String filename)
    在 MyQuery.Work.FromXml.GetXml(String name)
    在 MyQuery.Work.BaseDetail.OnLoad(EventArgs e)
+
+发生时间：2018-04-21 10:48:23,294
+线程ID：[15]
+级别：ERROR
+类：ASP.tmp_myquery_aspx
+日志消息：listmytechRq25获取数据,语句: select TechRequire.Rq_ID "id",TechRequire.Enp_ID "eid",Enterprise.Enp_Name "Enp_Name",TechRequire.Rq_Name "Rq_Name",dbo.f_GetMark('tech',TechRequire.Rq_ID) "marks",Rq_Status.name "sate",TechRequire.Rq_DueDay "Rq_DueDay",TechRequire.Rq_Fund "Rq_Fund",TechRequire.Rq_ResolveManner "Rq_ResolveManner",Rq_flag.name "Rq_flag",S_User.Name "Name",Rq_Time "Rq_Time",'<a onclick=openDialogRefresh("../EasyTechFunc/EditMark.aspx?entity=tech&id='+cast(TechRequire.Rq_ID as varchar)+'",800,600) style="color: #0055BA;cursor: pointer;">打标签</a>
+&nbsp;<a  href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="iframeContent" style="color: #0055BA;cursor: pointer;">关注</a> 
+ &nbsp;<a href="../EasyTechFunc/Plan.aspx?rqid='+cast(TechRequire.Rq_ID as varchar)+'&id='+isnull((select cast(Plan_ID as varchar) from [Plan] where Plan_Owner=0 and Rq_ID=TechRequire.Rq_ID),'')+'" target="_blank" style="color: #0055BA;cursor: pointer;">方案</a>      
+&nbsp;<a href="../EasyTechFunc/StopPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">放弃</a>
+&nbsp;<a href="../EasyTechFunc/FinishPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">完成方案</a>'
+ &nbsp;<a href="../Tmp/MyQuery.aspx?n=listfeedback&rqid='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">反馈信息</a> "edit" from TechRequire left join Enterprise on Enterprise.Enp_ID=TechRequire.Enp_ID left join Rq_words_alg on TechRequire.Rq_ID=Rq_words_alg.Rq_ID left join f_code Rq_flag on Rq_flag.id='Rq_flag' and Rq_flag.code=TechRequire.Rq_flag left join f_code Rq_Type on Rq_Type.id='Rq_Type' and Rq_Type.code=TechRequire.Rq_Type left join f_code Rq_Status on Rq_Status.id='Rq_Status' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner='111' and TechRequire.Rq_flag=5 order by TechRequire.Rq_Time desc
+System.Data.SqlClient.SqlException (0x80131904): ';' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:333cccf2-6b0f-4308-a309-10c44f879ebc
+
+发生时间：2018-04-21 10:49:17,473
+线程ID：[22]
+级别：ERROR
+类：ASP.tmp_myquery_aspx
+日志消息：listmytechRq25获取数据,语句: select TechRequire.Rq_ID "id",TechRequire.Enp_ID "eid",Enterprise.Enp_Name "Enp_Name",TechRequire.Rq_Name "Rq_Name",dbo.f_GetMark('tech',TechRequire.Rq_ID) "marks",Rq_Status.name "sate",TechRequire.Rq_DueDay "Rq_DueDay",TechRequire.Rq_Fund "Rq_Fund",TechRequire.Rq_ResolveManner "Rq_ResolveManner",Rq_flag.name "Rq_flag",S_User.Name "Name",Rq_Time "Rq_Time",'<a onclick=openDialogRefresh("../EasyTechFunc/EditMark.aspx?entity=tech&id='+cast(TechRequire.Rq_ID as varchar)+'",800,600) style="color: #0055BA;cursor: pointer;">打标签</a>
+&nbsp;<a  href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="iframeContent" style="color: #0055BA;cursor: pointer;">关注</a> 
+ &nbsp;<a href="../EasyTechFunc/Plan.aspx?rqid='+cast(TechRequire.Rq_ID as varchar)+'&id='+isnull((select cast(Plan_ID as varchar) from [Plan] where Plan_Owner=0 and Rq_ID=TechRequire.Rq_ID),'')+'" target="_blank" style="color: #0055BA;cursor: pointer;">方案</a>      
+&nbsp;<a href="../EasyTechFunc/StopPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">放弃</a>
+&nbsp;<a href="../EasyTechFunc/FinishPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">完成方案</a>'
+ &nbsp;<a href="../Tmp/MyQuery.aspx?n=listfeedback&rqid='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">反馈信息</a>' "edit" from TechRequire left join Enterprise on Enterprise.Enp_ID=TechRequire.Enp_ID left join Rq_words_alg on TechRequire.Rq_ID=Rq_words_alg.Rq_ID left join f_code Rq_flag on Rq_flag.id='Rq_flag' and Rq_flag.code=TechRequire.Rq_flag left join f_code Rq_Type on Rq_Type.id='Rq_Type' and Rq_Type.code=TechRequire.Rq_Type left join f_code Rq_Status on Rq_Status.id='Rq_Status' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner='111' and TechRequire.Rq_flag=5 order by TechRequire.Rq_Time desc
+System.Data.SqlClient.SqlException (0x80131904): ';' 附近有语法错误。
+字符串 ' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner=@ID and TechRequire.Rq_flag=5 ' 后的引号不完整。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:2933ca47-a45f-4208-b470-1cfd9bebd830
+
+发生时间：2018-04-21 10:51:48,790
+线程ID：[12]
+级别：ERROR
+类：ASP.tmp_myquery_aspx
+日志消息：listmytechRq25获取数据,语句: select TechRequire.Rq_ID "id",TechRequire.Enp_ID "eid",Enterprise.Enp_Name "Enp_Name",TechRequire.Rq_Name "Rq_Name",dbo.f_GetMark('tech',TechRequire.Rq_ID) "marks",Rq_Status.name "sate",TechRequire.Rq_DueDay "Rq_DueDay",TechRequire.Rq_Fund "Rq_Fund",TechRequire.Rq_ResolveManner "Rq_ResolveManner",Rq_flag.name "Rq_flag",S_User.Name "Name",Rq_Time "Rq_Time",'&nbsp;<a onclick=openDialogRefresh("../EasyTechFunc/EditMark.aspx?entity=tech&id='+cast(TechRequire.Rq_ID as varchar)+'",800,600) style="color: #0055BA;cursor: pointer;">打标签</a>
+&nbsp;<a  href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="iframeContent" style="color: #0055BA;cursor: pointer;">关注</a> 
+ &nbsp;<a href="../EasyTechFunc/Plan.aspx?rqid='+cast(TechRequire.Rq_ID as varchar)+'&id='+isnull((select cast(Plan_ID as varchar) from [Plan] where Plan_Owner=0 and Rq_ID=TechRequire.Rq_ID),'')+'" target="_blank" style="color: #0055BA;cursor: pointer;">方案</a>      
+&nbsp;<a href="../EasyTechFunc/StopPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">放弃</a>
+&nbsp;<a href="../EasyTechFunc/FinishPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">完成方案</a>'
+&nbsp;<a href="../Tmp/MyQuery.aspx?n=listfeedback&rqid='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">反馈信息</a>
+ ' "edit" from TechRequire left join Enterprise on Enterprise.Enp_ID=TechRequire.Enp_ID left join Rq_words_alg on TechRequire.Rq_ID=Rq_words_alg.Rq_ID left join f_code Rq_flag on Rq_flag.id='Rq_flag' and Rq_flag.code=TechRequire.Rq_flag left join f_code Rq_Type on Rq_Type.id='Rq_Type' and Rq_Type.code=TechRequire.Rq_Type left join f_code Rq_Status on Rq_Status.id='Rq_Status' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner='111' and TechRequire.Rq_flag=5 order by TechRequire.Rq_Time desc
+System.Data.SqlClient.SqlException (0x80131904): ';' 附近有语法错误。
+字符串 ' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner=@ID and TechRequire.Rq_flag=5 ' 后的引号不完整。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:bc5480a8-febf-4cc1-8576-64eeb59d9b67
+
+发生时间：2018-04-21 10:55:14,095
+线程ID：[31]
+级别：ERROR
+类：ASP.tmp_myquery_aspx
+日志消息：listmytechRq25获取数据,语句: select TechRequire.Rq_ID "id",TechRequire.Enp_ID "eid",Enterprise.Enp_Name "Enp_Name",TechRequire.Rq_Name "Rq_Name",dbo.f_GetMark('tech',TechRequire.Rq_ID) "marks",Rq_Status.name "sate",TechRequire.Rq_DueDay "Rq_DueDay",TechRequire.Rq_Fund "Rq_Fund",TechRequire.Rq_ResolveManner "Rq_ResolveManner",Rq_flag.name "Rq_flag",S_User.Name "Name",Rq_Time "Rq_Time",'&nbsp;<a onclick=openDialogRefresh("../EasyTechFunc/EditMark.aspx?entity=tech&id='+cast(TechRequire.Rq_ID as varchar)+'",800,600) style="color: #0055BA;cursor: pointer;">打标签</a>
+&nbsp;<a  href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="iframeContent" style="color: #0055BA;cursor: pointer;">关注</a> 
+ &nbsp;<a href="../EasyTechFunc/Plan.aspx?rqid='+cast(TechRequire.Rq_ID as varchar)+'&id='+isnull((select cast(Plan_ID as varchar) from [Plan] where Plan_Owner=0 and Rq_ID=TechRequire.Rq_ID),'-1')+'" target="_blank" style="color: #0055BA;cursor: pointer;">方案</a>      
+&nbsp;<a href="../EasyTechFunc/StopPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">放弃</a>
+&nbsp;<a href="../EasyTechFunc/FinishPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">完成方案</a>'
+&nbsp;<a href="../Tmp/MyQuery.aspx?n=listfeedback&rqid='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">反馈信息</a>
+ ' "edit" from TechRequire left join Enterprise on Enterprise.Enp_ID=TechRequire.Enp_ID left join Rq_words_alg on TechRequire.Rq_ID=Rq_words_alg.Rq_ID left join f_code Rq_flag on Rq_flag.id='Rq_flag' and Rq_flag.code=TechRequire.Rq_flag left join f_code Rq_Type on Rq_Type.id='Rq_Type' and Rq_Type.code=TechRequire.Rq_Type left join f_code Rq_Status on Rq_Status.id='Rq_Status' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner='111' and TechRequire.Rq_flag=5 order by TechRequire.Rq_Time desc
+System.Data.SqlClient.SqlException (0x80131904): ';' 附近有语法错误。
+字符串 ' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner=@ID and TechRequire.Rq_flag=5 ' 后的引号不完整。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:2933ca47-a45f-4208-b470-1cfd9bebd830
+
+发生时间：2018-04-21 10:56:57,248
+线程ID：[31]
+级别：ERROR
+类：ASP.tmp_myquery_aspx
+日志消息：listmytechRq25获取数据,语句: select TechRequire.Rq_ID "id",TechRequire.Enp_ID "eid",Enterprise.Enp_Name "Enp_Name",TechRequire.Rq_Name "Rq_Name",dbo.f_GetMark('tech',TechRequire.Rq_ID) "marks",Rq_Status.name "sate",TechRequire.Rq_DueDay "Rq_DueDay",TechRequire.Rq_Fund "Rq_Fund",TechRequire.Rq_ResolveManner "Rq_ResolveManner",Rq_flag.name "Rq_flag",S_User.Name "Name",Rq_Time "Rq_Time",'&nbsp;<a onclick=openDialogRefresh("../EasyTechFunc/EditMark.aspx?entity=tech&id='+cast(TechRequire.Rq_ID as varchar)+'",800,600) style="color: #0055BA;cursor: pointer;">打标签</a>
+&nbsp;<a  href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="iframeContent" style="color: #0055BA;cursor: pointer;">关注</a> 
+ &nbsp;<a href="../EasyTechFunc/Plan.aspx?rqid='+cast(TechRequire.Rq_ID as varchar)+'&id='+isnull((select cast(Plan_ID as varchar) from [Plan] where Plan_Owner=0 and Rq_ID=TechRequire.Rq_ID),'-1')+'" target="_blank" style="color: #0055BA;cursor: pointer;">方案</a>      
+&nbsp;<a href="../EasyTechFunc/StopPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">放弃</a>
+&nbsp;<a href="../EasyTechFunc/FinishPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">完成方案</a>'
+&nbsp;<a href="../Tmp/MyQuery.aspx?n=listfeedback&rqid='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">反馈信息</a>
+ ' "edit" from TechRequire left join Enterprise on Enterprise.Enp_ID=TechRequire.Enp_ID left join Rq_words_alg on TechRequire.Rq_ID=Rq_words_alg.Rq_ID left join f_code Rq_flag on Rq_flag.id='Rq_flag' and Rq_flag.code=TechRequire.Rq_flag left join f_code Rq_Type on Rq_Type.id='Rq_Type' and Rq_Type.code=TechRequire.Rq_Type left join f_code Rq_Status on Rq_Status.id='Rq_Status' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner='111' and TechRequire.Rq_flag=5 order by TechRequire.Rq_Time desc
+System.Data.SqlClient.SqlException (0x80131904): ';' 附近有语法错误。
+字符串 ' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner=@ID and TechRequire.Rq_flag=5 ' 后的引号不完整。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:333cccf2-6b0f-4308-a309-10c44f879ebc
+
+发生时间：2018-04-21 10:57:19,581
+线程ID：[19]
+级别：ERROR
+类：ASP.tmp_myquery_aspx
+日志消息：listmytechRq25获取数据,语句: select TechRequire.Rq_ID "id",TechRequire.Enp_ID "eid",Enterprise.Enp_Name "Enp_Name",TechRequire.Rq_Name "Rq_Name",dbo.f_GetMark('tech',TechRequire.Rq_ID) "marks",Rq_Status.name "sate",TechRequire.Rq_DueDay "Rq_DueDay",TechRequire.Rq_Fund "Rq_Fund",TechRequire.Rq_ResolveManner "Rq_ResolveManner",Rq_flag.name "Rq_flag",S_User.Name "Name",Rq_Time "Rq_Time",'&nbsp;<a onclick=openDialogRefresh("../EasyTechFunc/EditMark.aspx?entity=tech&id='+cast(TechRequire.Rq_ID as varchar)+'",800,600) style="color: #0055BA;cursor: pointer;">打标签</a>
+&nbsp;<a  href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="iframeContent" style="color: #0055BA;cursor: pointer;">关注</a> 
+ &nbsp;<a href="../EasyTechFunc/Plan.aspx?rqid='+cast(TechRequire.Rq_ID as varchar)+'&id='+isnull((select cast(Plan_ID as varchar) from [Plan] where Plan_Owner=0 and Rq_ID=TechRequire.Rq_ID),'-1')+'" target="_blank" style="color: #0055BA;cursor: pointer;">方案</a>      
+&nbsp;<a href="../EasyTechFunc/StopPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">放弃</a>
+&nbsp;<a href="../EasyTechFunc/FinishPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">完成方案</a>'
+&nbsp;<a href="../Tmp/MyQuery.aspx?n=listfeedback&rqid='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">反馈信息</a>
+ ' "edit" from TechRequire left join Enterprise on Enterprise.Enp_ID=TechRequire.Enp_ID left join Rq_words_alg on TechRequire.Rq_ID=Rq_words_alg.Rq_ID left join f_code Rq_flag on Rq_flag.id='Rq_flag' and Rq_flag.code=TechRequire.Rq_flag left join f_code Rq_Type on Rq_Type.id='Rq_Type' and Rq_Type.code=TechRequire.Rq_Type left join f_code Rq_Status on Rq_Status.id='Rq_Status' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner='111' and TechRequire.Rq_flag=5 order by TechRequire.Rq_Time desc
+System.Data.SqlClient.SqlException (0x80131904): ';' 附近有语法错误。
+字符串 ' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner=@ID and TechRequire.Rq_flag=5 ' 后的引号不完整。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:333cccf2-6b0f-4308-a309-10c44f879ebc
+
+发生时间：2018-04-21 10:58:01,826
+线程ID：[17]
+级别：ERROR
+类：ASP.tmp_myquery_aspx
+日志消息：listmytechRq25获取数据,语句: select TechRequire.Rq_ID "id",TechRequire.Enp_ID "eid",Enterprise.Enp_Name "Enp_Name",TechRequire.Rq_Name "Rq_Name",dbo.f_GetMark('tech',TechRequire.Rq_ID) "marks",Rq_Status.name "sate",TechRequire.Rq_DueDay "Rq_DueDay",TechRequire.Rq_Fund "Rq_Fund",TechRequire.Rq_ResolveManner "Rq_ResolveManner",Rq_flag.name "Rq_flag",S_User.Name "Name",Rq_Time "Rq_Time",'&nbsp;<a onclick=openDialogRefresh("../EasyTechFunc/EditMark.aspx?entity=tech&id='+cast(TechRequire.Rq_ID as varchar)+'",800,600) style="color: #0055BA;cursor: pointer;">打标签</a>
+&nbsp;<a  href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="iframeContent" style="color: #0055BA;cursor: pointer;">关注</a> 
+ &nbsp;<a href="../EasyTechFunc/Plan.aspx?rqid='+cast(TechRequire.Rq_ID as varchar)+'&id='+isnull((select cast(Plan_ID as varchar) from [Plan] where Plan_Owner=0 and Rq_ID=TechRequire.Rq_ID),'-1')+'" target="_blank" style="color: #0055BA;cursor: pointer;">方案</a>      
+&nbsp;<a href="../EasyTechFunc/StopPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">放弃</a>
+&nbsp;<a href="../EasyTechFunc/FinishPlan.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">完成方案</a>'
+ ' "edit" from TechRequire left join Enterprise on Enterprise.Enp_ID=TechRequire.Enp_ID left join Rq_words_alg on TechRequire.Rq_ID=Rq_words_alg.Rq_ID left join f_code Rq_flag on Rq_flag.id='Rq_flag' and Rq_flag.code=TechRequire.Rq_flag left join f_code Rq_Type on Rq_Type.id='Rq_Type' and Rq_Type.code=TechRequire.Rq_Type left join f_code Rq_Status on Rq_Status.id='Rq_Status' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner='111' and TechRequire.Rq_flag=5 order by TechRequire.Rq_Time desc
+System.Data.SqlClient.SqlException (0x80131904): 以 ' "edit" ,row_number() over (order by TechRequire.Rq_Time desc) as rn from TechRequire left join Enterprise on Enterprise.Enp_ID=TechRequire.Enp_ID left join Rq_words_alg on TechRequire.Rq_ID=Rq_words_alg.Rq_ID left join f_code Rq_flag on Rq_flag.id=' 开头的 标识符 太长。最大长度为 128。
+字符串 ' and Rq_Status.code=TechRequire.Rq_Status left join S_User on S_User.id= TechRequire.Rq_Owner  where  TechRequire.Rq_Owner=@ID and TechRequire.Rq_flag=5 ' 后的引号不完整。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   在 MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.DataFrom.GetDataSet(String sql, IDataParameter[] parameters)
+   在 MyQuery.Work.FromXml.SetGridViewData(XmlNode myquery, MyGridView MyGridView1, DataFrom dataFrom, MySqlParameters sqlParameters, Boolean isParameter, Object[] dtAll)
+   在 MyQuery.Work.BaseQuery.PageLoad(MyInputs MyInputs1, MyBtns MyBtns1, MyBtns MyBtns2, MyGridView MyGridView1, HtmlInputButton btnSubject, Label lblDef, Button btnQuery, HtmlTableRow trToolTip, HtmlTableRow trQuery, HtmlTable tblSearch, HtmlGenericControl divQuery, HtmlGenericControl divNotes)
+ClientConnectionId:9433537e-8af0-4bb6-98b1-22ee725b0cf3

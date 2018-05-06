@@ -65,7 +65,9 @@
        <![CDATA['
 &nbsp;<a  href="../EasyTechFunc/Concern.aspx?ConcernID='+cast( TechRequire.Rq_ID as varchar)+'&flag=2" target="iframeContent" style="color: #0055BA;cursor: pointer;">关注</a> 
  &nbsp;<a href="../tmp/MyDetail.aspx?n=detailPlan1&rqid='+cast(TechRequire.Rq_ID as varchar)+'&id='+isnull((select cast(Plan_ID as varchar) from [Plan] where Plan_Owner=0 and Rq_ID=TechRequire.Rq_ID),'-1')+'" target="_blank" style="color: #0055BA;cursor: pointer;">方案</a> 
-&nbsp;<a href="../EasyTechFunc/FinishRq.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">方案完结</a>']]>
+&nbsp;<a href="../EasyTechFunc/FinishRq.aspx?ConcernID='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">方案完结</a>
+&nbsp;<a href="../Tmp/MyQuery.aspx?n=listfeedback&rqid='+cast(TechRequire.Rq_ID as varchar)+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">反馈信息</a>
+']]>
       </column>
     </select>
     <from type="table">
