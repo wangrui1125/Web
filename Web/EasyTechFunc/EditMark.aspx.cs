@@ -33,6 +33,10 @@ namespace MyQuery.Web.EasyTechFunc
                 {
                     txtKeywords.Text = deal.GetScalar("select Rq_Keywords from Rq_words_alg where Rq_ID=" + QueryString["id"]); 
                     txtNotes.Text = deal.GetScalar("select Rq_EnpDes from TechRequire where Rq_ID=" + QueryString["id"]);
+                    Literal1.Text = deal.GetScalar("select dbo.f_GetMark('" + QueryString["entity"] + "'," + QueryString["id"] + ")");
+                    string temp = deal.GetScalar("select Rq_Status from TechRequire where Rq_ID=" + QueryString["id"]);
+                    Literal2.Text = deal.GetScalar("select name from f_code where ID='Rq_status' and f_code.Code like " + temp);
+
                 }
                 else if ("researcher".Equals(QueryString["entity"]))
                 {
@@ -42,10 +46,7 @@ namespace MyQuery.Web.EasyTechFunc
                         txtKeywords.Text = "";
                         txtNotes.Text = dt.Rows[0]["Extract"].ToString();
                     }
-                }
-                Literal1.Text = deal.GetScalar("select dbo.f_GetMark('" + QueryString["entity"] + "'," + QueryString["id"] + ")");
-                string temp = deal.GetScalar("select Rq_Status from TechRequire where Rq_ID=" + QueryString["id"]);
-                Literal2.Text = deal.GetScalar("select name from f_code where ID='Rq_status' and f_code.Code like "+temp);
+                }                
                 CategoryID_SelectedIndexChanged(null, null);
             }
         }

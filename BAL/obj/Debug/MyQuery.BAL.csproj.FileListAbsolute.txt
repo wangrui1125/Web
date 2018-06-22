@@ -110,3 +110,7 @@ C:\Users\Administrator\Desktop\kexiaomi\Web\BAL\bin\Debug\office.xml
 C:\Users\Administrator\Desktop\kexiaomi\Web\BAL\obj\Debug\MyQuery.BAL.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\kexiaomi\Web\BAL\obj\Debug\MyQuery.BAL.dll
 C:\Users\Administrator\Desktop\kexiaomi\Web\BAL\obj\Debug\MyQuery.BAL.pdb
+C:\Users\Administrator\Desktop\kexiaomi\Web\BAL\bin\Debug\MyQuery.BAL.xml
+C:\Users\Administrator\Desktop\kexiaomi\Web\BAL\bin\Debug\stdole.dll
+C:\Users\Administrator\Desktop\kexiaomi\Web\BAL\obj\Debug\MyQuery.BAL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\kexiaomi\Web\BAL\obj\Debug\MyQuery.BAL.csproj.CopyComplete

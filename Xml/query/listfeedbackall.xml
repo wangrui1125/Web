@@ -57,7 +57,7 @@
     </from>
     <where isparameter="true" isshowappend="true" issession="true">
      
-	  <append type="querystring" name="type" title="咨询信息类型-需求">
+	  <append type="querystring" name="type" title="咨询信息类型">
         dfg_feedback.service_type={0} and dfg_feedback.reply_to_id=0
       </append>
 	   <colgroup>

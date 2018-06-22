@@ -102,7 +102,7 @@
     </asp:DropDownList>
     <br />
                 <br />
-                支付金额：<asp:TextBox ID="TextBox1" runat="server" Width="65px" Height="30px"></asp:TextBox>
+                支付金额：<asp:TextBox ID="TextBox1" runat="server" Width="65px" Height="30px" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
     <br />
                 <br />
     <asp:Button ID="Button1" runat="server" Text="确定" onclick="Button1_Click" />
@@ -111,13 +111,13 @@
                 服务单进展情况<br /> 
     <br />
     <asp:DropDownList ID="DropDownList2" runat="server" 
-        Height="30px" Width="120px" style="font-size: large">
+        Height="30px" Width="120px" style="font-size: large" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
     </asp:DropDownList>
     <br />
                 <br />
     <br />
                 <br />
-    <asp:Button ID="Button2" runat="server" Text="确定" onclick="Button1_Click" />
+    <asp:Button ID="Button2" runat="server" Text="确定" onclick="Button2_Click" />
             </td>
         </tr>
         <tr>

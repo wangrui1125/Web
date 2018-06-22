@@ -4,6 +4,114 @@
         <name>MyQuery.BAL</name>
     </assembly>
     <members>
+        <member name="T:MyQuery.BAL.Authenticate">
+            <summary>
+            用户认证业务类
+            by 贾世义 2011-9-8
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.Authenticate.Error">
+            <summary>
+            获取错误信息 失败时才有值
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.Authenticate.MyUser">
+            <summary>
+            获取错误信息 成功时有效
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.Authenticate.Table">
+            <summary>
+            认证表
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.Authenticate.Email">
+            <summary>
+            邮件地址
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.Authenticate.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.Authenticate.IsPass(System.String,System.String)">
+            <summary>
+            是否能够通过认证
+            </summary>
+            <param name="userAccount"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.Authenticate.getUserTable(System.String,System.String)">
+            <summary>
+            获得用户信息
+            </summary>
+            <param name="userAccount"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.Authenticate.setUserApd(MyQuery.Utils.MyUser,System.Data.DataTable)">
+            <summary>
+            设定扩展信息
+            </summary>
+            <param name="myUser"></param>
+            <param name="dt"></param>
+        </member>
+        <member name="M:MyQuery.BAL.Authenticate.GetUser(System.String)">
+            <summary>
+            通过ID 获得user对象
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.BAL.Authenticate.UpdatePwd(System.String,System.String)">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="old"></param>
+            <param name="pwd"></param>
+        </member>
+        <member name="T:MyQuery.BAL.MailDeal">
+            <summary>
+            邮件处理封装
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.MailDeal.#ctor(MyQuery.Utils.MyUser)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.MailDeal.SendMailTask(System.String,System.String,System.String)">
+            <summary>
+            给常规任务相关人发邮件
+            </summary>
+            <param name="mailContent">内容</param>
+            <param name="userids">多个用,分割</param>
+            <param name="userid">不空时 则通知其部门领导</param>
+        </member>
+        <member name="M:MyQuery.BAL.MailDeal.SendMailTask(System.Int32)">
+            <summary>
+            给常规任务相关人发邮件
+            </summary>
+            <param name="id">id</param>
+        </member>
+        <member name="M:MyQuery.BAL.MailDeal.SendMailProject(System.String,System.String,System.Int32)">
+            <summary>
+            给部门经理发邮件
+            </summary>
+            <param name="mailContent"></param>
+            <param name="depid"></param>
+            <param name="projectId"></param>
+        </member>
+        <member name="M:MyQuery.BAL.MailDeal.SendMailNoPass(System.String,System.String,System.Boolean)">
+            <summary>
+            发送未通邮件
+            </summary>
+            <param name="mailContent"></param>
+            <param name="ids"></param>
+            <param name="isLog"></param>
+        </member>
         <member name="T:MyQuery.BAL.DataDeal">
             <summary>
             封装Dao数据库操作处理、简化页面控件与数据库交互处理
@@ -27,6 +135,11 @@
             </summary>
             <param name="dbtype">数据库类型</param>
             <param name="connectionString">连接字符串</param>
+        </member>
+        <member name="P:MyQuery.BAL.DataDeal.Dbtype">
+            <summary>
+            返回数据库类型
+            </summary>
         </member>
         <member name="M:MyQuery.BAL.DataDeal.GetDataSet(System.String,System.Data.IDataParameter[])">
             <summary>
@@ -272,22 +385,59 @@
             <param name="id"></param>
             <returns>名称</returns>
         </member>
-        <member name="P:MyQuery.BAL.DataDeal.Dbtype">
+        <member name="T:MyQuery.BAL.LogDeal">
             <summary>
-            返回数据库类型
+            系统日志处理
             </summary>
+        </member>
+        <member name="M:MyQuery.BAL.LogDeal.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.LogDeal.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.LogDeal.Write(System.String)">
+            <summary>
+            计入一条日志
+            </summary>
+            <param name="des"></param>
+        </member>
+        <member name="T:MyQuery.BAL.QueryFunction">
+            <summary>
+            针对查询模板按钮的function计算接口的实现 
+            by 贾世义 2009-1-28
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFunction.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFunction.FunctionCode">
+            <summary>
+            按钮对应的FunctionCode
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFunction.User">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.QueryFunction.HasFunction">
+            <summary>
+            返回是否有此功能
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:MyQuery.BAL.QueryRow">
             <summary>
             针对查询模板自定义行计算接口的实现 
             by 贾世义 2009-1-28
             </summary>
-        </member>
-        <member name="M:MyQuery.BAL.QueryRow.Add">
-            <summary>
-            返回增加了新处理的行数据的数据源
-            </summary>
-            <returns></returns>
         </member>
         <member name="P:MyQuery.BAL.QueryRow.Name">
             <summary>
@@ -319,150 +469,17 @@
             当前处理行的名称
             </summary>
         </member>
-        <member name="T:MyQuery.BAL.WFFunction">
+        <member name="M:MyQuery.BAL.QueryRow.Add">
             <summary>
-            自动任务执行类
-            </summary>
-        </member>
-        <member name="M:MyQuery.BAL.WFFunction.Run">
-            <summary>
-            执行处理
+            返回增加了新处理的行数据的数据源
             </summary>
             <returns></returns>
-        </member>
-        <member name="P:MyQuery.BAL.WFFunction.WFDeal">
-            <summary>
-            工作流处理对象
-            </summary>
-        </member>
-        <member name="T:MyQuery.BAL.MailDeal">
-            <summary>
-            邮件处理封装
-            </summary>
-        </member>
-        <member name="M:MyQuery.BAL.MailDeal.#ctor(MyQuery.Utils.MyUser)">
-            <summary>
-            构造函数
-            </summary>
-        </member>
-        <member name="M:MyQuery.BAL.MailDeal.SendMailTask(System.String,System.String,System.String)">
-            <summary>
-            给常规任务相关人发邮件
-            </summary>
-            <param name="mailContent">内容</param>
-            <param name="userids">多个用,分割</param>
-            <param name="userid">不空时 则通知其部门领导</param>
-        </member>
-        <member name="M:MyQuery.BAL.MailDeal.SendMailTask(System.Int32)">
-            <summary>
-            给常规任务相关人发邮件
-            </summary>
-            <param name="id">id</param>
-        </member>
-        <member name="M:MyQuery.BAL.MailDeal.SendMailProject(System.String,System.String,System.Int32)">
-            <summary>
-            给部门经理发邮件
-            </summary>
-            <param name="mailContent"></param>
-            <param name="depid"></param>
-            <param name="projectId"></param>
-        </member>
-        <member name="M:MyQuery.BAL.MailDeal.SendMailNoPass(System.String,System.String,System.Boolean)">
-            <summary>
-            发送未通邮件
-            </summary>
-            <param name="mailContent"></param>
-            <param name="ids"></param>
-            <param name="isLog"></param>
-        </member>
-        <member name="T:MyQuery.BAL.QueryWhere">
-            <summary>
-            针对查询模板append中sys类型条件计算接口的实现 
-            by 贾世义 2009-1-28
-            </summary>
-        </member>
-        <member name="M:MyQuery.BAL.QueryWhere.GetValue">
-            <summary>
-            返回替换条件表达式中{0}的值
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:MyQuery.BAL.QueryWhere.Name">
-            <summary>
-            对应查询的name
-            </summary>
-        </member>
-        <member name="P:MyQuery.BAL.QueryWhere.Parameter">
-            <summary>
-            配置的参数值字符串
-            </summary>
-        </member>
-        <member name="P:MyQuery.BAL.QueryWhere.User">
-            <summary>
-            当前用户
-            </summary>
-        </member>
-        <member name="T:MyQuery.BAL.QueryFunction">
-            <summary>
-            针对查询模板按钮的function计算接口的实现 
-            by 贾世义 2009-1-28
-            </summary>
-        </member>
-        <member name="M:MyQuery.BAL.QueryFunction.HasFunction">
-            <summary>
-            返回是否有此功能
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:MyQuery.BAL.QueryFunction.Name">
-            <summary>
-            对应查询的name
-            </summary>
-        </member>
-        <member name="P:MyQuery.BAL.QueryFunction.FunctionCode">
-            <summary>
-            按钮对应的FunctionCode
-            </summary>
-        </member>
-        <member name="P:MyQuery.BAL.QueryFunction.User">
-            <summary>
-            当前用户
-            </summary>
-        </member>
-        <member name="T:MyQuery.BAL.QueryDefault">
-            <summary>
-            针对查询模板Foot的列计算接口的实现 
-            by 贾世义 2009-1-28
-            </summary>
-        </member>
-        <member name="M:MyQuery.BAL.QueryDefault.GetValue">
-            <summary>
-            返回有Parameter计算的来的值
-            注意当else if多于10个时建议再仿照此类另建一个实现类，配置中配成新实现的类名即可
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:MyQuery.BAL.QueryDefault.Parameter">
-            <summary>
-            配置的参数值字符串
-            </summary>
-        </member>
-        <member name="P:MyQuery.BAL.QueryDefault.User">
-            <summary>
-            当前用户
-            </summary>
         </member>
         <member name="T:MyQuery.BAL.QueryValidate">
             <summary>
             针对编辑模板服务器校验接口的实现 
             by jiashiyi 2010-05-18
             </summary>
-        </member>
-        <member name="M:MyQuery.BAL.QueryValidate.Validate">
-            <summary>
-            返回未通过验证的提示信息 通过则返回null
-            </summary>
-            <returns></returns>
         </member>
         <member name="P:MyQuery.BAL.QueryValidate.Name">
             <summary>
@@ -484,27 +501,106 @@
             当前用户
             </summary>
         </member>
+        <member name="M:MyQuery.BAL.QueryValidate.Validate">
+            <summary>
+            返回未通过验证的提示信息 通过则返回null
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.BAL.QueryWhere">
+            <summary>
+            针对查询模板append中sys类型条件计算接口的实现 
+            by 贾世义 2009-1-28
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryWhere.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryWhere.Parameter">
+            <summary>
+            配置的参数值字符串
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryWhere.User">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.QueryWhere.GetValue">
+            <summary>
+            返回替换条件表达式中{0}的值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.BAL.QueryDefault">
+            <summary>
+            针对查询模板Foot的列计算接口的实现 
+            by 贾世义 2009-1-28
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryDefault.Parameter">
+            <summary>
+            配置的参数值字符串
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryDefault.User">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.QueryDefault.GetValue">
+            <summary>
+            返回有Parameter计算的来的值
+            注意当else if多于10个时建议再仿照此类另建一个实现类，配置中配成新实现的类名即可
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.BAL.QueryFooter">
+            <summary>
+            针对查询模板Foot的列计算接口的实现 
+            by 贾世义 2009-1-28
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFooter.Name">
+            <summary>
+            对应查询的name
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFooter.Column">
+            <summary>
+            当前处理的列
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFooter.DataColumns">
+            <summary>
+            当前处理的数据列的集合
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFooter.DataSource">
+            <summary>
+            当前处理的DataTable
+            </summary>
+        </member>
+        <member name="P:MyQuery.BAL.QueryFooter.User">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="M:MyQuery.BAL.QueryFooter.GetValue">
+            <summary>
+            返回计算列的值
+            注意当case多于10个时建议再仿照此类另建一个实现类，配置中配成新实现的类名即可
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:MyQuery.BAL.QueryButton">
             <summary>
             针对查询模板按钮接口的实现 
             注意 为了记录按钮操作日志 请使用DataDeal 而不直接实用Dao
             by 贾世义 2009-1-27
             </summary>
-        </member>
-        <member name="M:MyQuery.BAL.QueryButton.Deal">
-            <summary>
-            返回运行的脚本则执行之 空或空字符串则忽略
-            注意当case多于10个时建议再仿照此类另建一个实现类，配置中配成新实现的类名即可
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:MyQuery.BAL.QueryButton.getHtmls(System.String,System.String)">
-            <summary>
-            批量生成静态网页
-            </summary>
-            <param name="url"></param>
-            <param name="city"></param>
-            <returns></returns>
         </member>
         <member name="P:MyQuery.BAL.QueryButton.Name">
             <summary>
@@ -536,74 +632,26 @@
             当前用户
             </summary>
         </member>
-        <member name="T:MyQuery.BAL.QueryFooter">
+        <member name="M:MyQuery.BAL.QueryButton.Deal">
             <summary>
-            针对查询模板Foot的列计算接口的实现 
-            by 贾世义 2009-1-28
-            </summary>
-        </member>
-        <member name="M:MyQuery.BAL.QueryFooter.GetValue">
-            <summary>
-            返回计算列的值
+            返回运行的脚本则执行之 空或空字符串则忽略
             注意当case多于10个时建议再仿照此类另建一个实现类，配置中配成新实现的类名即可
             </summary>
             <returns></returns>
         </member>
-        <member name="P:MyQuery.BAL.QueryFooter.Name">
+        <member name="M:MyQuery.BAL.QueryButton.getHtmls(System.String,System.String)">
             <summary>
-            对应查询的name
+            批量生成静态网页
             </summary>
-        </member>
-        <member name="P:MyQuery.BAL.QueryFooter.Column">
-            <summary>
-            当前处理的列
-            </summary>
-        </member>
-        <member name="P:MyQuery.BAL.QueryFooter.DataColumns">
-            <summary>
-            当前处理的数据列的集合
-            </summary>
-        </member>
-        <member name="P:MyQuery.BAL.QueryFooter.DataSource">
-            <summary>
-            当前处理的DataTable
-            </summary>
-        </member>
-        <member name="P:MyQuery.BAL.QueryFooter.User">
-            <summary>
-            当前用户
-            </summary>
-        </member>
-        <member name="T:MyQuery.BAL.TimerTaskUnWrite">
-            <summary>
-            未填写日志提醒邮件 定时任务
-            by 贾世义 2011-07-04
-            </summary>
-        </member>
-        <member name="M:MyQuery.BAL.TimerTaskUnWrite.#ctor(System.String,System.String)">
-            <summary>
-            构造函数
-            </summary>
-            <param name="days">超n天未填写日志，则发邮件提醒</param>
-            <param name="toHeader">是否 同时发邮件提醒部门经理督促</param>
-        </member>
-        <member name="M:MyQuery.BAL.TimerTaskUnWrite.Run">
-            <summary>
-            执行任务
-            </summary>
+            <param name="url"></param>
+            <param name="city"></param>
+            <returns></returns>
         </member>
         <member name="T:MyQuery.BAL.QueryColumn">
             <summary>
             针对查询模板列计算接口的实现 
             by 贾世义 2009-1-28
             </summary>
-        </member>
-        <member name="M:MyQuery.BAL.QueryColumn.GetValue">
-            <summary>
-            返回计算列的值
-            注意当case多于10个时建议再仿照此类另建一个实现类，配置中配成新实现的类名即可
-            </summary>
-            <returns></returns>
         </member>
         <member name="P:MyQuery.BAL.QueryColumn.Name">
             <summary>
@@ -635,94 +683,46 @@
             当前用户
             </summary>
         </member>
-        <member name="T:MyQuery.BAL.LogDeal">
+        <member name="M:MyQuery.BAL.QueryColumn.GetValue">
             <summary>
-            系统日志处理
+            返回计算列的值
+            注意当case多于10个时建议再仿照此类另建一个实现类，配置中配成新实现的类名即可
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.BAL.TimerTaskUnWrite">
+            <summary>
+            未填写日志提醒邮件 定时任务
+            by 贾世义 2011-07-04
             </summary>
         </member>
-        <member name="M:MyQuery.BAL.LogDeal.#ctor">
+        <member name="M:MyQuery.BAL.TimerTaskUnWrite.#ctor(System.String,System.String)">
             <summary>
             构造函数
             </summary>
+            <param name="days">超n天未填写日志，则发邮件提醒</param>
+            <param name="toHeader">是否 同时发邮件提醒部门经理督促</param>
         </member>
-        <member name="M:MyQuery.BAL.LogDeal.#ctor(System.String)">
+        <member name="M:MyQuery.BAL.TimerTaskUnWrite.Run">
             <summary>
-            构造函数
+            执行任务
             </summary>
         </member>
-        <member name="M:MyQuery.BAL.LogDeal.Write(System.String)">
+        <member name="T:MyQuery.BAL.WFFunction">
             <summary>
-            计入一条日志
-            </summary>
-            <param name="des"></param>
-        </member>
-        <member name="T:MyQuery.BAL.Authenticate">
-            <summary>
-            用户认证业务类
-            by 贾世义 2011-9-8
+            自动任务执行类
             </summary>
         </member>
-        <member name="M:MyQuery.BAL.Authenticate.#ctor">
+        <member name="P:MyQuery.BAL.WFFunction.WFDeal">
             <summary>
-            构造函数
+            工作流处理对象
             </summary>
         </member>
-        <member name="M:MyQuery.BAL.Authenticate.IsPass(System.String,System.String)">
+        <member name="M:MyQuery.BAL.WFFunction.Run">
             <summary>
-            是否能够通过认证
+            执行处理
             </summary>
-            <param name="userAccount"></param>
-            <param name="password"></param>
             <returns></returns>
-        </member>
-        <member name="M:MyQuery.BAL.Authenticate.getUserTable(System.String,System.String)">
-            <summary>
-            获得用户信息
-            </summary>
-            <param name="userAccount"></param>
-            <param name="password"></param>
-            <returns></returns>
-        </member>
-        <member name="M:MyQuery.BAL.Authenticate.setUserApd(MyQuery.Utils.MyUser,System.Data.DataTable)">
-            <summary>
-            设定扩展信息
-            </summary>
-            <param name="myUser"></param>
-            <param name="dt"></param>
-        </member>
-        <member name="M:MyQuery.BAL.Authenticate.GetUser(System.String)">
-            <summary>
-            通过ID 获得user对象
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:MyQuery.BAL.Authenticate.UpdatePwd(System.String,System.String)">
-            <summary>
-            修改用户密码
-            </summary>
-            <param name="old"></param>
-            <param name="pwd"></param>
-        </member>
-        <member name="P:MyQuery.BAL.Authenticate.Error">
-            <summary>
-            获取错误信息 失败时才有值
-            </summary>
-        </member>
-        <member name="P:MyQuery.BAL.Authenticate.MyUser">
-            <summary>
-            获取错误信息 成功时有效
-            </summary>
-        </member>
-        <member name="P:MyQuery.BAL.Authenticate.Table">
-            <summary>
-            认证表
-            </summary>
-        </member>
-        <member name="P:MyQuery.BAL.Authenticate.Email">
-            <summary>
-            邮件地址
-            </summary>
         </member>
     </members>
 </doc>

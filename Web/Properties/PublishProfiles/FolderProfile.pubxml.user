@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+此文件由 Web 项目的发布/打包过程使用。可以通过编辑此 MSBuild 文件
+自定义此过程的行为。为了解与此相关的更多内容，请访问 https://go.microsoft.com/fwlink/?LinkID=208121。 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Administrator\Desktop\kexiaomi\Web\WebPublic</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/CKEditor.NET.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/GotDotNet.ApplicationBlocks.Data.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/Interop.MSScriptControl.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.BAL.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.BAL.pdb">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.BAL.xml">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.CSharpScript.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.CSharpScript.xml">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.DAL.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.DAL.xml">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.Entity.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.Entity.pdb">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.MyControl.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.MyControl.xml">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.Utils.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.Utils.xml">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.Web.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.Web.pdb">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.WFWork.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.WFWork.xml">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.Work.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/MyQuery.Work.xml">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="bin/System.Net.Json.dll">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Css/common.css">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Css/item.css">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Css/menu.css">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Css/print.css">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Css/WorkFlow.css">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddHelper.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddReq.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddResearcher.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddTechConsult.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddTechManager.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/CancelContract.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Concern.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ConcernAll.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ConsultConcern.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ConsultExecute.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/DeleteConcern.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Do.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EditEnp.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EditMark.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EditSubPlan.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EditTechRq.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EnterInfoConcern.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EnterInfoExecute.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Exe.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/FinishPlan.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/FinishRq.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Giveup.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Plan.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/PlanConcern.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Queryenp.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/QueryResearcher.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/QuerytechRq.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/recommand.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/RefResearcher.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ReplyFeedBack.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ResearcherConcern.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ResearcherExecute.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Review.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ReviewChange.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SearchPlan.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SearchSuccess.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SendEmail.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ServiceAllot.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ServiceEdit.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/StopPlan.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Submit.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SubmitFailure.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SubmitSuccess.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/TechRequire.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/TechRqConcern.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/TechRqExecute.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/UpdateFile.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/UpdateHetong.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/UserInfo.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/WeChatProgressReminder.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="EasyTechFunc/WeChatTest.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Error.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="GetId.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Image.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/arrowd.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/arrowu.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/bg.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/bg.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/bg0.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/bg1.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/bg2.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/bg3.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/bg4.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/btn_xp_bg.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/buttonsback.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/buttonsbackall.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/calendar.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/close.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/Cristal_Intense.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/date.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/del.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/enter.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/error.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/green.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/iedit.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/i_save.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/jt.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/lb1.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/left.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/leftBack.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/left_r.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/loading_animation_liferay.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/menu.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/menubg.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/menufg.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/menuon.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/menu_bg.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/menu_line.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/menu_on.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/minus.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/msg.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/nav_bg.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/nav_bg0.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/open.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/plusx.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/PrintSet.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/r.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/rarrow-hover.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/rarrow.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/red.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/register.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/return.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/right_r.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/r_d.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/scroll-down-disabled.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/scroll-down-hover.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/scroll-down.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/scroll-up-disabled.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/scroll-up-hover.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/scroll-up.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/search.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/SelectedBack.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/separator.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/shadow.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/shm.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/tableft.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/tabright.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/thbg.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/top.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/wait.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/wrapBack.jpg">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Img/yellow.gif">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Index.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Js/calendar.js">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Js/ClientValidate.js">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Js/common.js">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Js/helptip.js">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Js/jquery.js">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Js/menu.js">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Js/mygridview.js">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Js/popupWindow.js">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="log4net.config">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="SendEmail.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Sys/down.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Sys/Editpasswd.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Sys/InsteadOf.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Sys/LogOut.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Sys/RoleFunEdit.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Sys/SetPrint.htm">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Sys/UserRoleEdit.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Sys/WorkDaySet.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Test/Image.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Test/Test.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Test/TestEdit.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2D100StackedArea.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DArea.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DBar.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DBeltPieChart.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DBubble.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DColumn.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DDoughnut.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DDoughnut2.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DFastLine.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DKagi.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DLine.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DLineMarkers.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DPie.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DPoint.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DPointCustom.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DPointFigure.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DPointLabels.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DPointShapes.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DPolar.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DPolarMarker.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DPyramid.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DRadarArea.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DRadarMarker.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DRange.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DRangeBar.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DRangeColumn.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DRenko.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DSpline.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DSplineArea.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DSplineRange.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DStackedArea.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DStepLine.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DSupplementalPie.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/ChartType/2DThreeLine.png">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/Color.htm">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/down.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/EditHtml.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/EditMyQuery.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/MyDetail.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/MyDetail1.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/MyEdit.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/MyImport.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/MyMain.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/MyQuery.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/MySel.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/MyService.asmx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/MySubject.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/MyToExcel.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/NewMyQuery.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/SelChartType.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Tmp/TplDetail.aspx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+    <File Include="WebService.asmx">
+      <publishTime>05/13/2018 10:14:06</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
