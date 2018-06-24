@@ -18,9 +18,6 @@ using System.Security.Cryptography;
 using System.Net;
 using System.IO;
 
-
-
-
 namespace MyQuery.Web.EasyTechFunc
 {
     public partial class ReplyFeedBack : BaseWWW
@@ -130,6 +127,13 @@ namespace MyQuery.Web.EasyTechFunc
         protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+
+            ClientScript.RegisterStartupScript(Page.GetType(), "", "<script language=javascript>window.opener=null;window.close();</script>");
         }
     }
 }

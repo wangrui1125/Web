@@ -88,9 +88,10 @@ namespace MyQuery.Web.EasyTechFunc
             int index = DropDownList1.SelectedIndex;
             string time = DateTime.Now.ToString();
             int amount = 0;
-            amount = int.Parse(TextBox1.Text);
-            
-
+            if (TextBox1.Text != "")
+            {
+                amount = int.Parse(TextBox1.Text);
+            }
             string SqlConnectionString = WebHelper.GetAppConfig("SqlConnectionString");
             SqlConnection m_Connection = new SqlConnection(SqlConnectionString);
             m_Connection.Open();

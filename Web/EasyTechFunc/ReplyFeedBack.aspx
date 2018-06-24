@@ -21,6 +21,7 @@
     <asp:TextBox ID="TextBox1" runat="server" ontextchanged="TextBox1_TextChanged" 
         TextMode="MultiLine" Height="27px" Width="428px"></asp:TextBox>
     <asp:Button ID="Button1" runat="server" onclick="Button1_Click" Text="回复" />
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="关闭页面" Width="56px" />
     <br />
     </form>
 </body>
