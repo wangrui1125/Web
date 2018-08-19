@@ -24,22 +24,22 @@
       <column name="Department" title="单位部门" cssclass="input_text" width="99%" maxlength="50" colspan="3">	  
       </column>
 
-      <column name="PrimaryDetail" title="详细信息" type="textarea" urlformatstring="8" cssclass="input_text" width="99%" colspan="3">	  
+      <column name="Primary_Detail" title="详细信息" type="textarea" urlformatstring="8" cssclass="input_text" width="99%" colspan="3">	  
       </column>
 
       <column name="Extract" title="研究方向" type="textarea" urlformatstring="8" cssclass="input_text" width="99%" colspan="3">	  
       </column>
 
-      <column name="PrimaryURL" title="个人主页" cssclass="input_text"  width="99%" colspan="3">	   
+      <column name="Primary_URL" title="个人主页" cssclass="input_text"  width="99%" colspan="3">	   
       </column>
 
     </select>
     <from type="table">
-      <table title="科研人员表">Researcher</table>
+      <table title="科研人员表">new_researcher</table>
     </from>
     <where isparameter="true" isshowappend="true" issession="false">
       <append type="querystring" name="id">
-        Researcher.ID={0}
+        new_researcher.ID={0}
       </append>
     </where>
     <buttons>

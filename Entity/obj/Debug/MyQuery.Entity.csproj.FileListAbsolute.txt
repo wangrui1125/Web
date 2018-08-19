@@ -59,5 +59,3 @@ C:\Users\Administrator\Desktop\kexiaomi\Web\Entity\obj\Debug\MyQuery.Entity.cspr
 C:\Users\Administrator\Desktop\kexiaomi\Web\Entity\obj\Debug\MyQuery.Entity.dll
 C:\Users\Administrator\Desktop\kexiaomi\Web\Entity\obj\Debug\MyQuery.Entity.pdb
 C:\Users\Administrator\Desktop\kexiaomi\Web\Entity\bin\Debug\stdole.dll
-C:\Users\Administrator\Desktop\kexiaomi\Web\Entity\obj\Debug\MyQuery.Entity.csproj.CoreCompileInputs.cache
-C:\Users\Administrator\Desktop\kexiaomi\Web\Entity\obj\Debug\MyQuery.Entity.csproj.CopyComplete

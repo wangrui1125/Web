@@ -4,23 +4,23 @@
     <select keycolumnnames="id" ismultiselect="false" isshowrownum="false" sortdirection="ascending">     
 	  <column visible="false" name="id"> myresearcher.id </column>    
 	   <column name="researcherId" visible="false" >
-        Researcher.id
+        new_researcher.id
       </column>       
 	  <column name="name" title="姓名" width="80px" type="link" usefields="researcherId" 
 	  urlformatstring="Tmp/MyDetail.aspx?n=detailResearcher&amp;id={0}" target="_blank">
-        Researcher.name
+        new_researcher.name
       </column>
       <column name="Department" title="单位部门" width="220px">
-        Researcher.Department
+        new_researcher.department
       </column>
       <column name="Extract" title="研究方向" maxlength="20">
-        Researcher.Extract
+        new_researcher.extract
       </column>
       <column name="PrimaryDetail" title="详细信息" maxlength="40">
-        Researcher.PrimaryDetail
+        new_researcher.primary_detail
       </column>
       <!--<column name="marks" title="标签内容" width="100px">
-        dbo.f_GetMark('researcher',Researcher.id)
+        dbo.f_GetMark('new_researcher',new_researcher.id)
       </column>-->
       <!--<column name="Proc" title="操作" width="100px" maxlength="20">
         <![CDATA['<a href="../SendEmail.aspx?id='+cast(TechRequire.Rq_ID as varchar)+'&researcherId='+ConcernResearcher.ConcernID+'" target="iframeContent" style="color: #0055BA;cursor: pointer;">完成方案</a>']]>
@@ -36,7 +36,7 @@
     </select>
     <from type="table">
       <table title="信息列表">myresearcher</table>
-      <table title="研究人员表">left join Researcher on Researcher.id = myresearcher.fid</table>
+      <table title="研究人员表">left join new_researcher on new_researcher.id = myresearcher.fid</table>
       <table title="代码列表">left join f_code EmailR_flag on EmailR_flag.id='EmailR_flag' and EmailR_flag.code= myresearcher.contact_researcher_status</table>
     </from>
     <where isparameter="true" isshowappend="true" issession="false">
@@ -57,19 +57,19 @@
         <col/>
       </colgroup>
       <column name="name" title="姓名" width="100px" target="all" cssclass="input_text">
-        Researcher.name like {0}
+        new_researcher.name like {0}
       </column>
       <column name="Department" title="单位部门" width="100px" target="all" cssclass="input_text">
-        Researcher.Department like {0}
+        new_researcher.department like {0}
       </column>
       <column name="Extract" title="研究方向" width="100px" target="all" cssclass="input_text">
-        Researcher.Extract like {0}
+        new_researcher.extract like {0}
       </column>
       <column name="PrimaryDetail" title="详细信息" width="100px" target="all" cssclass="input_text">
-        Researcher.PrimaryDetail like {0}
+        new_researcher.primary_detail like {0}
       </column>
       <column name="marks" title="标签" width="100px" target="all" cssclass="input_text">
-         dbo.f_GetMark('researcher',Researcher.id) like {0}
+         dbo.f_GetMark('Researcher',new_researcher.id) like {0}
       </column>
 
 

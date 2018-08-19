@@ -131,8 +131,6 @@ C:\Users\Administrator\Desktop\kexiaomi\Web\Web\obj\Debug\MyQuery.Web.csprojReso
 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\obj\Debug\MyQuery.Web.csproj.ResolveComReference.cache
 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\obj\Debug\MyQuery.Web.dll
 C:\Users\Administrator\Desktop\kexiaomi\Web\Web\obj\Debug\MyQuery.Web.pdb
-C:\Users\Administrator\Desktop\kexiaomi\Web\Web\obj\Debug\MyQuery.Web.csproj.CoreCompileInputs.cache
-C:\Users\Administrator\Desktop\kexiaomi\Web\Web\obj\Debug\MyQuery.Web.csproj.CopyComplete
 C:\Users\Administrator\Desktop\Rui\kexiaomi\Web\Web\bin\MyQuery.Web.dll
 C:\Users\Administrator\Desktop\Rui\kexiaomi\Web\Web\bin\MyQuery.Web.pdb
 C:\Users\Administrator\Desktop\Rui\kexiaomi\Web\Web\bin\MyQuery.BAL.dll
