@@ -105,7 +105,7 @@ namespace MyQuery.Web.Tmp
                 news = "此用户已经激活，ID为" + UserID;
             }
             m_Connection.Close();
-            Response.Write("<script type='text/javascript'>alert('" + news + "');window.location.href='../Tmp/MyDetail.aspx?n=detailEnpContact&id="+ ContectID + "&EnpID="+ Enp_ID + "'</script>");
+            Response.Write("<script type='text/javascript'>alert('" + news + "');window.close();</script>");
         }       
         private bool CheckPhoneIsAble(string input)
         {

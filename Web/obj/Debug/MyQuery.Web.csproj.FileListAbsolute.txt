@@ -155,3 +155,4 @@ C:\Users\Administrator\Desktop\Rui\kexiaomi\Web\Web\obj\Debug\MyQuery.Web.csproj
 C:\Users\Administrator\Desktop\Rui\kexiaomi\Web\Web\obj\Debug\MyQuery.Web.csproj.CopyComplete
 C:\Users\Administrator\Desktop\Rui\kexiaomi\Web\Web\obj\Debug\MyQuery.Web.dll
 C:\Users\Administrator\Desktop\Rui\kexiaomi\Web\Web\obj\Debug\MyQuery.Web.pdb
+C:\Users\Administrator\Desktop\kexiaomi\Web\Web\bin\MyQuery.Web.xml

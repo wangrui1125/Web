@@ -23544,3 +23544,40 @@ System.Data.SqlClient.SqlException (0x80131904): È±ÉÙ¶ÔÏó»òÁÐÃû£¬»òÕß¶ÔÏó»òÁÐÃûÎ
    ÔÚ MyQuery.Work.BaseDetail.SetData(XmlNode myquery, PlaceHolder phContent, MyCommandEventArgs e)
 ClientConnectionId:2d7c8247-fb51-44a0-94f3-e3bf15d46418
 Error Number:1038,State:4,Class:15
+
+·¢ÉúÊ±¼ä£º2018-08-23 20:49:29,582
+Ïß³ÌID£º[14]
+¼¶±ð£ºERROR
+Àà£ºMyQuery.Web.WebService
+ÈÕÖ¾ÏûÏ¢£º»ñµÃµÈ´ýÈÎÎñÌõÊý´íÎó
+System.Data.SqlClient.SqlException (0x80131904): ÔÚ´Ó·þÎñÆ÷½ÓÊÕ½á¹ûÊ±·¢Éú´«Êä¼¶´íÎó¡£ (provider: TCP Provider, error: 0 - Ö¸¶¨µÄÍøÂçÃû²»ÔÙ¿ÉÓÃ¡£) ---> System.ComponentModel.Win32Exception (0x80004005): Ö¸¶¨µÄÍøÂçÃû²»ÔÙ¿ÉÓÃ¡£
+   ÔÚ System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   ÔÚ System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   ÔÚ System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   ÔÚ System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   ÔÚ System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   ÔÚ System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   ÔÚ System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   ÔÚ System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   ÔÚ System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   ÔÚ System.Data.SqlClient.SqlDataReader.get_MetaData()
+   ÔÚ System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   ÔÚ System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   ÔÚ System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   ÔÚ System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbCommand command, DataSet dataSet, String[] tableNames)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, IDbTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ GotDotNet.ApplicationBlocks.Data.AdoHelper.FillDataset(IDbConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, IDataParameter[] commandParameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataSet(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.DAL.Dao.GetDataTable(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Work.DataFrom.GetDataTable(String sql, IDataParameter[] parameters)
+   ÔÚ MyQuery.Web.WebService.GetWFWaiting(String userid) Î»ÖÃ C:\Users\Administrator\Desktop\kexiaomi\Web\Web\WebService.asmx.cs:ÐÐºÅ 213
+ClientConnectionId:deb33bbe-164b-4d5e-9338-a1864e5a3ba8
+Error Number:64,State:0,Class:20

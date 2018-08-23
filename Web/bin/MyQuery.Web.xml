@@ -1,0 +1,4004 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyQuery.Web</name>
+    </assembly>
+    <members>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddHelper.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.Head1">
+            <summary>
+            Head1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.TableAddReq">
+            <summary>
+            TableAddReq 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.fileId">
+            <summary>
+            fileId 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.btnSubmit">
+            <summary>
+            btnSubmit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.tableStyle">
+            <summary>
+            tableStyle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.Image1">
+            <summary>
+            Image1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.Image2">
+            <summary>
+            Image2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.Image3">
+            <summary>
+            Image3 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.myinfo">
+            <summary>
+            myinfo 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.myinfo2">
+            <summary>
+            myinfo2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.myinfo5">
+            <summary>
+            myinfo5 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.myinfo3">
+            <summary>
+            myinfo3 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddReq.myinfo4">
+            <summary>
+            myinfo4 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddResearcher.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddTechConsult.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.AddTechManager.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.CancelContract.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ConcernAll.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ConsultConcern.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ConsultExecute.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.Delete.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.DeleteConcern.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.Do.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditEnp.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditEnp.Label1">
+            <summary>
+            Label1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.Head1">
+            <summary>
+            Head1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.Literal2">
+            <summary>
+            Literal2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.TechLevel">
+            <summary>
+            TechLevel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.Button1">
+            <summary>
+            Button1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.Literal1">
+            <summary>
+            Literal1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.txtKeywords">
+            <summary>
+            txtKeywords 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.txtNotes">
+            <summary>
+            txtNotes 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.MarkColor">
+            <summary>
+            MarkColor 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.CategoryID">
+            <summary>
+            CategoryID 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.Marks">
+            <summary>
+            Marks 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.btnSave">
+            <summary>
+            btnSave 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditMark.Button2">
+            <summary>
+            Button2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditSubPlan.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditSubPlan.Label1">
+            <summary>
+            Label1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EditTechRq.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EnterInfoConcern.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EnterInfoExecute.Head1">
+            <summary>
+            Head1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EnterInfoExecute.form2">
+            <summary>
+            form2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.EnterInfoExecute.Query1">
+            <summary>
+            Query1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.Exe.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.FinishPlan.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.FinishRq.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.Giveup.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.Plan.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.PlanConcern.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.Queryenp.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.QueryResearcher.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.QueryResearcher.Query1">
+            <summary>
+            Query1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.QuerytechRq1.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.QuerytechRq1.Query1">
+            <summary>
+            Query1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.recommand.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.recommand.TextBox1">
+            <summary>
+            TextBox1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.recommand.Button1">
+            <summary>
+            Button1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.RefResearcher.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ReplyFeedBack.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ReplyFeedBack.Label1">
+            <summary>
+            Label1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ReplyFeedBack.Label2">
+            <summary>
+            Label2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ReplyFeedBack.TextBox1">
+            <summary>
+            TextBox1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ReplyFeedBack.Button1">
+            <summary>
+            Button1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ReplyFeedBack.Button2">
+            <summary>
+            Button2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ResearcherConcern.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ResearcherExecute.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.Review.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ReviewChange.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.SearchPlan.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.SearchSuccess.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.SendEmail.Head1">
+            <summary>
+            Head1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceAllot.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.Label3">
+            <summary>
+            Label3 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.Label1">
+            <summary>
+            Label1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.DropDownList1">
+            <summary>
+            DropDownList1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.TextBox1">
+            <summary>
+            TextBox1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.Button1">
+            <summary>
+            Button1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.DropDownList2">
+            <summary>
+            DropDownList2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.Button2">
+            <summary>
+            Button2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.FileUpload1">
+            <summary>
+            FileUpload1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.Button5">
+            <summary>
+            Button5 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.TextBox3">
+            <summary>
+            TextBox3 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.Button4">
+            <summary>
+            Button4 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.GridView1">
+            <summary>
+            GridView1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.Label4">
+            <summary>
+            Label4 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.TextBox2">
+            <summary>
+            TextBox2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.ServiceEdit.Button3">
+            <summary>
+            Button3 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.StopPlan.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.Submit.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.SubmitFailure.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.SubmitSuccess.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.TechRequire.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.TechRqConcern.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.TechRqExecute.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.TechRqExecute.Query1">
+            <summary>
+            Query1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.UpdateFile.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.UpdateFile.CheckBoxList1">
+            <summary>
+            CheckBoxList1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.UpdateFile.FileUpload1">
+            <summary>
+            FileUpload1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.UpdateFile.Button1">
+            <summary>
+            Button1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.UpdateHetong.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.UpdateHetong.FileUpload1">
+            <summary>
+            FileUpload1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.UpdateHetong.Button1">
+            <summary>
+            Button1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.UserInfo.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.Table1">
+            <summary>
+            Table1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.Label1">
+            <summary>
+            Label1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.Label2">
+            <summary>
+            Label2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.TableCell1">
+            <summary>
+            TableCell1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.Label3">
+            <summary>
+            Label3 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.Label4">
+            <summary>
+            Label4 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.TableCell3">
+            <summary>
+            TableCell3 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.Label5">
+            <summary>
+            Label5 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.DropDownList1">
+            <summary>
+            DropDownList1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.TableRow1">
+            <summary>
+            TableRow1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.TableCell5">
+            <summary>
+            TableCell5 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.Label6">
+            <summary>
+            Label6 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.TableRow2">
+            <summary>
+            TableRow2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.TableCell6">
+            <summary>
+            TableCell6 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.TextBox1">
+            <summary>
+            TextBox1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.Button1">
+            <summary>
+            Button1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatProgressReminder.Button2">
+            <summary>
+            Button2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatTest.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatTest.Panel1">
+            <summary>
+            Panel1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatTest.Label1">
+            <summary>
+            Label1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatTest.DropDownList1">
+            <summary>
+            DropDownList1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.EasyTechFunc.WeChatTest.Button3">
+            <summary>
+            Button3 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:MyQuery.Web.Error">
+            <summary>
+            错误提示页面 参数i接收提示信息
+            by 贾世义
+            </summary>
+        </member>
+        <member name="F:MyQuery.Web.Error.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Error.Image1">
+            <summary>
+            Image1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Error.lblErr">
+            <summary>
+            lblErr 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Error.txtErr">
+            <summary>
+            txtErr 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.SendEmail.Head1">
+            <summary>
+            Head1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.InsteadOf.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.InsteadOf.txtID">
+            <summary>
+            txtID 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.InsteadOf.btnSubmit">
+            <summary>
+            btnSubmit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.LogOut.form1">
+            <summary>
+            form1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.Editpasswd.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.Editpasswd.lblDes">
+            <summary>
+            lblDes 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.Editpasswd.txtID">
+            <summary>
+            txtID 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.Editpasswd.txtPwdOld">
+            <summary>
+            txtPwdOld 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.Editpasswd.txtPasswd">
+            <summary>
+            txtPasswd 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.Editpasswd.txtPwdCheck">
+            <summary>
+            txtPwdCheck 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.Editpasswd.btnSubmit">
+            <summary>
+            btnSubmit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:MyQuery.Web.Sys.RoleFunEdit.hasChildChecked(System.Web.UI.WebControls.TreeNode)">
+            <summary>
+            递归子是否被选中
+            </summary>
+            <param name="parentNode"></param>
+            <returns></returns>
+        </member>
+        <member name="F:MyQuery.Web.Sys.RoleFunEdit.form1">
+            <summary>
+            form1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.RoleFunEdit.lblRoleName">
+            <summary>
+            lblRoleName control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.RoleFunEdit.divFunctions">
+            <summary>
+            divFunctions control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.RoleFunEdit.tvFunctions">
+            <summary>
+            tvFunctions control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.RoleFunEdit.btnSave">
+            <summary>
+            btnSave control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.UserRoleEdit.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.UserRoleEdit.literalUsers">
+            <summary>
+            literalUsers 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.UserRoleEdit.chkListRoles">
+            <summary>
+            chkListRoles 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.UserRoleEdit.btnSave">
+            <summary>
+            btnSave 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:MyQuery.Web.Sys.WorkDaySet.SetWorkWeekInfo">
+            <summary>
+            设置WorkWeek信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:MyQuery.Web.Sys.WorkDaySet.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.WorkDaySet.StartDate">
+            <summary>
+            StartDate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.WorkDaySet.RequiredFieldValidator1">
+            <summary>
+            RequiredFieldValidator1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.WorkDaySet.EndDate">
+            <summary>
+            EndDate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.WorkDaySet.RequiredFieldValidator2">
+            <summary>
+            RequiredFieldValidator2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.WorkDaySet.CompareValidator1">
+            <summary>
+            CompareValidator1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.WorkDaySet.btnBuild">
+            <summary>
+            btnBuild 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.WorkDaySet.calendarWorkDay">
+            <summary>
+            calendarWorkDay 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.WorkDaySet.WorkDayState">
+            <summary>
+            WorkDayState 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.WorkDaySet.btnSet">
+            <summary>
+            btnSet 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.WorkDaySet.btnReturnCurrent">
+            <summary>
+            btnReturnCurrent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Sys.WorkDaySet.ValidationSummary1">
+            <summary>
+            ValidationSummary1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ActCont.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail1.Head1">
+            <summary>
+            Head1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail1.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail1.divTab">
+            <summary>
+            divTab 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail1.hrFirefox">
+            <summary>
+            hrFirefox 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail1.MyBtns1">
+            <summary>
+            MyBtns1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail1.phContent">
+            <summary>
+            phContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail1.divNotes">
+            <summary>
+            divNotes 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail1.MyBtns2">
+            <summary>
+            MyBtns2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyMain.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyMain.MyTabPage1">
+            <summary>
+            MyTabPage1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyMain.divButtons">
+            <summary>
+            divButtons 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.NewMyQuery.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.NewMyQuery.tablename">
+            <summary>
+            tablename 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.NewMyQuery.btnGet">
+            <summary>
+            btnGet 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.NewMyQuery.MyGridView1">
+            <summary>
+            MyGridView1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.NewMyQuery.type">
+            <summary>
+            type 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.NewMyQuery.title">
+            <summary>
+            title 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.NewMyQuery.btnSave">
+            <summary>
+            btnSave 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditHtml.frmEdit">
+            <summary>
+            frmEdit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditHtml.HtmlUrl">
+            <summary>
+            HtmlUrl 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditHtml.AspxUrl">
+            <summary>
+            AspxUrl 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditHtml.DepId">
+            <summary>
+            DepId 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditHtml.txtTitle">
+            <summary>
+            txtTitle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditHtml.Content">
+            <summary>
+            Content 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditHtml.txtXml">
+            <summary>
+            txtXml 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditHtml.btnSubmit">
+            <summary>
+            btnSubmit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditHtml.divUp">
+            <summary>
+            divUp 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditHtml.fileHtml">
+            <summary>
+            fileHtml 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditHtml.fileXml">
+            <summary>
+            fileXml 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditHtml.btnUp">
+            <summary>
+            btnUp 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="M:MyQuery.Web.Tmp.EditMyQuery.firstLoad">
+            <summary>
+            首次加载使用
+            </summary>
+        </member>
+        <member name="M:MyQuery.Web.Tmp.EditMyQuery.initData(System.Boolean)">
+            <summary>
+            初始化XML配置展示
+            </summary>
+            <param name="isAdd">是否新增</param>
+        </member>
+        <member name="M:MyQuery.Web.Tmp.EditMyQuery.initChartArea(System.Boolean)">
+            <summary>
+            初始化图形区域配置展示
+            </summary>
+            <param name="isAdd"></param>
+        </member>
+        <member name="M:MyQuery.Web.Tmp.EditMyQuery.getMyQuery">
+            <summary>
+            获得当前处理配置根节点myquery
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Web.Tmp.EditMyQuery.loadXml">
+            <summary>
+            校验是否有语法错误
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.MyTabPage1">
+            <summary>
+            MyTabPage1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.myquery_Add">
+            <summary>
+            myquery_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.rblMyQuery">
+            <summary>
+            rblMyQuery 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.txt0">
+            <summary>
+            txt0 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlButtons_Add">
+            <summary>
+            dlButtons_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlButtons">
+            <summary>
+            dlButtons 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.functionsql">
+            <summary>
+            functionsql 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.javascript">
+            <summary>
+            javascript 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlScriptsrc_Add">
+            <summary>
+            dlScriptsrc_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlScriptsrc">
+            <summary>
+            dlScriptsrc 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.myquery_Del">
+            <summary>
+            myquery_Del 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.title">
+            <summary>
+            title 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.titleSql">
+            <summary>
+            titleSql 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.functioncode">
+            <summary>
+            functioncode 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.titleParameters">
+            <summary>
+            titleParameters 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.isfirstload">
+            <summary>
+            isfirstload 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.allowpaging">
+            <summary>
+            allowpaging 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.pagesize">
+            <summary>
+            pagesize 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.allowsorting">
+            <summary>
+            allowsorting 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.pagervisible">
+            <summary>
+            pagervisible 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.islogicdeal">
+            <summary>
+            islogicdeal 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.issavedata">
+            <summary>
+            issavedata 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.list_height">
+            <summary>
+            list_height 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.height_unit">
+            <summary>
+            height_unit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.list_width">
+            <summary>
+            list_width 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.width_unit">
+            <summary>
+            width_unit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.fixedcols">
+            <summary>
+            fixedcols 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.footervisible">
+            <summary>
+            footervisible 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.notes">
+            <summary>
+            notes 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlUpdatesqls_Add">
+            <summary>
+            dlUpdatesqls_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.isautoid">
+            <summary>
+            isautoid 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlUpdatesqls">
+            <summary>
+            dlUpdatesqls 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.type">
+            <summary>
+            type 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dbtype">
+            <summary>
+            dbtype 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.connectionstring">
+            <summary>
+            connectionstring 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.procedurename">
+            <summary>
+            procedurename 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.method">
+            <summary>
+            method 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.parameters">
+            <summary>
+            parameters 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlTables_Add">
+            <summary>
+            dlTables_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlTables">
+            <summary>
+            dlTables 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.group">
+            <summary>
+            group 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.order">
+            <summary>
+            order 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlSqls_Add">
+            <summary>
+            dlSqls_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlSqls">
+            <summary>
+            dlSqls 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.keycolumnnames">
+            <summary>
+            keycolumnnames 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.ismultiselect">
+            <summary>
+            ismultiselect 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.issingleselect">
+            <summary>
+            issingleselect 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.isshowrownum">
+            <summary>
+            isshowrownum 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.mergecolumns">
+            <summary>
+            mergecolumns 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.sortdirection">
+            <summary>
+            sortdirection 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.iscrosstable">
+            <summary>
+            iscrosstable 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.parentcolumnname">
+            <summary>
+            parentcolumnname 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.childcolumnname">
+            <summary>
+            childcolumnname 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.parentchilddisplay">
+            <summary>
+            parentchilddisplay 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.isallopenchilds">
+            <summary>
+            isallopenchilds 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlSelectCol_Add">
+            <summary>
+            dlSelectCol_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlSelectCol">
+            <summary>
+            dlSelectCol 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlSelectColumn_Add">
+            <summary>
+            dlSelectColumn_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlSelectColumn">
+            <summary>
+            dlSelectColumn 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.selectjavascript">
+            <summary>
+            selectjavascript 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.isparameter">
+            <summary>
+            isparameter 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.isshowappend">
+            <summary>
+            isshowappend 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.issession">
+            <summary>
+            issession 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.isquerybutton">
+            <summary>
+            isquerybutton 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.isquerysubject">
+            <summary>
+            isquerysubject 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlAppends_Add">
+            <summary>
+            dlAppends_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlAppends">
+            <summary>
+            dlAppends 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlWhereCols_Add">
+            <summary>
+            dlWhereCols_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlWhereCols">
+            <summary>
+            dlWhereCols 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlWheres_Add">
+            <summary>
+            dlWheres_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlWheres">
+            <summary>
+            dlWheres 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.position">
+            <summary>
+            position 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.ifunctioncalc">
+            <summary>
+            ifunctioncalc 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.buttonsnotes">
+            <summary>
+            buttonsnotes 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlButton_Add">
+            <summary>
+            dlButton_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlButton">
+            <summary>
+            dlButton 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlAddrows_Add">
+            <summary>
+            dlAddrows_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlAddrows">
+            <summary>
+            dlAddrows 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.chart_name">
+            <summary>
+            chart_name 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.chart_width">
+            <summary>
+            chart_width 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.chart_height">
+            <summary>
+            chart_height 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.chart_template">
+            <summary>
+            chart_template 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlTitles_Add">
+            <summary>
+            dlTitles_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlTitles">
+            <summary>
+            dlTitles 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_name">
+            <summary>
+            area_name 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_isdatatable">
+            <summary>
+            area_isdatatable 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_rows">
+            <summary>
+            area_rows 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_xfield">
+            <summary>
+            area_xfield 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_datasource">
+            <summary>
+            area_datasource 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.datasource_paranames">
+            <summary>
+            datasource_paranames 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_xvaluetype">
+            <summary>
+            area_xvaluetype 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_xdataformat">
+            <summary>
+            area_xdataformat 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_yvaluetype">
+            <summary>
+            area_yvaluetype 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_ydataformat">
+            <summary>
+            area_ydataformat 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_isshow3d">
+            <summary>
+            area_isshow3d 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_isclustered">
+            <summary>
+            area_isclustered 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_isrightangleaxes">
+            <summary>
+            area_isrightangleaxes 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_lightstyle">
+            <summary>
+            area_lightstyle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_rotation">
+            <summary>
+            area_rotation 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_inclination">
+            <summary>
+            area_inclination 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_pointdepth">
+            <summary>
+            area_pointdepth 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_pointgapdepth">
+            <summary>
+            area_pointgapdepth 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_xinterval">
+            <summary>
+            area_xinterval 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_yinterval">
+            <summary>
+            area_yinterval 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_xminimum">
+            <summary>
+            area_xminimum 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.area_yminimum">
+            <summary>
+            area_yminimum 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.legend_name">
+            <summary>
+            legend_name 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.legend_title">
+            <summary>
+            legend_title 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.legend_docking">
+            <summary>
+            legend_docking 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlSeries_Add">
+            <summary>
+            dlSeries_Add 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.dlSeries">
+            <summary>
+            dlSeries 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.btnSave">
+            <summary>
+            btnSave 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.btnSubmit">
+            <summary>
+            btnSubmit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.EditMyQuery.btnRestore">
+            <summary>
+            btnRestore 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:MyQuery.Web.Tmp.MyEdit">
+            <summary>
+            编辑模板
+            参数：n对应的编辑定制xml的名字（不含后缀）
+            </summary>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyEdit.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyEdit.divTab">
+            <summary>
+            divTab 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyEdit.hrFirefox">
+            <summary>
+            hrFirefox 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyEdit.MyBtns1">
+            <summary>
+            MyBtns1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyEdit.MyInputs1">
+            <summary>
+            MyInputs1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyEdit.lblNoID">
+            <summary>
+            lblNoID 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyEdit.lblNoSub">
+            <summary>
+            lblNoSub 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyEdit.lblNext">
+            <summary>
+            lblNext 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyEdit.MyBtns2">
+            <summary>
+            MyBtns2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyEdit.divNotes">
+            <summary>
+            divNotes 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.lbltitle">
+            <summary>
+            lbltitle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.ddlTitle">
+            <summary>
+            ddlTitle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.lbltype">
+            <summary>
+            lbltype 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.type">
+            <summary>
+            type 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.trDatabase">
+            <summary>
+            trDatabase 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.lbldbtype">
+            <summary>
+            lbldbtype 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.dbtype">
+            <summary>
+            dbtype 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.lblconnectionstring">
+            <summary>
+            lblconnectionstring 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.connectionstring">
+            <summary>
+            connectionstring 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.lblprocedurename">
+            <summary>
+            lblprocedurename 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.procedurename">
+            <summary>
+            procedurename 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.lblmethod">
+            <summary>
+            lblmethod 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.method">
+            <summary>
+            method 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.lblparameters">
+            <summary>
+            lblparameters 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.parameters">
+            <summary>
+            parameters 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.lblfileimport">
+            <summary>
+            lblfileimport 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.fileImport">
+            <summary>
+            fileImport 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.IsFirstTitle">
+            <summary>
+            IsFirstTitle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.btnAdmin">
+            <summary>
+            btnAdmin 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.btnSubmit">
+            <summary>
+            btnSubmit 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.ulContent">
+            <summary>
+            ulContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyImport.divErrFile">
+            <summary>
+            divErrFile 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MySel.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:MyQuery.Web.Tmp.MyService">
+            <summary>
+            Summary description for MyService
+            </summary>
+        </member>
+        <member name="M:MyQuery.Web.Tmp.MyService.GetAuthenticate(System.String,System.String)">
+            <summary>
+            获得认证信息
+            </summary>
+            <param name="userAccount"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Web.Tmp.MyService.GetTemplateList(System.String,System.String)">
+            <summary>
+            获得模板列表信息
+            </summary>
+            <param name="userAccount"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Web.Tmp.MyService.GetXml(System.String,System.String,System.String)">
+            <summary>
+            获得模板xml信息
+            </summary>
+            <param name="name"></param>
+            <param name="userAccount"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Web.Tmp.MyService.SetXml(System.String,System.String,System.String,System.String)">
+            <summary>
+            保存模板xml信息
+            </summary>
+            <param name="name"></param>
+            <param name="xmlstring"></param>
+            <param name="userAccount"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MyQuery.Web.Tmp.MyToExcel">
+            <summary>
+            导出模板
+            参数：n对应的导出定制xml的名字（不含后缀）
+            s是否提供选择
+            f对应的查询 当无时导出与查询为同一个配置文件
+            </summary>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyToExcel.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyToExcel.MyInputs1">
+            <summary>
+            MyInputs1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyToExcel.phContent">
+            <summary>
+            phContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyToExcel.btnAdmin">
+            <summary>
+            btnAdmin 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyToExcel.ckbAll">
+            <summary>
+            ckbAll 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyToExcel.btnExcel">
+            <summary>
+            btnExcel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:MyQuery.Web.Tmp.MySubject">
+            <summary>
+            查询模板
+            参数：n对应的查询定制xml的名字（不含后缀）
+            </summary>
+        </member>
+        <member name="P:MyQuery.Web.Tmp.MySubject.sqlParameters">
+            <summary>
+            设置获取参数集合 (Session保存 导航到其他页使用)
+            </summary>
+        </member>
+        <member name="M:MyQuery.Web.Tmp.MySubject.MyGridView1_PageIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            页变更回发事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.Web.Tmp.MySubject.MyGridView1_Sorting(System.Object,System.Web.UI.WebControls.GridViewSortEventArgs)">
+            <summary>
+            排序回发事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MyQuery.Web.Tmp.MySubject.btnUse_Click(System.Object,System.EventArgs)">
+            <summary>
+            使用
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MySubject.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MySubject.txtName">
+            <summary>
+            txtName 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MySubject.RequiredFieldValidator1">
+            <summary>
+            RequiredFieldValidator1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MySubject.ckbPrivate">
+            <summary>
+            ckbPrivate 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MySubject.btnAdd">
+            <summary>
+            btnAdd 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MySubject.MyInputs1">
+            <summary>
+            MyInputs1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MySubject.btnUse">
+            <summary>
+            btnUse 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MySubject.btnDel">
+            <summary>
+            btnDel 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MySubject.MyGridView1">
+            <summary>
+            MyGridView1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MySubject.ValidationSummary1">
+            <summary>
+            ValidationSummary1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:MyQuery.Web.Tmp.MyDetail">
+            <summary>
+            详述模板
+            </summary>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail.divTitle">
+            <summary>
+            divTitle 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail.divTab">
+            <summary>
+            divTab 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail.hrFirefox">
+            <summary>
+            hrFirefox 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail.MyBtns1">
+            <summary>
+            MyBtns1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail.phContent">
+            <summary>
+            phContent 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail.divNotes">
+            <summary>
+            divNotes 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.MyDetail.MyBtns2">
+            <summary>
+            MyBtns2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="T:MyQuery.Web.Tmp.ListQuery">
+            <summary>
+            查询模板
+            参数：n对应的查询定制xml的名字（不含后缀）
+            </summary>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.divQuery">
+            <summary>
+            divQuery 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.tblSearch">
+            <summary>
+            tblSearch 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.trToolTip">
+            <summary>
+            trToolTip 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.lblDef">
+            <summary>
+            lblDef 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.btnSubject">
+            <summary>
+            btnSubject 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.trQuery">
+            <summary>
+            trQuery 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.MyInputs1">
+            <summary>
+            MyInputs1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.btnQuery">
+            <summary>
+            btnQuery 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.MyBtns1">
+            <summary>
+            MyBtns1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.MyGridView1">
+            <summary>
+            MyGridView1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.divNotes">
+            <summary>
+            divNotes 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.ListQuery.MyBtns2">
+            <summary>
+            MyBtns2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.SelChartType.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Tmp.SelChartType.dlCharttype">
+            <summary>
+            dlCharttype 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web._Default.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web._Default.menuHolder">
+            <summary>
+            menuHolder 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.GetId.form1">
+            <summary>
+            form1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.GetId.Label1">
+            <summary>
+            Label1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="M:MyQuery.Web.Global.RegisterCacheEntry(System.String)">
+            <summary>
+            注册一缓存条目在5分钟内到期，到期后触发的调事件
+            </summary>
+        </member>
+        <member name="M:MyQuery.Web.Global.CacheItemRemovedCallback(System.String,System.Object,System.Web.Caching.CacheItemRemovedReason)">
+            <summary>
+            缓存项过期时程序模拟点击页面，阻止应用程序结束
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="reason"></param>
+        </member>
+        <member name="F:MyQuery.Web.Login.Head1">
+            <summary>
+            Head1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Login.form1">
+            <summary>
+            form1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Login.txtUser">
+            <summary>
+            txtUser 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Login.RequiredFieldValidator1">
+            <summary>
+            RequiredFieldValidator1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Login.imgOk">
+            <summary>
+            imgOk 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Login.txtPwd">
+            <summary>
+            txtPwd 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Login.RequiredFieldValidator2">
+            <summary>
+            RequiredFieldValidator2 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Login.HyperLink1">
+            <summary>
+            HyperLink1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Login.txtYZM">
+            <summary>
+            txtYZM 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Login.RequiredFieldValidator3">
+            <summary>
+            RequiredFieldValidator3 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Login.ckbSave">
+            <summary>
+            ckbSave 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Login.ValidationSummary1">
+            <summary>
+            ValidationSummary1 控件。
+            </summary>
+            <remarks>
+            自动生成的字段。
+            若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test._Image.form1">
+            <summary>
+            form1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test._Image.Image1">
+            <summary>
+            Image1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.Test.Head1">
+            <summary>
+            Head1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.Test.form1">
+            <summary>
+            form1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="T:MyQuery.Web.Test.TestEdit">
+            <summary>
+            编辑举例
+            普通窗口 继承MyQuery.Work.BasePage 使用扩展则继承MyQuery.Work.BaseExpand
+            使用扩展信息注意 1、仅支持一个表 2、不能支持验证 3、仅处理select部分 4、扩展字段不能和已处理的字段重复 5、需要开发人员拷贝示例代码
+            </summary>
+        </member>
+        <member name="M:MyQuery.Web.Test.TestEdit.setMySql(MyQuery.Utils.SqlMode)">
+            <summary>
+            组织MySqlParameters
+            </summary>
+            <param name="sqlMode">SQL语句类别</param>
+        </member>
+        <member name="F:MyQuery.Web.Test.TestEdit.form1">
+            <summary>
+            form1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.TestEdit.RDate">
+            <summary>
+            RDate control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.TestEdit.FunID">
+            <summary>
+            FunID control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.TestEdit.txtTitle">
+            <summary>
+            txtTitle control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.TestEdit.Notes">
+            <summary>
+            Notes control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.TestEdit.FileName">
+            <summary>
+            FileName control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.TestEdit.FileImg">
+            <summary>
+            FileImg control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.TestEdit.IClass">
+            <summary>
+            IClass control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.TestEdit.IFlag">
+            <summary>
+            IFlag control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.TestEdit.MyInputs1">
+            <summary>
+            MyInputs1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.TestEdit.btnAdmin">
+            <summary>
+            btnAdmin control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:MyQuery.Web.Test.TestEdit.btnSave">
+            <summary>
+            btnSave control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="T:MyQuery.Web.WebService">
+            <summary>
+            Summary description for WebService
+            </summary>
+        </member>
+        <member name="M:MyQuery.Web.WebService.GetUserNameList(System.String,System.Int32)">
+            <summary>
+            获得用户名 匹配帐户和姓名
+            </summary>
+            <param name="prefixText"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Web.WebService.GetMarkList(System.String,System.Int32)">
+            <summary>
+            获得标签 匹配代码和名称
+            </summary>
+            <param name="prefixText"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Web.WebService.GetEnpList(System.String,System.Int32)">
+            <summary>
+            获得企业 匹配代码和名称
+            </summary>
+            <param name="prefixText"></param>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Web.WebService.GetUserDepartInfo(System.String)">
+            <summary>
+            获得用户和部门信息
+            </summary>
+            <returns></returns>
+            <param name="name"></param>
+        </member>
+        <member name="M:MyQuery.Web.WebService.GetWFWaiting(System.String)">
+            <summary>
+            获得等待任务条数
+            </summary>
+            <param name="userid">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:MyQuery.Web.WebService.UpdateData(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            ajax更新
+            </summary>
+            <param name="table">表</param>
+            <param name="field">字段</param>
+            <param name="value">值</param>
+            <param name="key">主键</param>
+            <param name="keyvalue">主键值</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

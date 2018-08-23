@@ -47,7 +47,7 @@
       </column>
 
 	  <column name="edit" title="操作" width="120px" type="excelno">
-        <![CDATA['<a a href="../tmp/ActCont.aspx?id='+cast(Contact.ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">点击激活</a>']]>
+        <![CDATA['<a a href="../tmp/ActCont.aspx?id='+cast(Contact.ID as varchar)+'" target="_black" style="color: #0055BA;cursor: pointer;">点击激活</a>']]>
       </column>
        <!--
       <column name="status" title="状态">
