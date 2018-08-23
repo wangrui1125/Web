@@ -24,7 +24,7 @@
         Contact.weichat
       </column>
       <column name="UserID" title="用户ID" width="80px">
-        Contact.UserID
+        case when Contact.UserID='' then '' else Contact.UserID+'(active)' end
       </column>
     </select>
     <from type="table">

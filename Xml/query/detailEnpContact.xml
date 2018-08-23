@@ -8,6 +8,10 @@
         <col width="100px"/>
         <col/>
       </colgroup>
+	  <column name="id" visible="false">
+        Contact.ID
+      </column>
+
       <column name="Name" title="联系人名称">
         Contact.Name
       </column>
@@ -39,11 +43,17 @@
         Contact.Fax
       </column>
       <column name="UserID" title="用户ID">
-        Contact.UserID
+        case when Contact.UserID='' then '' else Contact.UserID+'(active)' end
       </column>
-      <column name="status" title="状态" type="select" urlformatstring="0,unactive;1,active">
+
+	  <column name="edit" title="操作" width="120px" type="excelno">
+        <![CDATA['<a a href="../tmp/ActCont.aspx?id='+cast(Contact.ID as varchar)+'" target="_self" style="color: #0055BA;cursor: pointer;">点击激活</a>']]>
+      </column>
+       <!--
+      <column name="status" title="状态">
         case when Contact.status=0 then 'unactive' else 'active' end
       </column>
+	  -->
     </select>
     <from type="table">
       <table title="企业联系人">Contact</table>

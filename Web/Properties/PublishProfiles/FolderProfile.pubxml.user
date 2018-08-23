@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 此文件由 Web 项目的发布/打包过程使用。可以通过编辑此 MSBuild 文件
 自定义此过程的行为。为了解与此相关的更多内容，请访问 https://go.microsoft.com/fwlink/?LinkID=208121。 
@@ -9,695 +9,1430 @@
     <_PublishTargetUrl>C:\Users\Administrator\Desktop\kexiaomi\Web\WebPublic</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="App_Data/ASPNETDB.MDF">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="App_Data/aspnetdb_log.ldf">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
     <File Include="bin/AjaxControlToolkit.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/CKEditor.NET.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="bin/CKFinder.dll">
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/GotDotNet.ApplicationBlocks.Data.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:01</publishTime>
     </File>
     <File Include="bin/Interop.MSScriptControl.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/log4net.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Office.Interop.Excel.dll">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Office.Interop.Excel.xml">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Office.Interop.Word.dll">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Office.Interop.Word.xml">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Vbe.Interop.dll">
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.BAL.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:26:43</publishTime>
     </File>
     <File Include="bin/MyQuery.BAL.pdb">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:26:43</publishTime>
     </File>
     <File Include="bin/MyQuery.BAL.xml">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:26:43</publishTime>
     </File>
     <File Include="bin/MyQuery.CSharpScript.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.CSharpScript.xml">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.DAL.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="bin/MyQuery.DAL.pdb">
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.DAL.xml">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="bin/MyQuery.Entity.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:26:43</publishTime>
     </File>
     <File Include="bin/MyQuery.Entity.pdb">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:26:43</publishTime>
     </File>
     <File Include="bin/MyQuery.MyControl.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.MyControl.xml">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.Utils.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.Utils.xml">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.Web.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:26:46</publishTime>
+    </File>
+    <File Include="bin/MyQuery.Web.dll.r225">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="bin/MyQuery.Web.dll.r238">
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.Web.pdb">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:26:46</publishTime>
+    </File>
+    <File Include="bin/MyQuery.Web.pdb.r225">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="bin/MyQuery.Web.pdb.r238">
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.WFWork.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.WFWork.xml">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.Work.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/MyQuery.Work.xml">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="bin/office.dll">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="bin/office.xml">
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="bin/System.Net.Json.dll">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="ClassDiagram1.cd">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="ClassDiagram2.cd">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Css/common.css">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Css/item.css">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Css/menu.css">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Css/print.css">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Css/WorkFlow.css">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Default.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Default.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/AddHelper.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddHelper.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddHelper.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/AddReq.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddReq.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddReq.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/AddResearcher.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddResearcher.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddResearcher.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/AddTechConsult.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddTechConsult.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddTechConsult.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/AddTechManager.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddTechManager.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/AddTechManager.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/CancelContract.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/CancelContract.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/CancelContract.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/Concern.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Concern.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Concern.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/ConcernAll.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ConcernAll.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ConcernAll.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/ConsultConcern.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ConsultConcern.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ConsultConcern.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/ConsultExecute.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ConsultExecute.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ConsultExecute.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/DeleteConcern.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/DeleteConcern.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/DeleteConcern.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/Do.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Do.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Do.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/EditEnp.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EditEnp.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EditEnp.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/EditMark.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EditMark.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EditMark.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/EditSubPlan.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EditSubPlan.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EditSubPlan.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/EditTechRq.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EditTechRq.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EditTechRq.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/EnterInfoConcern.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EnterInfoConcern.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EnterInfoConcern.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/EnterInfoExecute.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EnterInfoExecute.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/EnterInfoExecute.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/Exe.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Exe.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Exe.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/FinishPlan.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/FinishPlan.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/FinishPlan.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/FinishRq.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/FinishRq.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/FinishRq.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/Giveup.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Giveup.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Giveup.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/Plan.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Plan.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Plan.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/PlanConcern.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/PlanConcern.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/PlanConcern.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/Queryenp.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Queryenp.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Queryenp.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/QueryResearcher.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/QueryResearcher.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/QueryResearcher.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/QuerytechRq.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/QuerytechRq.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/QuerytechRq.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/recommand.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/recommand.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/recommand.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/RefResearcher.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/RefResearcher.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/RefResearcher.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/ReplyFeedBack.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ReplyFeedBack.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ReplyFeedBack.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/ResearcherConcern.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ResearcherConcern.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ResearcherConcern.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/ResearcherExecute.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ResearcherExecute.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ResearcherExecute.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/Review.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Review.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Review.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/ReviewChange.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ReviewChange.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ReviewChange.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/SearchPlan.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SearchPlan.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SearchPlan.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/SearchSuccess.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SearchSuccess.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SearchSuccess.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/SendEmail.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SendEmail.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SendEmail.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/ServiceAllot.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ServiceAllot.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ServiceAllot.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/ServiceEdit.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ServiceEdit.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/ServiceEdit.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/StopPlan.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/StopPlan.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/StopPlan.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/Submit.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Submit.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/Submit.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/SubmitFailure.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SubmitFailure.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SubmitFailure.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/SubmitSuccess.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SubmitSuccess.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/SubmitSuccess.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/TechRequire.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/TechRequire.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/TechRequire.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/TechRqConcern.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/TechRqConcern.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/TechRqConcern.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/TechRqExecute.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/TechRqExecute.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/TechRqExecute.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/UpdateFile.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/UpdateFile.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/UpdateFile.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/UpdateHetong.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/UpdateHetong.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/UpdateHetong.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/UserInfo.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/UserInfo.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/UserInfo.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/WeChatProgressReminder.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/WeChatProgressReminder.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/WeChatProgressReminder.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="EasyTechFunc/WeChatTest.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/WeChatTest.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="EasyTechFunc/WeChatTest.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Error.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Error.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Error.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="GetId.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="GetId.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="GetId.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Global.asax.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="GotDotNet.ApplicationBlocks.Data.dll">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Image.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Image.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Image.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/arrowd.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/arrowu.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/bg.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/bg.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/bg0.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/bg1.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/bg2.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/bg3.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/bg4.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/btn_xp_bg.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/buttonsback.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/buttonsbackall.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/calendar.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/close.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/Cristal_Intense.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/date.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/del.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/enter.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/error.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/green.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/iedit.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/i_save.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/jt.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/lb1.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/left.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/leftBack.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/left_r.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/loading_animation_liferay.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/menu.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/menubg.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/menufg.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/menuon.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/menu_bg.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/menu_line.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/menu_on.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/minus.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/msg.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/nav_bg.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/nav_bg0.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/open.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/plusx.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/PrintSet.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/r.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/rarrow-hover.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/rarrow.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/red.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/register.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/return.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/right_r.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/r_d.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/scroll-down-disabled.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/scroll-down-hover.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/scroll-down.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/scroll-up-disabled.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/scroll-up-hover.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/scroll-up.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/search.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/SelectedBack.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/separator.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/shadow.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/shm.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/tableft.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/tabright.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/thbg.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/top.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/wait.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/wrapBack.jpg">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Img/yellow.gif">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Index.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Index.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Index.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Js/calendar.js">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Js/ClientValidate.js">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Js/common.js">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Js/helptip.js">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Js/jquery.js">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Js/menu.js">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Js/mygridview.js">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Js/popupWindow.js">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Log.txt">
+      <publishTime>08/19/2018 19:47:26</publishTime>
+    </File>
+    <File Include="Log.txt.mine">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Log.txt.r225">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Log.txt.r238">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="log4net.config">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="Login.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Login.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Login.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/calendar.js">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/config.js">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/lang/en.js">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/lang/zh-cn.js">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/lang/zh-tw.js">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/My97DatePicker.htm">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/skin/datePicker.gif">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/skin/default/datepicker.css">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/skin/default/img.gif">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/skin/WdatePicker.css">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/skin/whyGreen/bg.jpg">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/skin/whyGreen/datepicker.css">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/skin/whyGreen/img.gif">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/WdatePicker.js">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/开发包/lang/en.js">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/开发包/lang/zh-cn.js">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/开发包/lang/zh-tw.js">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/开发包/readme.txt">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/开发包/skin/datePicker.gif">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/开发包/skin/default/datepicker.css">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/开发包/skin/default/img.gif">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/开发包/skin/WdatePicker.css">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/开发包/skin/whyGreen/bg.jpg">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/开发包/skin/whyGreen/datepicker.css">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="My97DatePicker/开发包/skin/whyGreen/img.gif">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="MyQuery.Web.csproj">
+      <publishTime>08/19/2018 19:26:06</publishTime>
+    </File>
+    <File Include="MyQuery.Web.csproj.user">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="MyQuery.Web.Publish.xml">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Properties/AssemblyInfo.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/FolderProfile.pubxml">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Properties/PublishProfiles/FolderProfile.pubxml.user">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="SendEmail.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="SendEmail.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="SendEmail.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Sys/down.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/down.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/down.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Sys/Editpasswd.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/Editpasswd.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/Editpasswd.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Sys/InsteadOf.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/InsteadOf.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/InsteadOf.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Sys/LogOut.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/LogOut.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/LogOut.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Sys/RoleFunEdit.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/RoleFunEdit.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/RoleFunEdit.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Sys/SetPrint.htm">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Sys/UserRoleEdit.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/UserRoleEdit.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/UserRoleEdit.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Sys/WorkDaySet.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/WorkDaySet.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Sys/WorkDaySet.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Test/Image.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Test/Image.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Test/Image.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Test/Test.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Test/Test.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Test/Test.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Test/TestEdit.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Test/TestEdit.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Test/TestEdit.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2D100StackedArea.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DArea.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DBar.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DBeltPieChart.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DBubble.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DColumn.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DDoughnut.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DDoughnut2.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DFastLine.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DKagi.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DLine.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DLineMarkers.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DPie.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DPoint.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DPointCustom.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DPointFigure.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DPointLabels.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DPointShapes.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DPolar.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DPolarMarker.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DPyramid.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DRadarArea.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DRadarMarker.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DRange.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DRangeBar.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DRangeColumn.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DRenko.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DSpline.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DSplineArea.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DSplineRange.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DStackedArea.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DStepLine.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DSupplementalPie.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/ChartType/2DThreeLine.png">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/Color.htm">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/connnect.aspx">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/connnect.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/connnect.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/down.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/down.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/down.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/EditHtml.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/EditHtml.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/EditHtml.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/EditMyQuery.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/EditMyQuery.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/EditMyQuery.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/MyDetail.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyDetail.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyDetail.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/MyDetail1.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyDetail1.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyDetail1.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/MyEdit.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyEdit.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyEdit.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/MyImport.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyImport.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyImport.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/MyMain.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyMain.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyMain.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/MyQuery.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyQuery.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyQuery.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/MySel.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MySel.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MySel.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/MyService.asmx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyService.asmx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/MySubject.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MySubject.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MySubject.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/MyToExcel.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyToExcel.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/MyToExcel.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/NewMyQuery.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/NewMyQuery.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/NewMyQuery.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/SelChartType.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/SelChartType.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/SelChartType.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
     </File>
     <File Include="Tmp/TplDetail.aspx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/TplDetail.aspx.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Tmp/TplDetail.aspx.designer.cs">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Uploaded/1%252E4982713.pdf">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Uploaded/1.2362971.pdf">
+      <publishTime>08/19/2018 19:08:02</publishTime>
+    </File>
+    <File Include="Uploaded/159461%252E4982713.pdf">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/BF1620.dat">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/DMSdetail.ppt">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/Tc_/个人权益记录定制_参保人员缴费信息20171221007494.pdf">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/Tc_/手势.pdf">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/Tc_15874/1-s2.0-S1293255815001417-main.pdf">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/Tc_15877/Matlabcode.txt">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/Tc_15877/卢美玉20153101358.docx">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/Tc_15877/高端科技资源挖掘利用项目报告.docx">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/Tc_15946/1-s2.0-S0169433214025641-main.pdf">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/Tc_15946/1.5010988.pdf">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/Tc_15946/ex1.pdf">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/Tc_15946/ex6.pdf">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/Tc_15946/定薪表+韩雪3人0912.pdf">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/[muchong.com]LightPipes for Matlab.pdf">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/[neubt]NetSarangXmanagerEnterprise5.torrent">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/[neubt]Sango.11.PK.Chinese.Big5.Standalone.2CD-NETSHOW %281%29.torrent">
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="Uploaded/[neubt][DUTPT]Wu.Xin.The.Monster.Killer.2015.720p.WEB-DL.x264-HDATV.torrent">
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:29:01</publishTime>
     </File>
     <File Include="WebService.asmx">
-      <publishTime>05/13/2018 10:14:06</publishTime>
+      <publishTime>08/19/2018 19:08:03</publishTime>
+    </File>
+    <File Include="WebService.asmx.cs">
+      <publishTime>08/19/2018 19:08:03</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -30,7 +30,7 @@
         Contact.weichat
       </column>
       <column name="UserID" title="用户ID" width="80px">
-        Contact.UserID
+      case when Contact.UserID='' then '' else Contact.UserID+'(active)' end
       </column>
 
     </select>
@@ -72,7 +72,7 @@
       </button>
       <button name="toexcel" title="导出Excel" type="toexcel" cssclass="input_button">
       </button>
-      <button name="delnot" title="删除停用" type="runsql" isselectedrow="true" cssclass="input_button" parameters="id" confirminfo="确认删除或停用选中的记录吗？">
+      <button name="delnot" title="删除停用" type="runsql" isselectedrow="true" cssclass="input_button" parameter="id" confirminfo="确认删除或停用选中的记录吗？">
         <sql value="0" title="选择记录删除成功">delete from Contact where ID={0}</sql>
       </button>
       <button name="btnReturn" title="返回企业" type="redirect" cssclass="input_button" parameter="eid" parametervalue="!">
